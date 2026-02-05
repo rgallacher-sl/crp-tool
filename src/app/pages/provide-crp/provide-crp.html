@@ -1,0 +1,62 @@
+<div class="provide-crp-page">
+  <h1>New assessment</h1>
+
+  <div class="form-section">
+    <label class="field-label" for="crp-link">
+      Paste link to supplier's Carbon Reduction Plan
+    </label>
+    <input
+      id="crp-link"
+      type="url"
+      class="text-input"
+      placeholder="https://..."
+      [(ngModel)]="linkUrl"
+      (ngModelChange)="onLinkChange()"
+      [disabled]="!!selectedFile"
+    />
+  </div>
+
+  <div class="divider">
+    <span>or</span>
+  </div>
+
+  <div
+    class="drop-zone"
+    [class.dragging]="isDragging"
+    [class.has-file]="!!selectedFile"
+    (dragover)="onDragOver($event)"
+    (dragleave)="onDragLeave($event)"
+    (drop)="onDrop($event)"
+  >
+    @if (selectedFile) {
+      <div class="file-info">
+        <span class="file-icon">PDF</span>
+        <span class="file-name">{{ selectedFile.name }}</span>
+        <button class="remove-file" (click)="removeFile()">Remove</button>
+      </div>
+    } @else {
+      <div class="drop-prompt">
+        <p>Drag and drop a PDF here</p>
+        <p class="drop-sub">or</p>
+        <label class="file-browse">
+          Browse files
+          <input type="file" accept=".pdf" (change)="onFileSelected($event)" hidden />
+        </label>
+      </div>
+    }
+  </div>
+
+  @if (error) {
+    <p class="error-message">{{ error }}</p>
+  }
+
+  <div class="actions">
+    <button
+      class="btn-primary"
+      [disabled]="!canContinue()"
+      (click)="onContinue()"
+    >
+      Continue
+    </button>
+  </div>
+</div>

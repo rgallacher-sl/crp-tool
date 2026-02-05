@@ -1,0 +1,41 @@
+<div class="suppliers-page">
+  <h1>Suppliers</h1>
+
+  @if (!hasAssessments) {
+    <div class="empty-state">
+      <p class="empty-lead">You haven't assessed any suppliers yet.</p>
+      <p class="empty-description">
+        This tool helps ensure supplier compliance with PPN 006
+        by reviewing their Carbon Reduction Plan.
+      </p>
+      <div class="what-youll-do">
+        <p class="what-label">What you'll do:</p>
+        <ul>
+          <li>Provide a supplier's CRP</li>
+          <li>Review the document</li>
+          <li>Record a compliance decision</li>
+        </ul>
+      </div>
+      <button class="btn-primary" (click)="startFirstAssessment()">
+        Start first assessment
+      </button>
+    </div>
+  } @else {
+    <div class="supplier-list">
+      @for (supplier of suppliers; track supplier.id) {
+        <a class="supplier-card" [routerLink]="['/suppliers', supplier.id]">
+          <div class="supplier-name">{{ supplier.name }}</div>
+          <div class="supplier-meta">
+            <span class="outcome">PPN 006: {{ supplier.outcomeLabel }}</span>
+            <span class="last-checked">Last checked: {{ supplier.lastChecked }}</span>
+          </div>
+        </a>
+      }
+    </div>
+    <div class="actions">
+      <a routerLink="/assessments/new/provide-crp" class="btn-primary">
+        New assessment
+      </a>
+    </div>
+  }
+</div>

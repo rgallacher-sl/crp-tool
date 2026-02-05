@@ -1,0 +1,61 @@
+.confirm-supplier-page {
+  display: flex;
+  justify-content: center;
+  padding: 80px 24px;
+}
+
+.confirm-content {
+  max-width: 480px;
+  width: 100%;
+}
+
+.context {
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.supplier-name {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.instruction {
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.edit-section {
+  margin-bottom: 24px;
+
+  .field-label {
+    display: block;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    font-size: 0.9375rem;
+  }
+
+  .text-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    background: white;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+      border-color: var(--focus-color);
+      box-shadow: 0 0 0 2px var(--focus-ring);
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}

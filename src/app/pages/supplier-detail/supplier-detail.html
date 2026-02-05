@@ -1,0 +1,31 @@
+@if (supplier) {
+  <div class="supplier-detail-page">
+    <a routerLink="/suppliers" class="back-link">&larr; Suppliers</a>
+
+    <h1>{{ supplier.name }}</h1>
+
+    <h2>Assessment history</h2>
+
+    <div class="assessment-list">
+      @for (assessment of assessments; track assessment.id) {
+        <div class="assessment-entry">
+          <div class="assessment-header">
+            <span class="assessment-date">{{ assessment.formattedDate }}</span>
+            <span class="assessment-outcome" [attr.data-outcome]="assessment.outcome">
+              {{ assessment.outcomeLabel }}
+            </span>
+          </div>
+          <div class="assessment-doc">
+            {{ assessment.documentLabel }}
+          </div>
+        </div>
+      } @empty {
+        <p class="no-assessments">No assessments recorded.</p>
+      }
+    </div>
+
+    <a routerLink="/assessments/new/provide-crp" class="btn-primary">
+      Start new assessment
+    </a>
+  </div>
+}

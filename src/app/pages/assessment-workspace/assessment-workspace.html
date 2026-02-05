@@ -1,0 +1,129 @@
+@if (assessment) {
+  <div class="workspace">
+    <div class="document-panel">
+      <div class="document-header">
+        <span class="doc-label">{{ assessment.documentLabel }}</span>
+      </div>
+      <div class="document-viewer">
+        <div class="pdf-placeholder">
+          <div class="pdf-page">
+            <h3>Carbon Reduction Plan</h3>
+            <p class="pdf-supplier">{{ assessment.supplierName }}</p>
+            <div class="pdf-section">
+              <h4>Commitment to achieving Net Zero</h4>
+              <p>{{ assessment.supplierName }} is committed to achieving Net Zero emissions by 2050.</p>
+            </div>
+            <div class="pdf-section">
+              <h4>Baseline Emissions Footprint</h4>
+              <p>Reporting Year: April 2023 - March 2024</p>
+              <table class="pdf-table">
+                <tr><td>Scope 1</td><td>1,245 tCO2e</td></tr>
+                <tr><td>Scope 2</td><td>876 tCO2e</td></tr>
+                <tr><td>Scope 3 (Upstream)</td><td>3,421 tCO2e</td></tr>
+                <tr><td>Total Emissions</td><td>5,542 tCO2e</td></tr>
+              </table>
+            </div>
+            <div class="pdf-section">
+              <h4>Emissions Reduction Targets</h4>
+              <p>We project a 30% reduction in emissions by 2030 from our 2023 baseline.</p>
+            </div>
+            <div class="pdf-section">
+              <h4>Carbon Reduction Projects</h4>
+              <ul>
+                <li>LED lighting retrofit across all facilities</li>
+                <li>Fleet electrification programme</li>
+                <li>Renewable energy procurement</li>
+                <li>Supply chain engagement programme</li>
+              </ul>
+            </div>
+            <div class="pdf-section">
+              <h4>Declaration and Sign Off</h4>
+              <p>This Carbon Reduction Plan has been completed in accordance with PPN 06/21 and associated guidance and reporting standard for Carbon Reduction Plans.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="decision-panel">
+      <p class="context-copy">
+        You are reviewing the supplier's Carbon Reduction Plan
+        to determine whether they meet PPN 006.
+      </p>
+
+      <div class="ai-summary">
+        <p class="ai-label">AI review completed:</p>
+        <ul>
+          <li>Document structure checked</li>
+          <li>Key dates identified</li>
+        </ul>
+      </div>
+
+      <div class="decision-section">
+        <h3>PPN 006 assessment</h3>
+        <p class="decision-question">Does this supplier meet PPN 006?</p>
+
+        <div class="outcome-options">
+          <label class="outcome-option" [class.selected]="selectedOutcome === 'meets'">
+            <input
+              type="radio"
+              name="outcome"
+              value="meets"
+              [checked]="selectedOutcome === 'meets'"
+              (change)="selectOutcome('meets')"
+            />
+            <span class="radio-dot"></span>
+            <span>Meets requirements</span>
+          </label>
+
+          <label class="outcome-option" [class.selected]="selectedOutcome === 'does_not_meet'">
+            <input
+              type="radio"
+              name="outcome"
+              value="does_not_meet"
+              [checked]="selectedOutcome === 'does_not_meet'"
+              (change)="selectOutcome('does_not_meet')"
+            />
+            <span class="radio-dot"></span>
+            <span>Does not meet requirements</span>
+          </label>
+
+          <label class="outcome-option" [class.selected]="selectedOutcome === 'unclear'">
+            <input
+              type="radio"
+              name="outcome"
+              value="unclear"
+              [checked]="selectedOutcome === 'unclear'"
+              (change)="selectOutcome('unclear')"
+            />
+            <span class="radio-dot"></span>
+            <span>Unclear</span>
+          </label>
+        </div>
+
+        <p class="unclear-hint">
+          Use "Unclear" if the CRP does not provide sufficient information.
+        </p>
+
+        <div class="notes-section">
+          <label class="field-label" for="notes">Notes</label>
+          <textarea
+            id="notes"
+            class="text-area"
+            [(ngModel)]="notes"
+            rows="4"
+            placeholder="Optional notes about this assessment..."
+          ></textarea>
+        </div>
+
+        @if (error) {
+          <p class="error-message">{{ error }}</p>
+        }
+
+        <button class="btn-primary btn-record" (click)="recordDecision()">
+          Record PPN 006 decision
+        </button>
+      </div>
+    </div>
+  </div>
+}

@@ -1,0 +1,84 @@
+.supplier-detail-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  margin-bottom: 20px;
+
+  &:hover {
+    color: var(--text-primary);
+  }
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 32px;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.assessment-list {
+  margin-bottom: 32px;
+}
+
+.assessment-entry {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-color);
+
+  &:first-child {
+    border-top: 1px solid var(--border-color);
+  }
+}
+
+.assessment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+
+  .assessment-date {
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 0.9375rem;
+  }
+
+  .assessment-outcome {
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    &[data-outcome="meets"] {
+      color: var(--success-color);
+    }
+
+    &[data-outcome="does_not_meet"] {
+      color: var(--error-color);
+    }
+
+    &[data-outcome="unclear"] {
+      color: var(--warning-color);
+    }
+  }
+}
+
+.assessment-doc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.no-assessments {
+  color: var(--text-tertiary);
+  padding: 16px 0;
+}

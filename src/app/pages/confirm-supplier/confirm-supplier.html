@@ -1,0 +1,40 @@
+<div class="confirm-supplier-page">
+  <div class="confirm-content">
+    <p class="context">We've identified the supplier from the CRP:</p>
+
+    @if (!isEditing) {
+      <h2 class="supplier-name">{{ supplierName }}</h2>
+      <p class="instruction">Please confirm this is the correct organisation.</p>
+
+      <div class="actions">
+        <button class="btn-primary" (click)="confirmSupplier()">
+          Yes, continue
+        </button>
+        <button class="btn-secondary" (click)="startEditing()">
+          Edit name
+        </button>
+      </div>
+    } @else {
+      <div class="edit-section">
+        <label class="field-label" for="supplier-name">Supplier name</label>
+        <input
+          id="supplier-name"
+          type="text"
+          class="text-input"
+          [(ngModel)]="supplierName"
+          (keydown.enter)="confirmSupplier()"
+          autofocus
+        />
+      </div>
+      <div class="actions">
+        <button
+          class="btn-primary"
+          [disabled]="!supplierName.trim()"
+          (click)="confirmSupplier()"
+        >
+          Continue
+        </button>
+      </div>
+    }
+  </div>
+</div>
