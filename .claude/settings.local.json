@@ -8,7 +8,9 @@
       "Bash(npx ng build)",
       "Bash(npx ng serve:*)",
       "WebFetch(domain:localhost)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)"
     ]
   }
 }
