@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AssessmentService } from '../../services/assessment.service';
 
 @Component({
   selector: 'app-provide-crp',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterModule],
   templateUrl: './provide-crp.html',
   styleUrl: './provide-crp.scss',
 })
@@ -75,9 +75,23 @@ export class ProvideCrpComponent {
     return !!(this.linkUrl.trim() || this.selectedFile);
   }
 
+  private isValidUrl(value: string): boolean {
+    try {
+      const url = new URL(value);
+      return url.protocol === 'http:' || url.protocol === 'https:';
+    } catch {
+      return false;
+    }
+  }
+
   onContinue(): void {
     if (!this.canContinue()) {
       this.error = 'Please provide a link or upload a PDF.';
+      return;
+    }
+
+    if (this.linkUrl.trim() && !this.isValidUrl(this.linkUrl.trim())) {
+      this.error = 'Please enter a valid URL.';
       return;
     }
 
@@ -85,8 +99,13 @@ export class ProvideCrpComponent {
       ? this.selectedFile.name
       : this.extractDomain(this.linkUrl);
     const documentSource = this.selectedFile ? 'upload' : 'link';
+    const documentReference = this.selectedFile ? undefined : this.linkUrl.trim();
 
-    const assessment = this.assessmentService.createAssessment(documentLabel, documentSource as 'link' | 'upload');
+    const assessment = this.assessmentService.createAssessment(
+      documentLabel,
+      documentSource as 'link' | 'upload',
+      documentReference,
+    );
     this.router.navigate(['/assessments', assessment.id, 'processing']);
   }
 

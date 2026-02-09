@@ -3,7 +3,23 @@ export interface Assessment {
   supplierName: string;
   documentLabel: string;
   documentSource: 'link' | 'upload';
-  status: 'processing' | 'ready' | 'completed';
+  documentReference?: string;
+  status:
+    | 'fetching'
+    | 'uploading'
+    | 'uploaded'
+    | 'processing_extraction'
+    | 'extraction_complete'
+    | 'processing_semantic'
+    | 'semantic_complete'
+    | 'processing_validation'
+    | 'processing_persistence'
+    | 'ready'
+    | 'completed'
+    | 'failed';
+  errorCode?: string | null;
+  errorMessage?: string | null;
+  failedStep?: string | null;
   outcome: 'meets' | 'does_not_meet' | 'unclear' | null;
   notes: string;
   createdDate: Date;

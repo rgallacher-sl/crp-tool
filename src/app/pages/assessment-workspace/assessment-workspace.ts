@@ -41,6 +41,11 @@ export class AssessmentWorkspaceComponent implements OnInit {
       return;
     }
 
+    if (assessment.status !== 'ready') {
+      this.router.navigate(['/suppliers']);
+      return;
+    }
+
     this.assessment = assessment;
   }
 

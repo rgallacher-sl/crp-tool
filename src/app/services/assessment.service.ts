@@ -5,6 +5,21 @@ import { Assessment, Supplier } from '../models/assessment.model';
 export class AssessmentService {
   private readonly STORAGE_KEY = 'crp_assessments';
   private assessments: Assessment[] = [];
+  private readonly pipelineTimers = new Map<string, ReturnType<typeof setTimeout>[]>();
+  private readonly statusOrder: Assessment['status'][] = [
+    'fetching',
+    'uploading',
+    'uploaded',
+    'processing_extraction',
+    'extraction_complete',
+    'processing_semantic',
+    'semantic_complete',
+    'processing_validation',
+    'processing_persistence',
+    'ready',
+    'completed',
+    'failed',
+  ];
 
   constructor() {
     this.loadFromStorage();
@@ -19,6 +34,10 @@ export class AssessmentService {
           ...a,
           createdDate: new Date(a.createdDate),
           completedDate: a.completedDate ? new Date(a.completedDate) : null,
+          status: this.normalizeStatus(a.status),
+          errorCode: a.errorCode ?? null,
+          errorMessage: a.errorMessage ?? null,
+          failedStep: a.failedStep ?? null,
         }));
       }
     } catch {
@@ -32,6 +51,12 @@ export class AssessmentService {
 
   private generateId(): string {
     return crypto.randomUUID();
+  }
+
+  private normalizeStatus(status: string): Assessment['status'] {
+    if (status === 'processing') return 'processing_extraction';
+    if (status === 'ready' || status === 'completed' || status === 'failed') return status;
+    return status as Assessment['status'];
   }
 
   getAssessments(): Assessment[] {
@@ -75,13 +100,22 @@ export class AssessmentService {
     return assessments.length > 0 ? assessments[0] : undefined;
   }
 
-  createAssessment(documentLabel: string, documentSource: 'link' | 'upload'): Assessment {
+  createAssessment(
+    documentLabel: string,
+    documentSource: 'link' | 'upload',
+    documentReference?: string,
+  ): Assessment {
+    const initialStatus = documentSource === 'link' ? 'fetching' : 'uploading';
     const assessment: Assessment = {
       id: this.generateId(),
       supplierName: '',
       documentLabel,
       documentSource,
-      status: 'processing',
+      documentReference,
+      status: initialStatus,
+      errorCode: null,
+      errorMessage: null,
+      failedStep: null,
       outcome: null,
       notes: '',
       createdDate: new Date(),
@@ -104,11 +138,142 @@ export class AssessmentService {
     const assessment = this.assessments.find(a => a.id === id);
     if (assessment) {
       assessment.status = 'ready';
+      assessment.errorCode = null;
+      assessment.errorMessage = null;
+      assessment.failedStep = null;
       if (!assessment.supplierName) {
         assessment.supplierName = 'Acme Construction Ltd';
       }
       this.saveToStorage();
     }
+  }
+
+  markFailed(id: string, code: string, message: string, step: string): void {
+    const assessment = this.assessments.find(a => a.id === id);
+    if (!assessment) return;
+    assessment.status = 'failed';
+    assessment.errorCode = code;
+    assessment.errorMessage = message;
+    assessment.failedStep = step;
+    this.saveToStorage();
+  }
+
+  updateStatus(id: string, status: Assessment['status']): void {
+    const assessment = this.assessments.find(a => a.id === id);
+    if (!assessment) return;
+    if (assessment.status === 'failed' || assessment.status === 'completed') return;
+    if (this.getStatusRank(status) < this.getStatusRank(assessment.status)) return;
+    assessment.status = status;
+    this.saveToStorage();
+  }
+
+  restartProcessing(id: string, startSimulation = true): void {
+    const assessment = this.assessments.find(a => a.id === id);
+    if (!assessment) return;
+    this.clearPipelineTimers(id);
+    assessment.status = assessment.documentSource === 'link' ? 'fetching' : 'uploading';
+    assessment.errorCode = null;
+    assessment.errorMessage = null;
+    assessment.failedStep = null;
+    this.saveToStorage();
+    if (startSimulation) {
+      this.startPipelineSimulation(id, true);
+    }
+  }
+
+  startPipelineSimulation(id: string, force = false): void {
+    const assessment = this.assessments.find(a => a.id === id);
+    if (!assessment) return;
+    if (!force && this.pipelineTimers.has(id)) return;
+    this.clearPipelineTimers(id);
+
+    const timers: ReturnType<typeof setTimeout>[] = [];
+    const schedule = (delayMs: number, fn: () => void) => {
+      const timer = setTimeout(fn, delayMs);
+      timers.push(timer);
+    };
+
+    this.pipelineTimers.set(id, timers);
+
+    const shouldFail = this.shouldSimulateFailure(assessment);
+    const failAt = shouldFail?.step ?? null;
+
+    const fetchOrUploadMs = this.randomBetween(1000, 2000);
+    const extractionMs = this.randomBetween(5000, 7000);
+    const semanticMs = this.randomBetween(3500, 5000);
+    const validationMs = this.randomBetween(2000, 3000);
+    const persistenceMs = this.randomBetween(1000, 2000);
+
+    if (assessment.status === 'fetching') {
+      schedule(fetchOrUploadMs, () => this.updateStatus(id, 'uploaded'));
+    }
+
+    if (assessment.status === 'uploading') {
+      schedule(fetchOrUploadMs, () => this.updateStatus(id, 'uploaded'));
+    }
+
+    schedule(fetchOrUploadMs + 1000, () => this.updateStatus(id, 'processing_extraction'));
+    schedule(fetchOrUploadMs + extractionMs, () => {
+      if (failAt === 'extraction') {
+        this.markFailed(id, shouldFail!.code, shouldFail!.message, 'extraction');
+        return;
+      }
+      this.updateStatus(id, 'extraction_complete');
+    });
+
+    schedule(fetchOrUploadMs + extractionMs + 1000, () => this.updateStatus(id, 'processing_semantic'));
+    schedule(fetchOrUploadMs + extractionMs + semanticMs, () => {
+      if (failAt === 'semantic') {
+        this.markFailed(id, shouldFail!.code, shouldFail!.message, 'semantic');
+        return;
+      }
+      this.updateStatus(id, 'semantic_complete');
+    });
+
+    schedule(fetchOrUploadMs + extractionMs + semanticMs + 1000, () => this.updateStatus(id, 'processing_validation'));
+    schedule(fetchOrUploadMs + extractionMs + semanticMs + validationMs, () => {
+      if (failAt === 'validation') {
+        this.markFailed(id, shouldFail!.code, shouldFail!.message, 'validation');
+        return;
+      }
+      this.updateStatus(id, 'processing_persistence');
+    });
+
+    schedule(fetchOrUploadMs + extractionMs + semanticMs + validationMs + persistenceMs, () => {
+      if (failAt === 'persistence') {
+        this.markFailed(id, shouldFail!.code, shouldFail!.message, 'persistence');
+        return;
+      }
+      this.markReady(id);
+      this.clearPipelineTimers(id);
+    });
+  }
+
+  private clearPipelineTimers(id: string): void {
+    const timers = this.pipelineTimers.get(id);
+    if (!timers) return;
+    for (const timer of timers) clearTimeout(timer);
+    this.pipelineTimers.delete(id);
+  }
+
+  private shouldSimulateFailure(assessment: Assessment): { step: string; code: string; message: string } | null {
+    const token = `${assessment.documentLabel} ${assessment.documentReference ?? ''}`.toLowerCase();
+    if (token.includes('timeout')) {
+      return { step: 'semantic', code: 'timeout', message: 'This step timed out.' };
+    }
+    if (token.includes('fail') || token.includes('error')) {
+      return { step: 'semantic', code: 'processing_failed', message: 'We could not process this document.' };
+    }
+    return null;
+  }
+
+  private randomBetween(minMs: number, maxMs: number): number {
+    return Math.floor(Math.random() * (maxMs - minMs + 1)) + minMs;
+  }
+
+  private getStatusRank(status: Assessment['status']): number {
+    const index = this.statusOrder.indexOf(status);
+    return index === -1 ? 0 : index;
   }
 
   completeAssessment(id: string, outcome: 'meets' | 'does_not_meet' | 'unclear', notes: string): void {
