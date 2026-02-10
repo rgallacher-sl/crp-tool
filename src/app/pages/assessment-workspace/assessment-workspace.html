@@ -1,6 +1,17 @@
 @if (assessment) {
   <div class="workspace">
     <div class="decision-panel">
+      <div class="supplier-edit">
+        <label class="field-label" for="supplier-name">Supplier name</label>
+        <input
+          id="supplier-name"
+          class="text-input"
+          type="text"
+          [(ngModel)]="supplierName"
+          placeholder="Supplier name"
+        />
+      </div>
+
       <div class="decision-header">
         <div class="doc-label">{{ assessment.documentLabel }}</div>
         @if (assessment.documentSource === 'link' && assessment.documentReference) {
@@ -16,42 +27,25 @@
       </div>
       <div class="ai-summary">
         <p class="ai-label">AI findings against PPN 006:</p>
-        <div class="review-banner" [class.required]="assessment.reviewRequired">
-          <span class="badge">
-            {{ assessment.reviewRequired ? 'Review required' : 'Review optional' }}
-          </span>
-          <p>
-            AI confidence: {{ assessment.aiConfidence | percent:'1.0-0' }}.
-            @if (assessment.reviewRequired) {
-              Please open the document and confirm the key details before deciding.
-            } @else {
-              You can proceed, or open the document if you want to verify.
-            }
-          </p>
-        </div>
         @if (showAllFindings) {
-          <div class="ai-table">
-            <div class="ai-row ai-header">
-              <span>Condition</span>
-              <span>Validation rule</span>
-              <span>Pass/Fail</span>
-            </div>
+          <dl class="ai-summary-list">
             @for (finding of ppnFindings; track finding.code) {
-              <div class="ai-row">
-                <span class="ai-code">{{ finding.code }}</span>
-                <span class="ai-rule">{{ finding.rule }}</span>
-                <span
-                  class="ai-result"
-                  [class.pass]="finding.result === 'pass'"
-                  [class.fail]="finding.result === 'fail'"
-                  [class.check]="finding.result === 'check'"
-                >
-                  {{ finding.label }}
-                </span>
+              <div class="ai-summary-row">
+                <dt class="ai-summary-key">{{ finding.code }}</dt>
+                <dd class="ai-summary-value">{{ finding.rule }}</dd>
+                <dd class="ai-summary-status">
+                  <span
+                    class="ai-result"
+                    [class.pass]="finding.result === 'pass'"
+                    [class.fail]="finding.result === 'fail'"
+                    [class.check]="finding.result === 'check'"
+                  >
+                    {{ finding.label }}
+                  </span>
+                </dd>
               </div>
             }
-          </div>
-          <p class="ai-footnote">Check items marked “Check” in the source document.</p>
+          </dl>
         } @else {
           <div class="ai-summary-success">
             <span class="ai-summary-title">All PPN 006 criteria met.</span>
@@ -68,35 +62,12 @@
         }
       </div>
 
-      <label class="review-check">
-        <input
-          type="checkbox"
-          [checked]="reviewConfirmed"
-          (change)="toggleReview($any($event.target).checked)"
-        />
-        <span>I have reviewed the original document.</span>
-      </label>
-
-      <div class="supplier-edit">
-        <label class="field-label" for="supplier-name">Supplier name</label>
-        <input
-          id="supplier-name"
-          class="text-input"
-          type="text"
-          [(ngModel)]="supplierName"
-          placeholder="Supplier name"
-        />
-        <p class="supplier-hint">
-          This name groups the supplier's assessment history.
-        </p>
-      </div>
-
       <div class="decision-section">
         <h3>PPN 006 assessment</h3>
         <p class="decision-question">Does this supplier meet PPN 006?</p>
 
         <div class="outcome-options">
-          <label class="outcome-option" [class.selected]="selectedOutcome === 'meets'">
+          <label class="outcome-option">
             <input
               type="radio"
               name="outcome"
@@ -104,11 +75,10 @@
               [checked]="selectedOutcome === 'meets'"
               (change)="selectOutcome('meets')"
             />
-            <span class="radio-dot"></span>
-            <span>Meets requirements</span>
+            <span class="radio-label">Meets requirements</span>
           </label>
 
-          <label class="outcome-option" [class.selected]="selectedOutcome === 'does_not_meet'">
+          <label class="outcome-option">
             <input
               type="radio"
               name="outcome"
@@ -116,11 +86,10 @@
               [checked]="selectedOutcome === 'does_not_meet'"
               (change)="selectOutcome('does_not_meet')"
             />
-            <span class="radio-dot"></span>
-            <span>Does not meet requirements</span>
+            <span class="radio-label">Does not meet requirements</span>
           </label>
 
-          <label class="outcome-option" [class.selected]="selectedOutcome === 'unclear'">
+          <label class="outcome-option">
             <input
               type="radio"
               name="outcome"
@@ -128,8 +97,7 @@
               [checked]="selectedOutcome === 'unclear'"
               (change)="selectOutcome('unclear')"
             />
-            <span class="radio-dot"></span>
-            <span>Unclear</span>
+            <span class="radio-label">Unclear</span>
           </label>
         </div>
 

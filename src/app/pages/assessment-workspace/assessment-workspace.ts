@@ -18,7 +18,6 @@ export class AssessmentWorkspaceComponent implements OnInit {
   notes = '';
   error = '';
   supplierName = '';
-  reviewConfirmed = false;
   showAllFindings = false;
   ppnFindings = [
     { code: 'CP1', rule: 'Net Zero year ≤ 2050', result: 'pass', label: 'Pass' },
@@ -64,7 +63,6 @@ export class AssessmentWorkspaceComponent implements OnInit {
 
     this.assessment = assessment;
     this.supplierName = assessment.supplierName;
-    this.reviewConfirmed = assessment.reviewCompleted;
     this.showAllFindings = !this.areAllFindingsPass();
   }
 
@@ -73,24 +71,12 @@ export class AssessmentWorkspaceComponent implements OnInit {
     this.error = '';
   }
 
-  toggleReview(checked: boolean): void {
-    this.reviewConfirmed = checked;
-    if (this.assessment) {
-      this.assessmentService.markReviewed(this.assessment.id, checked);
-    }
-  }
-
   recordDecision(): void {
     if (!this.assessment) return;
 
     const trimmedName = this.supplierName.trim();
     if (!trimmedName) {
       this.error = 'Please confirm the supplier name before recording your decision.';
-      return;
-    }
-
-    if (this.assessment.reviewRequired && !this.reviewConfirmed) {
-      this.error = 'Please review the original document before recording your decision.';
       return;
     }
 
