@@ -38,6 +38,9 @@ export class AssessmentService {
           errorCode: a.errorCode ?? null,
           errorMessage: a.errorMessage ?? null,
           failedStep: a.failedStep ?? null,
+          aiConfidence: typeof a.aiConfidence === 'number' ? a.aiConfidence : 0.9,
+          reviewRequired: typeof a.reviewRequired === 'boolean' ? a.reviewRequired : false,
+          reviewCompleted: typeof a.reviewCompleted === 'boolean' ? a.reviewCompleted : false,
         }));
       }
     } catch {
@@ -106,12 +109,17 @@ export class AssessmentService {
     documentReference?: string,
   ): Assessment {
     const initialStatus = documentSource === 'link' ? 'fetching' : 'uploading';
+    const aiConfidence = this.generateConfidence(documentLabel, documentReference);
+    const reviewRequired = aiConfidence < 0.85;
     const assessment: Assessment = {
       id: this.generateId(),
       supplierName: '',
       documentLabel,
       documentSource,
       documentReference,
+      aiConfidence,
+      reviewRequired,
+      reviewCompleted: false,
       status: initialStatus,
       errorCode: null,
       errorMessage: null,
@@ -132,6 +140,13 @@ export class AssessmentService {
       assessment.supplierName = name;
       this.saveToStorage();
     }
+  }
+
+  markReviewed(id: string, reviewed: boolean): void {
+    const assessment = this.assessments.find(a => a.id === id);
+    if (!assessment) return;
+    assessment.reviewCompleted = reviewed;
+    this.saveToStorage();
   }
 
   markReady(id: string): void {
@@ -247,6 +262,17 @@ export class AssessmentService {
       this.markReady(id);
       this.clearPipelineTimers(id);
     });
+  }
+
+  private generateConfidence(label: string, reference?: string): number {
+    const token = `${label} ${reference ?? ''}`.toLowerCase();
+    if (token.includes('low') || token.includes('unclear') || token.includes('partial')) {
+      return 0.72;
+    }
+    if (token.includes('medium')) {
+      return 0.84;
+    }
+    return Math.round((0.86 + Math.random() * 0.12) * 100) / 100;
   }
 
   private clearPipelineTimers(id: string): void {

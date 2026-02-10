@@ -52,7 +52,7 @@ export class ProcessingComponent implements OnInit, OnDestroy {
     }
 
     if (assessment.status === 'ready') {
-      this.router.navigate(['/assessments', id, 'confirm-supplier']);
+      this.router.navigate(['/assessments', id]);
       return;
     }
 
@@ -172,7 +172,7 @@ export class ProcessingComponent implements OnInit, OnDestroy {
       this.refreshAssessment();
       this.updateViewState();
       this.clearTicker();
-      this.router.navigate(['/assessments', this.assessment.id, 'confirm-supplier']);
+      this.router.navigate(['/assessments', this.assessment.id]);
       return;
     }
 

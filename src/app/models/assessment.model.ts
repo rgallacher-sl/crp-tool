@@ -4,6 +4,9 @@ export interface Assessment {
   documentLabel: string;
   documentSource: 'link' | 'upload';
   documentReference?: string;
+  aiConfidence: number;
+  reviewRequired: boolean;
+  reviewCompleted: boolean;
   status:
     | 'fetching'
     | 'uploading'
