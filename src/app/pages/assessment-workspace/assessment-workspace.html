@@ -14,24 +14,68 @@
           </a>
         }
       </div>
-      <p class="context-copy">
-        You are reviewing the supplier's Carbon Reduction Plan
-        to determine whether they meet PPN 006.
-      </p>
-
-      <div class="review-banner" [class.required]="assessment.reviewRequired">
-        <span class="badge">
-          {{ assessment.reviewRequired ? 'Review required' : 'Review optional' }}
-        </span>
-        <p>
-          AI confidence: {{ assessment.aiConfidence | percent:'1.0-0' }}.
-          @if (assessment.reviewRequired) {
-            Please open the document and confirm the key details before deciding.
-          } @else {
-            You can proceed, or open the document if you want to verify.
-          }
-        </p>
+      <div class="ai-summary">
+        <p class="ai-label">AI findings against PPN 006:</p>
+        <div class="review-banner" [class.required]="assessment.reviewRequired">
+          <span class="badge">
+            {{ assessment.reviewRequired ? 'Review required' : 'Review optional' }}
+          </span>
+          <p>
+            AI confidence: {{ assessment.aiConfidence | percent:'1.0-0' }}.
+            @if (assessment.reviewRequired) {
+              Please open the document and confirm the key details before deciding.
+            } @else {
+              You can proceed, or open the document if you want to verify.
+            }
+          </p>
+        </div>
+        @if (showAllFindings) {
+          <div class="ai-table">
+            <div class="ai-row ai-header">
+              <span>Condition</span>
+              <span>Validation rule</span>
+              <span>Pass/Fail</span>
+            </div>
+            @for (finding of ppnFindings; track finding.code) {
+              <div class="ai-row">
+                <span class="ai-code">{{ finding.code }}</span>
+                <span class="ai-rule">{{ finding.rule }}</span>
+                <span
+                  class="ai-result"
+                  [class.pass]="finding.result === 'pass'"
+                  [class.fail]="finding.result === 'fail'"
+                  [class.check]="finding.result === 'check'"
+                >
+                  {{ finding.label }}
+                </span>
+              </div>
+            }
+          </div>
+          <p class="ai-footnote">Check items marked “Check” in the source document.</p>
+        } @else {
+          <div class="ai-summary-success">
+            <span class="ai-summary-title">All PPN 006 criteria met.</span>
+            <span class="ai-summary-sub">AI found evidence for every condition.</span>
+          </div>
+          <button class="ai-toggle" type="button" (click)="toggleFindings()">
+            Show all criteria
+          </button>
+        }
+        @if (showAllFindings) {
+          <button class="ai-toggle" type="button" (click)="toggleFindings()">
+            Hide criteria
+          </button>
+        }
       </div>
+
+      <label class="review-check">
+        <input
+          type="checkbox"
+          [checked]="reviewConfirmed"
+          (change)="toggleReview($any($event.target).checked)"
+        />
+        <span>I have reviewed the original document.</span>
+      </label>
 
       <div class="supplier-edit">
         <label class="field-label" for="supplier-name">Supplier name</label>
@@ -45,23 +89,6 @@
         <p class="supplier-hint">
           This name groups the supplier's assessment history.
         </p>
-      </div>
-
-      <label class="review-check">
-        <input
-          type="checkbox"
-          [checked]="reviewConfirmed"
-          (change)="toggleReview($any($event.target).checked)"
-        />
-        <span>I have reviewed the original document.</span>
-      </label>
-
-      <div class="ai-summary">
-        <p class="ai-label">AI review completed:</p>
-        <ul>
-          <li>Document structure checked</li>
-          <li>Key dates identified</li>
-        </ul>
       </div>
 
       <div class="decision-section">

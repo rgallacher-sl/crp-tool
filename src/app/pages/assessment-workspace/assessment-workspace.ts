@@ -19,6 +19,19 @@ export class AssessmentWorkspaceComponent implements OnInit {
   error = '';
   supplierName = '';
   reviewConfirmed = false;
+  showAllFindings = false;
+  ppnFindings = [
+    { code: 'CP1', rule: 'Net Zero year ≤ 2050', result: 'pass', label: 'Pass' },
+    { code: 'CP2', rule: 'Baseline year and emissions present', result: 'pass', label: 'Pass' },
+    { code: 'CP3', rule: 'Scope 1 value present and > 0 or explicitly zero', result: 'pass', label: 'Pass' },
+    { code: 'CP4', rule: 'Scope 2 value present', result: 'pass', label: 'Pass' },
+    { code: 'CP5', rule: 'All five Scope 3 categories reported', result: 'check', label: 'Check' },
+    { code: 'CP6', rule: 'Emissions in tCO2e format', result: 'pass', label: 'Pass' },
+    { code: 'CP7', rule: 'At least one environmental measure documented', result: 'pass', label: 'Pass' },
+    { code: 'CP8', rule: 'CRP URL accessible and public', result: 'pass', label: 'Pass' },
+    { code: 'CP9', rule: 'Director name, title, and date present', result: 'pass', label: 'Pass' },
+    { code: 'CP10', rule: 'Sign-off date within 6 months of financial year-end', result: 'check', label: 'Check' },
+  ];
 
   constructor(
     private route: ActivatedRoute,
@@ -52,6 +65,7 @@ export class AssessmentWorkspaceComponent implements OnInit {
     this.assessment = assessment;
     this.supplierName = assessment.supplierName;
     this.reviewConfirmed = assessment.reviewCompleted;
+    this.showAllFindings = !this.areAllFindingsPass();
   }
 
   selectOutcome(outcome: AssessmentOutcome): void {
@@ -94,5 +108,13 @@ export class AssessmentWorkspaceComponent implements OnInit {
     );
 
     this.router.navigate(['/assessments', this.assessment.id, 'complete']);
+  }
+
+  toggleFindings(): void {
+    this.showAllFindings = !this.showAllFindings;
+  }
+
+  private areAllFindingsPass(): boolean {
+    return this.ppnFindings.every(finding => finding.result === 'pass');
   }
 }

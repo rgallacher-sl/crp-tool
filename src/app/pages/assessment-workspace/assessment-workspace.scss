@@ -83,6 +83,10 @@
   }
 }
 
+.ai-summary .review-banner {
+  margin: 0 0 12px;
+}
+
 .review-check {
   display: flex;
   gap: 10px;
@@ -146,17 +150,119 @@
   .ai-label {
     font-weight: 500;
     color: var(--text-secondary);
-    margin-bottom: 4px;
+    margin-bottom: 10px;
   }
 
-  ul {
-    list-style: disc;
-    padding-left: 18px;
-    margin: 0;
-    color: var(--text-tertiary);
+  .ai-summary-success {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--success-bg);
+    background: var(--success-bg);
+    color: var(--success-color);
+    font-size: 0.8125rem;
+  }
 
-    li {
-      margin-bottom: 2px;
+  .ai-summary-title {
+    font-weight: 600;
+  }
+
+  .ai-summary-sub {
+    color: var(--text-secondary);
+  }
+
+  .ai-table {
+    display: grid;
+    gap: 6px;
+  }
+
+  .ai-row {
+    display: grid;
+    grid-template-columns: 72px 1fr 88px;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    background: white;
+    border: 1px solid var(--border-color);
+  }
+
+  .ai-header {
+    background: transparent;
+    border: none;
+    padding: 0 8px 4px;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.6875rem;
+  }
+
+  .ai-code {
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+
+  .ai-rule {
+    color: var(--text-secondary);
+  }
+
+  .ai-result {
+    justify-self: end;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    background: var(--bg-subtle);
+    color: var(--text-secondary);
+  }
+
+  .ai-result.pass {
+    background: var(--success-bg);
+    color: var(--success-color);
+  }
+
+  .ai-result.fail {
+    background: rgba(197, 34, 31, 0.12);
+    color: var(--error-color);
+  }
+
+  .ai-result.check {
+    background: rgba(176, 94, 13, 0.12);
+    color: var(--warning-color);
+  }
+
+  .ai-footnote {
+    margin-top: 10px;
+    color: var(--text-tertiary);
+  }
+
+  .ai-toggle {
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    color: var(--link-color);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  @media (max-width: 600px) {
+    .ai-header {
+      display: none;
+    }
+
+    .ai-row {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+
+    .ai-result {
+      justify-self: start;
     }
   }
 }
