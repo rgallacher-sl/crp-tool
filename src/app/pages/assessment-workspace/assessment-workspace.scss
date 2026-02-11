@@ -202,7 +202,7 @@
 
   .ai-summary-row {
     display: grid;
-    grid-template-columns: 72px 1fr 120px 160px;
+    grid-template-columns: 72px 1fr 120px;
     align-items: start;
     gap: 12px;
     padding: 10px 0;
@@ -234,21 +234,6 @@
   .ai-summary-status {
     margin: 0;
     text-align: right;
-  }
-
-  .ai-summary-feedback {
-    margin: 0;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .finding-select {
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 4px 8px;
-    font-size: 0.75rem;
-    background: #fff;
-    color: var(--text-primary);
   }
 
   .ai-result {
@@ -317,10 +302,6 @@
 
   .ai-summary-status {
     text-align: left;
-  }
-
-  .ai-summary-feedback {
-    justify-content: flex-start;
   }
 }
 

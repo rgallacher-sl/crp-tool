@@ -26,7 +26,6 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'pass',
       label: 'Pass',
       evidence: 'Net Zero target stated as 2045 (Executive summary).',
-      reviewer: null,
     },
     {
       code: 'CP2',
@@ -34,7 +33,6 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'pass',
       label: 'Pass',
       evidence: 'Baseline year 2019 with totals listed in emissions table.',
-      reviewer: null,
     },
     {
       code: 'CP3',
@@ -42,7 +40,6 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'pass',
       label: 'Pass',
       evidence: 'Scope 1 shown as 210 tCO2e in 2019 baseline.',
-      reviewer: null,
     },
     {
       code: 'CP4',
@@ -50,7 +47,6 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'pass',
       label: 'Pass',
       evidence: 'Scope 2 reported alongside Scope 1 in table.',
-      reviewer: null,
     },
     {
       code: 'CP5',
@@ -58,7 +54,6 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'check',
       label: 'Check',
       evidence: 'Scope 3 list includes 4 categories; one appears missing.',
-      reviewer: null,
     },
     {
       code: 'CP6',
@@ -66,7 +61,6 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'pass',
       label: 'Pass',
       evidence: 'All emissions totals expressed in tCO2e units.',
-      reviewer: null,
     },
     {
       code: 'CP7',
@@ -74,7 +68,6 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'pass',
       label: 'Pass',
       evidence: 'Measures section lists fleet electrification and retrofit plan.',
-      reviewer: null,
     },
     {
       code: 'CP8',
@@ -82,7 +75,6 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'pass',
       label: 'Pass',
       evidence: 'Public PDF retrieved from supplied link.',
-      reviewer: null,
     },
     {
       code: 'CP9',
@@ -90,7 +82,6 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'pass',
       label: 'Pass',
       evidence: 'Signed by Operations Director on 12 Jan 2025.',
-      reviewer: null,
     },
     {
       code: 'CP10',
@@ -98,7 +89,6 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'check',
       label: 'Check',
       evidence: 'Financial year-end not explicitly stated.',
-      reviewer: null,
     },
   ];
 

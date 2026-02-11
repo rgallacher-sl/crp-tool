@@ -119,21 +119,6 @@
                       {{ finding.label }}
                     </span>
                   </dd>
-                  <dd class="ai-summary-feedback">
-                    <label class="sr-only" [for]="'feedback-' + finding.code">
-                      Reviewer feedback for {{ finding.code }}
-                    </label>
-                    <select
-                      class="finding-select"
-                      [id]="'feedback-' + finding.code"
-                      [(ngModel)]="finding.reviewer"
-                    >
-                      <option [ngValue]="null">No feedback</option>
-                      <option value="agree">Looks correct</option>
-                      <option value="check">Needs review</option>
-                      <option value="disagree">Incorrect</option>
-                    </select>
-                  </dd>
                 </div>
               }
             </dl>
