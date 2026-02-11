@@ -120,19 +120,39 @@
                     </span>
                   </dd>
                   <dd class="ai-summary-feedback">
-                    <label class="sr-only" [for]="'feedback-' + finding.code">
-                      Reviewer feedback for {{ finding.code }}
-                    </label>
-                    <select
-                      class="finding-select"
-                      [id]="'feedback-' + finding.code"
-                      [(ngModel)]="finding.reviewer"
-                    >
-                      <option [ngValue]="null">No feedback</option>
-                      <option value="agree">Looks correct</option>
-                      <option value="check">Needs review</option>
-                      <option value="disagree">Incorrect</option>
-                    </select>
+                    <div class="feedback-stack">
+                      @if (finding.reviewer !== 'agree') {
+                        <span class="feedback-status">{{ getReviewerLabel(finding.reviewer) }}</span>
+                      }
+                      <button
+                        class="override-toggle"
+                        type="button"
+                        (click)="toggleOverride(finding)"
+                        [attr.aria-expanded]="finding.override"
+                        [attr.aria-controls]="'override-' + finding.code"
+                      >
+                        {{ finding.override ? 'Cancel override' : 'Override' }}
+                      </button>
+                      @if (finding.override) {
+                        <label class="sr-only" [for]="'feedback-' + finding.code">
+                          Reviewer feedback for {{ finding.code }}
+                        </label>
+                        <select
+                          class="finding-select"
+                          [id]="'feedback-' + finding.code"
+                          [(ngModel)]="finding.reviewer"
+                          (ngModelChange)="onFeedbackChange(finding)"
+                          [attr.aria-describedby]="'override-' + finding.code"
+                        >
+                          <option value="agree">Agree</option>
+                          <option value="check">Unsure (needs review)</option>
+                          <option value="disagree">Disagree</option>
+                        </select>
+                        <span class="sr-only" [id]="'override-' + finding.code">
+                          Override AI feedback for {{ finding.code }}
+                        </span>
+                      }
+                    </div>
                   </dd>
                 </div>
               }
@@ -142,44 +162,17 @@
       </div>
 
       <div class="decision-section">
-        <h3>Does this supplier meet PPN 006 requirements?</h3>
+        <h3>Assessment outcome</h3>
         <p class="decision-question">
-          Select the most accurate outcome.
+          The outcome is derived from your criteria feedback.
         </p>
 
-        <div class="outcome-options">
-          <label class="outcome-option">
-            <input
-              type="radio"
-              name="outcome"
-              value="meets"
-              [checked]="selectedOutcome === 'meets'"
-              (change)="selectOutcome('meets')"
-            />
-            <span class="radio-label">Meets requirements</span>
-          </label>
-
-          <label class="outcome-option">
-            <input
-              type="radio"
-              name="outcome"
-              value="does_not_meet"
-              [checked]="selectedOutcome === 'does_not_meet'"
-              (change)="selectOutcome('does_not_meet')"
-            />
-            <span class="radio-label">Does not meet requirements</span>
-          </label>
-
-          <label class="outcome-option">
-            <input
-              type="radio"
-              name="outcome"
-              value="unclear"
-              [checked]="selectedOutcome === 'unclear'"
-              (change)="selectOutcome('unclear')"
-            />
-            <span class="radio-label">Unclear</span>
-          </label>
+        <div class="outcome-summary">
+          <span class="outcome-label">Result</span>
+          <span class="outcome-value" [attr.data-outcome]="computedOutcome">
+            {{ computedOutcomeLabel }}
+          </span>
+          <span class="outcome-note">{{ computedOutcomeNote }}</span>
         </div>
 
         <div class="notes-section">
@@ -189,7 +182,12 @@
             class="text-area"
             [(ngModel)]="notes"
             rows="4"
+            [attr.aria-required]="requiresNotes"
+            [placeholder]="requiresNotes ? 'Notes are required when criteria need review or are incorrect.' : ''"
           ></textarea>
+          @if (requiresNotes) {
+            <p class="notes-required">Required when any criterion is marked “Unsure” or “Incorrect”.</p>
+          }
         </div>
 
         @if (error) {

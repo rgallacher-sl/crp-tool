@@ -14,7 +14,6 @@ import { Assessment, AssessmentOutcome } from '../../models/assessment.model';
 })
 export class AssessmentWorkspaceComponent implements OnInit {
   assessment: Assessment | null = null;
-  selectedOutcome: AssessmentOutcome | null = null;
   notes = '';
   error = '';
   supplierName = '';
@@ -26,7 +25,9 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'pass',
       label: 'Pass',
       evidence: 'Net Zero target stated as 2045 (Executive summary).',
-      reviewer: null,
+      reason: 'Net Zero year is stated, but double-check the target year in the summary.',
+      reviewer: 'agree',
+      override: false,
     },
     {
       code: 'CP2',
@@ -34,7 +35,9 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'pass',
       label: 'Pass',
       evidence: 'Baseline year 2019 with totals listed in emissions table.',
-      reviewer: null,
+      reason: 'Baseline year or emissions table may be missing or unclear.',
+      reviewer: 'agree',
+      override: false,
     },
     {
       code: 'CP3',
@@ -42,7 +45,9 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'pass',
       label: 'Pass',
       evidence: 'Scope 1 shown as 210 tCO2e in 2019 baseline.',
-      reviewer: null,
+      reason: 'Scope 1 value is missing or not clearly stated.',
+      reviewer: 'agree',
+      override: false,
     },
     {
       code: 'CP4',
@@ -50,7 +55,9 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'pass',
       label: 'Pass',
       evidence: 'Scope 2 reported alongside Scope 1 in table.',
-      reviewer: null,
+      reason: 'Scope 2 value is missing or not clearly stated.',
+      reviewer: 'agree',
+      override: false,
     },
     {
       code: 'CP5',
@@ -58,7 +65,9 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'check',
       label: 'Check',
       evidence: 'Scope 3 list includes 4 categories; one appears missing.',
-      reviewer: null,
+      reason: 'One or more Scope 3 categories are missing from the plan.',
+      reviewer: 'agree',
+      override: false,
     },
     {
       code: 'CP6',
@@ -66,7 +75,9 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'pass',
       label: 'Pass',
       evidence: 'All emissions totals expressed in tCO2e units.',
-      reviewer: null,
+      reason: 'Emissions are not reported in tCO2e units.',
+      reviewer: 'agree',
+      override: false,
     },
     {
       code: 'CP7',
@@ -74,7 +85,9 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'pass',
       label: 'Pass',
       evidence: 'Measures section lists fleet electrification and retrofit plan.',
-      reviewer: null,
+      reason: 'No clear environmental measures are described.',
+      reviewer: 'agree',
+      override: false,
     },
     {
       code: 'CP8',
@@ -82,7 +95,9 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'pass',
       label: 'Pass',
       evidence: 'Public PDF retrieved from supplied link.',
-      reviewer: null,
+      reason: 'CRP URL is inaccessible or not public.',
+      reviewer: 'agree',
+      override: false,
     },
     {
       code: 'CP9',
@@ -90,7 +105,9 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'pass',
       label: 'Pass',
       evidence: 'Signed by Operations Director on 12 Jan 2025.',
-      reviewer: null,
+      reason: 'Director name, title, or sign-off date is missing.',
+      reviewer: 'agree',
+      override: false,
     },
     {
       code: 'CP10',
@@ -98,7 +115,9 @@ export class AssessmentWorkspaceComponent implements OnInit {
       result: 'check',
       label: 'Check',
       evidence: 'Financial year-end not explicitly stated.',
-      reviewer: null,
+      reason: 'Sign-off date cannot be verified against the financial year-end.',
+      reviewer: 'agree',
+      override: false,
     },
   ];
 
@@ -136,11 +155,6 @@ export class AssessmentWorkspaceComponent implements OnInit {
     this.showAllFindings = !this.areAllFindingsPass();
   }
 
-  selectOutcome(outcome: AssessmentOutcome): void {
-    this.selectedOutcome = outcome;
-    this.error = '';
-  }
-
   recordDecision(): void {
     if (!this.assessment) return;
 
@@ -150,8 +164,9 @@ export class AssessmentWorkspaceComponent implements OnInit {
       return;
     }
 
-    if (!this.selectedOutcome) {
-      this.error = 'Please select an outcome before recording your decision.';
+    const trimmedNotes = this.notes.trim();
+    if (this.requiresNotes && !trimmedNotes) {
+      this.error = 'Please add a note explaining the criteria that require review.';
       return;
     }
 
@@ -159,7 +174,7 @@ export class AssessmentWorkspaceComponent implements OnInit {
 
     this.assessmentService.completeAssessment(
       this.assessment.id,
-      this.selectedOutcome,
+      this.computedOutcome,
       this.notes,
     );
 
@@ -168,6 +183,102 @@ export class AssessmentWorkspaceComponent implements OnInit {
 
   toggleFindings(): void {
     this.showAllFindings = !this.showAllFindings;
+  }
+
+  onFeedbackChange(finding: { code: string; reviewer: string | null; reason?: string | null }): void {
+    if (!finding.reviewer || !finding.reason) return;
+    if (finding.reviewer === 'agree') return;
+    const line = `${finding.code}: ${finding.reason}`;
+    if (!this.notes.trim()) {
+      this.notes = line;
+      return;
+    }
+    const existing = this.notes.split('\n').map(entry => entry.trim());
+    if (!existing.includes(line)) {
+      this.notes = `${this.notes.trim()}\n${line}`;
+    }
+  }
+
+  toggleOverride(finding: { code: string; reviewer: string | null; reason?: string | null; override?: boolean }): void {
+    finding.override = !finding.override;
+    if (!finding.override) {
+      const wasReview = finding.reviewer === 'disagree' || finding.reviewer === 'check';
+      finding.reviewer = 'agree';
+      if (wasReview && finding.reason) {
+        this.removeReasonLine(finding.code, finding.reason);
+      }
+    }
+  }
+
+  private removeReasonLine(code: string, reason: string): void {
+    const line = `${code}: ${reason}`;
+    const lines = this.notes.split('\n').map(entry => entry.trim()).filter(Boolean);
+    const next = lines.filter(entry => entry !== line);
+    this.notes = next.join('\n');
+  }
+
+  get requiresNotes(): boolean {
+    return this.ppnFindings.some(finding => finding.reviewer === 'disagree' || finding.reviewer === 'check');
+  }
+
+  getReviewerLabel(reviewer: string | null): string {
+    if (reviewer === 'disagree') return 'Disagree';
+    if (reviewer === 'check') return 'Unsure';
+    return 'Agree';
+  }
+
+  get computedOutcome(): AssessmentOutcome {
+    let hasFail = false;
+    let hasUnclear = false;
+
+    for (const finding of this.ppnFindings) {
+      const reviewer = finding.reviewer;
+      if (!reviewer || reviewer === 'check') {
+        hasUnclear = true;
+        continue;
+      }
+
+      const effective =
+        reviewer === 'agree'
+          ? finding.result
+          : finding.result === 'fail'
+            ? 'pass'
+            : 'fail';
+
+      if (effective === 'fail') {
+        hasFail = true;
+      } else if (effective === 'check') {
+        hasUnclear = true;
+      }
+    }
+
+    if (hasFail) return 'does_not_meet';
+    if (hasUnclear) return 'unclear';
+    return 'meets';
+  }
+
+  get computedOutcomeLabel(): string {
+    return this.assessmentService.getOutcomeLabel(this.computedOutcome);
+  }
+
+  get computedOutcomeNote(): string {
+    const pending = this.ppnFindings.filter(finding => !finding.reviewer).length;
+    const unsure = this.ppnFindings.filter(finding => finding.reviewer === 'check').length;
+    if (this.computedOutcome === 'unclear') {
+      if (pending && unsure) {
+        return 'Some criteria are not reviewed and some are marked as unsure.';
+      }
+      if (pending) {
+        return 'Some criteria are not yet reviewed.';
+      }
+      if (unsure) {
+        return 'Some criteria are marked as unsure.';
+      }
+    }
+    if (this.computedOutcome === 'meets') {
+      return 'All criteria are agreed and passing.';
+    }
+    return 'At least one criterion is marked as not meeting the requirement.';
   }
 
   get aiRecommendation(): { label: string; status: 'pass' | 'fail' | 'check' } {

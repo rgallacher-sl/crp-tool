@@ -236,20 +236,43 @@
     text-align: right;
   }
 
-  .ai-summary-feedback {
-    margin: 0;
-    display: flex;
-    justify-content: flex-end;
-  }
+.ai-summary-feedback {
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
 
-  .finding-select {
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 4px 8px;
-    font-size: 0.75rem;
-    background: #fff;
-    color: var(--text-primary);
-  }
+.feedback-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.feedback-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.override-toggle {
+  background: transparent;
+  border: none;
+  color: var(--link-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.finding-select {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  background: #fff;
+  color: var(--text-primary);
+}
 
   .ai-result {
     padding: 2px 8px;
@@ -322,6 +345,10 @@
   .ai-summary-feedback {
     justify-content: flex-start;
   }
+
+  .feedback-stack {
+    align-items: flex-start;
+  }
 }
 
 .decision-section {
@@ -339,35 +366,51 @@
   }
 }
 
-.outcome-options {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 12px;
-}
-
-.outcome-option {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  font-size: 0.9375rem;
-  color: var(--text-primary);
-
-  input[type="radio"] {
-    width: 16px;
-    height: 16px;
-  }
-
-  .radio-label {
-    line-height: 1.4;
-  }
-}
-
 .unclear-hint {
   font-size: 0.8125rem;
   color: var(--text-tertiary);
   margin-bottom: 20px;
+}
+
+.outcome-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 16px;
+}
+
+.outcome-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-tertiary);
+}
+
+.outcome-value {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.outcome-value[data-outcome="meets"] {
+  color: var(--success-color);
+}
+
+.outcome-value[data-outcome="does_not_meet"] {
+  color: var(--error-color);
+}
+
+.outcome-value[data-outcome="unclear"] {
+  color: var(--warning-color);
+}
+
+.outcome-note {
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
 }
 
 .notes-section {
@@ -380,6 +423,12 @@
     margin-bottom: 6px;
     font-size: 0.875rem;
   }
+}
+
+.notes-required {
+  margin: 6px 0 0;
+  font-size: 0.75rem;
+  color: var(--warning-color);
 }
 
 .text-area {
