@@ -108,38 +108,104 @@
   margin: 8px 0 0;
 }
 
-.ai-summary {
-  background: var(--bg-subtle);
+.ai-assessment {
   border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 12px 16px;
+  border-radius: 10px;
+  background: #fff;
   margin-bottom: 24px;
-  font-size: 0.8125rem;
+  overflow: hidden;
+}
 
-  .ai-label {
-    font-weight: 500;
-    color: var(--text-secondary);
-    margin-bottom: 10px;
-  }
+.ai-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+  background: transparent;
 
-  .ai-summary-success {
+  .ai-metric {
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    padding: 10px 12px;
-    border-radius: 6px;
-    border: 1px solid var(--success-bg);
+    gap: 4px;
+  }
+
+  .ai-metric-label {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .ai-metric-value {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+  }
+
+  .ai-recommendation {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    width: fit-content;
+    background: var(--bg-subtle);
+    color: var(--text-secondary);
+    gap: 6px;
+  }
+
+  .ai-recommendation-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .ai-recommendation.pass {
     background: var(--success-bg);
     color: var(--success-color);
-    font-size: 0.8125rem;
   }
 
-  .ai-summary-title {
+  .ai-recommendation.fail {
+    background: rgba(197, 34, 31, 0.12);
+    color: var(--error-color);
+  }
+
+  .ai-recommendation.check {
+    background: rgba(176, 94, 13, 0.12);
+    color: var(--warning-color);
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ai-summary {
+  background: var(--bg-subtle);
+  padding: 16px;
+  font-size: 0.8125rem;
+
+  .ai-summary-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .ai-title {
+    margin: 0 0 4px;
     font-weight: 600;
+    color: var(--text-primary);
+    font-size: 1rem;
   }
 
-  .ai-summary-sub {
+  .ai-caption {
+    margin: 0;
     color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.4;
   }
 
   .ai-summary-list {
@@ -149,7 +215,7 @@
 
   .ai-summary-row {
     display: grid;
-    grid-template-columns: 72px 1fr 120px;
+    grid-template-columns: 72px 1fr 120px 160px;
     align-items: start;
     gap: 12px;
     padding: 10px 0;
@@ -171,9 +237,31 @@
     color: var(--text-secondary);
   }
 
+  .ai-summary-evidence {
+    display: block;
+    margin-top: 6px;
+    color: var(--text-tertiary);
+    font-size: 0.75rem;
+  }
+
   .ai-summary-status {
     margin: 0;
     text-align: right;
+  }
+
+  .ai-summary-feedback {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .finding-select {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    background: #fff;
+    color: var(--text-primary);
   }
 
   .ai-result {
@@ -202,26 +290,37 @@
     color: var(--warning-color);
   }
 
-  .ai-toggle {
-    margin-top: 10px;
-    background: transparent;
-    border: none;
-    color: var(--link-color);
-    font-size: 0.8125rem;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 0;
+}
+
+.ai-label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 16px 0 10px;
+}
+
+.ai-toggle {
+  background: transparent;
+  border: none;
+  color: var(--link-color);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .ai-summary-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 
-  @media (max-width: 600px) {
-    .ai-summary-row {
-      grid-template-columns: 1fr;
-      gap: 6px;
-    }
+  .ai-summary-status {
+    text-align: left;
+  }
 
-    .ai-summary-status {
-      text-align: left;
-    }
+  .ai-summary-feedback {
+    justify-content: flex-start;
   }
 }
 
@@ -306,10 +405,27 @@
   }
 }
 
+.decision-consequence {
+  color: var(--text-tertiary);
+  font-size: 0.8125rem;
+  margin-bottom: 12px;
+}
+
 .error-message {
   color: var(--error-color);
   font-size: 0.875rem;
   margin-bottom: 12px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .btn-record {

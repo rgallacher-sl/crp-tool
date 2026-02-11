@@ -20,16 +20,86 @@ export class AssessmentWorkspaceComponent implements OnInit {
   supplierName = '';
   showAllFindings = false;
   ppnFindings = [
-    { code: 'CP1', rule: 'Net Zero year ≤ 2050', result: 'pass', label: 'Pass' },
-    { code: 'CP2', rule: 'Baseline year and emissions present', result: 'pass', label: 'Pass' },
-    { code: 'CP3', rule: 'Scope 1 value present and > 0 or explicitly zero', result: 'pass', label: 'Pass' },
-    { code: 'CP4', rule: 'Scope 2 value present', result: 'pass', label: 'Pass' },
-    { code: 'CP5', rule: 'All five Scope 3 categories reported', result: 'check', label: 'Check' },
-    { code: 'CP6', rule: 'Emissions in tCO2e format', result: 'pass', label: 'Pass' },
-    { code: 'CP7', rule: 'At least one environmental measure documented', result: 'pass', label: 'Pass' },
-    { code: 'CP8', rule: 'CRP URL accessible and public', result: 'pass', label: 'Pass' },
-    { code: 'CP9', rule: 'Director name, title, and date present', result: 'pass', label: 'Pass' },
-    { code: 'CP10', rule: 'Sign-off date within 6 months of financial year-end', result: 'check', label: 'Check' },
+    {
+      code: 'CP1',
+      rule: 'Net Zero year ≤ 2050',
+      result: 'pass',
+      label: 'Pass',
+      evidence: 'Net Zero target stated as 2045 (Executive summary).',
+      reviewer: null,
+    },
+    {
+      code: 'CP2',
+      rule: 'Baseline year and emissions present',
+      result: 'pass',
+      label: 'Pass',
+      evidence: 'Baseline year 2019 with totals listed in emissions table.',
+      reviewer: null,
+    },
+    {
+      code: 'CP3',
+      rule: 'Scope 1 value present and > 0 or explicitly zero',
+      result: 'pass',
+      label: 'Pass',
+      evidence: 'Scope 1 shown as 210 tCO2e in 2019 baseline.',
+      reviewer: null,
+    },
+    {
+      code: 'CP4',
+      rule: 'Scope 2 value present',
+      result: 'pass',
+      label: 'Pass',
+      evidence: 'Scope 2 reported alongside Scope 1 in table.',
+      reviewer: null,
+    },
+    {
+      code: 'CP5',
+      rule: 'All five Scope 3 categories reported',
+      result: 'check',
+      label: 'Check',
+      evidence: 'Scope 3 list includes 4 categories; one appears missing.',
+      reviewer: null,
+    },
+    {
+      code: 'CP6',
+      rule: 'Emissions in tCO2e format',
+      result: 'pass',
+      label: 'Pass',
+      evidence: 'All emissions totals expressed in tCO2e units.',
+      reviewer: null,
+    },
+    {
+      code: 'CP7',
+      rule: 'At least one environmental measure documented',
+      result: 'pass',
+      label: 'Pass',
+      evidence: 'Measures section lists fleet electrification and retrofit plan.',
+      reviewer: null,
+    },
+    {
+      code: 'CP8',
+      rule: 'CRP URL accessible and public',
+      result: 'pass',
+      label: 'Pass',
+      evidence: 'Public PDF retrieved from supplied link.',
+      reviewer: null,
+    },
+    {
+      code: 'CP9',
+      rule: 'Director name, title, and date present',
+      result: 'pass',
+      label: 'Pass',
+      evidence: 'Signed by Operations Director on 12 Jan 2025.',
+      reviewer: null,
+    },
+    {
+      code: 'CP10',
+      rule: 'Sign-off date within 6 months of financial year-end',
+      result: 'check',
+      label: 'Check',
+      evidence: 'Financial year-end not explicitly stated.',
+      reviewer: null,
+    },
   ];
 
   constructor(
@@ -98,6 +168,14 @@ export class AssessmentWorkspaceComponent implements OnInit {
 
   toggleFindings(): void {
     this.showAllFindings = !this.showAllFindings;
+  }
+
+  get aiRecommendation(): { label: string; status: 'pass' | 'fail' | 'check' } {
+    const hasFail = this.ppnFindings.some(finding => finding.result === 'fail');
+    const hasCheck = this.ppnFindings.some(finding => finding.result === 'check');
+    if (hasFail) return { label: 'Does not meet requirements', status: 'fail' };
+    if (hasCheck) return { label: 'Needs review', status: 'check' };
+    return { label: 'Meets requirements', status: 'pass' };
   }
 
   private areAllFindingsPass(): boolean {
