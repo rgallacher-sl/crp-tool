@@ -64,14 +64,22 @@
                 The AI checks the CRP against PPN 006 and highlights evidence. You still make the final decision.
               </p>
             </div>
-            <button class="ai-toggle" type="button" (click)="toggleFindings()">
-              {{ showAllFindings ? 'Hide criteria' : 'Show criteria' }}
+            <button
+              class="ai-criteria-toggle"
+              type="button"
+              (click)="toggleFindings()"
+              [attr.aria-expanded]="showAllFindings"
+              aria-controls="ai-criteria"
+            >
+              <span>{{ showAllFindings ? 'Hide criteria' : 'Show criteria' }}</span>
+              <svg class="chevron" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M5 7l5 6 5-6" fill="currentColor" />
+              </svg>
             </button>
           </div>
 
           <div class="ai-metrics">
             <div class="ai-metric">
-              <span class="ai-metric-label">AI recommendation</span>
               <span
                 class="ai-recommendation"
                 [class.pass]="aiRecommendation.status === 'pass'"
@@ -89,17 +97,11 @@
                 {{ aiRecommendation.label }}
               </span>
             </div>
-            <div class="ai-metric">
-              <span class="ai-metric-label">AI confidence</span>
-              <span class="ai-metric-value">
-                {{ (assessment?.aiConfidence ?? 0) * 100 | number: '1.0-0' }}%
-              </span>
-            </div>
           </div>
 
           @if (showAllFindings) {
             <p class="ai-label">AI findings by criterion:</p>
-            <dl class="ai-summary-list">
+            <dl class="ai-summary-list" id="ai-criteria">
               @for (finding of ppnFindings; track finding.code) {
                 <div class="ai-summary-row">
                   <dt class="ai-summary-key">{{ finding.code }}</dt>

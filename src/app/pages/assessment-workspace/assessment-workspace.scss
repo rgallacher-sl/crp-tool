@@ -118,7 +118,7 @@
 
 .ai-metrics {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 12px;
   margin-top: 16px;
   background: transparent;
@@ -127,19 +127,6 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-  }
-
-  .ai-metric-label {
-    font-size: 0.75rem;
-    color: var(--text-tertiary);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-
-  .ai-metric-value {
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: var(--text-primary);
   }
 
   .ai-recommendation {
@@ -298,7 +285,10 @@
   margin: 16px 0 10px;
 }
 
-.ai-toggle {
+.ai-criteria-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: transparent;
   border: none;
   color: var(--link-color);
@@ -307,6 +297,16 @@
   cursor: pointer;
   padding: 0;
   white-space: nowrap;
+
+  .chevron {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+  }
+}
+
+.ai-criteria-toggle[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
 }
 
 @media (max-width: 600px) {
