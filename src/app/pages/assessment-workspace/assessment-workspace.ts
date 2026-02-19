@@ -18,76 +18,77 @@ export class AssessmentWorkspaceComponent implements OnInit {
   notes = '';
   error = '';
   supplierName = '';
-  showAllFindings = false;
+  pendingOverrideConfirmation = false;
+  overrideConfirmed = false;
   ppnFindings = [
     {
-      code: 'CP1',
+      code: '1',
       rule: 'Net Zero year ≤ 2050',
       result: 'pass',
       label: 'Pass',
       evidence: 'Net Zero target stated as 2045 (Executive summary).',
     },
     {
-      code: 'CP2',
+      code: '2',
       rule: 'Baseline year and emissions present',
       result: 'pass',
       label: 'Pass',
       evidence: 'Baseline year 2019 with totals listed in emissions table.',
     },
     {
-      code: 'CP3',
+      code: '3',
       rule: 'Scope 1 value present and > 0 or explicitly zero',
       result: 'pass',
       label: 'Pass',
       evidence: 'Scope 1 shown as 210 tCO2e in 2019 baseline.',
     },
     {
-      code: 'CP4',
+      code: '4',
       rule: 'Scope 2 value present',
       result: 'pass',
       label: 'Pass',
       evidence: 'Scope 2 reported alongside Scope 1 in table.',
     },
     {
-      code: 'CP5',
+      code: '5',
       rule: 'All five Scope 3 categories reported',
       result: 'check',
       label: 'Review',
       evidence: 'Scope 3 list includes 4 categories; one appears missing.',
     },
     {
-      code: 'CP6',
+      code: '6',
       rule: 'Emissions in tCO2e format',
       result: 'pass',
       label: 'Pass',
       evidence: 'All emissions totals expressed in tCO2e units.',
     },
     {
-      code: 'CP7',
+      code: '7',
       rule: 'At least one environmental measure documented',
       result: 'pass',
       label: 'Pass',
       evidence: 'Measures section lists fleet electrification and retrofit plan.',
     },
     {
-      code: 'CP8',
+      code: '8',
       rule: 'CRP URL accessible and public',
       result: 'pass',
       label: 'Pass',
       evidence: 'Public PDF retrieved from supplied link.',
     },
     {
-      code: 'CP9',
+      code: '9',
       rule: 'Director name, title, and date present',
       result: 'pass',
       label: 'Pass',
       evidence: 'Signed by Operations Director on 12 Jan 2025.',
     },
     {
-      code: 'CP10',
+      code: '10',
       rule: 'Sign-off date within 6 months of financial year-end',
-      result: 'check',
-      label: 'Review',
+      result: 'fail',
+      label: 'Fail',
       evidence: 'Financial year-end not explicitly stated.',
     },
   ];
@@ -123,12 +124,13 @@ export class AssessmentWorkspaceComponent implements OnInit {
 
     this.assessment = assessment;
     this.supplierName = assessment.supplierName;
-    this.showAllFindings = !this.areAllFindingsPass();
   }
 
   selectOutcome(outcome: AssessmentOutcome): void {
     this.selectedOutcome = outcome;
     this.error = '';
+    this.pendingOverrideConfirmation = false;
+    this.overrideConfirmed = false;
   }
 
   recordDecision(): void {
@@ -145,6 +147,25 @@ export class AssessmentWorkspaceComponent implements OnInit {
       return;
     }
 
+    if (this.isOutcomeDisagreement()) {
+      if (!this.pendingOverrideConfirmation) {
+        this.pendingOverrideConfirmation = true;
+        this.overrideConfirmed = false;
+        this.error = '';
+        return;
+      }
+
+      if (!this.overrideConfirmed) {
+        this.error = 'Please confirm that you want to override the AI result.';
+        return;
+      }
+
+      if (this.notes.trim().length < 20) {
+        this.error = 'Please add at least 20 characters of notes to explain the override.';
+        return;
+      }
+    }
+
     this.assessmentService.updateSupplierName(this.assessment.id, trimmedName);
 
     this.assessmentService.completeAssessment(
@@ -156,19 +177,42 @@ export class AssessmentWorkspaceComponent implements OnInit {
     this.router.navigate(['/assessments', this.assessment.id, 'complete']);
   }
 
-  toggleFindings(): void {
-    this.showAllFindings = !this.showAllFindings;
-  }
-
-  get aiRecommendation(): { label: string; status: 'pass' | 'fail' | 'check' } {
+  get aiOutcome(): AssessmentOutcome {
     const hasFail = this.ppnFindings.some(finding => finding.result === 'fail');
-    const hasCheck = this.ppnFindings.some(finding => finding.result === 'check');
-    if (hasFail) return { label: 'Does not meet requirements', status: 'fail' };
-    if (hasCheck) return { label: 'Needs review', status: 'check' };
-    return { label: 'Meets requirements', status: 'pass' };
+    if (hasFail) return 'does_not_meet';
+    const hasReview = this.ppnFindings.some(finding => finding.result === 'check');
+    if (hasReview) return 'unclear';
+    return 'meets';
   }
 
-  private areAllFindingsPass(): boolean {
-    return this.ppnFindings.every(finding => finding.result === 'pass');
+  get showOverridePanel(): boolean {
+    return this.pendingOverrideConfirmation && this.isOutcomeDisagreement();
+  }
+
+  get aiOutcomeLabel(): string {
+    if (this.aiOutcome === 'meets') return 'Meets requirements';
+    if (this.aiOutcome === 'does_not_meet') return 'Does not meet requirements';
+    return 'Unclear';
+  }
+
+  get selectedOutcomeLabel(): string {
+    if (this.selectedOutcome === 'meets') return 'Meets requirements';
+    if (this.selectedOutcome === 'does_not_meet') return 'Does not meet requirements';
+    if (this.selectedOutcome === 'unclear') return 'Unclear';
+    return '';
+  }
+
+  get disagreementFindings(): typeof this.ppnFindings {
+    if (this.aiOutcome === 'does_not_meet') {
+      return this.ppnFindings.filter(finding => finding.result === 'fail');
+    }
+    if (this.aiOutcome === 'unclear') {
+      return this.ppnFindings.filter(finding => finding.result === 'check');
+    }
+    return [];
+  }
+
+  private isOutcomeDisagreement(): boolean {
+    return this.selectedOutcome !== null && this.selectedOutcome !== this.aiOutcome;
   }
 }

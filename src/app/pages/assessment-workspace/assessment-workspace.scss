@@ -116,54 +116,6 @@
   overflow: hidden;
 }
 
-.ai-metrics {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 12px;
-  margin-top: 16px;
-  background: transparent;
-
-  .ai-metric {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .ai-recommendation {
-    display: inline-flex;
-    align-items: center;
-    padding: 4px 10px;
-    border-radius: 999px;
-    font-weight: 600;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    width: fit-content;
-    background: var(--bg-subtle);
-    color: var(--text-secondary);
-    gap: 6px;
-  }
-
-  .ai-recommendation.pass {
-    background: var(--success-bg);
-    color: var(--success-color);
-  }
-
-  .ai-recommendation.fail {
-    background: rgba(197, 34, 31, 0.12);
-    color: var(--error-color);
-  }
-
-  .ai-recommendation.check {
-    background: rgba(176, 94, 13, 0.12);
-    color: var(--warning-color);
-  }
-
-  @media (max-width: 700px) {
-    grid-template-columns: 1fr;
-  }
-}
-
 .ai-summary {
   background: var(--bg-subtle);
   padding: 16px;
@@ -274,36 +226,6 @@
   direction: ltr;
 }
 
-.ai-label {
-  font-weight: 500;
-  color: var(--text-secondary);
-  margin: 16px 0 10px;
-}
-
-.ai-criteria-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: transparent;
-  border: none;
-  color: var(--link-color);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  cursor: pointer;
-  padding: 0;
-  white-space: nowrap;
-
-  .chevron {
-    width: 16px;
-    height: 16px;
-    transition: transform 0.2s ease;
-  }
-}
-
-.ai-criteria-toggle[aria-expanded="true"] .chevron {
-  transform: rotate(180deg);
-}
-
 @media (max-width: 600px) {
   .ai-summary-row {
     grid-template-columns: 1fr;
@@ -406,6 +328,50 @@
   color: var(--error-color);
   font-size: 0.875rem;
   margin-bottom: 12px;
+}
+
+.override-guardrail {
+  border: 1px solid rgba(176, 94, 13, 0.35);
+  background: rgba(176, 94, 13, 0.08);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.override-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.override-summary {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 6px;
+}
+
+.override-copy {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 8px;
+}
+
+.override-findings {
+  margin: 0 0 10px;
+  padding-left: 18px;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.override-confirm {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+
+  input[type="checkbox"] {
+    margin-top: 2px;
+  }
 }
 
 .sr-only {

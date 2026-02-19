@@ -61,69 +61,38 @@
             <div>
               <p class="ai-title">AI assessment</p>
             </div>
-            <button
-              class="ai-criteria-toggle"
-              type="button"
-              (click)="toggleFindings()"
-              [attr.aria-expanded]="showAllFindings"
-              aria-controls="ai-criteria"
-            >
-              <span>{{ showAllFindings ? 'Hide criteria' : 'Show criteria' }}</span>
-              <svg class="chevron" viewBox="0 0 20 20" aria-hidden="true">
-                <path d="M5 7l5 6 5-6" fill="currentColor" />
-              </svg>
-            </button>
           </div>
 
-          <div class="ai-metrics">
-            <div class="ai-metric">
-              <span
-                class="ai-recommendation"
-                [class.pass]="aiRecommendation.status === 'pass'"
-                [class.fail]="aiRecommendation.status === 'fail'"
-                [class.check]="aiRecommendation.status === 'check'"
-              >
-                @if (aiRecommendation.status === 'pass') {
-                  <span class="status-icon material-symbols-outlined" aria-hidden="true">check_circle</span>
-                }
-                @if (aiRecommendation.status === 'check') {
-                  <span class="status-icon material-symbols-outlined" aria-hidden="true">warning</span>
-                }
-                {{ aiRecommendation.label }}
-              </span>
-            </div>
-          </div>
-
-          @if (showAllFindings) {
-            <p class="ai-label">AI findings by criterion:</p>
-            <dl class="ai-summary-list" id="ai-criteria">
-              @for (finding of ppnFindings; track finding.code) {
-                <div class="ai-summary-row">
-                  <dt class="ai-summary-key">{{ finding.code }}</dt>
-                  <dd class="ai-summary-value">
-                    {{ finding.rule }}
-                    <span class="ai-summary-evidence">Evidence: {{ finding.evidence }}</span>
-                  </dd>
-                  <dd class="ai-summary-status">
-                    <span
-                      class="ai-result"
-                      [class.pass]="finding.result === 'pass'"
-                      [class.fail]="finding.result === 'fail'"
-                      [class.check]="finding.result === 'check'"
-                    >
-                      @if (finding.result === 'pass') {
-                        <span class="status-icon material-symbols-outlined" aria-hidden="true">check_circle</span>
-                      }
-                      @if (finding.result === 'check') {
-                        <span class="status-icon material-symbols-outlined" aria-hidden="true">warning</span>
-                      }
-                      {{ finding.label }}
-                    </span>
-                  </dd>
-                </div>
-              }
-            </dl>
-          }
+          <dl class="ai-summary-list" id="ai-criteria">
+            @for (finding of ppnFindings; track finding.code) {
+              <div class="ai-summary-row">
+                <dt class="ai-summary-key">{{ finding.code }}</dt>
+                <dd class="ai-summary-value">
+                  {{ finding.rule }}
+                  <span class="ai-summary-evidence">Evidence: {{ finding.evidence }}</span>
+                </dd>
+                <dd class="ai-summary-status">
+                  <span
+                    class="ai-result"
+                    [class.pass]="finding.result === 'pass'"
+                    [class.fail]="finding.result === 'fail'"
+                    [class.check]="finding.result === 'check'"
+                  >
+                    @if (finding.result === 'pass') {
+                      <span class="status-icon material-symbols-outlined" aria-hidden="true">check_circle</span>
+                    }
+                    @if (finding.result === 'fail') {
+                      <span class="status-icon material-symbols-outlined" aria-hidden="true">cancel</span>
+                    }
+                    @if (finding.result === 'check') {
+                      <span class="status-icon material-symbols-outlined" aria-hidden="true">warning</span>
+                    }
+                    {{ finding.label }}
+                  </span>
+                </dd>
+              </div>
+            }
+          </dl>
         </div>
       </div>
 
@@ -174,6 +143,28 @@
             rows="4"
           ></textarea>
         </div>
+
+        @if (showOverridePanel) {
+          <div class="override-guardrail">
+            <p class="override-title">Your decision differs from the AI result</p>
+            <p class="override-summary">
+              AI result: <strong>{{ aiOutcomeLabel }}</strong><br />
+              Your decision: <strong>{{ selectedOutcomeLabel }}</strong>
+            </p>
+            <p class="override-copy">
+              Please review the flagged criteria and confirm you want to continue.
+            </p>
+            <ul class="override-findings">
+              @for (finding of disagreementFindings; track finding.code) {
+                <li><strong>{{ finding.code }}</strong> - {{ finding.rule }}</li>
+              }
+            </ul>
+            <label class="override-confirm">
+              <input type="checkbox" [(ngModel)]="overrideConfirmed" />
+              <span>I confirm I reviewed the criteria and want to override the AI result.</span>
+            </label>
+          </div>
+        }
 
         @if (error) {
           <p class="error-message">{{ error }}</p>
