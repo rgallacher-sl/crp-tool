@@ -144,11 +144,6 @@
     gap: 6px;
   }
 
-  .ai-recommendation-icon {
-    width: 14px;
-    height: 14px;
-  }
-
   .ai-recommendation.pass {
     background: var(--success-bg);
     color: var(--success-color);
@@ -237,6 +232,9 @@
   }
 
   .ai-result {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
     padding: 2px 8px;
     border-radius: 999px;
     font-weight: 600;
@@ -262,6 +260,18 @@
     color: var(--warning-color);
   }
 
+}
+
+.status-icon {
+  font-family: 'Material Symbols Outlined';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  direction: ltr;
 }
 
 .ai-label {

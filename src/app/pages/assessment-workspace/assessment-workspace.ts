@@ -52,7 +52,7 @@ export class AssessmentWorkspaceComponent implements OnInit {
       code: 'CP5',
       rule: 'All five Scope 3 categories reported',
       result: 'check',
-      label: 'Check',
+      label: 'Review',
       evidence: 'Scope 3 list includes 4 categories; one appears missing.',
     },
     {
@@ -87,7 +87,7 @@ export class AssessmentWorkspaceComponent implements OnInit {
       code: 'CP10',
       rule: 'Sign-off date within 6 months of financial year-end',
       result: 'check',
-      label: 'Check',
+      label: 'Review',
       evidence: 'Financial year-end not explicitly stated.',
     },
   ];

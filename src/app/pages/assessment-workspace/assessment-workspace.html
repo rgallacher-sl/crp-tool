@@ -60,9 +60,6 @@
           <div class="ai-summary-header">
             <div>
               <p class="ai-title">AI assessment</p>
-              <p class="ai-caption">
-                The AI checks the CRP against PPN 006 and highlights evidence. You still make the final decision.
-              </p>
             </div>
             <button
               class="ai-criteria-toggle"
@@ -86,14 +83,12 @@
                 [class.fail]="aiRecommendation.status === 'fail'"
                 [class.check]="aiRecommendation.status === 'check'"
               >
-                <svg class="ai-recommendation-icon" viewBox="0 0 20 20" aria-hidden="true">
-                  <path
-                    d="M10 2.5l7.5 13a1 1 0 0 1-.87 1.5H3.37a1 1 0 0 1-.87-1.5l7.5-13a1 1 0 0 1 1.74 0z"
-                    fill="currentColor"
-                  />
-                  <rect x="9.2" y="7" width="1.6" height="5.8" rx="0.8" fill="#fff" />
-                  <circle cx="10" cy="14.7" r="1" fill="#fff" />
-                </svg>
+                @if (aiRecommendation.status === 'pass') {
+                  <span class="status-icon material-symbols-outlined" aria-hidden="true">check_circle</span>
+                }
+                @if (aiRecommendation.status === 'check') {
+                  <span class="status-icon material-symbols-outlined" aria-hidden="true">warning</span>
+                }
                 {{ aiRecommendation.label }}
               </span>
             </div>
@@ -116,6 +111,12 @@
                       [class.fail]="finding.result === 'fail'"
                       [class.check]="finding.result === 'check'"
                     >
+                      @if (finding.result === 'pass') {
+                        <span class="status-icon material-symbols-outlined" aria-hidden="true">check_circle</span>
+                      }
+                      @if (finding.result === 'check') {
+                        <span class="status-icon material-symbols-outlined" aria-hidden="true">warning</span>
+                      }
                       {{ finding.label }}
                     </span>
                   </dd>
