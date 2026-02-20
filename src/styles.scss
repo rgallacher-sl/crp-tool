@@ -1,19 +1,104 @@
 :root {
-  --text-primary: #1a1a1a;
-  --text-secondary: #555;
-  --text-tertiary: #888;
-  --border-color: #e2e2e2;
-  --bg-subtle: #f7f7f7;
-  --bg-hover: #fafafa;
-  --bg-disabled: #f2f2f2;
-  --bg-document: #eee;
-  --focus-color: #1a73e8;
-  --focus-ring: rgba(26, 115, 232, 0.08);
-  --link-color: #1a73e8;
-  --error-color: #c5221f;
-  --success-color: #188038;
-  --success-bg: rgba(24, 128, 56, 0.08);
-  --warning-color: #b05e0d;
+  /* Color */
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #555;
+  --color-text-tertiary: #888;
+  --color-border-default: #e2e2e2;
+  --color-border-muted: #b9b9b9;
+  --color-bg-canvas: #fff;
+  --color-bg-subtle: #f7f7f7;
+  --color-bg-hover: #fafafa;
+  --color-bg-disabled: #f2f2f2;
+  --color-bg-document: #eee;
+  --color-link: #1a73e8;
+  --color-focus: #1a73e8;
+  --color-focus-ring: rgba(26, 115, 232, 0.08);
+  --color-danger: #c5221f;
+  --color-danger-soft: rgba(197, 34, 31, 0.12);
+  --color-success: #188038;
+  --color-success-soft: rgba(24, 128, 56, 0.08);
+  --color-warning: #b05e0d;
+  --color-warning-subtle: rgba(176, 94, 13, 0.08);
+  --color-warning-soft: rgba(176, 94, 13, 0.12);
+  --color-warning-border: rgba(176, 94, 13, 0.35);
+  --color-action-primary-hover: #333;
+  --color-action-primary-active: #111;
+
+  /* Typography */
+  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-size-body: 1rem;
+  --line-height-body: 1.5;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  /* Primer-like spacing primitives */
+  --base-size-0: 0px;
+  --base-size-4: 4px;
+  --base-size-8: 8px;
+  --base-size-16: 16px;
+  --base-size-24: 24px;
+  --base-size-32: 32px;
+  --base-size-40: 40px;
+  --base-size-48: 48px;
+  --base-size-64: 64px;
+  --base-size-80: 80px;
+  --base-size-96: 96px;
+  --base-size-112: 112px;
+  --base-size-128: 128px;
+
+  /* Primer-like spacing keywords (0-12) */
+  --sx-0: var(--base-size-0);
+  --sx-1: var(--base-size-4);
+  --sx-2: var(--base-size-8);
+  --sx-3: var(--base-size-16);
+  --sx-4: var(--base-size-24);
+  --sx-5: var(--base-size-32);
+  --sx-6: var(--base-size-40);
+  --sx-7: var(--base-size-48);
+  --sx-8: var(--base-size-64);
+  --sx-9: var(--base-size-80);
+  --sx-10: var(--base-size-96);
+  --sx-11: var(--base-size-112);
+  --sx-12: var(--base-size-128);
+
+  /* App spacing aliases (kept stable for existing styles) */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --duration-fast: 0.1s;
+  --duration-medium: 0.15s;
+  --easing-standard: ease;
+
+  /* Legacy aliases */
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --text-tertiary: var(--color-text-tertiary);
+  --border-color: var(--color-border-default);
+  --bg-subtle: var(--color-bg-subtle);
+  --bg-hover: var(--color-bg-hover);
+  --bg-disabled: var(--color-bg-disabled);
+  --bg-document: var(--color-bg-document);
+  --focus-color: var(--color-focus);
+  --focus-ring: var(--color-focus-ring);
+  --link-color: var(--color-link);
+  --error-color: var(--color-danger);
+  --success-color: var(--color-success);
+  --success-bg: var(--color-success-soft);
+  --warning-color: var(--color-warning);
 }
 
 *,
@@ -23,25 +108,24 @@
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
+  margin: var(--space-0);
+  padding: var(--space-0);
   height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
   color: var(--text-primary);
-  background: white;
+  background: var(--color-bg-canvas);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 p {
-  margin: 0 0 8px;
+  margin: var(--space-0) var(--space-0) var(--space-2);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 8px;
+  margin: var(--space-0) var(--space-0) var(--space-2);
 }
 
 a {
@@ -53,24 +137,24 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
+  padding: 10px var(--space-5);
   background: var(--text-primary);
-  color: white;
+  color: var(--color-bg-canvas);
   border: none;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   font-size: 0.9375rem;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.1s ease;
+  transition: background-color var(--duration-fast) var(--easing-standard);
   font-family: inherit;
 
   &:hover {
-    background: #333;
+    background: var(--color-action-primary-hover);
   }
 
   &:active {
-    background: #111;
+    background: var(--color-action-primary-active);
   }
 
   &:disabled {
@@ -84,19 +168,145 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
-  background: white;
+  padding: 10px var(--space-5);
+  background: var(--color-bg-canvas);
   color: var(--text-primary);
   border: 1px solid var(--border-color);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   font-size: 0.9375rem;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   cursor: pointer;
   text-decoration: none;
-  transition: border-color 0.1s ease;
+  transition: border-color var(--duration-fast) var(--easing-standard);
   font-family: inherit;
 
   &:hover {
     border-color: var(--text-tertiary);
   }
 }
+
+/* Layout utilities */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sx-3);
+}
+
+.stack-inline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--sx-3);
+}
+
+.gap-0 { gap: var(--sx-0); }
+.gap-1 { gap: var(--sx-1); }
+.gap-2 { gap: var(--sx-2); }
+.gap-3 { gap: var(--sx-3); }
+.gap-4 { gap: var(--sx-4); }
+.gap-5 { gap: var(--sx-5); }
+.gap-6 { gap: var(--sx-6); }
+.gap-7 { gap: var(--sx-7); }
+.gap-8 { gap: var(--sx-8); }
+.gap-9 { gap: var(--sx-9); }
+.gap-10 { gap: var(--sx-10); }
+.gap-11 { gap: var(--sx-11); }
+.gap-12 { gap: var(--sx-12); }
+
+.p-0 { padding: var(--sx-0); }
+.p-1 { padding: var(--sx-1); }
+.p-2 { padding: var(--sx-2); }
+.p-3 { padding: var(--sx-3); }
+.p-4 { padding: var(--sx-4); }
+.p-5 { padding: var(--sx-5); }
+.p-6 { padding: var(--sx-6); }
+.p-7 { padding: var(--sx-7); }
+.p-8 { padding: var(--sx-8); }
+.p-9 { padding: var(--sx-9); }
+.p-10 { padding: var(--sx-10); }
+.p-11 { padding: var(--sx-11); }
+.p-12 { padding: var(--sx-12); }
+
+.px-0 { padding-left: var(--sx-0); padding-right: var(--sx-0); }
+.px-1 { padding-left: var(--sx-1); padding-right: var(--sx-1); }
+.px-2 { padding-left: var(--sx-2); padding-right: var(--sx-2); }
+.px-3 { padding-left: var(--sx-3); padding-right: var(--sx-3); }
+.px-4 { padding-left: var(--sx-4); padding-right: var(--sx-4); }
+.px-5 { padding-left: var(--sx-5); padding-right: var(--sx-5); }
+.px-6 { padding-left: var(--sx-6); padding-right: var(--sx-6); }
+.px-7 { padding-left: var(--sx-7); padding-right: var(--sx-7); }
+.px-8 { padding-left: var(--sx-8); padding-right: var(--sx-8); }
+.px-9 { padding-left: var(--sx-9); padding-right: var(--sx-9); }
+.px-10 { padding-left: var(--sx-10); padding-right: var(--sx-10); }
+.px-11 { padding-left: var(--sx-11); padding-right: var(--sx-11); }
+.px-12 { padding-left: var(--sx-12); padding-right: var(--sx-12); }
+
+.py-0 { padding-top: var(--sx-0); padding-bottom: var(--sx-0); }
+.py-1 { padding-top: var(--sx-1); padding-bottom: var(--sx-1); }
+.py-2 { padding-top: var(--sx-2); padding-bottom: var(--sx-2); }
+.py-3 { padding-top: var(--sx-3); padding-bottom: var(--sx-3); }
+.py-4 { padding-top: var(--sx-4); padding-bottom: var(--sx-4); }
+.py-5 { padding-top: var(--sx-5); padding-bottom: var(--sx-5); }
+.py-6 { padding-top: var(--sx-6); padding-bottom: var(--sx-6); }
+.py-7 { padding-top: var(--sx-7); padding-bottom: var(--sx-7); }
+.py-8 { padding-top: var(--sx-8); padding-bottom: var(--sx-8); }
+.py-9 { padding-top: var(--sx-9); padding-bottom: var(--sx-9); }
+.py-10 { padding-top: var(--sx-10); padding-bottom: var(--sx-10); }
+.py-11 { padding-top: var(--sx-11); padding-bottom: var(--sx-11); }
+.py-12 { padding-top: var(--sx-12); padding-bottom: var(--sx-12); }
+
+.pt-0 { padding-top: var(--sx-0); }
+.pt-1 { padding-top: var(--sx-1); }
+.pt-2 { padding-top: var(--sx-2); }
+.pt-3 { padding-top: var(--sx-3); }
+.pt-4 { padding-top: var(--sx-4); }
+.pt-5 { padding-top: var(--sx-5); }
+.pt-6 { padding-top: var(--sx-6); }
+.pt-7 { padding-top: var(--sx-7); }
+.pt-8 { padding-top: var(--sx-8); }
+.pt-9 { padding-top: var(--sx-9); }
+.pt-10 { padding-top: var(--sx-10); }
+.pt-11 { padding-top: var(--sx-11); }
+.pt-12 { padding-top: var(--sx-12); }
+
+.pr-0 { padding-right: var(--sx-0); }
+.pr-1 { padding-right: var(--sx-1); }
+.pr-2 { padding-right: var(--sx-2); }
+.pr-3 { padding-right: var(--sx-3); }
+.pr-4 { padding-right: var(--sx-4); }
+.pr-5 { padding-right: var(--sx-5); }
+.pr-6 { padding-right: var(--sx-6); }
+.pr-7 { padding-right: var(--sx-7); }
+.pr-8 { padding-right: var(--sx-8); }
+.pr-9 { padding-right: var(--sx-9); }
+.pr-10 { padding-right: var(--sx-10); }
+.pr-11 { padding-right: var(--sx-11); }
+.pr-12 { padding-right: var(--sx-12); }
+
+.pb-0 { padding-bottom: var(--sx-0); }
+.pb-1 { padding-bottom: var(--sx-1); }
+.pb-2 { padding-bottom: var(--sx-2); }
+.pb-3 { padding-bottom: var(--sx-3); }
+.pb-4 { padding-bottom: var(--sx-4); }
+.pb-5 { padding-bottom: var(--sx-5); }
+.pb-6 { padding-bottom: var(--sx-6); }
+.pb-7 { padding-bottom: var(--sx-7); }
+.pb-8 { padding-bottom: var(--sx-8); }
+.pb-9 { padding-bottom: var(--sx-9); }
+.pb-10 { padding-bottom: var(--sx-10); }
+.pb-11 { padding-bottom: var(--sx-11); }
+.pb-12 { padding-bottom: var(--sx-12); }
+
+.pl-0 { padding-left: var(--sx-0); }
+.pl-1 { padding-left: var(--sx-1); }
+.pl-2 { padding-left: var(--sx-2); }
+.pl-3 { padding-left: var(--sx-3); }
+.pl-4 { padding-left: var(--sx-4); }
+.pl-5 { padding-left: var(--sx-5); }
+.pl-6 { padding-left: var(--sx-6); }
+.pl-7 { padding-left: var(--sx-7); }
+.pl-8 { padding-left: var(--sx-8); }
+.pl-9 { padding-left: var(--sx-9); }
+.pl-10 { padding-left: var(--sx-10); }
+.pl-11 { padding-left: var(--sx-11); }
+.pl-12 { padding-left: var(--sx-12); }
