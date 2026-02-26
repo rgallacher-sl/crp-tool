@@ -1,7 +1,11 @@
 .provide-crp-page {
-  max-width: 540px;
+  max-width: 928px;
   margin: 0 auto;
-  padding: 48px 24px;
+  padding: var(--sx-7) var(--sx-4) var(--sx-8);
+}
+
+.content-column {
+  width: min(100%, 420px);
 }
 
 .source-group {
@@ -11,38 +15,36 @@
 }
 
 h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 32px;
+  margin: 0 0 var(--sx-5);
+  font-size: 2rem;
+  line-height: 44px;
+  font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
 }
 
 .form-section {
-  margin-bottom: 16px;
+  margin-bottom: var(--sx-0);
 }
 
 .field-label {
   display: block;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--text-primary);
-  margin-bottom: 8px;
-  font-size: 0.9375rem;
-}
-
-.helper-text {
-  margin: 0 0 16px;
-  color: var(--text-secondary);
-  font-size: 0.9375rem;
+  margin-bottom: var(--sx-2);
+  font-size: 1rem;
+  line-height: 24px;
 }
 
 .text-input {
   width: 100%;
-  padding: 10px 12px;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  font-size: 0.9375rem;
+  height: var(--sx-6);
+  padding: 0 var(--sx-3);
+  border: 1px solid var(--color-border-muted);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  line-height: 24px;
   color: var(--text-primary);
-  background: white;
+  background: var(--bg-disabled);
   box-sizing: border-box;
 
   &::placeholder {
@@ -64,10 +66,11 @@ h1 {
 .divider {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin: 24px 0;
+  gap: var(--sx-4);
+  margin: var(--sx-4) 0;
   color: var(--text-secondary);
-  font-size: 0.875rem;
+  font-size: 1rem;
+  line-height: 24px;
 
   &::before,
   &::after {
@@ -78,12 +81,14 @@ h1 {
   }
 }
 
-.drop-zone {
-  border: 2px dashed var(--border-color);
-  border-radius: 8px;
-  padding: 32px;
-  text-align: center;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
+.upload-panel {
+  border: 1px dashed var(--color-neutral-500);
+  border-radius: var(--radius-sm);
+  min-height: 72px;
+  padding: var(--sx-3);
+  transition: border-color var(--duration-medium) var(--easing-standard),
+    background-color var(--duration-medium) var(--easing-standard);
+  cursor: pointer;
 
   &.dragging {
     border-color: var(--focus-color);
@@ -91,34 +96,33 @@ h1 {
   }
 
   &.has-file {
-    border-style: solid;
-    background: var(--bg-subtle);
+    cursor: default;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 2px;
   }
 }
 
-.drop-prompt {
+.upload-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sx-1);
   color: var(--text-secondary);
-
-  p {
-    margin: 0;
-  }
-
-  .drop-sub {
-    margin: 8px 0;
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-  }
 }
 
-.file-browse {
+.upload-link {
   display: inline-block;
   color: var(--link-color);
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 400;
   background: none;
   border: none;
   padding: 0;
-  font-size: inherit;
+  font-size: 0.875rem;
+  line-height: 20px;
   font-family: inherit;
 
   &:hover {
@@ -132,63 +136,124 @@ h1 {
   }
 }
 
-.file-info {
+.upload-hint {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 16px;
+  color: var(--color-neutral-600);
+}
+
+.file-state {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sx-1);
+  padding-top: var(--sx-1);
+
+  &.uploaded .status-label {
+    color: var(--success-color);
+    font-weight: var(--font-weight-semibold);
+  }
+}
+
+.status-line {
   display: flex;
   align-items: center;
-  gap: 12px;
-  justify-content: center;
+  justify-content: space-between;
+  gap: var(--sx-3);
+}
 
-  .file-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2px 6px;
-    background: var(--text-secondary);
-    color: white;
-    font-size: 0.6875rem;
-    font-weight: 700;
-    border-radius: 3px;
-    letter-spacing: 0.02em;
+.status-left {
+  display: flex;
+  align-items: center;
+  gap: var(--sx-2);
+}
+
+.status-icon {
+  display: inline-block;
+  width: var(--sx-4);
+  height: var(--sx-4);
+  border-radius: 50%;
+
+  &.uploading {
+    border: 3px solid var(--color-neutral-400);
+    border-top-color: var(--text-primary);
+    animation: spin 1s linear infinite;
   }
 
-  .file-name {
-    font-weight: 500;
-    color: var(--text-primary);
+  &.uploaded {
+    border: 3px solid var(--success-color);
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 1px;
+      width: 4px;
+      height: 8px;
+      border-right: 2px solid var(--success-color);
+      border-bottom: 2px solid var(--success-color);
+      transform: rotate(45deg);
+    }
   }
+}
 
-  .remove-file {
-    background: none;
-    border: none;
-    color: var(--text-secondary);
-    cursor: pointer;
-    font-size: 0.875rem;
-    padding: 0;
+.status-label {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 20px;
+  color: var(--text-primary);
+}
 
-    &:hover {
-      color: var(--text-secondary);
-    }
+.file-name {
+  margin: 0;
+  padding-left: calc(var(--sx-4) + var(--sx-2));
+  font-size: 1rem;
+  line-height: 20px;
+  color: var(--text-primary);
+}
 
-    &:focus-visible {
-      outline: 2px solid var(--focus-color);
-      outline-offset: 2px;
-      border-radius: var(--radius-sm);
-    }
+.remove-file {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 20px;
+  font-weight: var(--font-weight-semibold);
+  padding: 0;
+
+  &:focus-visible {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
 .error-message {
-  margin-top: 12px;
+  margin-top: var(--sx-2);
   color: var(--error-color);
   font-size: 0.875rem;
+  line-height: 20px;
 }
 
 .actions {
-  margin-top: 32px;
+  margin-top: var(--sx-6);
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: var(--sx-2);
 }
 
+.sr-only-copy,
 .sr-only-input,
 .sr-only-status {
   position: absolute;
@@ -200,4 +265,14 @@ h1 {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+@media (max-width: 640px) {
+  .provide-crp-page {
+    padding: var(--sx-6) var(--sx-3) var(--sx-7);
+  }
+
+  .actions {
+    flex-wrap: wrap;
+  }
 }

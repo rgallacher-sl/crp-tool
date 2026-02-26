@@ -1,94 +1,102 @@
 <div class="provide-crp-page">
-  <h1>New assessment</h1>
+  <div class="content-column">
+    <h1>New assessment</h1>
 
-  <fieldset class="source-group">
-    <legend class="field-label">Carbon Reduction Plan source</legend>
-    <p class="helper-text" [id]="sourceHelpId">
-      Provide either a link or a PDF upload. You only need one.
+    <fieldset class="source-group">
+      <p class="sr-only-copy" [id]="sourceHelpId">
+        Provide either a link or a PDF upload. You only need one.
+      </p>
+
+      <div class="form-section">
+        <label class="field-label" for="crp-link">
+          Paste a link to a supplier's Carbon Reduction Plan
+        </label>
+        <input
+          id="crp-link"
+          type="url"
+          class="text-input"
+          [(ngModel)]="linkUrl"
+          (ngModelChange)="onLinkChange()"
+          [disabled]="!!selectedFile"
+          [attr.aria-describedby]="error ? sourceHelpId + ' ' + sourceErrorId : sourceHelpId"
+          [attr.aria-invalid]="error ? 'true' : null"
+        />
+      </div>
+
+      <div class="divider">
+        <span>or</span>
+      </div>
+
+      <div
+        class="upload-panel"
+        [class.dragging]="isDragging"
+        [class.has-file]="!!selectedFile"
+        [attr.role]="selectedFile ? null : 'button'"
+        [attr.tabindex]="selectedFile ? null : '0'"
+        (dragover)="onDragOver($event)"
+        (dragleave)="onDragLeave($event)"
+        (drop)="onDrop($event)"
+        (click)="selectedFile ? null : openFilePicker(fileInput)"
+        (keydown)="selectedFile ? null : onUploadPanelKeydown($event, fileInput)"
+        [attr.aria-describedby]="sourceHelpId"
+      >
+        @if (selectedFile) {
+          <div class="file-state" [class.uploaded]="uploadState === 'uploaded'">
+            <div class="status-line">
+              <div class="status-left">
+                <span class="status-icon" [class.uploading]="uploadState === 'uploading'" [class.uploaded]="uploadState === 'uploaded'" aria-hidden="true"></span>
+                <p class="status-label">{{ uploadState === 'uploading' ? 'Uploading...' : 'Uploaded' }}</p>
+              </div>
+              @if (uploadState === 'uploaded') {
+                <button class="remove-file" (click)="removeFile(); $event.stopPropagation()" type="button">Remove</button>
+              }
+            </div>
+            <p class="file-name">{{ selectedFile.name }}</p>
+          </div>
+        } @else {
+          <div class="upload-copy">
+            <span
+              class="upload-link"
+              [attr.aria-describedby]="error ? sourceHelpId + ' ' + sourceErrorId : sourceHelpId"
+            >
+              Upload file
+            </span>
+            <p class="upload-hint">PDF less than [10MB]</p>
+          </div>
+        }
+        <input
+          #fileInput
+          type="file"
+          accept=".pdf,application/pdf"
+          (change)="onFileSelected($event)"
+          class="sr-only-input"
+          tabindex="-1"
+          aria-hidden="true"
+        />
+      </div>
+
+      @if (error) {
+        <p class="error-message" [id]="sourceErrorId" role="alert">
+          {{ error }}
+        </p>
+      }
+    </fieldset>
+
+    <p [id]="sourceStatusId" class="sr-only-status" aria-live="polite">
+      {{ announcement }}
     </p>
 
-    <div class="form-section">
-      <label class="field-label" for="crp-link">
-        Paste link to supplier's Carbon Reduction Plan
-      </label>
-      <input
-        id="crp-link"
-        type="url"
-        class="text-input"
-        placeholder="https://..."
-        [(ngModel)]="linkUrl"
-        (ngModelChange)="onLinkChange()"
-        [disabled]="!!selectedFile"
-        [attr.aria-describedby]="error ? sourceHelpId + ' ' + sourceErrorId : sourceHelpId"
-        [attr.aria-invalid]="error ? 'true' : null"
-      />
+    <div class="actions">
+      <a routerLink="/suppliers" class="btn-secondary">
+        Back to suppliers
+      </a>
+      <button
+        class="btn-primary"
+        [disabled]="!canContinue()"
+        (click)="onContinue()"
+      >
+        Run assessment
+      </button>
     </div>
-
-    <div class="divider">
-      <span>or</span>
-    </div>
-
-    <div
-      class="drop-zone"
-      [class.dragging]="isDragging"
-      [class.has-file]="!!selectedFile"
-      (dragover)="onDragOver($event)"
-      (dragleave)="onDragLeave($event)"
-      (drop)="onDrop($event)"
-      [attr.aria-describedby]="sourceHelpId"
-    >
-      @if (selectedFile) {
-        <div class="file-info">
-          <span class="file-icon" aria-hidden="true">PDF</span>
-          <span class="file-name">{{ selectedFile.name }}</span>
-          <button class="remove-file" (click)="removeFile()" type="button">Remove</button>
-        </div>
-      } @else {
-        <div class="drop-prompt">
-          <p>Drag and drop a PDF here</p>
-          <p class="drop-sub">or</p>
-          <button
-            class="file-browse"
-            type="button"
-            [attr.aria-describedby]="error ? sourceHelpId + ' ' + sourceErrorId : sourceHelpId"
-            (click)="fileInput.click()"
-          >
-            Browse files
-          </button>
-          <input
-            #fileInput
-            type="file"
-            accept=".pdf,application/pdf"
-            (change)="onFileSelected($event)"
-            class="sr-only-input"
-            tabindex="-1"
-            aria-hidden="true"
-          />
-        </div>
-      }
-    </div>
-
-    @if (error) {
-      <p class="error-message" [id]="sourceErrorId" role="alert">
-        {{ error }}
-      </p>
-    }
-  </fieldset>
-
-  <p [id]="sourceStatusId" class="sr-only-status" aria-live="polite">
-    {{ announcement }}
-  </p>
-
-  <div class="actions">
-    <a routerLink="/suppliers" class="btn-secondary">
-      Back to suppliers
-    </a>
-    <button
-      class="btn-primary"
-      [disabled]="!canContinue()"
-      (click)="onContinue()"
-    >
-      Run Assessment
-    </button>
   </div>
 </div>

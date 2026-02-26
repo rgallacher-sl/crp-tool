@@ -1,28 +1,40 @@
 :root {
   /* Color */
-  --color-text-primary: #1a1a1a;
-  --color-text-secondary: #555;
-  --color-text-tertiary: #888;
-  --color-border-default: #e2e2e2;
-  --color-border-muted: #b9b9b9;
+  --color-text-default: #252525;
+  --color-text-muted: #5e666c;
+  --color-brand-primary: #238a91;
+  --color-brand-light: #dff0f3;
+  --color-brand-zebra: #f5fafb;
+  --color-neutral-600: #5e666c;
+  --color-neutral-500: #8a939a;
+  --color-neutral-400: #aeb5ba;
+  --color-neutral-300: #d3d8dc;
+  --color-success-green: #4f8a3a;
+  --color-link-blue: #0073e6;
+
+  --color-text-primary: var(--color-text-default);
+  --color-text-secondary: var(--color-neutral-600);
+  --color-text-tertiary: var(--color-neutral-400);
+  --color-border-default: var(--color-neutral-300);
+  --color-border-muted: var(--color-neutral-400);
   --color-bg-canvas: #fff;
-  --color-bg-subtle: #f7f7f7;
-  --color-bg-hover: #fafafa;
-  --color-bg-disabled: #f2f2f2;
-  --color-bg-document: #eee;
-  --color-link: #1a73e8;
-  --color-focus: #1a73e8;
-  --color-focus-ring: rgba(26, 115, 232, 0.08);
+  --color-bg-subtle: var(--color-brand-zebra);
+  --color-bg-hover: var(--color-brand-light);
+  --color-bg-disabled: var(--color-brand-zebra);
+  --color-bg-document: var(--color-brand-zebra);
+  --color-link: var(--color-link-blue);
+  --color-focus: var(--color-link-blue);
+  --color-focus-ring: rgba(0, 115, 230, 0.12);
   --color-danger: #c5221f;
   --color-danger-soft: rgba(197, 34, 31, 0.12);
-  --color-success: #188038;
-  --color-success-soft: rgba(24, 128, 56, 0.08);
+  --color-success: var(--color-success-green);
+  --color-success-soft: rgba(79, 138, 58, 0.08);
   --color-warning: #b05e0d;
   --color-warning-subtle: rgba(176, 94, 13, 0.08);
   --color-warning-soft: rgba(176, 94, 13, 0.12);
   --color-warning-border: rgba(176, 94, 13, 0.35);
-  --color-action-primary-hover: #333;
-  --color-action-primary-active: #111;
+  --color-action-primary-hover: #1f1f1f;
+  --color-action-primary-active: #141414;
 
   /* Typography */
   --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,

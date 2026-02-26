@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, NgZone, OnDestroy } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AssessmentService } from '../../services/assessment.service';
@@ -10,19 +10,23 @@ import { AssessmentService } from '../../services/assessment.service';
   templateUrl: './provide-crp.html',
   styleUrl: './provide-crp.scss',
 })
-export class ProvideCrpComponent {
+export class ProvideCrpComponent implements OnDestroy {
   linkUrl = '';
   selectedFile: File | null = null;
+  uploadState: 'idle' | 'uploading' | 'uploaded' = 'idle';
   isDragging = false;
   error = '';
   announcement = '';
   readonly sourceHelpId = 'source-help';
   readonly sourceErrorId = 'source-error';
   readonly sourceStatusId = 'source-status';
+  private uploadTimer: ReturnType<typeof setTimeout> | null = null;
 
   constructor(
     private assessmentService: AssessmentService,
     private router: Router,
+    private ngZone: NgZone,
+    private cdr: ChangeDetectorRef,
   ) {}
 
   onDragOver(event: DragEvent): void {
@@ -46,10 +50,7 @@ export class ProvideCrpComponent {
     if (files && files.length > 0) {
       const file = files[0];
       if (this.isPdfFile(file)) {
-        this.selectedFile = file;
-        this.linkUrl = '';
-        this.error = '';
-        this.announcement = `File selected: ${file.name}. Link input cleared.`;
+        this.setSelectedFile(file);
       } else {
         this.error = 'Please upload a PDF file.';
         this.announcement = this.error;
@@ -68,23 +69,35 @@ export class ProvideCrpComponent {
         return;
       }
 
-      this.selectedFile = file;
-      this.linkUrl = '';
-      this.error = '';
-      this.announcement = `File selected: ${file.name}. Link input cleared.`;
+      this.setSelectedFile(file);
     }
   }
 
   onLinkChange(): void {
     if (this.linkUrl) {
       this.selectedFile = null;
+      this.uploadState = 'idle';
+      this.clearUploadTimer();
       this.announcement = 'Link provided. Uploaded file cleared.';
     }
     this.error = '';
   }
 
+  openFilePicker(fileInput: HTMLInputElement): void {
+    fileInput.click();
+  }
+
+  onUploadPanelKeydown(event: KeyboardEvent, fileInput: HTMLInputElement): void {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      this.openFilePicker(fileInput);
+    }
+  }
+
   removeFile(): void {
     this.selectedFile = null;
+    this.uploadState = 'idle';
+    this.clearUploadTimer();
     this.error = '';
     this.announcement = 'File removed.';
   }
@@ -132,6 +145,34 @@ export class ProvideCrpComponent {
   private isPdfFile(file: File): boolean {
     const nameLooksPdf = file.name.toLowerCase().endsWith('.pdf');
     return file.type === 'application/pdf' || nameLooksPdf;
+  }
+
+  private setSelectedFile(file: File): void {
+    this.selectedFile = file;
+    this.linkUrl = '';
+    this.error = '';
+    this.uploadState = 'uploading';
+    this.announcement = `Uploading ${file.name}.`;
+    this.clearUploadTimer();
+    this.uploadTimer = setTimeout(() => {
+      this.ngZone.run(() => {
+        this.uploadState = 'uploaded';
+        this.announcement = `Upload complete: ${file.name}.`;
+        this.uploadTimer = null;
+        this.cdr.markForCheck();
+      });
+    }, 1200);
+  }
+
+  private clearUploadTimer(): void {
+    if (this.uploadTimer) {
+      clearTimeout(this.uploadTimer);
+      this.uploadTimer = null;
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.clearUploadTimer();
   }
 
   private extractDomain(url: string): string {
