@@ -15,6 +15,10 @@ export class ProvideCrpComponent {
   selectedFile: File | null = null;
   isDragging = false;
   error = '';
+  announcement = '';
+  readonly sourceHelpId = 'source-help';
+  readonly sourceErrorId = 'source-error';
+  readonly sourceStatusId = 'source-status';
 
   constructor(
     private assessmentService: AssessmentService,
@@ -41,12 +45,14 @@ export class ProvideCrpComponent {
     const files = event.dataTransfer?.files;
     if (files && files.length > 0) {
       const file = files[0];
-      if (file.type === 'application/pdf') {
+      if (this.isPdfFile(file)) {
         this.selectedFile = file;
         this.linkUrl = '';
         this.error = '';
+        this.announcement = `File selected: ${file.name}. Link input cleared.`;
       } else {
         this.error = 'Please upload a PDF file.';
+        this.announcement = this.error;
       }
     }
   }
@@ -54,21 +60,33 @@ export class ProvideCrpComponent {
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files.length > 0) {
-      this.selectedFile = input.files[0];
+      const file = input.files[0];
+      if (!this.isPdfFile(file)) {
+        this.error = 'Please upload a PDF file.';
+        this.announcement = this.error;
+        input.value = '';
+        return;
+      }
+
+      this.selectedFile = file;
       this.linkUrl = '';
       this.error = '';
+      this.announcement = `File selected: ${file.name}. Link input cleared.`;
     }
   }
 
   onLinkChange(): void {
     if (this.linkUrl) {
       this.selectedFile = null;
+      this.announcement = 'Link provided. Uploaded file cleared.';
     }
     this.error = '';
   }
 
   removeFile(): void {
     this.selectedFile = null;
+    this.error = '';
+    this.announcement = 'File removed.';
   }
 
   canContinue(): boolean {
@@ -87,11 +105,13 @@ export class ProvideCrpComponent {
   onContinue(): void {
     if (!this.canContinue()) {
       this.error = 'Please provide a link or upload a PDF.';
+      this.announcement = this.error;
       return;
     }
 
     if (this.linkUrl.trim() && !this.isValidUrl(this.linkUrl.trim())) {
       this.error = 'Please enter a valid URL.';
+      this.announcement = this.error;
       return;
     }
 
@@ -107,6 +127,11 @@ export class ProvideCrpComponent {
       documentReference,
     );
     this.router.navigate(['/assessments', assessment.id, 'processing']);
+  }
+
+  private isPdfFile(file: File): boolean {
+    const nameLooksPdf = file.name.toLowerCase().endsWith('.pdf');
+    return file.type === 'application/pdf' || nameLooksPdf;
   }
 
   private extractDomain(url: string): string {

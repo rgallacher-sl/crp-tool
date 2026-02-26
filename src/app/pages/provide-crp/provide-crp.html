@@ -1,54 +1,83 @@
 <div class="provide-crp-page">
   <h1>New assessment</h1>
 
-  <div class="form-section">
-    <label class="field-label" for="crp-link">
-      Paste link to supplier's Carbon Reduction Plan
-    </label>
-    <input
-      id="crp-link"
-      type="url"
-      class="text-input"
-      placeholder="https://..."
-      [(ngModel)]="linkUrl"
-      (ngModelChange)="onLinkChange()"
-      [disabled]="!!selectedFile"
-    />
-  </div>
+  <fieldset class="source-group">
+    <legend class="field-label">Carbon Reduction Plan source</legend>
+    <p class="helper-text" [id]="sourceHelpId">
+      Provide either a link or a PDF upload. You only need one.
+    </p>
 
-  <div class="divider">
-    <span>or</span>
-  </div>
+    <div class="form-section">
+      <label class="field-label" for="crp-link">
+        Paste link to supplier's Carbon Reduction Plan
+      </label>
+      <input
+        id="crp-link"
+        type="url"
+        class="text-input"
+        placeholder="https://..."
+        [(ngModel)]="linkUrl"
+        (ngModelChange)="onLinkChange()"
+        [disabled]="!!selectedFile"
+        [attr.aria-describedby]="error ? sourceHelpId + ' ' + sourceErrorId : sourceHelpId"
+        [attr.aria-invalid]="error ? 'true' : null"
+      />
+    </div>
 
-  <div
-    class="drop-zone"
-    [class.dragging]="isDragging"
-    [class.has-file]="!!selectedFile"
-    (dragover)="onDragOver($event)"
-    (dragleave)="onDragLeave($event)"
-    (drop)="onDrop($event)"
-  >
-    @if (selectedFile) {
-      <div class="file-info">
-        <span class="file-icon">PDF</span>
-        <span class="file-name">{{ selectedFile.name }}</span>
-        <button class="remove-file" (click)="removeFile()">Remove</button>
-      </div>
-    } @else {
-      <div class="drop-prompt">
-        <p>Drag and drop a PDF here</p>
-        <p class="drop-sub">or</p>
-        <label class="file-browse">
-          Browse files
-          <input type="file" accept=".pdf" (change)="onFileSelected($event)" hidden />
-        </label>
-      </div>
+    <div class="divider">
+      <span>or</span>
+    </div>
+
+    <div
+      class="drop-zone"
+      [class.dragging]="isDragging"
+      [class.has-file]="!!selectedFile"
+      (dragover)="onDragOver($event)"
+      (dragleave)="onDragLeave($event)"
+      (drop)="onDrop($event)"
+      [attr.aria-describedby]="sourceHelpId"
+    >
+      @if (selectedFile) {
+        <div class="file-info">
+          <span class="file-icon" aria-hidden="true">PDF</span>
+          <span class="file-name">{{ selectedFile.name }}</span>
+          <button class="remove-file" (click)="removeFile()" type="button">Remove</button>
+        </div>
+      } @else {
+        <div class="drop-prompt">
+          <p>Drag and drop a PDF here</p>
+          <p class="drop-sub">or</p>
+          <button
+            class="file-browse"
+            type="button"
+            [attr.aria-describedby]="error ? sourceHelpId + ' ' + sourceErrorId : sourceHelpId"
+            (click)="fileInput.click()"
+          >
+            Browse files
+          </button>
+          <input
+            #fileInput
+            type="file"
+            accept=".pdf,application/pdf"
+            (change)="onFileSelected($event)"
+            class="sr-only-input"
+            tabindex="-1"
+            aria-hidden="true"
+          />
+        </div>
+      }
+    </div>
+
+    @if (error) {
+      <p class="error-message" [id]="sourceErrorId" role="alert">
+        {{ error }}
+      </p>
     }
-  </div>
+  </fieldset>
 
-  @if (error) {
-    <p class="error-message">{{ error }}</p>
-  }
+  <p [id]="sourceStatusId" class="sr-only-status" aria-live="polite">
+    {{ announcement }}
+  </p>
 
   <div class="actions">
     <a routerLink="/suppliers" class="btn-secondary">

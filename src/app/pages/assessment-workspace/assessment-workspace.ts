@@ -177,6 +177,10 @@ export class AssessmentWorkspaceComponent implements OnInit {
     this.router.navigate(['/assessments', this.assessment.id, 'complete']);
   }
 
+  cancel(): void {
+    this.router.navigate(['/suppliers']);
+  }
+
   get aiOutcome(): AssessmentOutcome {
     const hasFail = this.ppnFindings.some(finding => finding.result === 'fail');
     if (hasFail) return 'does_not_meet';

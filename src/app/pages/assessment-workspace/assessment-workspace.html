@@ -64,6 +64,11 @@
           </div>
 
           <dl class="ai-summary-list" id="ai-criteria">
+            <div class="ai-summary-columns" aria-hidden="true">
+              <span class="ai-summary-column">Entry</span>
+              <span class="ai-summary-column">Assessment criteria</span>
+              <span class="ai-summary-column ai-summary-column-right">AI recommendation</span>
+            </div>
             @for (finding of ppnFindings; track finding.code) {
               <div class="ai-summary-row">
                 <dt class="ai-summary-key">{{ finding.code }}</dt>
@@ -174,9 +179,14 @@
           Recording this decision will finalize the assessment and update supplier history.
         </p>
 
-        <button class="btn-primary btn-record" (click)="recordDecision()">
-          Record decision
-        </button>
+        <div class="decision-actions">
+          <button class="btn-secondary" type="button" (click)="cancel()">
+            Cancel
+          </button>
+          <button class="btn-primary btn-record" type="button" (click)="recordDecision()">
+            Record decision
+          </button>
+        </div>
       </div>
     </div>
   </div>
