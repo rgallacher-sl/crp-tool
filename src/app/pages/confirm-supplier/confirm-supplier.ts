@@ -35,6 +35,11 @@ export class ConfirmSupplierComponent implements OnInit {
       return;
     }
 
+    if (assessment.status !== 'ready') {
+      this.router.navigate(['/suppliers']);
+      return;
+    }
+
     this.assessment = assessment;
     this.supplierName = assessment.supplierName || 'Acme Construction Ltd';
   }

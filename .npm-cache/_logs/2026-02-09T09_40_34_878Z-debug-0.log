@@ -1,0 +1,1680 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.9.3
+2 info using node@v22.19.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/.npmrc
+5 silly config load:file:/Users/ryangallacher/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install
+8 verbose argv "install" "--cache" "./.npm-cache" "--no-fund" "--no-audit"
+9 verbose logfile logs-max:10 dir:/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/.npm-cache/_logs/2026-02-09T09_40_34_878Z-
+10 verbose logfile /Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/.npm-cache/_logs/2026-02-09T09_40_34_878Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 silly reify mark retired [
+14 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/abbrev'
+14 silly reify ]
+15 silly reify mark retired [
+15 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/accepts'
+15 silly reify ]
+16 silly reify mark retired [
+16 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/agent-base'
+16 silly reify ]
+17 silly reify mark retired [
+17 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ajv'
+17 silly reify ]
+18 silly reify mark retired [
+18 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ajv-formats'
+18 silly reify ]
+19 silly reify mark retired [
+19 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/algoliasearch'
+19 silly reify ]
+20 silly reify mark retired [
+20 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ansi-escapes'
+20 silly reify ]
+21 silly reify mark retired [
+21 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ansi-regex'
+21 silly reify ]
+22 silly reify mark retired [
+22 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ansi-styles'
+22 silly reify ]
+23 silly reify mark retired [
+23 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/baseline-browser-mapping'
+23 silly reify ]
+24 silly reify mark retired [
+24 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/beasties'
+24 silly reify ]
+25 silly reify mark retired [
+25 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/body-parser'
+25 silly reify ]
+26 silly reify mark retired [
+26 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/browserslist'
+26 silly reify ]
+27 silly reify mark retired [
+27 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/cacache'
+27 silly reify ]
+28 silly reify mark retired [
+28 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/caniuse-lite'
+28 silly reify ]
+29 silly reify mark retired [
+29 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/chalk'
+29 silly reify ]
+30 silly reify mark retired [
+30 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/chardet'
+30 silly reify ]
+31 silly reify mark retired [
+31 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/chokidar'
+31 silly reify ]
+32 silly reify mark retired [
+32 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/cli-cursor'
+32 silly reify ]
+33 silly reify mark retired [
+33 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/chownr'
+33 silly reify ]
+34 silly reify mark retired [
+34 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/cli-spinners'
+34 silly reify ]
+35 silly reify mark retired [
+35 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/cli-truncate'
+35 silly reify ]
+36 silly reify mark retired [
+36 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/cliui'
+36 silly reify ]
+37 silly reify mark retired [
+37 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/content-disposition'
+37 silly reify ]
+38 silly reify mark retired [
+38 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/convert-source-map'
+38 silly reify ]
+39 silly reify mark retired [
+39 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/cookie-signature'
+39 silly reify ]
+40 silly reify mark retired [
+40 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/cors'
+40 silly reify ]
+41 silly reify mark retired [
+41 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/css-select'
+41 silly reify ]
+42 silly reify mark retired [
+42 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/css-what'
+42 silly reify ]
+43 silly reify mark retired [
+43 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/debug'
+43 silly reify ]
+44 silly reify mark retired [
+44 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/detect-libc'
+44 silly reify ]
+45 silly reify mark retired [
+45 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/domutils'
+45 silly reify ]
+46 silly reify mark retired [
+46 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ee-first'
+46 silly reify ]
+47 silly reify mark retired [
+47 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/electron-to-chromium'
+47 silly reify ]
+48 silly reify mark retired [
+48 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/emoji-regex'
+48 silly reify ]
+49 silly reify mark retired [
+49 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/encoding'
+49 silly reify ]
+50 silly reify mark retired [
+50 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/entities'
+50 silly reify ]
+51 silly reify mark retired [
+51 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/env-paths'
+51 silly reify ]
+52 silly reify mark retired [
+52 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/environment'
+52 silly reify ]
+53 silly reify mark retired [
+53 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/err-code'
+53 silly reify ]
+54 silly reify mark retired [
+54 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/esbuild'
+54 silly reify ]
+55 silly reify mark retired [
+55 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/escalade'
+55 silly reify ]
+56 silly reify mark retired [
+56 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/escape-html'
+56 silly reify ]
+57 silly reify mark retired [
+57 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/eventemitter3'
+57 silly reify ]
+58 silly reify mark retired [
+58 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/eventsource'
+58 silly reify ]
+59 silly reify mark retired [
+59 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/eventsource-parser'
+59 silly reify ]
+60 silly reify mark retired [
+60 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/exponential-backoff'
+60 silly reify ]
+61 silly reify mark retired [
+61 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/express-rate-limit'
+61 silly reify ]
+62 silly reify mark retired [
+62 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/etag'
+62 silly reify ]
+63 silly reify mark retired [
+63 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/express'
+63 silly reify ]
+64 silly reify mark retired [
+64 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/fast-uri'
+64 silly reify ]
+65 silly reify mark retired [
+65 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/fdir'
+65 silly reify ]
+66 silly reify mark retired [
+66 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/finalhandler'
+66 silly reify ]
+67 silly reify mark retired [
+67 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/fresh'
+67 silly reify ]
+68 silly reify mark retired [
+68 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/fs-minipass'
+68 silly reify ]
+69 silly reify mark retired [
+69 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/fsevents'
+69 silly reify ]
+70 silly reify mark retired [
+70 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/get-east-asian-width'
+70 silly reify ]
+71 silly reify mark retired [
+71 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/glob'
+71 silly reify ]
+72 silly reify mark retired [
+72 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/glob-to-regexp'
+72 silly reify ]
+73 silly reify mark retired [
+73 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/graceful-fs'
+73 silly reify ]
+74 silly reify mark retired [
+74 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/hono'
+74 silly reify ]
+75 silly reify mark retired [
+75 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/hosted-git-info'
+75 silly reify ]
+76 silly reify mark retired [
+76 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/htmlparser2'
+76 silly reify ]
+77 silly reify mark retired [
+77 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/http-cache-semantics'
+77 silly reify ]
+78 silly reify mark retired [
+78 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/http-errors'
+78 silly reify ]
+79 silly reify mark retired [
+79 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/http-proxy-agent'
+79 silly reify ]
+80 silly reify mark retired [
+80 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/https-proxy-agent'
+80 silly reify ]
+81 silly reify mark retired [
+81 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/iconv-lite'
+81 silly reify ]
+82 silly reify mark retired [
+82 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ignore-walk'
+82 silly reify ]
+83 silly reify mark retired [
+83 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/immutable'
+83 silly reify ]
+84 silly reify mark retired [
+84 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/imurmurhash'
+84 silly reify ]
+85 silly reify mark retired [
+85 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ini'
+85 silly reify ]
+86 silly reify mark retired [
+86 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ip-address'
+86 silly reify ]
+87 silly reify mark retired [
+87 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/is-core-module'
+87 silly reify ]
+88 silly reify mark retired [
+88 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/is-extglob'
+88 silly reify ]
+89 silly reify mark retired [
+89 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/is-fullwidth-code-point'
+89 silly reify ]
+90 silly reify mark retired [
+90 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/is-interactive'
+90 silly reify ]
+91 silly reify mark retired [
+91 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/is-promise'
+91 silly reify ]
+92 silly reify mark retired [
+92 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/is-unicode-supported'
+92 silly reify ]
+93 silly reify mark retired [
+93 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/isexe'
+93 silly reify ]
+94 silly reify mark retired [
+94 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/istanbul-lib-coverage'
+94 silly reify ]
+95 silly reify mark retired [
+95 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/istanbul-lib-instrument'
+95 silly reify ]
+96 silly reify mark retired [
+96 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/jose'
+96 silly reify ]
+97 silly reify mark retired [
+97 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/jsesc'
+97 silly reify ]
+98 silly reify mark retired [
+98 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/json-parse-even-better-errors'
+98 silly reify ]
+99 silly reify mark retired [
+99 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/json-schema-traverse'
+99 silly reify ]
+100 silly reify mark retired [
+100 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/json5'
+100 silly reify ]
+101 silly reify mark retired [
+101 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/json-schema-typed'
+101 silly reify ]
+102 silly reify mark retired [
+102 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/jsonc-parser'
+102 silly reify ]
+103 silly reify mark retired [
+103 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/jsonparse'
+103 silly reify ]
+104 silly reify mark retired [
+104 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/lmdb'
+104 silly reify ]
+105 silly reify mark retired [
+105 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/log-symbols'
+105 silly reify ]
+106 silly reify mark retired [
+106 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/log-update'
+106 silly reify ]
+107 silly reify mark retired [
+107 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/listr2'
+107 silly reify ]
+108 silly reify mark retired [
+108 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/magic-string'
+108 silly reify ]
+109 silly reify mark retired [
+109 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/make-fetch-happen'
+109 silly reify ]
+110 silly reify mark retired [
+110 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/merge-descriptors'
+110 silly reify ]
+111 silly reify mark retired [
+111 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/mime-db'
+111 silly reify ]
+112 silly reify mark retired [
+112 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/mime-types'
+112 silly reify ]
+113 silly reify mark retired [
+113 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/media-typer'
+113 silly reify ]
+114 silly reify mark retired [
+114 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/mimic-function'
+114 silly reify ]
+115 silly reify mark retired [
+115 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/minimatch'
+115 silly reify ]
+116 silly reify mark retired [
+116 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/minipass'
+116 silly reify ]
+117 silly reify mark retired [
+117 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/minipass-collect'
+117 silly reify ]
+118 silly reify mark retired [
+118 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/minipass-fetch'
+118 silly reify ]
+119 silly reify mark retired [
+119 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/minipass-flush'
+119 silly reify ]
+120 silly reify mark retired [
+120 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/minipass-sized'
+120 silly reify ]
+121 silly reify mark retired [
+121 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/minipass-pipeline'
+121 silly reify ]
+122 silly reify mark retired [
+122 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/minizlib'
+122 silly reify ]
+123 silly reify mark retired [
+123 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/mrmime'
+123 silly reify ]
+124 silly reify mark retired [
+124 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/msgpackr'
+124 silly reify ]
+125 silly reify mark retired [
+125 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/msgpackr-extract'
+125 silly reify ]
+126 silly reify mark retired [
+126 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/nanoid'
+126 silly reify ]
+127 silly reify mark retired [
+127 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/negotiator'
+127 silly reify ]
+128 silly reify mark retired [
+128 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/node-addon-api'
+128 silly reify ]
+129 silly reify mark retired [
+129 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/node-gyp'
+129 silly reify ]
+130 silly reify mark retired [
+130 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/node-gyp-build-optional-packages'
+130 silly reify ]
+131 silly reify mark retired [
+131 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/node-releases'
+131 silly reify ]
+132 silly reify mark retired [
+132 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/nopt'
+132 silly reify ]
+133 silly reify mark retired [
+133 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/npm-bundled'
+133 silly reify ]
+134 silly reify mark retired [
+134 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/npm-install-checks'
+134 silly reify ]
+135 silly reify mark retired [
+135 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/npm-normalize-package-bin'
+135 silly reify ]
+136 silly reify mark retired [
+136 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/npm-package-arg'
+136 silly reify ]
+137 silly reify mark retired [
+137 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/npm-packlist'
+137 silly reify ]
+138 silly reify mark retired [
+138 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/npm-pick-manifest'
+138 silly reify ]
+139 silly reify mark retired [
+139 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/npm-registry-fetch'
+139 silly reify ]
+140 silly reify mark retired [
+140 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/object-assign'
+140 silly reify ]
+141 silly reify mark retired [
+141 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/once'
+141 silly reify ]
+142 silly reify mark retired [
+142 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/onetime'
+142 silly reify ]
+143 silly reify mark retired [
+143 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ora'
+143 silly reify ]
+144 silly reify mark retired [
+144 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ordered-binary'
+144 silly reify ]
+145 silly reify mark retired [
+145 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/p-map'
+145 silly reify ]
+146 silly reify mark retired [
+146 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/pacote'
+146 silly reify ]
+147 silly reify mark retired [
+147 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/parse5'
+147 silly reify ]
+148 silly reify mark retired [
+148 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/parse5-html-rewriting-stream'
+148 silly reify ]
+149 silly reify mark retired [
+149 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/parse5-sax-parser'
+149 silly reify ]
+150 silly reify mark retired [
+150 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/path-scurry'
+150 silly reify ]
+151 silly reify mark retired [
+151 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/path-to-regexp'
+151 silly reify ]
+152 silly reify mark retired [
+152 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/picomatch'
+152 silly reify ]
+153 silly reify mark retired [
+153 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/postcss'
+153 silly reify ]
+154 silly reify mark retired [
+154 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/piscina'
+154 silly reify ]
+155 silly reify mark retired [
+155 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/pkce-challenge'
+155 silly reify ]
+156 silly reify mark retired [
+156 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/postcss-media-query-parser'
+156 silly reify ]
+157 silly reify mark retired [
+157 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/proc-log'
+157 silly reify ]
+158 silly reify mark retired [
+158 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/promise-retry'
+158 silly reify ]
+159 silly reify mark retired [
+159 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/qs'
+159 silly reify ]
+160 silly reify mark retired [
+160 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/raw-body'
+160 silly reify ]
+161 silly reify mark retired [
+161 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/readdirp'
+161 silly reify ]
+162 silly reify mark retired [
+162 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/reflect-metadata'
+162 silly reify ]
+163 silly reify mark retired [
+163 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/require-from-string'
+163 silly reify ]
+164 silly reify mark retired [
+164 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/resolve'
+164 silly reify ]
+165 silly reify mark retired [
+165 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/restore-cursor'
+165 silly reify ]
+166 silly reify mark retired [
+166 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/rfdc'
+166 silly reify ]
+167 silly reify mark retired [
+167 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/rolldown'
+167 silly reify ]
+168 silly reify mark retired [
+168 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/rollup'
+168 silly reify ]
+169 silly reify mark retired [
+169 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/router'
+169 silly reify ]
+170 silly reify mark retired [
+170 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/sass'
+170 silly reify ]
+171 silly reify mark retired [
+171 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/semver'
+171 silly reify ]
+172 silly reify mark retired [
+172 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/send'
+172 silly reify ]
+173 silly reify mark retired [
+173 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/serve-static'
+173 silly reify ]
+174 silly reify mark retired [
+174 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/sigstore'
+174 silly reify ]
+175 silly reify mark retired [
+175 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/slice-ansi'
+175 silly reify ]
+176 silly reify mark retired [
+176 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/smart-buffer'
+176 silly reify ]
+177 silly reify mark retired [
+177 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/socks'
+177 silly reify ]
+178 silly reify mark retired [
+178 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/socks-proxy-agent'
+178 silly reify ]
+179 silly reify mark retired [
+179 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/source-map'
+179 silly reify ]
+180 silly reify mark retired [
+180 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/source-map-js'
+180 silly reify ]
+181 silly reify mark retired [
+181 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/source-map-support'
+181 silly reify ]
+182 silly reify mark retired [
+182 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/spdx-correct'
+182 silly reify ]
+183 silly reify mark retired [
+183 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/spdx-exceptions'
+183 silly reify ]
+184 silly reify mark retired [
+184 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/spdx-expression-parse'
+184 silly reify ]
+185 silly reify mark retired [
+185 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/spdx-license-ids'
+185 silly reify ]
+186 silly reify mark retired [
+186 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ssri'
+186 silly reify ]
+187 silly reify mark retired [
+187 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/statuses'
+187 silly reify ]
+188 silly reify mark retired [
+188 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/stdin-discarder'
+188 silly reify ]
+189 silly reify mark retired [
+189 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/string-width'
+189 silly reify ]
+190 silly reify mark retired [
+190 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/strip-ansi'
+190 silly reify ]
+191 silly reify mark retired [
+191 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/tar'
+191 silly reify ]
+192 silly reify mark retired [
+192 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/tinyglobby'
+192 silly reify ]
+193 silly reify mark retired [
+193 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/tslib'
+193 silly reify ]
+194 silly reify mark retired [
+194 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/tuf-js'
+194 silly reify ]
+195 silly reify mark retired [
+195 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/type-is'
+195 silly reify ]
+196 silly reify mark retired [
+196 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/typescript'
+196 silly reify ]
+197 silly reify mark retired [
+197 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/undici'
+197 silly reify ]
+198 silly reify mark retired [
+198 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/unique-filename'
+198 silly reify ]
+199 silly reify mark retired [
+199 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/unique-slug'
+199 silly reify ]
+200 silly reify mark retired [
+200 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/unpipe'
+200 silly reify ]
+201 silly reify mark retired [
+201 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/update-browserslist-db'
+201 silly reify ]
+202 silly reify mark retired [
+202 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/validate-npm-package-license'
+202 silly reify ]
+203 silly reify mark retired [
+203 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/validate-npm-package-name'
+203 silly reify ]
+204 silly reify mark retired [
+204 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/vite'
+204 silly reify ]
+205 silly reify mark retired [
+205 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/vary'
+205 silly reify ]
+206 silly reify mark retired [
+206 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/watchpack'
+206 silly reify ]
+207 silly reify mark retired [
+207 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/weak-lru-cache'
+207 silly reify ]
+208 silly reify mark retired [
+208 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/which'
+208 silly reify ]
+209 silly reify mark retired [
+209 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/wrappy'
+209 silly reify ]
+210 silly reify mark retired [
+210 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/yargs'
+210 silly reify ]
+211 silly reify mark retired [
+211 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/yargs-parser'
+211 silly reify ]
+212 silly reify mark retired [
+212 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/yoctocolors'
+212 silly reify ]
+213 silly reify mark retired [
+213 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/zod-to-json-schema'
+213 silly reify ]
+214 silly reify mark retired [
+214 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/zod'
+214 silly reify ]
+215 silly reify mark retired [
+215 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/client-abtesting'
+215 silly reify ]
+216 silly reify mark retired [
+216 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/client-analytics'
+216 silly reify ]
+217 silly reify mark retired [
+217 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/client-common'
+217 silly reify ]
+218 silly reify mark retired [
+218 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/abtesting'
+218 silly reify ]
+219 silly reify mark retired [
+219 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/client-insights'
+219 silly reify ]
+220 silly reify mark retired [
+220 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/client-personalization'
+220 silly reify ]
+221 silly reify mark retired [
+221 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/client-search'
+221 silly reify ]
+222 silly reify mark retired [
+222 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/client-query-suggestions'
+222 silly reify ]
+223 silly reify mark retired [
+223 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/ingestion'
+223 silly reify ]
+224 silly reify mark retired [
+224 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/recommend'
+224 silly reify ]
+225 silly reify mark retired [
+225 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/monitoring'
+225 silly reify ]
+226 silly reify mark retired [
+226 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/requester-browser-xhr'
+226 silly reify ]
+227 silly reify mark retired [
+227 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/requester-node-http'
+227 silly reify ]
+228 silly reify mark retired [
+228 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/requester-fetch'
+228 silly reify ]
+229 silly reify mark retired [
+229 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@ampproject/remapping'
+229 silly reify ]
+230 silly reify mark retired [
+230 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/cli'
+230 silly reify ]
+231 silly reify mark retired [
+231 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/common'
+231 silly reify ]
+232 silly reify mark retired [
+232 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/build'
+232 silly reify ]
+233 silly reify mark retired [
+233 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/compiler'
+233 silly reify ]
+234 silly reify mark retired [
+234 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/core'
+234 silly reify ]
+235 silly reify mark retired [
+235 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/compiler-cli'
+235 silly reify ]
+236 silly reify mark retired [
+236 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/forms'
+236 silly reify ]
+237 silly reify mark retired [
+237 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/platform-browser'
+237 silly reify ]
+238 silly reify mark retired [
+238 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular-devkit/architect'
+238 silly reify ]
+239 silly reify mark retired [
+239 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular-devkit/core'
+239 silly reify ]
+240 silly reify mark retired [
+240 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/router'
+240 silly reify ]
+241 silly reify mark retired [
+241 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular-devkit/schematics'
+241 silly reify ]
+242 silly reify mark retired [
+242 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/compat-data'
+242 silly reify ]
+243 silly reify mark retired [
+243 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/core'
+243 silly reify ]
+244 silly reify mark retired [
+244 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/code-frame'
+244 silly reify ]
+245 silly reify mark retired [
+245 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/generator'
+245 silly reify ]
+246 silly reify mark retired [
+246 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helper-annotate-as-pure'
+246 silly reify ]
+247 silly reify mark retired [
+247 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helper-globals'
+247 silly reify ]
+248 silly reify mark retired [
+248 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helper-compilation-targets'
+248 silly reify ]
+249 silly reify mark retired [
+249 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helper-module-imports'
+249 silly reify ]
+250 silly reify mark retired [
+250 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helper-module-transforms'
+250 silly reify ]
+251 silly reify mark retired [
+251 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helper-split-export-declaration'
+251 silly reify ]
+252 silly reify mark retired [
+252 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helper-validator-option'
+252 silly reify ]
+253 silly reify mark retired [
+253 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helper-validator-identifier'
+253 silly reify ]
+254 silly reify mark retired [
+254 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/parser'
+254 silly reify ]
+255 silly reify mark retired [
+255 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helpers'
+255 silly reify ]
+256 silly reify mark retired [
+256 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/template'
+256 silly reify ]
+257 silly reify mark retired [
+257 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/traverse'
+257 silly reify ]
+258 silly reify mark retired [
+258 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@emnapi/core'
+258 silly reify ]
+259 silly reify mark retired [
+259 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/types'
+259 silly reify ]
+260 silly reify mark retired [
+260 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@emnapi/runtime'
+260 silly reify ]
+261 silly reify mark retired [
+261 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@emnapi/wasi-threads'
+261 silly reify ]
+262 silly reify mark retired [
+262 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/android-arm'
+262 silly reify ]
+263 silly reify mark retired [
+263 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/aix-ppc64'
+263 silly reify ]
+264 silly reify mark retired [
+264 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/darwin-arm64'
+264 silly reify ]
+265 silly reify mark retired [
+265 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/android-arm64'
+265 silly reify ]
+266 silly reify mark retired [
+266 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/android-x64'
+266 silly reify ]
+267 silly reify mark retired [
+267 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/darwin-x64'
+267 silly reify ]
+268 silly reify mark retired [
+268 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/freebsd-x64'
+268 silly reify ]
+269 silly reify mark retired [
+269 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-arm'
+269 silly reify ]
+270 silly reify mark retired [
+270 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-arm64'
+270 silly reify ]
+271 silly reify mark retired [
+271 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-ia32'
+271 silly reify ]
+272 silly reify mark retired [
+272 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-loong64'
+272 silly reify ]
+273 silly reify mark retired [
+273 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-mips64el'
+273 silly reify ]
+274 silly reify mark retired [
+274 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-riscv64'
+274 silly reify ]
+275 silly reify mark retired [
+275 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-ppc64'
+275 silly reify ]
+276 silly reify mark retired [
+276 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/freebsd-arm64'
+276 silly reify ]
+277 silly reify mark retired [
+277 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-x64'
+277 silly reify ]
+278 silly reify mark retired [
+278 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/netbsd-arm64'
+278 silly reify ]
+279 silly reify mark retired [
+279 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/openbsd-arm64'
+279 silly reify ]
+280 silly reify mark retired [
+280 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/openbsd-x64'
+280 silly reify ]
+281 silly reify mark retired [
+281 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/openharmony-arm64'
+281 silly reify ]
+282 silly reify mark retired [
+282 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/sunos-x64'
+282 silly reify ]
+283 silly reify mark retired [
+283 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-s390x'
+283 silly reify ]
+284 silly reify mark retired [
+284 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/win32-arm64'
+284 silly reify ]
+285 silly reify mark retired [
+285 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/netbsd-x64'
+285 silly reify ]
+286 silly reify mark retired [
+286 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@hono/node-server'
+286 silly reify ]
+287 silly reify mark retired [
+287 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/ansi'
+287 silly reify ]
+288 silly reify mark retired [
+288 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/checkbox'
+288 silly reify ]
+289 silly reify mark retired [
+289 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/core'
+289 silly reify ]
+290 silly reify mark retired [
+290 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/editor'
+290 silly reify ]
+291 silly reify mark retired [
+291 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/external-editor'
+291 silly reify ]
+292 silly reify mark retired [
+292 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/expand'
+292 silly reify ]
+293 silly reify mark retired [
+293 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/input'
+293 silly reify ]
+294 silly reify mark retired [
+294 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/figures'
+294 silly reify ]
+295 silly reify mark retired [
+295 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/confirm'
+295 silly reify ]
+296 silly reify mark retired [
+296 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/number'
+296 silly reify ]
+297 silly reify mark retired [
+297 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/password'
+297 silly reify ]
+298 silly reify mark retired [
+298 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/prompts'
+298 silly reify ]
+299 silly reify mark retired [
+299 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/rawlist'
+299 silly reify ]
+300 silly reify mark retired [
+300 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/search'
+300 silly reify ]
+301 silly reify mark retired [
+301 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/select'
+301 silly reify ]
+302 silly reify mark retired [
+302 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/type'
+302 silly reify ]
+303 silly reify mark retired [
+303 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@isaacs/balanced-match'
+303 silly reify ]
+304 silly reify mark retired [
+304 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@isaacs/brace-expansion'
+304 silly reify ]
+305 silly reify mark retired [
+305 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@isaacs/fs-minipass'
+305 silly reify ]
+306 silly reify mark retired [
+306 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@jridgewell/gen-mapping'
+306 silly reify ]
+307 silly reify mark retired [
+307 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@jridgewell/remapping'
+307 silly reify ]
+308 silly reify mark retired [
+308 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@jridgewell/resolve-uri'
+308 silly reify ]
+309 silly reify mark retired [
+309 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@jridgewell/sourcemap-codec'
+309 silly reify ]
+310 silly reify mark retired [
+310 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@jridgewell/trace-mapping'
+310 silly reify ]
+311 silly reify mark retired [
+311 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@listr2/prompt-adapter-inquirer'
+311 silly reify ]
+312 silly reify mark retired [
+312 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/lmdb-darwin-arm64'
+312 silly reify ]
+313 silly reify mark retired [
+313 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/win32-ia32'
+313 silly reify ]
+314 silly reify mark retired [
+314 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/win32-x64'
+314 silly reify ]
+315 silly reify mark retired [
+315 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/lmdb-darwin-x64'
+315 silly reify ]
+316 silly reify mark retired [
+316 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/lmdb-linux-arm64'
+316 silly reify ]
+317 silly reify mark retired [
+317 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/lmdb-linux-arm'
+317 silly reify ]
+318 silly reify mark retired [
+318 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/lmdb-linux-x64'
+318 silly reify ]
+319 silly reify mark retired [
+319 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/lmdb-win32-x64'
+319 silly reify ]
+320 silly reify mark retired [
+320 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/lmdb-win32-arm64'
+320 silly reify ]
+321 silly reify mark retired [
+321 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@modelcontextprotocol/sdk'
+321 silly reify ]
+322 silly reify mark retired [
+322 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/msgpackr-extract-darwin-arm64'
+322 silly reify ]
+323 silly reify mark retired [
+323 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/msgpackr-extract-darwin-x64'
+323 silly reify ]
+324 silly reify mark retired [
+324 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/msgpackr-extract-linux-arm64'
+324 silly reify ]
+325 silly reify mark retired [
+325 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/msgpackr-extract-linux-arm'
+325 silly reify ]
+326 silly reify mark retired [
+326 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/msgpackr-extract-linux-x64'
+326 silly reify ]
+327 silly reify mark retired [
+327 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice'
+327 silly reify ]
+328 silly reify mark retired [
+328 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/msgpackr-extract-win32-x64'
+328 silly reify ]
+329 silly reify mark retired [
+329 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-android-arm-eabi'
+329 silly reify ]
+330 silly reify mark retired [
+330 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-darwin-arm64'
+330 silly reify ]
+331 silly reify mark retired [
+331 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-android-arm64'
+331 silly reify ]
+332 silly reify mark retired [
+332 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-freebsd-x64'
+332 silly reify ]
+333 silly reify mark retired [
+333 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-linux-arm-gnueabihf'
+333 silly reify ]
+334 silly reify mark retired [
+334 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-darwin-x64'
+334 silly reify ]
+335 silly reify mark retired [
+335 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-linux-arm64-musl'
+335 silly reify ]
+336 silly reify mark retired [
+336 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-linux-arm64-gnu'
+336 silly reify ]
+337 silly reify mark retired [
+337 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-linux-ppc64-gnu'
+337 silly reify ]
+338 silly reify mark retired [
+338 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-linux-x64-gnu'
+338 silly reify ]
+339 silly reify mark retired [
+339 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-linux-riscv64-gnu'
+339 silly reify ]
+340 silly reify mark retired [
+340 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-linux-x64-musl'
+340 silly reify ]
+341 silly reify mark retired [
+341 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-openharmony-arm64'
+341 silly reify ]
+342 silly reify mark retired [
+342 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-win32-arm64-msvc'
+342 silly reify ]
+343 silly reify mark retired [
+343 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-win32-ia32-msvc'
+343 silly reify ]
+344 silly reify mark retired [
+344 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/wasm-runtime'
+344 silly reify ]
+345 silly reify mark retired [
+345 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-win32-x64-msvc'
+345 silly reify ]
+346 silly reify mark retired [
+346 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/fs'
+346 silly reify ]
+347 silly reify mark retired [
+347 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/agent'
+347 silly reify ]
+348 silly reify mark retired [
+348 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/git'
+348 silly reify ]
+349 silly reify mark retired [
+349 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/installed-package-contents'
+349 silly reify ]
+350 silly reify mark retired [
+350 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/node-gyp'
+350 silly reify ]
+351 silly reify mark retired [
+351 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/package-json'
+351 silly reify ]
+352 silly reify mark retired [
+352 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/promise-spawn'
+352 silly reify ]
+353 silly reify mark retired [
+353 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/redact'
+353 silly reify ]
+354 silly reify mark retired [
+354 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/run-script'
+354 silly reify ]
+355 silly reify mark retired [
+355 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@oxc-project/types'
+355 silly reify ]
+356 silly reify mark retired [
+356 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher'
+356 silly reify ]
+357 silly reify mark retired [
+357 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-darwin-arm64'
+357 silly reify ]
+358 silly reify mark retired [
+358 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-linux-s390x-gnu'
+358 silly reify ]
+359 silly reify mark retired [
+359 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-android-arm64'
+359 silly reify ]
+360 silly reify mark retired [
+360 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-linux-arm-glibc'
+360 silly reify ]
+361 silly reify mark retired [
+361 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-linux-arm64-glibc'
+361 silly reify ]
+362 silly reify mark retired [
+362 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-darwin-x64'
+362 silly reify ]
+363 silly reify mark retired [
+363 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-freebsd-x64'
+363 silly reify ]
+364 silly reify mark retired [
+364 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-linux-arm-musl'
+364 silly reify ]
+365 silly reify mark retired [
+365 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-linux-arm64-musl'
+365 silly reify ]
+366 silly reify mark retired [
+366 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-linux-x64-musl'
+366 silly reify ]
+367 silly reify mark retired [
+367 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-win32-arm64'
+367 silly reify ]
+368 silly reify mark retired [
+368 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-win32-x64'
+368 silly reify ]
+369 silly reify mark retired [
+369 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-darwin-arm64'
+369 silly reify ]
+370 silly reify mark retired [
+370 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-win32-ia32'
+370 silly reify ]
+371 silly reify mark retired [
+371 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-android-arm64'
+371 silly reify ]
+372 silly reify mark retired [
+372 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-darwin-x64'
+372 silly reify ]
+373 silly reify mark retired [
+373 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-linux-arm-gnueabihf'
+373 silly reify ]
+374 silly reify mark retired [
+374 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-linux-x64-glibc'
+374 silly reify ]
+375 silly reify mark retired [
+375 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-freebsd-x64'
+375 silly reify ]
+376 silly reify mark retired [
+376 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-linux-arm64-gnu'
+376 silly reify ]
+377 silly reify mark retired [
+377 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-linux-arm64-musl'
+377 silly reify ]
+378 silly reify mark retired [
+378 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-linux-x64-gnu'
+378 silly reify ]
+379 silly reify mark retired [
+379 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-linux-x64-musl'
+379 silly reify ]
+380 silly reify mark retired [
+380 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-openharmony-arm64'
+380 silly reify ]
+381 silly reify mark retired [
+381 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-wasm32-wasi'
+381 silly reify ]
+382 silly reify mark retired [
+382 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-win32-arm64-msvc'
+382 silly reify ]
+383 silly reify mark retired [
+383 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-win32-x64-msvc'
+383 silly reify ]
+384 silly reify mark retired [
+384 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/pluginutils'
+384 silly reify ]
+385 silly reify mark retired [
+385 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-android-arm-eabi'
+385 silly reify ]
+386 silly reify mark retired [
+386 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-darwin-arm64'
+386 silly reify ]
+387 silly reify mark retired [
+387 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-darwin-x64'
+387 silly reify ]
+388 silly reify mark retired [
+388 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-freebsd-x64'
+388 silly reify ]
+389 silly reify mark retired [
+389 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-arm-gnueabihf'
+389 silly reify ]
+390 silly reify mark retired [
+390 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-arm-musleabihf'
+390 silly reify ]
+391 silly reify mark retired [
+391 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-arm64-gnu'
+391 silly reify ]
+392 silly reify mark retired [
+392 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-arm64-musl'
+392 silly reify ]
+393 silly reify mark retired [
+393 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-loong64-gnu'
+393 silly reify ]
+394 silly reify mark retired [
+394 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-loong64-musl'
+394 silly reify ]
+395 silly reify mark retired [
+395 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-ppc64-gnu'
+395 silly reify ]
+396 silly reify mark retired [
+396 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-ppc64-musl'
+396 silly reify ]
+397 silly reify mark retired [
+397 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-riscv64-gnu'
+397 silly reify ]
+398 silly reify mark retired [
+398 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-riscv64-musl'
+398 silly reify ]
+399 silly reify mark retired [
+399 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-freebsd-arm64'
+399 silly reify ]
+400 silly reify mark retired [
+400 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-s390x-gnu'
+400 silly reify ]
+401 silly reify mark retired [
+401 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-x64-gnu'
+401 silly reify ]
+402 silly reify mark retired [
+402 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-openbsd-x64'
+402 silly reify ]
+403 silly reify mark retired [
+403 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-openharmony-arm64'
+403 silly reify ]
+404 silly reify mark retired [
+404 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-android-arm64'
+404 silly reify ]
+405 silly reify mark retired [
+405 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-win32-arm64-msvc'
+405 silly reify ]
+406 silly reify mark retired [
+406 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-x64-musl'
+406 silly reify ]
+407 silly reify mark retired [
+407 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-win32-ia32-msvc'
+407 silly reify ]
+408 silly reify mark retired [
+408 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-win32-x64-gnu'
+408 silly reify ]
+409 silly reify mark retired [
+409 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-win32-x64-msvc'
+409 silly reify ]
+410 silly reify mark retired [
+410 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@schematics/angular'
+410 silly reify ]
+411 silly reify mark retired [
+411 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/bundle'
+411 silly reify ]
+412 silly reify mark retired [
+412 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/core'
+412 silly reify ]
+413 silly reify mark retired [
+413 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/protobuf-specs'
+413 silly reify ]
+414 silly reify mark retired [
+414 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/tuf'
+414 silly reify ]
+415 silly reify mark retired [
+415 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/sign'
+415 silly reify ]
+416 silly reify mark retired [
+416 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/verify'
+416 silly reify ]
+417 silly reify mark retired [
+417 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@standard-schema/spec'
+417 silly reify ]
+418 silly reify mark retired [
+418 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@tufjs/canonical-json'
+418 silly reify ]
+419 silly reify mark retired [
+419 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@tufjs/models'
+419 silly reify ]
+420 silly reify mark retired [
+420 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@tybys/wasm-util'
+420 silly reify ]
+421 silly reify mark retired [
+421 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@types/estree'
+421 silly reify ]
+422 silly reify mark retired [
+422 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@vitejs/plugin-basic-ssl'
+422 silly reify ]
+423 silly reify mark retired [
+423 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@yarnpkg/lockfile'
+423 silly reify ]
+424 silly reify moves {
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/abbrev': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.abbrev-ilOXmJTv',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/accepts': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.accepts-bZAjpnKk',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/agent-base': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.agent-base-B3qCml0e',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ajv': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.ajv-VueoowjH',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ajv-formats': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.ajv-formats-9LpydZmQ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/algoliasearch': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.algoliasearch-zzruSgvT',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ansi-escapes': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.ansi-escapes-aNnILkUf',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ansi-regex': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.ansi-regex-toS9BosI',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ansi-styles': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.ansi-styles-Rl2GBenN',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/baseline-browser-mapping': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.baseline-browser-mapping-G6AQ81EB',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/beasties': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.beasties-jx2flyl7',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/body-parser': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.body-parser-dnt8r1c2',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/browserslist': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.browserslist-xDCWhSau',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/cacache': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.cacache-T5TmO4wb',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/caniuse-lite': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.caniuse-lite-tt8ktLzn',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/chalk': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.chalk-o1ENmOx6',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/chardet': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.chardet-93EP3sS7',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/chokidar': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.chokidar-9BnfkjgJ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/cli-cursor': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.cli-cursor-dCiCinx3',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/chownr': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.chownr-vEduA1Mt',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/cli-spinners': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.cli-spinners-BCCMkPEg',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/cli-truncate': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.cli-truncate-zEVNBtnW',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/cliui': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.cliui-7Ohaf4nR',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/content-disposition': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.content-disposition-PGjpJIqB',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/convert-source-map': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.convert-source-map-5tQLAQlq',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/cookie-signature': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.cookie-signature-yDuxLUGw',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/cors': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.cors-SgEkZ4J5',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/css-select': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.css-select-kCM2LbSC',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/css-what': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.css-what-1nz657KB',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/debug': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.debug-wFVcWBCM',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/detect-libc': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.detect-libc-o9smfc3V',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/domutils': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.domutils-eKNUtIuQ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ee-first': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.ee-first-edwuVTOH',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/electron-to-chromium': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.electron-to-chromium-yctSiFbq',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/emoji-regex': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.emoji-regex-I0eNlAr4',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/encoding': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.encoding-HIjjES57',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/entities': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.entities-UQOQJRUC',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/env-paths': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.env-paths-m40IgjWg',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/environment': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.environment-ITF3FYcv',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/err-code': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.err-code-Livy1r8T',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/esbuild': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.esbuild-J76xx5hR',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/escalade': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.escalade-HKDESD8e',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/escape-html': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.escape-html-B7tq9FbG',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/eventemitter3': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.eventemitter3-dlTl9iLa',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/eventsource': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.eventsource-kkDEZrb8',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/eventsource-parser': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.eventsource-parser-Xdv3nqEJ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/exponential-backoff': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.exponential-backoff-ZdT4Fuji',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/express-rate-limit': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.express-rate-limit-wWpYepCw',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/etag': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.etag-S0zna3Nn',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/express': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.express-YBhRuudu',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/fast-uri': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.fast-uri-ydYYiLzV',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/fdir': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.fdir-aTYOMmAN',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/finalhandler': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.finalhandler-TnXgMy3H',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/fresh': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.fresh-iq9NmBMf',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/fs-minipass': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.fs-minipass-PB2f15Kn',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/fsevents': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.fsevents-Dy3NMjYL',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/get-east-asian-width': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.get-east-asian-width-2DcJvNAA',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/glob': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.glob-r0kXySHC',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/glob-to-regexp': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.glob-to-regexp-oNPyuxGb',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/graceful-fs': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.graceful-fs-gP31vRxp',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/hono': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.hono-VZErWNu7',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/hosted-git-info': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.hosted-git-info-nBxzfJ8E',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/htmlparser2': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.htmlparser2-uKREyVqz',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/http-cache-semantics': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.http-cache-semantics-iBTQrBNL',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/http-errors': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.http-errors-owkbk8vM',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/http-proxy-agent': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.http-proxy-agent-SorJYVmc',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/https-proxy-agent': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.https-proxy-agent-tV4Epq3F',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/iconv-lite': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.iconv-lite-hHcsl3Xk',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ignore-walk': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.ignore-walk-I4b0HEDY',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/immutable': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.immutable-i8Ddy8Qu',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/imurmurhash': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.imurmurhash-i1n058yZ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ini': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.ini-DgHUezjU',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ip-address': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.ip-address-G60yUAfl',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/is-core-module': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.is-core-module-hRi7PEiH',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/is-extglob': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.is-extglob-0Wuagmd5',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/is-fullwidth-code-point': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.is-fullwidth-code-point-OroaRFUm',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/is-interactive': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.is-interactive-t5VWCcDk',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/is-promise': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.is-promise-uFm3tgNv',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/is-unicode-supported': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.is-unicode-supported-vwCYkKW9',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/isexe': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.isexe-fT94TYvl',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/istanbul-lib-coverage': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.istanbul-lib-coverage-u36vdky8',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/istanbul-lib-instrument': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.istanbul-lib-instrument-hSgzb0Jt',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/jose': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.jose-SmdewqL7',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/jsesc': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.jsesc-LjxgoARF',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/json-parse-even-better-errors': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.json-parse-even-better-errors-SyhIU0Mj',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/json-schema-traverse': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.json-schema-traverse-EdMxZEgx',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/json5': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.json5-50RITB3I',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/json-schema-typed': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.json-schema-typed-kvOKmQYH',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/jsonc-parser': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.jsonc-parser-yEVjO1bC',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/jsonparse': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.jsonparse-rLR97Ny8',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/lmdb': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.lmdb-P3PhmwLS',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/log-symbols': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.log-symbols-92XqHSyF',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/log-update': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.log-update-HDYbuhxd',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/listr2': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.listr2-3gF6w1uV',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/magic-string': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.magic-string-6axc4XWz',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/make-fetch-happen': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.make-fetch-happen-LDfizkNn',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/merge-descriptors': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.merge-descriptors-W218vi9K',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/mime-db': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.mime-db-4YaJMUqZ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/mime-types': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.mime-types-JkDhCk7J',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/media-typer': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.media-typer-YmnypcD8',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/mimic-function': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.mimic-function-4IndXuso',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/minimatch': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.minimatch-Cb3fMbIr',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/minipass': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.minipass-oDRYvySd',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/minipass-collect': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.minipass-collect-9JlUiQtH',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/minipass-fetch': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.minipass-fetch-2rPrVDNV',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/minipass-flush': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.minipass-flush-qUxTu4h0',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/minipass-sized': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.minipass-sized-SiLEDzY1',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/minipass-pipeline': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.minipass-pipeline-FwByRezy',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/minizlib': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.minizlib-JzNmZ0RP',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/mrmime': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.mrmime-TWzD8Xr4',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/msgpackr': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.msgpackr-hTxqduKw',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/msgpackr-extract': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.msgpackr-extract-dmkIPEw9',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/nanoid': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.nanoid-a7Y6hykl',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/negotiator': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.negotiator-XSBITr2n',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/node-addon-api': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.node-addon-api-YoOFVx09',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/node-gyp': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.node-gyp-1Wx0SZR7',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/node-gyp-build-optional-packages': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.node-gyp-build-optional-packages-fd8oDVah',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/node-releases': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.node-releases-ZPZUVT3j',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/nopt': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.nopt-MIhs0gLZ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/npm-bundled': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.npm-bundled-XR27PoCJ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/npm-install-checks': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.npm-install-checks-5tcnslML',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/npm-normalize-package-bin': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.npm-normalize-package-bin-rwodHaVN',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/npm-package-arg': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.npm-package-arg-Wvj5BQ6u',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/npm-packlist': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.npm-packlist-eI6EG3jU',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/npm-pick-manifest': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.npm-pick-manifest-9Thhu1aO',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/npm-registry-fetch': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.npm-registry-fetch-nEx8pdI3',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/object-assign': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.object-assign-5tz9WvtA',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/once': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.once-liw8s84V',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/onetime': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.onetime-e6MN6Bti',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ora': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.ora-AEuyRynF',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ordered-binary': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.ordered-binary-C0mTi6eb',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/p-map': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.p-map-FarHOtTP',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/pacote': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.pacote-5TJNIki0',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/parse5': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.parse5-avq3jXq4',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/parse5-html-rewriting-stream': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.parse5-html-rewriting-stream-IPCv2SmA',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/parse5-sax-parser': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.parse5-sax-parser-5ZjEppsx',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/path-scurry': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.path-scurry-BzySwONb',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/path-to-regexp': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.path-to-regexp-5RjeEx1j',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/picomatch': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.picomatch-UepD0gDw',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/postcss': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.postcss-47WZmJUu',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/piscina': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.piscina-nAdWF5qh',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/pkce-challenge': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.pkce-challenge-DoAPdzJ7',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/postcss-media-query-parser': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.postcss-media-query-parser-jdJPQgrl',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/proc-log': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.proc-log-i9CBnABq',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/promise-retry': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.promise-retry-l0MloZ63',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/qs': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.qs-R6vm03e2',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/raw-body': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.raw-body-LaDq8DYR',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/readdirp': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.readdirp-Yr6YYdps',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/reflect-metadata': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.reflect-metadata-MGmnp1lO',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/require-from-string': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.require-from-string-mJg3wKxy',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/resolve': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.resolve-sVV6tTGX',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/restore-cursor': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.restore-cursor-fhLQEnXW',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/rfdc': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.rfdc-RCjfxktN',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/rolldown': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.rolldown-hUjJ6KoB',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/rollup': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.rollup-ZwTLkCAY',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/router': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.router-ahKH8sUE',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/sass': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.sass-CPMvRsyV',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/semver': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.semver-apguR5Or',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/send': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.send-i3Z58E9L',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/serve-static': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.serve-static-mTs0ajdw',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/sigstore': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.sigstore-zGrlv4qc',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/slice-ansi': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.slice-ansi-2FsqhzxV',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/smart-buffer': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.smart-buffer-UVJ8Buz4',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/socks': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.socks-qMpUuLNR',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/socks-proxy-agent': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.socks-proxy-agent-13NNqbhD',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/source-map': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.source-map-na10vntH',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/source-map-js': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.source-map-js-G3rmgXGD',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/source-map-support': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.source-map-support-w9ROlCxh',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/spdx-correct': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.spdx-correct-7lsWdPE5',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/spdx-exceptions': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.spdx-exceptions-59Kd5EAX',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/spdx-expression-parse': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.spdx-expression-parse-d2RQvUJ2',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/spdx-license-ids': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.spdx-license-ids-gPxm6Qpk',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/ssri': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.ssri-yJpNzgx8',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/statuses': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.statuses-XPDSKuBQ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/stdin-discarder': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.stdin-discarder-2dFC0Bob',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/string-width': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.string-width-P1xh3rpn',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/strip-ansi': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.strip-ansi-LLMUTDNK',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/tar': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.tar-nL66pIgz',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/tinyglobby': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.tinyglobby-zIEeXJ4I',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/tslib': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.tslib-ZcqChYUZ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/tuf-js': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.tuf-js-FX1jiqKh',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/type-is': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.type-is-obkp1K9J',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/typescript': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.typescript-eMiYumGD',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/undici': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.undici-i6wps1TA',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/unique-filename': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.unique-filename-B9aAPFhK',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/unique-slug': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.unique-slug-BqeyYwye',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/unpipe': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.unpipe-V5sZJuEZ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/update-browserslist-db': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.update-browserslist-db-KQpFtN5v',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/validate-npm-package-license': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.validate-npm-package-license-c0N5w9na',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/validate-npm-package-name': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.validate-npm-package-name-MTodSPhT',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/vite': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.vite-88cAVc3j',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/vary': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.vary-ePbNZZUg',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/watchpack': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.watchpack-BMjWWfxr',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/weak-lru-cache': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.weak-lru-cache-COYP95fV',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/which': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.which-EKhNbqzc',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/wrappy': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.wrappy-8inDMv1J',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/yargs': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.yargs-uza4qDno',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/yargs-parser': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.yargs-parser-W6o1sxzg',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/yoctocolors': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.yoctocolors-6tnoj5T9',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/zod-to-json-schema': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.zod-to-json-schema-OCxP0lfP',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/zod': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.zod-cVsGxL8j',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/client-abtesting': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/.client-abtesting-VRs3rtKj',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/client-analytics': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/.client-analytics-jrKoSOdv',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/client-common': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/.client-common-bwtOrGT4',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/abtesting': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/.abtesting-0yvrFJHF',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/client-insights': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/.client-insights-9pPSBx9r',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/client-personalization': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/.client-personalization-zQrLz5Im',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/client-search': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/.client-search-KkeaC9EW',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/client-query-suggestions': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/.client-query-suggestions-aPvo9gWq',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/ingestion': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/.ingestion-gK6XSXap',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/recommend': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/.recommend-gsjx2oxT',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/monitoring': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/.monitoring-H0xLyiCe',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/requester-browser-xhr': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/.requester-browser-xhr-6AxI4jrr',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/requester-node-http': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/.requester-node-http-U3wPb5YH',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/requester-fetch': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@algolia/.requester-fetch-T8fxzlaD',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@ampproject/remapping': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@ampproject/.remapping-tvCvuScc',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/cli': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/.cli-tEC630Bf',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/common': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/.common-0HkuOmBe',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/build': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/.build-l8CGnM7i',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/compiler': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/.compiler-uWp3e7pz',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/core': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/.core-3eOrTZKx',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/compiler-cli': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/.compiler-cli-y2O2zfZo',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/forms': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/.forms-ng7ftpxP',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/platform-browser': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/.platform-browser-0PwVJS3C',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular-devkit/architect': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular-devkit/.architect-CrNrYI46',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular-devkit/core': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular-devkit/.core-rlz1Wigg',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/router': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular/.router-38JfHeG3',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular-devkit/schematics': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@angular-devkit/.schematics-uo3mM0U4',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/compat-data': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/.compat-data-y4KqBRDH',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/core': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/.core-WHi0TNM9',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/code-frame': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/.code-frame-wGlolp0J',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/generator': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/.generator-wCYP5bE1',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helper-annotate-as-pure': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/.helper-annotate-as-pure-aynHQEzA',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helper-globals': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/.helper-globals-XQSMLjnb',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helper-compilation-targets': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/.helper-compilation-targets-S9xQglcl',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helper-module-imports': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/.helper-module-imports-TBwv8RRb',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helper-module-transforms': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/.helper-module-transforms-6cU7zHTE',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helper-split-export-declaration': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/.helper-split-export-declaration-baEi2ZFr',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helper-validator-option': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/.helper-validator-option-g2iCcvwT',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helper-validator-identifier': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/.helper-validator-identifier-SXIdXy3L',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/parser': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/.parser-ELDw3DVZ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/helpers': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/.helpers-qzbuwUvF',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/template': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/.template-BNZzdeCl',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/traverse': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/.traverse-9EXru0PJ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@emnapi/core': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@emnapi/.core-npF07l1g',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/types': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@babel/.types-oHIZYvbr',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@emnapi/runtime': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@emnapi/.runtime-clRmlGH7',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@emnapi/wasi-threads': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@emnapi/.wasi-threads-nGvTVvvI',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/android-arm': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.android-arm-7z2uani6',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/aix-ppc64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.aix-ppc64-QBYi0i2m',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/darwin-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.darwin-arm64-Y60PHqVy',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/android-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.android-arm64-NFMivbmk',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/android-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.android-x64-Rd2zgef3',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/darwin-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.darwin-x64-jK6Cwnvg',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/freebsd-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.freebsd-x64-EsIvTnWI',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-arm': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.linux-arm-Xvp2gZpn',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.linux-arm64-3sUs3DQk',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-ia32': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.linux-ia32-PLOFxM8G',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-loong64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.linux-loong64-37OzrVYY',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-mips64el': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.linux-mips64el-PDdrGeBS',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-riscv64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.linux-riscv64-3rGhdKZt',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-ppc64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.linux-ppc64-s0iaKeAE',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/freebsd-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.freebsd-arm64-N5aq2NBe',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.linux-x64-glaDKiGN',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/netbsd-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.netbsd-arm64-VVfB9FCD',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/openbsd-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.openbsd-arm64-IdruRdDG',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/openbsd-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.openbsd-x64-9hC4TKA1',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/openharmony-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.openharmony-arm64-r1mWpQIG',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/sunos-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.sunos-x64-MIkHIGN9',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/linux-s390x': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.linux-s390x-QEnB2pQQ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/win32-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.win32-arm64-YfCaTll0',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/netbsd-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.netbsd-x64-nGg4ZmmA',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@hono/node-server': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@hono/.node-server-W0ytqFa2',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/ansi': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/.ansi-pzyOTkSB',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/checkbox': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/.checkbox-rlUBjhha',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/core': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/.core-9wfByCDi',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/editor': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/.editor-LXaonK8R',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/external-editor': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/.external-editor-d04eQ4PR',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/expand': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/.expand-lA3DMOD6',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/input': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/.input-4h1AVgmD',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/figures': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/.figures-fAAJQMNi',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/confirm': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/.confirm-T1KPT3CW',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/number': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/.number-j23NDqje',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/password': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/.password-CFOBmmyJ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/prompts': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/.prompts-DqRqZJyT',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/rawlist': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/.rawlist-D4LsQR9N',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/search': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/.search-BFgtSjOP',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/select': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/.select-DaeVL4Hx',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/type': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@inquirer/.type-77bMP8GB',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@isaacs/balanced-match': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@isaacs/.balanced-match-H10ZzT06',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@isaacs/brace-expansion': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@isaacs/.brace-expansion-PJF3PoFF',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@isaacs/fs-minipass': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@isaacs/.fs-minipass-Z4PbGSoM',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@jridgewell/gen-mapping': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@jridgewell/.gen-mapping-9R4tpDla',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@jridgewell/remapping': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@jridgewell/.remapping-UPvaaM9M',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@jridgewell/resolve-uri': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@jridgewell/.resolve-uri-UBgmSQ5Y',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@jridgewell/sourcemap-codec': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@jridgewell/.sourcemap-codec-ZZ3gOcgp',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@jridgewell/trace-mapping': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@jridgewell/.trace-mapping-FU1QBO9o',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@listr2/prompt-adapter-inquirer': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@listr2/.prompt-adapter-inquirer-NwNmzbAJ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/lmdb-darwin-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/.lmdb-darwin-arm64-M8kxlDZM',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/win32-ia32': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.win32-ia32-b2XCUdi3',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/win32-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@esbuild/.win32-x64-mKWGQEKN',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/lmdb-darwin-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/.lmdb-darwin-x64-Yzchi4LE',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/lmdb-linux-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/.lmdb-linux-arm64-qlHcsbfd',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/lmdb-linux-arm': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/.lmdb-linux-arm-F99SW3Rf',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/lmdb-linux-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/.lmdb-linux-x64-j0JWxz6Z',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/lmdb-win32-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/.lmdb-win32-x64-rlKEU6J3',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/lmdb-win32-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@lmdb/.lmdb-win32-arm64-mU7FHU2d',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@modelcontextprotocol/sdk': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@modelcontextprotocol/.sdk-NMKQXjNq',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/msgpackr-extract-darwin-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/.msgpackr-extract-darwin-arm64-u9s7VVir',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/msgpackr-extract-darwin-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/.msgpackr-extract-darwin-x64-x1vjNof5',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/msgpackr-extract-linux-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/.msgpackr-extract-linux-arm64-PTk0nrIz',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/msgpackr-extract-linux-arm': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/.msgpackr-extract-linux-arm-THnokdBy',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/msgpackr-extract-linux-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/.msgpackr-extract-linux-x64-fQBZboVf',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-oGhdRasM',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/msgpackr-extract-win32-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@msgpackr-extract/.msgpackr-extract-win32-x64-3bYYp2BM',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-android-arm-eabi': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-android-arm-eabi-434yfRa0',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-darwin-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-darwin-arm64-MoZKdIHn',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-android-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-android-arm64-PfON15Y8',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-freebsd-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-freebsd-x64-kom0Ky9v',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-linux-arm-gnueabihf': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-linux-arm-gnueabihf-AG0OibuY',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-darwin-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-darwin-x64-PlUmedlR',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-linux-arm64-musl': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-linux-arm64-musl-BlRIdC0w',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-linux-arm64-gnu': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-linux-arm64-gnu-61H6fJd5',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-linux-ppc64-gnu': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-linux-ppc64-gnu-EHJU6HJx',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-linux-x64-gnu': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-linux-x64-gnu-3gwKqT5S',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-linux-riscv64-gnu': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-linux-riscv64-gnu-tAGFl5rf',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-linux-x64-musl': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-linux-x64-musl-qWFiYcCM',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-openharmony-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-openharmony-arm64-ONK51iy5',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-win32-arm64-msvc': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-win32-arm64-msvc-hFYLqhrm',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-win32-ia32-msvc': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-win32-ia32-msvc-Zset6AgR',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/wasm-runtime': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.wasm-runtime-QdpzVXaG',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-win32-x64-msvc': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-win32-x64-msvc-OXQK9sd0',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/fs': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/.fs-hyKk9Du4',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/agent': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/.agent-5oStcwyL',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/git': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/.git-HoGq8DkQ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/installed-package-contents': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/.installed-package-contents-q4K9wX5T',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/node-gyp': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/.node-gyp-zVOpuNnh',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/package-json': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/.package-json-UIVJU3aq',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/promise-spawn': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/.promise-spawn-qwjzBGk2',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/redact': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/.redact-F5qHO0pU',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/run-script': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@npmcli/.run-script-py2iKKai',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@oxc-project/types': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@oxc-project/.types-o0rUh4uM',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/.watcher-gJujGzAj',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-darwin-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/.watcher-darwin-arm64-qQzaX7xT',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/nice-linux-s390x-gnu': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@napi-rs/.nice-linux-s390x-gnu-8PXzbgdS',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-android-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/.watcher-android-arm64-0LWLJ9HM',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-linux-arm-glibc': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/.watcher-linux-arm-glibc-F0uQXG2v',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-linux-arm64-glibc': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/.watcher-linux-arm64-glibc-uTWjyd20',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-darwin-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/.watcher-darwin-x64-9GSJN7QS',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-freebsd-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/.watcher-freebsd-x64-w23AqZeW',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-linux-arm-musl': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/.watcher-linux-arm-musl-sHB8PRkj',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-linux-arm64-musl': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/.watcher-linux-arm64-musl-ZK69sD2y',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-linux-x64-musl': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/.watcher-linux-x64-musl-qh2PQvny',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-win32-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/.watcher-win32-arm64-5uEGO5xp',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-win32-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/.watcher-win32-x64-Qx3gtwqu',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-darwin-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/.binding-darwin-arm64-uwbwDtTl',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-win32-ia32': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/.watcher-win32-ia32-NxckDwmy',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-android-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/.binding-android-arm64-azyTYD6P',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-darwin-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/.binding-darwin-x64-7oOelbnR',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-linux-arm-gnueabihf': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/.binding-linux-arm-gnueabihf-thfQ9m4Q',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/watcher-linux-x64-glibc': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@parcel/.watcher-linux-x64-glibc-ybG5Jlap',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-freebsd-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/.binding-freebsd-x64-gQ2b0a51',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-linux-arm64-gnu': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/.binding-linux-arm64-gnu-BxoZEbkr',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-linux-arm64-musl': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/.binding-linux-arm64-musl-e2bHWVAq',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-linux-x64-gnu': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/.binding-linux-x64-gnu-pFxkkLTH',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-linux-x64-musl': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/.binding-linux-x64-musl-RoFVmaVh',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-openharmony-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/.binding-openharmony-arm64-YjXP1fR2',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-wasm32-wasi': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/.binding-wasm32-wasi-zKOVmPw8',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-win32-arm64-msvc': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/.binding-win32-arm64-msvc-5qvBpcAp',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/binding-win32-x64-msvc': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/.binding-win32-x64-msvc-mrMjJ2HR',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/pluginutils': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rolldown/.pluginutils-i4p0ij3W',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-android-arm-eabi': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-android-arm-eabi-VeOrBbuU',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-darwin-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-darwin-arm64-8v3TClQn',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-darwin-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-darwin-x64-SI7lh1dQ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-freebsd-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-freebsd-x64-Yx5F6QsJ',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-arm-gnueabihf': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-linux-arm-gnueabihf-rS4aEmpo',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-arm-musleabihf': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-linux-arm-musleabihf-wmcT3hfn',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-arm64-gnu': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-linux-arm64-gnu-sIEFTr44',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-arm64-musl': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-linux-arm64-musl-dCvwovzR',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-loong64-gnu': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-linux-loong64-gnu-DewJWcYV',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-loong64-musl': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-linux-loong64-musl-ZVnZi0if',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-ppc64-gnu': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-linux-ppc64-gnu-xqhWFqz5',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-ppc64-musl': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-linux-ppc64-musl-k9FuRqb2',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-riscv64-gnu': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-linux-riscv64-gnu-kOzJJ4YH',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-riscv64-musl': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-linux-riscv64-musl-oPgsd63g',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-freebsd-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-freebsd-arm64-59apxtuO',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-s390x-gnu': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-linux-s390x-gnu-KKwDtdGC',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-x64-gnu': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-linux-x64-gnu-l1wt4H0j',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-openbsd-x64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-openbsd-x64-DBy4z3zl',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-openharmony-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-openharmony-arm64-HyQakNhR',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-android-arm64': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-android-arm64-8kH48vfp',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-win32-arm64-msvc': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-win32-arm64-msvc-Ro2DjezS',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-linux-x64-musl': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-linux-x64-musl-Dxz3sMXe',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-win32-ia32-msvc': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-win32-ia32-msvc-UbtrzqKG',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-win32-x64-gnu': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-win32-x64-gnu-Yf80zcE6',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/rollup-win32-x64-msvc': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@rollup/.rollup-win32-x64-msvc-1gUVXbvG',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@schematics/angular': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@schematics/.angular-1CZOAwuP',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/bundle': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/.bundle-bsEOqeVc',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/core': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/.core-gPe3dj7W',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/protobuf-specs': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/.protobuf-specs-U91Noiyv',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/tuf': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/.tuf-opMDpuEe',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/sign': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/.sign-pQMbb2Jx',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/verify': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@sigstore/.verify-KlsBhGYR',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@standard-schema/spec': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@standard-schema/.spec-InqG1NfF',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@tufjs/canonical-json': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@tufjs/.canonical-json-DZizyKEo',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@tufjs/models': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@tufjs/.models-INBlEZ6E',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@tybys/wasm-util': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@tybys/.wasm-util-kzoVNMzy',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@types/estree': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@types/.estree-ssyZ41Al',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@vitejs/plugin-basic-ssl': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@vitejs/.plugin-basic-ssl-saFNMBLO',
+424 silly reify   '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@yarnpkg/lockfile': '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/@yarnpkg/.lockfile-4VH7Q9Hq'
+424 silly reify }
+425 verbose stack Error: ENOTEMPTY: directory not empty, rename '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/cacache' -> '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.cacache-T5TmO4wb'
+425 verbose stack     at async Object.rename (node:internal/fs/promises:786:10)
+425 verbose stack     at async moveFile (/usr/local/lib/node_modules/npm/node_modules/@npmcli/fs/lib/move-file.js:30:5)
+425 verbose stack     at async Promise.allSettled (index 13)
+425 verbose stack     at async [reifyPackages] (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:325:11)
+425 verbose stack     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:142:5)
+425 verbose stack     at async Install.exec (/usr/local/lib/node_modules/npm/lib/commands/install.js:150:5)
+425 verbose stack     at async Npm.exec (/usr/local/lib/node_modules/npm/lib/npm.js:207:9)
+425 verbose stack     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:74:5)
+426 error code ENOTEMPTY
+427 error syscall rename
+428 error path /Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/cacache
+429 error dest /Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.cacache-T5TmO4wb
+430 error errno -66
+431 error ENOTEMPTY: directory not empty, rename '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/cacache' -> '/Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/node_modules/.cacache-T5TmO4wb'
+432 silly unfinished npm timer reify 1770630035318
+433 silly unfinished npm timer reify:retireShallow 1770630035464
+434 verbose cwd /Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool
+435 verbose os Darwin 25.2.0
+436 verbose node v22.19.0
+437 verbose npm  v10.9.3
+438 verbose exit -66
+439 verbose code -66
+440 error A complete log of this run can be found in: /Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/.npm-cache/_logs/2026-02-09T09_40_34_878Z-debug-0.log

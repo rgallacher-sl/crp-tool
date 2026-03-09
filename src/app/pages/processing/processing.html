@@ -1,14 +1,24 @@
 <div class="processing-page">
   <div class="processing-content">
-    <div class="spinner"></div>
-    <h2>We're reviewing the Carbon Reduction Plan.</h2>
-    <p class="detail">
-      This includes checking the document structure
-      and identifying the supplier.
-    </p>
-    <p class="reassurance">
-      You don't need to do anything.<br>
-      You can safely leave this page and come back.
-    </p>
+    @if (!isFailed) {
+      <div class="spinner"></div>
+    }
+    <h2>{{ statusLabel }}</h2>
+    <p class="detail">{{ statusDetail }}</p>
+    <ol class="status-steps">
+      @for (step of steps; track step.label) {
+        <li class="status-step" [attr.data-state]="step.state">
+          <span class="step-label">{{ step.label }}</span>
+          <span class="step-state">{{ step.state }}</span>
+        </li>
+      }
+    </ol>
+    @if (isFailed) {
+      <p class="error-message">{{ errorMessage }}</p>
+      <div class="actions">
+        <button class="btn-primary" (click)="retry()">Try again</button>
+        <a routerLink="/suppliers" class="btn-secondary">Back to suppliers</a>
+      </div>
+    }
   </div>
 </div>
