@@ -219,12 +219,14 @@ export class AssessmentService {
     const validationMs = this.randomBetween(2000, 3000);
     const persistenceMs = this.randomBetween(1000, 2000);
 
-    if (assessment.status === 'fetching') {
-      schedule(fetchOrUploadMs, () => this.updateStatus(id, 'uploaded'));
-    }
-
-    if (assessment.status === 'uploading') {
-      schedule(fetchOrUploadMs, () => this.updateStatus(id, 'uploaded'));
+    if (assessment.status === 'fetching' || assessment.status === 'uploading') {
+      schedule(fetchOrUploadMs, () => {
+        if (failAt === 'upload') {
+          this.markFailed(id, shouldFail!.code, shouldFail!.message, 'upload');
+          return;
+        }
+        this.updateStatus(id, 'uploaded');
+      });
     }
 
     schedule(fetchOrUploadMs + 1000, () => this.updateStatus(id, 'processing_extraction'));
@@ -284,12 +286,11 @@ export class AssessmentService {
 
   private shouldSimulateFailure(assessment: Assessment): { step: string; code: string; message: string } | null {
     const token = `${assessment.documentLabel} ${assessment.documentReference ?? ''}`.toLowerCase();
-    if (token.includes('timeout')) {
-      return { step: 'semantic', code: 'timeout', message: 'This step timed out.' };
-    }
-    if (token.includes('fail') || token.includes('error')) {
-      return { step: 'semantic', code: 'processing_failed', message: 'We could not process this document.' };
-    }
+    if (token.includes('fail-network'))  return { step: 'upload',      code: 'network_error',     message: 'Your connection dropped during upload. Check your internet and try again.' };
+    if (token.includes('fail-upload'))   return { step: 'upload',      code: 'upload_failed',     message: 'We had trouble retrieving your document. Please try again.' };
+    if (token.includes('fail-storage'))  return { step: 'persistence', code: 'storage_failed',    message: 'Something went wrong saving your document. Please try again.' };
+    if (token.includes('fail-extract'))  return { step: 'extraction',  code: 'extraction_failed', message: "We weren't able to read this document. If it's a scanned PDF, try a text-based version. Otherwise try again." };
+    if (token.includes('fail-semantic')) return { step: 'semantic',    code: 'semantic_failed',   message: "We weren't able to analyse the document content. Please try again." };
     return null;
   }
 

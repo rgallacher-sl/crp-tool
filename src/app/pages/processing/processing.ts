@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ChangeDetectorRef, Component, NgZone, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { AssessmentService } from '../../services/assessment.service';
 import { Assessment } from '../../models/assessment.model';
@@ -30,6 +30,8 @@ export class ProcessingComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private router: Router,
     private assessmentService: AssessmentService,
+    private ngZone: NgZone,
+    private cdr: ChangeDetectorRef,
   ) {}
 
   ngOnInit(): void {
@@ -147,7 +149,10 @@ export class ProcessingComponent implements OnInit, OnDestroy {
     this.failureAtMs = this.getFailureMoment(this.plan, this.failureScenario);
 
     this.tick();
-    this.tickId = setInterval(() => this.tick(), 200);
+    this.tickId = setInterval(() => this.ngZone.run(() => {
+      this.tick();
+      this.cdr.markForCheck();
+    }), 200);
   }
 
   private tick(): void {
@@ -188,11 +193,11 @@ export class ProcessingComponent implements OnInit, OnDestroy {
 
   private buildPlan(assessment: Assessment): Array<{ status: Assessment['status']; durationMs: number }> {
     const durations = {
-      fetchOrUpload: this.randomBetween(1000, 2000),
-      extraction: this.randomBetween(5000, 7000),
-      semantic: this.randomBetween(3500, 5000),
-      validation: this.randomBetween(2000, 3000),
-      finalize: this.randomBetween(1000, 2000),
+      fetchOrUpload: this.randomBetween(800, 1200),
+      extraction: this.randomBetween(1200, 1800),
+      semantic: this.randomBetween(1200, 1800),
+      validation: this.randomBetween(800, 1200),
+      finalize: this.randomBetween(400, 600),
     };
 
     const firstStep: Assessment['status'] = assessment.documentSource === 'link' ? 'fetching' : 'uploading';
@@ -208,12 +213,11 @@ export class ProcessingComponent implements OnInit, OnDestroy {
 
   private getFailureScenario(assessment: Assessment): { step: string; code: string; message: string } | null {
     const token = `${assessment.documentLabel} ${assessment.documentReference ?? ''}`.toLowerCase();
-    if (token.includes('timeout')) {
-      return { step: 'semantic', code: 'timeout', message: 'This step timed out.' };
-    }
-    if (token.includes('fail') || token.includes('error')) {
-      return { step: 'semantic', code: 'processing_failed', message: 'We could not process this document.' };
-    }
+    if (token.includes('fail-network'))  return { step: 'upload',      code: 'network_error',     message: 'Your connection dropped during upload. Check your internet and try again.' };
+    if (token.includes('fail-upload'))   return { step: 'upload',      code: 'upload_failed',     message: 'We had trouble retrieving your document. Please try again.' };
+    if (token.includes('fail-storage'))  return { step: 'persistence', code: 'storage_failed',    message: 'Something went wrong saving your document. Please try again.' };
+    if (token.includes('fail-extract'))  return { step: 'extraction',  code: 'extraction_failed', message: "We weren't able to read this document. If it's a scanned PDF, try a text-based version. Otherwise try again." };
+    if (token.includes('fail-semantic')) return { step: 'semantic',    code: 'semantic_failed',   message: "We weren't able to analyse the document content. Please try again." };
     return null;
   }
 
@@ -244,6 +248,7 @@ export class ProcessingComponent implements OnInit, OnDestroy {
   }
 
   private mapFailureStatus(step: string): Assessment['status'] {
+    if (step === 'upload') return this.assessment?.documentSource === 'link' ? 'fetching' : 'uploading';
     if (step === 'extraction') return 'processing_extraction';
     if (step === 'semantic') return 'processing_semantic';
     if (step === 'validation') return 'processing_validation';
@@ -281,6 +286,7 @@ export class ProcessingComponent implements OnInit, OnDestroy {
   }
 
   private mapFailureStep(key: string): string {
+    if (key === 'fetching' || key === 'uploading') return 'upload';
     if (key === 'processing_extraction') return 'extraction';
     if (key === 'processing_semantic') return 'semantic';
     if (key === 'processing_validation') return 'validation';
