@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -13,6 +13,8 @@ import { Assessment, AssessmentOutcome } from '../../models/assessment.model';
   styleUrl: './assessment-workspace.scss',
 })
 export class AssessmentWorkspaceComponent implements OnInit {
+  @ViewChild('cancelBtn') cancelBtnRef!: ElementRef<HTMLButtonElement>;
+  @ViewChild('leaveBtn') leaveBtnRef!: ElementRef<HTMLButtonElement>;
   assessment: Assessment | null = null;
   selectedOutcome: AssessmentOutcome | null = null;
   notes = '';
@@ -178,8 +180,16 @@ export class AssessmentWorkspaceComponent implements OnInit {
     this.router.navigate(['/assessments', this.assessment.id, 'complete']);
   }
 
+  @HostListener('keydown.escape')
+  onEscape(): void {
+    if (this.showCancelConfirm) {
+      this.dismissCancel();
+    }
+  }
+
   cancel(): void {
     this.showCancelConfirm = true;
+    setTimeout(() => this.leaveBtnRef?.nativeElement.focus(), 0);
   }
 
   confirmCancel(): void {
@@ -188,6 +198,7 @@ export class AssessmentWorkspaceComponent implements OnInit {
 
   dismissCancel(): void {
     this.showCancelConfirm = false;
+    setTimeout(() => this.cancelBtnRef?.nativeElement.focus(), 0);
   }
 
   get aiOutcome(): AssessmentOutcome {
