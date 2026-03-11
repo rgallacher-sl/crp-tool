@@ -12,11 +12,11 @@ import { Assessment } from '../../models/assessment.model';
 })
 export class ProcessingComponent implements OnInit, OnDestroy {
   assessment: Assessment | null = null;
-  statusLabel = 'Preparing your assessment...';
-  statusDetail = '';
+  statusLabel = 'Checking your document';
   isFailed = false;
   errorMessage = '';
   steps: Array<{ label: string; state: 'pending' | 'active' | 'done' | 'error' }> = [];
+  notifyState: 'idle' | 'granted' | 'denied' | 'unsupported' = 'idle';
   private tickId: ReturnType<typeof setInterval> | null = null;
   private plan: Array<{ status: Assessment['status']; durationMs: number }> = [];
   private boundaries: number[] = [];
@@ -34,7 +34,19 @@ export class ProcessingComponent implements OnInit, OnDestroy {
     private cdr: ChangeDetectorRef,
   ) {}
 
+  get visibleSteps() {
+    return this.steps.filter(s => s.state !== 'pending');
+  }
+
   ngOnInit(): void {
+    if (!('Notification' in window)) {
+      this.notifyState = 'unsupported';
+    } else if (Notification.permission === 'granted') {
+      this.notifyState = 'granted';
+    } else if (Notification.permission === 'denied') {
+      this.notifyState = 'denied';
+    }
+
     const id = this.route.snapshot.paramMap.get('id');
     if (!id) {
       this.router.navigate(['/suppliers']);
@@ -76,59 +88,40 @@ export class ProcessingComponent implements OnInit, OnDestroy {
     this.startStepSequence();
   }
 
+  cancel(): void {
+    this.clearTicker();
+    this.router.navigate(['/suppliers']);
+  }
+
+  async requestNotification(): Promise<void> {
+    if (!('Notification' in window)) return;
+    const permission = await Notification.requestPermission();
+    this.ngZone.run(() => {
+      this.notifyState = permission === 'granted' ? 'granted' : 'denied';
+      this.cdr.markForCheck();
+    });
+  }
+
+  private sendNotification(): void {
+    if (this.notifyState !== 'granted') return;
+    new Notification('Assessment ready', {
+      body: 'Your document has been checked. View the results now.',
+      icon: '/favicon.ico',
+    });
+  }
+
   private updateViewState(): void {
     if (!this.assessment) return;
     this.steps = this.buildSteps(this.assessment);
     if (this.assessment.status === 'failed') {
       this.isFailed = true;
-      this.statusLabel = 'We could not process this document';
-      this.statusDetail = 'Please try again or return to suppliers.';
+      this.statusLabel = 'We couldn\'t process this document';
       this.errorMessage = this.assessment.errorMessage ?? 'An unexpected error occurred.';
       return;
     }
 
     this.isFailed = false;
-    switch (this.assessment.status) {
-      case 'fetching':
-        this.statusLabel = 'Fetching the PDF...';
-        this.statusDetail = 'We are retrieving the document from the link provided (typically 1–2s).';
-        break;
-      case 'uploading':
-        this.statusLabel = 'Uploading the PDF...';
-        this.statusDetail = 'This may take a moment depending on file size (typically 1–2s).';
-        break;
-      case 'uploaded':
-        this.statusLabel = 'Upload complete';
-        this.statusDetail = 'Starting document checks.';
-        break;
-      case 'processing_extraction':
-        this.statusLabel = 'Extracting text...';
-        this.statusDetail = 'We are reading the document structure (typically 5–7s).';
-        break;
-      case 'extraction_complete':
-        this.statusLabel = 'Text extracted';
-        this.statusDetail = 'Preparing semantic checks.';
-        break;
-      case 'processing_semantic':
-        this.statusLabel = 'Checking PPN 006 data...';
-        this.statusDetail = 'Identifying commitments and emissions data (typically 3.5–5s).';
-        break;
-      case 'semantic_complete':
-        this.statusLabel = 'Data extracted';
-        this.statusDetail = 'Validating compliance rules.';
-        break;
-      case 'processing_validation':
-        this.statusLabel = 'Validating compliance...';
-        this.statusDetail = 'Applying CP1–CP10 checks (typically 2–3s).';
-        break;
-      case 'processing_persistence':
-        this.statusLabel = 'Finalizing checks...';
-        this.statusDetail = 'Wrapping up the assessment (typically 1–2s).';
-        break;
-      default:
-        this.statusLabel = 'Processing your assessment...';
-        this.statusDetail = 'You can leave this page and come back.';
-    }
+    this.statusLabel = this.getStatusLabel(assessment);
   }
 
   private startStepSequence(): void {
@@ -177,7 +170,9 @@ export class ProcessingComponent implements OnInit, OnDestroy {
       this.refreshAssessment();
       this.updateViewState();
       this.clearTicker();
-      this.router.navigate(['/assessments', this.assessment.id]);
+      this.sendNotification();
+      const id = this.assessment.id;
+      setTimeout(() => this.ngZone.run(() => this.router.navigate(['/assessments', id])), 900);
       return;
     }
 
@@ -193,11 +188,11 @@ export class ProcessingComponent implements OnInit, OnDestroy {
 
   private buildPlan(assessment: Assessment): Array<{ status: Assessment['status']; durationMs: number }> {
     const durations = {
-      fetchOrUpload: this.randomBetween(800, 1200),
-      extraction: this.randomBetween(1200, 1800),
-      semantic: this.randomBetween(1200, 1800),
-      validation: this.randomBetween(800, 1200),
-      finalize: this.randomBetween(400, 600),
+      fetchOrUpload: this.randomBetween(3000, 5000),
+      extraction: this.randomBetween(15000, 20000),
+      semantic: this.randomBetween(20000, 25000),
+      validation: this.randomBetween(10000, 12000),
+      finalize: this.randomBetween(2000, 3000),
     };
 
     const firstStep: Assessment['status'] = assessment.documentSource === 'link' ? 'fetching' : 'uploading';
@@ -255,26 +250,31 @@ export class ProcessingComponent implements OnInit, OnDestroy {
     return 'processing_persistence';
   }
 
-  private buildSteps(assessment: Assessment): Array<{ label: string; state: 'pending' | 'active' | 'done' | 'error' }> {
-    const order: Array<{ key: string; label: string }> = [
-      {
-        key: assessment.documentSource === 'link' ? 'fetching' : 'uploading',
-        label: assessment.documentSource === 'link' ? 'Fetching PDF' : 'Uploading PDF',
-      },
-      { key: 'processing_extraction', label: 'Extracting text' },
-      { key: 'processing_semantic', label: 'Checking PPN 006 data' },
-      { key: 'processing_validation', label: 'Validating compliance' },
-    ];
+  private getStatusLabel(assessment: Assessment): string {
+    switch (assessment.status) {
+      case 'uploading': return 'Uploading your document';
+      case 'fetching':  return 'Fetching your document';
+      default:          return 'Checking your document';
+    }
+  }
 
-    return order.map(step => ({
-      label: step.label,
-      state: this.getStepState(assessment, step.key),
-    }));
+  private buildSteps(assessment: Assessment): Array<{ label: string; state: 'pending' | 'active' | 'done' | 'error' }> {
+    const fetchLabel = assessment.documentSource === 'link' ? 'Fetching document' : 'Uploading document';
+    const fetchKey  = assessment.documentSource === 'link' ? 'fetching' : 'uploading';
+
+    return [
+      { label: fetchLabel,                      state: this.getStepState(assessment, fetchKey) },
+      { label: 'Reading document contents',     state: this.getStepState(assessment, 'processing_extraction') },
+      { label: 'Checking PPN 006 requirements', state: this.getPpnStepState(assessment) },
+    ];
   }
 
   private getStepState(assessment: Assessment, key: string): 'pending' | 'active' | 'done' | 'error' {
     if (assessment.status === 'failed') {
-      return assessment.failedStep === this.mapFailureStep(key) ? 'error' : 'pending';
+      const thisKey = this.mapFailureStep(key);
+      if (thisKey === assessment.failedStep) return 'error';
+      const order = ['upload', 'extraction', 'semantic', 'validation', 'persistence'];
+      return order.indexOf(thisKey) < order.indexOf(assessment.failedStep ?? '') ? 'done' : 'pending';
     }
 
     const rank = this.getStatusRank(assessment.status);
@@ -282,6 +282,18 @@ export class ProcessingComponent implements OnInit, OnDestroy {
 
     if (rank > stepRank) return 'done';
     if (rank === stepRank) return 'active';
+    return 'pending';
+  }
+
+  private getPpnStepState(assessment: Assessment): 'pending' | 'active' | 'done' | 'error' {
+    if (assessment.status === 'failed') {
+      const ppnFailures = ['semantic', 'validation', 'persistence'];
+      return ppnFailures.includes(assessment.failedStep ?? '') ? 'error' : 'pending';
+    }
+
+    const rank = this.getStatusRank(assessment.status);
+    if (rank >= this.getStatusRank('ready')) return 'done';
+    if (rank >= this.getStatusRank('processing_semantic')) return 'active';
     return 'pending';
   }
 

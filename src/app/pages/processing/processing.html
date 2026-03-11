@@ -1,18 +1,58 @@
 <div class="processing-page">
   <div class="processing-content">
-    @if (!isFailed) {
-      <div class="spinner"></div>
-    }
     <h2>{{ statusLabel }}</h2>
-    <p class="detail">{{ statusDetail }}</p>
+
+    @if (!isFailed && assessment) {
+      <div class="document-chip">
+        @if (assessment.documentSource === 'upload') {
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M4 2h6l4 4v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+            <path d="M10 2v4h4" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+          </svg>
+        } @else {
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.25"/>
+            <path d="M2 8h12M8 2c-2 2-3 4-3 6s1 4 3 6M8 2c2 2 3 4 3 6s-1 4-3 6" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+          </svg>
+        }
+        <span>{{ assessment.documentSource === 'link' ? assessment.documentReference : assessment.documentLabel }}</span>
+      </div>
+    }
+
+    @if (!isFailed) {
+      <p class="reassurance">This can take a few minutes. You can leave this page and come back.</p>
+    }
+
     <ol class="status-steps">
       @for (step of steps; track step.label) {
         <li class="status-step" [attr.data-state]="step.state">
           <span class="step-label">{{ step.label }}</span>
-          <span class="step-state">{{ step.state }}</span>
+          <span class="step-icon" aria-hidden="true">
+            @if (step.state === 'active') {
+              <span class="step-spinner"></span>
+            } @else if (step.state === 'done') {
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            } @else if (step.state === 'error') {
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+            }
+          </span>
         </li>
       }
     </ol>
+
+    @if (!isFailed) {
+      <div class="page-actions">
+        @if (notifyState === 'idle') {
+          <button class="btn-secondary" (click)="requestNotification()">Notify me when done</button>
+        } @else if (notifyState === 'granted') {
+          <span class="notify-confirmed">You'll be notified when it's ready</span>
+        } @else if (notifyState === 'denied') {
+          <span class="notify-denied">Notifications blocked — check your browser settings</span>
+        }
+        <button class="btn-cancel" (click)="cancel()">Cancel</button>
+      </div>
+    }
+
     @if (isFailed) {
       <p class="error-message">{{ errorMessage }}</p>
       <div class="actions">

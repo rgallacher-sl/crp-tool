@@ -20,6 +20,7 @@ export class AssessmentWorkspaceComponent implements OnInit {
   supplierName = '';
   pendingOverrideConfirmation = false;
   overrideConfirmed = false;
+  showCancelConfirm = false;
   ppnFindings = [
     {
       code: '1',
@@ -178,7 +179,15 @@ export class AssessmentWorkspaceComponent implements OnInit {
   }
 
   cancel(): void {
+    this.showCancelConfirm = true;
+  }
+
+  confirmCancel(): void {
     this.router.navigate(['/suppliers']);
+  }
+
+  dismissCancel(): void {
+    this.showCancelConfirm = false;
   }
 
   get aiOutcome(): AssessmentOutcome {

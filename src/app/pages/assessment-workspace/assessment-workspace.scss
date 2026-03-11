@@ -414,6 +414,42 @@
   width: 100%;
 }
 
+.cancel-confirm {
+  border: 1px solid var(--color-danger-border, var(--error-color));
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: var(--color-danger-soft, #fff5f5);
+}
+
+.cancel-confirm-text {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.cancel-confirm-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sx-2);
+}
+
+.btn-danger {
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  background: var(--error-color);
+  color: #fff;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
 .decision-actions {
   display: flex;
   flex-direction: column;

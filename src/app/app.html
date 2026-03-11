@@ -1,9 +1,15 @@
-<header class="app-header">
-  <nav class="app-nav">
-    <a routerLink="/suppliers" class="nav-brand">CRP Assessment Tool</a>
-    <a routerLink="/suppliers" routerLinkActive="active" class="nav-link">Suppliers</a>
-  </nav>
-</header>
+@if (!isSignInPage) {
+  <header class="app-header">
+    <nav class="app-nav">
+      <a routerLink="/suppliers" class="nav-brand">CRP Assessment Tool</a>
+      <a routerLink="/suppliers" routerLinkActive="active" class="nav-link">Suppliers</a>
+      <div class="nav-spacer"></div>
+      @if (auth.isSignedIn()) {
+        <button class="nav-sign-out" (click)="signOut()">Sign out</button>
+      }
+    </nav>
+  </header>
+}
 <main class="app-main">
   <router-outlet />
 </main>

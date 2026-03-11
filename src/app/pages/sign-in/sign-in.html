@@ -1,0 +1,47 @@
+<div class="sign-in-page">
+  <div class="sign-in-card">
+    <h1>Sign in</h1>
+    <form (ngSubmit)="submit()" novalidate>
+      @if (authError) {
+        <p class="auth-error" role="alert">{{ authError }}</p>
+      }
+      <div class="field" [class.field--error]="emailError">
+        <label for="email">Email address</label>
+        @if (emailError) {
+          <p class="field-error" id="email-error" role="alert">{{ emailError }}</p>
+        }
+        <input
+          id="email"
+          type="email"
+          [(ngModel)]="email"
+          name="email"
+          autocomplete="email"
+          placeholder="you@example.com"
+          [attr.aria-invalid]="emailError ? 'true' : null"
+          [attr.aria-describedby]="emailError ? 'email-error' : null"
+        />
+      </div>
+      <div class="field" [class.field--error]="passwordError">
+        <label for="password">Password</label>
+        @if (passwordError) {
+          <p class="field-error" id="password-error" role="alert">{{ passwordError }}</p>
+        }
+        <div class="password-wrapper">
+          <input
+            id="password"
+            [type]="showPassword ? 'text' : 'password'"
+            [(ngModel)]="password"
+            name="password"
+            autocomplete="current-password"
+            [attr.aria-invalid]="passwordError ? 'true' : null"
+            [attr.aria-describedby]="passwordError ? 'password-error' : null"
+          />
+          <button type="button" class="show-hide-btn" (click)="showPassword = !showPassword">
+            {{ showPassword ? 'Hide' : 'Show' }}
+          </button>
+        </div>
+      </div>
+      <button type="submit" class="btn-primary full-width">Sign in</button>
+    </form>
+  </div>
+</div>

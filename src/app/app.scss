@@ -40,6 +40,24 @@
   }
 }
 
+.nav-spacer {
+  flex: 1;
+}
+
+.nav-sign-out {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-family: inherit;
+  padding: 4px 0;
+
+  &:hover {
+    color: var(--text-primary);
+  }
+}
+
 .app-main {
   min-height: calc(100vh - 57px);
 }

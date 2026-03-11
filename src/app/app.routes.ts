@@ -1,4 +1,7 @@
 import { Routes } from '@angular/router';
+import { authGuard } from './guards/auth.guard';
+import { SignInComponent } from './pages/sign-in/sign-in';
+import { DevProcessingComponent } from './pages/dev-processing/dev-processing';
 import { SuppliersComponent } from './pages/suppliers/suppliers';
 import { ProvideCrpComponent } from './pages/provide-crp/provide-crp';
 import { ProcessingComponent } from './pages/processing/processing';
@@ -8,13 +11,15 @@ import { AssessmentCompleteComponent } from './pages/assessment-complete/assessm
 import { SupplierDetailComponent } from './pages/supplier-detail/supplier-detail';
 
 export const routes: Routes = [
+  { path: 'sign-in', component: SignInComponent },
+  { path: 'dev/processing', component: DevProcessingComponent },
   { path: '', redirectTo: 'suppliers', pathMatch: 'full' },
-  { path: 'suppliers', component: SuppliersComponent },
-  { path: 'suppliers/:id', component: SupplierDetailComponent },
-  { path: 'assessments/new/provide-crp', component: ProvideCrpComponent },
-  { path: 'assessments/:id/processing', component: ProcessingComponent },
-  { path: 'assessments/:id/confirm-supplier', component: ConfirmSupplierComponent },
-  { path: 'assessments/:id/complete', component: AssessmentCompleteComponent },
-  { path: 'assessments/:id', component: AssessmentWorkspaceComponent },
+  { path: 'suppliers', component: SuppliersComponent, canActivate: [authGuard] },
+  { path: 'suppliers/:id', component: SupplierDetailComponent, canActivate: [authGuard] },
+  { path: 'assessments/new/provide-crp', component: ProvideCrpComponent, canActivate: [authGuard] },
+  { path: 'assessments/:id/processing', component: ProcessingComponent, canActivate: [authGuard] },
+  { path: 'assessments/:id/confirm-supplier', component: ConfirmSupplierComponent, canActivate: [authGuard] },
+  { path: 'assessments/:id/complete', component: AssessmentCompleteComponent, canActivate: [authGuard] },
+  { path: 'assessments/:id', component: AssessmentWorkspaceComponent, canActivate: [authGuard] },
   { path: '**', redirectTo: 'suppliers' },
 ];

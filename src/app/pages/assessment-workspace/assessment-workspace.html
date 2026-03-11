@@ -179,14 +179,24 @@
           Recording this decision will finalize the assessment and update supplier history.
         </p>
 
-        <div class="decision-actions">
-          <button class="btn-secondary" type="button" (click)="cancel()">
-            Cancel
-          </button>
-          <button class="btn-primary btn-record" type="button" (click)="recordDecision()">
-            Record decision
-          </button>
-        </div>
+        @if (showCancelConfirm) {
+          <div class="cancel-confirm">
+            <p class="cancel-confirm-text">If you leave now, this assessment will not be recorded and the AI results will be lost.</p>
+            <div class="cancel-confirm-actions">
+              <button class="btn-danger" type="button" (click)="confirmCancel()">Leave without recording</button>
+              <button class="btn-secondary" type="button" (click)="dismissCancel()">Stay on this page</button>
+            </div>
+          </div>
+        } @else {
+          <div class="decision-actions">
+            <button class="btn-secondary" type="button" (click)="cancel()">
+              Cancel
+            </button>
+            <button class="btn-primary btn-record" type="button" (click)="recordDecision()">
+              Record decision
+            </button>
+          </div>
+        }
       </div>
     </div>
   </div>

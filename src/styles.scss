@@ -123,6 +123,7 @@ html, body {
   margin: var(--space-0);
   padding: var(--space-0);
   height: 100%;
+  scrollbar-gutter: stable;
   font-family: var(--font-family-base);
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
