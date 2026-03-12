@@ -9,6 +9,8 @@ import { ConfirmSupplierComponent } from './pages/confirm-supplier/confirm-suppl
 import { AssessmentWorkspaceComponent } from './pages/assessment-workspace/assessment-workspace';
 import { AssessmentCompleteComponent } from './pages/assessment-complete/assessment-complete';
 import { SupplierDetailComponent } from './pages/supplier-detail/supplier-detail';
+import { BatchProcessingComponent } from './pages/batch-processing/batch-processing';
+import { BatchReviewComponent } from './pages/batch-review/batch-review';
 
 export const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
@@ -21,5 +23,7 @@ export const routes: Routes = [
   { path: 'assessments/:id/confirm-supplier', component: ConfirmSupplierComponent, canActivate: [authGuard] },
   { path: 'assessments/:id/complete', component: AssessmentCompleteComponent, canActivate: [authGuard] },
   { path: 'assessments/:id', component: AssessmentWorkspaceComponent, canActivate: [authGuard] },
+  { path: 'batches/:batchId/processing', component: BatchProcessingComponent, canActivate: [authGuard] },
+  { path: 'batches/:batchId/review', component: BatchReviewComponent, canActivate: [authGuard] },
   { path: '**', redirectTo: 'suppliers' },
 ];

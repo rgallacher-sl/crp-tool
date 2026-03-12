@@ -4,23 +4,44 @@
 
     <fieldset class="source-group">
       <p class="sr-only-copy" [id]="sourceHelpId">
-        Provide either a link or a PDF upload. You only need one.
+        Provide links and PDFs for the suppliers you want to assess. You can add multiple.
       </p>
 
       <div class="form-section">
-        <label class="field-label" for="crp-link">
-          Paste a link to a supplier's Carbon Reduction Plan
+        <label class="field-label">
+          Paste links to supplier Carbon Reduction Plans
         </label>
-        <input
-          id="crp-link"
-          type="url"
-          class="text-input"
-          [(ngModel)]="linkUrl"
-          (ngModelChange)="onLinkChange()"
-          [disabled]="!!selectedFile"
-          [attr.aria-describedby]="error ? sourceHelpId + ' ' + sourceErrorId : sourceHelpId"
-          [attr.aria-invalid]="error ? 'true' : null"
-        />
+        <div class="url-inputs">
+          @for (url of urlInputs; track trackByIndex($index)) {
+            <div class="url-row">
+              <input
+                [id]="'crp-link-' + $index"
+                type="url"
+                class="text-input"
+                [(ngModel)]="urlInputs[$index]"
+                (ngModelChange)="error = ''"
+                placeholder="https://"
+                [attr.aria-label]="'Link ' + ($index + 1)"
+                [attr.aria-describedby]="error ? sourceHelpId + ' ' + sourceErrorId : sourceHelpId"
+              />
+              @if (urlInputs.length > 1) {
+                <button
+                  type="button"
+                  class="remove-url-btn"
+                  (click)="removeLinkInput($index)"
+                  [attr.aria-label]="'Remove link ' + ($index + 1)"
+                >
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              }
+            </div>
+          }
+        </div>
+        <button type="button" class="add-link-btn" (click)="addLinkInput()">
+          + Add another link
+        </button>
       </div>
 
       <div class="divider">
@@ -30,44 +51,42 @@
       <div
         class="upload-panel"
         [class.dragging]="isDragging"
-        [class.has-file]="!!selectedFile"
-        [attr.role]="selectedFile ? null : 'button'"
-        [attr.tabindex]="selectedFile ? null : '0'"
         (dragover)="onDragOver($event)"
         (dragleave)="onDragLeave($event)"
         (drop)="onDrop($event)"
-        (click)="selectedFile ? null : openFilePicker(fileInput)"
-        (keydown)="selectedFile ? null : onUploadPanelKeydown($event, fileInput)"
+        (click)="openFilePicker(fileInput)"
+        (keydown)="onUploadPanelKeydown($event, fileInput)"
+        [attr.role]="fileEntries.length === 0 ? 'button' : null"
+        [attr.tabindex]="fileEntries.length === 0 ? '0' : null"
         [attr.aria-describedby]="sourceHelpId"
       >
-        @if (selectedFile) {
-          <div class="file-state" [class.uploaded]="uploadState === 'uploaded'">
-            <div class="status-line">
-              <div class="status-left">
-                <span class="status-icon" [class.uploading]="uploadState === 'uploading'" [class.uploaded]="uploadState === 'uploaded'" aria-hidden="true"></span>
-                <p class="status-label">{{ uploadState === 'uploading' ? 'Uploading...' : 'Uploaded' }}</p>
-              </div>
-              @if (uploadState === 'uploaded') {
-                <button class="remove-file" (click)="removeFile(); $event.stopPropagation()" type="button">Remove</button>
-              }
-            </div>
-            <p class="file-name">{{ selectedFile.name }}</p>
-          </div>
+        @if (fileEntries.length > 0) {
+          <ul class="file-list" (click)="$event.stopPropagation()">
+            @for (entry of fileEntries; track entry.file.name; let i = $index) {
+              <li class="file-row" [class.uploaded]="entry.state === 'uploaded'">
+                <span class="status-icon" [class.uploading]="entry.state === 'uploading'" [class.uploaded]="entry.state === 'uploaded'" aria-hidden="true"></span>
+                <span class="file-name">{{ entry.file.name }}</span>
+                <span class="file-state-label">{{ entry.state === 'uploading' ? 'Uploading...' : 'Uploaded' }}</span>
+                @if (entry.state === 'uploaded') {
+                  <button class="remove-file" (click)="removeFile(i); $event.stopPropagation()" type="button">Remove</button>
+                }
+              </li>
+            }
+          </ul>
+          <button type="button" class="add-more-btn" (click)="openFilePicker(fileInput); $event.stopPropagation()">
+            + Add more files
+          </button>
         } @else {
           <div class="upload-copy">
-            <span
-              class="upload-link"
-              [attr.aria-describedby]="error ? sourceHelpId + ' ' + sourceErrorId : sourceHelpId"
-            >
-              Upload file
-            </span>
-            <p class="upload-hint">PDF less than [10MB]</p>
+            <span class="upload-link">Upload files</span>
+            <p class="upload-hint">PDFs only</p>
           </div>
         }
         <input
           #fileInput
           type="file"
           accept=".pdf,application/pdf"
+          multiple
           (change)="onFileSelected($event)"
           class="sr-only-input"
           tabindex="-1"
@@ -95,7 +114,7 @@
         [disabled]="!canContinue()"
         (click)="onContinue()"
       >
-        Run assessment
+        {{ continueLabel }}
       </button>
     </div>
   </div>

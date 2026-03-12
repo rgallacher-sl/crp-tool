@@ -23,6 +23,7 @@ export class AssessmentWorkspaceComponent implements OnInit {
   pendingOverrideConfirmation = false;
   overrideConfirmed = false;
   showCancelConfirm = false;
+  private returnUrl: string | null = null;
   ppnFindings = [
     {
       code: '1',
@@ -122,6 +123,15 @@ export class AssessmentWorkspaceComponent implements OnInit {
 
     this.assessment = assessment;
     this.supplierName = assessment.supplierName;
+
+    const rawReturnUrl = this.route.snapshot.queryParamMap.get('returnUrl');
+    if (rawReturnUrl && rawReturnUrl.startsWith('/')) {
+      this.returnUrl = rawReturnUrl;
+    }
+
+    if (!this.isReadOnly && assessment.aiConfidence >= 0.85 && this.aiOutcome === 'meets') {
+      this.selectedOutcome = 'meets';
+    }
   }
 
   selectOutcome(outcome: AssessmentOutcome): void {
@@ -172,7 +182,8 @@ export class AssessmentWorkspaceComponent implements OnInit {
       this.notes,
     );
 
-    this.router.navigate(['/suppliers'], { state: { successBanner: trimmedName } });
+    const destination = this.returnUrl ?? '/suppliers';
+    this.router.navigate([destination], { state: { successBanner: trimmedName } });
   }
 
   @HostListener('keydown.escape')
@@ -188,7 +199,7 @@ export class AssessmentWorkspaceComponent implements OnInit {
   }
 
   confirmCancel(): void {
-    this.router.navigate(['/suppliers']);
+    this.router.navigate([this.returnUrl ?? '/suppliers']);
   }
 
   dismissCancel(): void {

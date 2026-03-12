@@ -1,0 +1,158 @@
+.batch-processing-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.batch-processing-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.summary-line {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+
+  &.summary-done {
+    color: var(--success-color);
+  }
+}
+
+.reassurance {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.assessment-rows {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: grid;
+  gap: 6px;
+}
+
+.assessment-row {
+  display: grid;
+  grid-template-columns: 16px 1fr auto 16px;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  transition: border-color 0.3s ease, color 0.3s ease;
+
+  &[data-state="active"] {
+    border-color: var(--focus-color);
+  }
+
+  &[data-state="done"] {
+    border-color: var(--success-color);
+  }
+
+  &[data-state="error"] {
+    border-color: var(--error-color);
+  }
+}
+
+.row-source-icon {
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.row-label {
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.row-step {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  padding-right: 8px;
+
+  [data-state="done"] & {
+    color: var(--success-color);
+  }
+
+  [data-state="error"] & {
+    color: var(--error-color);
+  }
+}
+
+.row-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+
+  [data-state="done"] & {
+    color: var(--success-color);
+  }
+
+  [data-state="error"] & {
+    color: var(--error-color);
+  }
+}
+
+.step-spinner {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--focus-color);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.page-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.btn-cancel {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.9375rem;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--text-secondary);
+  margin-left: auto;
+
+  &:hover {
+    color: var(--text-primary);
+  }
+}
+
+.notify-confirmed {
+  font-size: 0.875rem;
+  color: var(--success-color);
+}
+
+.notify-denied {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}

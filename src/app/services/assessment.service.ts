@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Assessment, Supplier } from '../models/assessment.model';
+import { Assessment, AssessmentOutcome, Batch, Supplier } from '../models/assessment.model';
 
 @Injectable({ providedIn: 'root' })
 export class AssessmentService {
   private readonly STORAGE_KEY = 'crp_assessments';
+  private readonly BATCH_STORAGE_KEY = 'crp_batches';
   private assessments: Assessment[] = [];
+  private batches: Batch[] = [];
   private readonly pipelineTimers = new Map<string, ReturnType<typeof setTimeout>[]>();
   private readonly statusOrder: Assessment['status'][] = [
     'fetching',
@@ -46,10 +48,26 @@ export class AssessmentService {
     } catch {
       this.assessments = [];
     }
+    try {
+      const storedBatches = localStorage.getItem(this.BATCH_STORAGE_KEY);
+      if (storedBatches) {
+        const parsed = JSON.parse(storedBatches);
+        this.batches = parsed.map((b: any) => ({
+          ...b,
+          createdDate: new Date(b.createdDate),
+        }));
+      }
+    } catch {
+      this.batches = [];
+    }
   }
 
   private saveToStorage(): void {
     localStorage.setItem(this.STORAGE_KEY, JSON.stringify(this.assessments));
+  }
+
+  private saveBatchesToStorage(): void {
+    localStorage.setItem(this.BATCH_STORAGE_KEY, JSON.stringify(this.batches));
   }
 
   private generateId(): string {
@@ -107,12 +125,14 @@ export class AssessmentService {
     documentLabel: string,
     documentSource: 'link' | 'upload',
     documentReference?: string,
+    batchId?: string,
   ): Assessment {
     const initialStatus = documentSource === 'link' ? 'fetching' : 'uploading';
     const aiConfidence = this.generateConfidence(documentLabel, documentReference);
     const reviewRequired = aiConfidence < 0.85;
     const assessment: Assessment = {
       id: this.generateId(),
+      batchId,
       supplierName: '',
       documentLabel,
       documentSource,
@@ -132,6 +152,72 @@ export class AssessmentService {
     this.assessments.push(assessment);
     this.saveToStorage();
     return assessment;
+  }
+
+  createBatch(
+    inputs: Array<{ documentLabel: string; documentSource: 'link' | 'upload'; documentReference?: string }>,
+  ): Batch {
+    const batchId = this.generateId();
+    const assessmentIds: string[] = [];
+    for (const input of inputs) {
+      const a = this.createAssessment(input.documentLabel, input.documentSource, input.documentReference, batchId);
+      assessmentIds.push(a.id);
+    }
+    const batch: Batch = {
+      id: batchId,
+      assessmentIds,
+      status: 'processing',
+      createdDate: new Date(),
+    };
+    this.batches.push(batch);
+    this.saveBatchesToStorage();
+    return batch;
+  }
+
+  getBatchById(id: string): Batch | undefined {
+    return this.batches.find(b => b.id === id);
+  }
+
+  getAssessmentsForBatch(batchId: string): Assessment[] {
+    return this.assessments.filter(a => a.batchId === batchId);
+  }
+
+  isBatchReady(batchId: string): boolean {
+    const assessments = this.getAssessmentsForBatch(batchId);
+    if (assessments.length === 0) return false;
+    return assessments.every(a => a.status === 'ready' || a.status === 'completed' || a.status === 'failed');
+  }
+
+  updateBatchStatus(batchId: string): void {
+    const batch = this.batches.find(b => b.id === batchId);
+    if (!batch) return;
+    const assessments = this.getAssessmentsForBatch(batchId);
+    const allTerminal = assessments.every(a => a.status === 'completed' || a.status === 'failed');
+    const anyReady = assessments.some(a => a.status === 'ready');
+    if (allTerminal) {
+      batch.status = 'completed';
+    } else if (anyReady || this.isBatchReady(batchId)) {
+      batch.status = 'ready';
+    }
+    this.saveBatchesToStorage();
+  }
+
+  bulkCompleteAssessments(ids: string[], outcome: AssessmentOutcome, notes: string): void {
+    for (const id of ids) {
+      const a = this.assessments.find(x => x.id === id);
+      if (a && a.status === 'ready') {
+        this.completeAssessment(id, outcome, notes);
+        if (a.batchId) this.updateBatchStatus(a.batchId);
+      }
+    }
+  }
+
+  deriveAiOutcome(assessment: Assessment): AssessmentOutcome {
+    // Placeholder: when real findings are on the assessment this will use them.
+    // For now, mirror the workspace logic: high confidence = meets.
+    if (assessment.aiConfidence >= 0.85) return 'meets';
+    if (assessment.aiConfidence >= 0.7) return 'unclear';
+    return 'does_not_meet';
   }
 
   updateSupplierName(id: string, name: string): void {

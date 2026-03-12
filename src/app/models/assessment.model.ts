@@ -1,5 +1,13 @@
+export interface Batch {
+  id: string;
+  assessmentIds: string[];
+  status: 'processing' | 'ready' | 'completed';
+  createdDate: Date;
+}
+
 export interface Assessment {
   id: string;
+  batchId?: string;
   supplierName: string;
   documentLabel: string;
   documentSource: 'link' | 'upload';

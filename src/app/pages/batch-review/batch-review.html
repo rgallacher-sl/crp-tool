@@ -1,0 +1,168 @@
+<div class="batch-review-page">
+  <div class="batch-review-content">
+
+    <h2>Review results</h2>
+
+    @if (successBanner) {
+      <div class="success-banner" role="alert">{{ successBanner }}</div>
+    }
+
+    @if (allResolved && failed.length === 0) {
+      <div class="all-done">
+        <p class="all-done-heading">All documents reviewed</p>
+        <ul class="outcome-summary">
+          <li><span class="outcome-count meets">{{ outcomeSummary.meets }}</span> compliant</li>
+          <li><span class="outcome-count does-not-meet">{{ outcomeSummary.does_not_meet }}</span> non-compliant</li>
+          @if (outcomeSummary.unclear > 0) {
+            <li><span class="outcome-count unclear">{{ outcomeSummary.unclear }}</span> unclear</li>
+          }
+        </ul>
+        <a routerLink="/suppliers" class="btn-primary">Go to suppliers</a>
+      </div>
+    }
+
+    @if (failed.length > 0) {
+      <section class="review-section">
+        <h3 class="section-heading">Failed ({{ failed.length }})</h3>
+        <p class="section-desc">These documents could not be processed. Retry each one individually.</p>
+        <ul class="failed-rows">
+          @for (a of failed; track a.id) {
+            <li class="failed-row">
+              <span class="row-label">{{ a.documentLabel }}</span>
+              <span class="failed-message">{{ a.errorMessage }}</span>
+              <a [routerLink]="['/assessments', a.id, 'processing']" class="btn-link">Retry</a>
+            </li>
+          }
+        </ul>
+      </section>
+    }
+
+    @if (bulkConfirmable.length > 0) {
+      <section class="review-section">
+        <h3 class="section-heading">
+          Ready to confirm ({{ bulkConfirmable.length }})
+        </h3>
+        <p class="section-desc">
+          AI confidence is {{ '\u2265' }}85% and the result is compliant for these documents.
+          Confirm supplier names and approve in one action.
+        </p>
+
+        @if (confirmError) {
+          <p class="error-message" role="alert">{{ confirmError }}</p>
+        }
+
+        <ul class="confirm-rows">
+          @for (a of bulkConfirmable; track a.id) {
+            <li class="confirm-row">
+              <span class="row-source-icon" aria-hidden="true">
+                @if (a.documentSource === 'upload') {
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+                    <path d="M4 2h6l4 4v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M10 2v4h4" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                  </svg>
+                } @else {
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+                    <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.25"/>
+                    <path d="M2 8h12M8 2c-2 2-3 4-3 6s1 4 3 6M8 2c2 2 3 4 3 6s-1 4-3 6" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                  </svg>
+                }
+              </span>
+              <span class="row-doc-label">{{ a.documentLabel }}</span>
+              <span class="row-confidence">{{ confidencePct(a) }}</span>
+              <span class="row-outcome meets">{{ aiOutcomeLabel(a) }}</span>
+              <div class="row-supplier">
+                <label [for]="'supplier-' + a.id" class="sr-only">Supplier name for {{ a.documentLabel }}</label>
+                <input
+                  [id]="'supplier-' + a.id"
+                  type="text"
+                  class="supplier-input"
+                  [class.input-error]="supplierNameErrors[a.id]"
+                  placeholder="Supplier name"
+                  [(ngModel)]="supplierNames[a.id]"
+                  (input)="clearSupplierError(a.id)"
+                />
+                @if (supplierNameErrors[a.id]) {
+                  <span class="input-error-msg">Required</span>
+                }
+              </div>
+            </li>
+          }
+        </ul>
+
+        <button
+          class="btn-primary confirm-all-btn"
+          [disabled]="confirmAllDisabled"
+          (click)="confirmAll()"
+        >
+          Confirm {{ bulkConfirmable.length }} as compliant
+        </button>
+      </section>
+    }
+
+    @if (exceptions.length > 0) {
+      <section class="review-section">
+        <h3 class="section-heading">Needs review ({{ exceptions.length }})</h3>
+        <p class="section-desc">
+          These documents have lower AI confidence or a non-compliant result. Review each one individually.
+        </p>
+        <ul class="exception-rows">
+          @for (a of exceptions; track a.id) {
+            <li class="exception-row">
+              <span class="row-source-icon" aria-hidden="true">
+                @if (a.documentSource === 'upload') {
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+                    <path d="M4 2h6l4 4v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                    <path d="M10 2v4h4" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                  </svg>
+                } @else {
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+                    <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.25"/>
+                    <path d="M2 8h12M8 2c-2 2-3 4-3 6s1 4 3 6M8 2c2 2 3 4 3 6s-1 4-3 6" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                  </svg>
+                }
+              </span>
+              <span class="row-doc-label">{{ a.documentLabel }}</span>
+              <span class="row-confidence low">{{ confidencePct(a) }}</span>
+              <span class="row-outcome" [class]="'row-outcome ' + assessmentService.deriveAiOutcome(a)">
+                {{ aiOutcomeLabel(a) }}
+              </span>
+              <div class="row-supplier">
+                <label [for]="'esupplier-' + a.id" class="sr-only">Supplier name for {{ a.documentLabel }}</label>
+                <input
+                  [id]="'esupplier-' + a.id"
+                  type="text"
+                  class="supplier-input"
+                  placeholder="Supplier name"
+                  [(ngModel)]="supplierNames[a.id]"
+                />
+              </div>
+              <a
+                [routerLink]="reviewUrl(a)"
+                [queryParams]="reviewQueryParams(a)"
+                class="btn-link"
+              >Review</a>
+            </li>
+          }
+        </ul>
+      </section>
+    }
+
+    @if (completed.length > 0 && (bulkConfirmable.length > 0 || exceptions.length > 0 || failed.length > 0)) {
+      <section class="review-section completed-section">
+        <h3 class="section-heading">Done ({{ completed.length }})</h3>
+        <ul class="completed-rows">
+          @for (a of completed; track a.id) {
+            <li class="completed-row">
+              <span class="row-doc-label">{{ a.documentLabel }}</span>
+              <span class="row-supplier-name">{{ a.supplierName }}</span>
+              <span class="row-outcome" [attr.data-outcome]="a.outcome">
+                {{ assessmentService.getOutcomeLabel(a.outcome) }}
+              </span>
+            </li>
+          }
+        </ul>
+      </section>
+    }
+
+  </div>
+</div>

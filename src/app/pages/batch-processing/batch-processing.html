@@ -1,0 +1,56 @@
+<div class="batch-processing-page">
+  <div class="batch-processing-content">
+    <h2>Processing {{ totalCount }} documents</h2>
+
+    @if (!allDone) {
+      <p class="summary-line">{{ readyCount }} of {{ totalCount }} complete</p>
+      <p class="reassurance">This can take a few minutes. You can leave this page and come back.</p>
+    } @else {
+      <p class="summary-line summary-done">All {{ totalCount }} documents processed — redirecting to review</p>
+    }
+
+    <ul class="assessment-rows">
+      @for (row of rows; track row.assessment.id) {
+        <li class="assessment-row" [attr.data-state]="row.stepState">
+          <span class="row-source-icon" aria-hidden="true">
+            @if (row.assessment.documentSource === 'upload') {
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+                <path d="M4 2h6l4 4v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                <path d="M10 2v4h4" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+              </svg>
+            } @else {
+              <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+                <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.25"/>
+                <path d="M2 8h12M8 2c-2 2-3 4-3 6s1 4 3 6M8 2c2 2 3 4 3 6s-1 4-3 6" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+              </svg>
+            }
+          </span>
+          <span class="row-label">{{ row.assessment.documentLabel }}</span>
+          <span class="row-step">{{ row.stepLabel }}</span>
+          <span class="row-icon" aria-hidden="true">
+            @if (row.stepState === 'active') {
+              <span class="step-spinner"></span>
+            } @else if (row.stepState === 'done') {
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            } @else if (row.stepState === 'error') {
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+            }
+          </span>
+        </li>
+      }
+    </ul>
+
+    @if (!allDone) {
+      <div class="page-actions">
+        @if (notifyState === 'idle') {
+          <button class="btn-secondary" (click)="requestNotification()">Notify me when done</button>
+        } @else if (notifyState === 'granted') {
+          <span class="notify-confirmed">You'll be notified when it's ready</span>
+        } @else if (notifyState === 'denied') {
+          <span class="notify-denied">Notifications blocked — check your browser settings</span>
+        }
+        <button class="btn-cancel" (click)="cancel()">Cancel</button>
+      </div>
+    }
+  </div>
+</div>
