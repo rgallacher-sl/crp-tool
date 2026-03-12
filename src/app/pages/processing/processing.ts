@@ -121,7 +121,7 @@ export class ProcessingComponent implements OnInit, OnDestroy {
     }
 
     this.isFailed = false;
-    this.statusLabel = this.getStatusLabel(assessment);
+    this.statusLabel = this.getStatusLabel(this.assessment);
   }
 
   private startStepSequence(): void {

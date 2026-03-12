@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AssessmentService } from '../../services/assessment.service';
@@ -8,7 +8,7 @@ import { Assessment, AssessmentOutcome } from '../../models/assessment.model';
 @Component({
   selector: 'app-assessment-workspace',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './assessment-workspace.html',
   styleUrl: './assessment-workspace.scss',
 })
@@ -115,12 +115,7 @@ export class AssessmentWorkspaceComponent implements OnInit {
       return;
     }
 
-    if (assessment.status === 'completed') {
-      this.router.navigate(['/assessments', id, 'complete']);
-      return;
-    }
-
-    if (assessment.status !== 'ready') {
+    if (assessment.status !== 'ready' && assessment.status !== 'completed') {
       this.router.navigate(['/suppliers']);
       return;
     }
@@ -177,7 +172,7 @@ export class AssessmentWorkspaceComponent implements OnInit {
       this.notes,
     );
 
-    this.router.navigate(['/assessments', this.assessment.id, 'complete']);
+    this.router.navigate(['/suppliers'], { state: { successBanner: trimmedName } });
   }
 
   @HostListener('keydown.escape')
@@ -238,5 +233,17 @@ export class AssessmentWorkspaceComponent implements OnInit {
 
   private isOutcomeDisagreement(): boolean {
     return this.selectedOutcome !== null && this.selectedOutcome !== this.aiOutcome;
+  }
+
+  get isReadOnly(): boolean {
+    return this.assessment?.status === 'completed';
+  }
+
+  get supplierId(): string {
+    return this.assessment?.supplierName.toLowerCase().replace(/\s+/g, '-') ?? '';
+  }
+
+  get recordedOutcomeLabel(): string {
+    return this.assessmentService.getOutcomeLabel(this.assessment?.outcome ?? null);
   }
 }

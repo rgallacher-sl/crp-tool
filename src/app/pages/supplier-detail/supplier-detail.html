@@ -8,7 +8,7 @@
 
     <div class="assessment-list">
       @for (assessment of assessments; track assessment.id) {
-        <div class="assessment-entry">
+        <a class="assessment-entry" [routerLink]="['/assessments', assessment.id]">
           <div class="assessment-header">
             <span class="assessment-date">{{ assessment.formattedDate }}</span>
             <span class="assessment-outcome" [attr.data-outcome]="assessment.outcome">
@@ -18,7 +18,7 @@
           <div class="assessment-doc">
             {{ assessment.documentLabel }}
           </div>
-        </div>
+        </a>
       } @empty {
         <p class="no-assessments">No assessments recorded.</p>
       }

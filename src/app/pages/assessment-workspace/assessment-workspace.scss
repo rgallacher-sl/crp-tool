@@ -410,6 +410,63 @@
   border: 0;
 }
 
+.back-link {
+  display: inline-block;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  margin-bottom: 20px;
+
+  &:hover {
+    color: var(--text-primary);
+  }
+}
+
+.supplier-static {
+  margin-bottom: 16px;
+
+  .field-label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    font-size: 1rem;
+  }
+}
+
+.supplier-static-value {
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.recorded-decision {
+  margin-bottom: 24px;
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+  }
+}
+
+.recorded-outcome {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+
+  &[data-outcome="meets"] { color: var(--success-color); }
+  &[data-outcome="does_not_meet"] { color: var(--error-color); }
+  &[data-outcome="unclear"] { color: var(--warning-color); }
+}
+
+.recorded-notes {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+  margin-bottom: 16px;
+}
+
 .btn-record {
   width: 100%;
 }

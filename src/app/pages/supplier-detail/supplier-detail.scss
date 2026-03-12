@@ -35,11 +35,18 @@ h2 {
 }
 
 .assessment-entry {
+  display: block;
   padding: 14px 0;
   border-bottom: 1px solid var(--border-color);
+  text-decoration: none;
+  color: inherit;
 
   &:first-child {
     border-top: 1px solid var(--border-color);
+  }
+
+  &:hover {
+    background: var(--bg-hover);
   }
 }
 

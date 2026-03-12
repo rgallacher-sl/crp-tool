@@ -1,4 +1,9 @@
 <div class="suppliers-page">
+  @if (successBanner) {
+    <div class="success-banner" role="status">
+      Decision recorded for <strong>{{ successBanner }}</strong>.
+    </div>
+  }
   <h1>Suppliers</h1>
 
   @if (!hasAssessments) {

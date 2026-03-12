@@ -13,6 +13,7 @@ import { Supplier } from '../../models/assessment.model';
 export class SuppliersComponent implements OnInit {
   suppliers: Array<Supplier & { outcomeLabel: string; lastChecked: string }> = [];
   hasAssessments = false;
+  successBanner = '';
 
   constructor(
     private assessmentService: AssessmentService,
@@ -20,6 +21,7 @@ export class SuppliersComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.successBanner = history.state?.successBanner ?? '';
     const suppliers = this.assessmentService.getSuppliers();
     this.hasAssessments = suppliers.length > 0;
 

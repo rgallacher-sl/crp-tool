@@ -1,7 +1,10 @@
 @if (assessment) {
   <div class="workspace">
     <div class="decision-panel">
-      <h1 class="page-title">Review assessment results</h1>
+      @if (isReadOnly) {
+        <a [routerLink]="['/suppliers', supplierId]" class="back-link">&larr; {{ supplierName }}</a>
+      }
+      <h1 class="page-title">{{ isReadOnly ? 'Assessment results' : 'Review assessment results' }}</h1>
       <div class="source-links">
         @if (assessment.documentSource === 'link' && assessment.documentReference) {
           <a
@@ -44,16 +47,23 @@
         </a>
       </div>
       <h2 class="section-title">Extracted details</h2>
-      <div class="supplier-edit">
-        <label class="field-label" for="supplier-name">Supplier name</label>
-        <input
-          id="supplier-name"
-          class="text-input"
-          type="text"
-          [(ngModel)]="supplierName"
-          placeholder="Supplier name"
-        />
-      </div>
+      @if (isReadOnly) {
+        <div class="supplier-static">
+          <span class="field-label">Supplier name</span>
+          <span class="supplier-static-value">{{ supplierName }}</span>
+        </div>
+      } @else {
+        <div class="supplier-edit">
+          <label class="field-label" for="supplier-name">Supplier name</label>
+          <input
+            id="supplier-name"
+            class="text-input"
+            type="text"
+            [(ngModel)]="supplierName"
+            placeholder="Supplier name"
+          />
+        </div>
+      }
 
       <div class="ai-assessment">
         <div class="ai-summary">
@@ -101,6 +111,15 @@
         </div>
       </div>
 
+      @if (isReadOnly) {
+        <div class="recorded-decision">
+          <h3>Recorded decision</h3>
+          <p class="recorded-outcome" [attr.data-outcome]="assessment.outcome">{{ recordedOutcomeLabel }}</p>
+          @if (assessment.notes) {
+            <p class="recorded-notes">{{ assessment.notes }}</p>
+          }
+        </div>
+      } @else {
       <div class="decision-section">
         <h3>Does this supplier meet PPN 006 requirements?</h3>
 
@@ -198,6 +217,7 @@
           </div>
         }
       </div>
+      }
     </div>
   </div>
 }
