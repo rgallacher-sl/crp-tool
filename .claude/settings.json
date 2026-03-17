@@ -10,5 +10,57 @@
       "Bash(ls -la \"c:\\\\Users\\\\Ryan\\\\Documents\\\\GitHub\\\\crp-tool-postmvp\\\\src\\\\app\\\\pages\"\" 2>/dev/null | grep \"^d \")",
       "Bash(ls -1d /c/Users/Ryan/Documents/GitHub/crp-tool-postmvp/src/app/pages/*/)"
     ]
+  },
+  "hooks": {
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/session-story.py 2>/dev/null || python .claude/hooks/session-story.py",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/protect-sensitive.py",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/bash-guard.py",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/pre-commit-check.py",
+            "timeout": 120
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/reinject-conventions.py 2>/dev/null || python .claude/hooks/reinject-conventions.py",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
   }
 }
