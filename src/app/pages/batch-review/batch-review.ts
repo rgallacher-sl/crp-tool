@@ -2,7 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AssessmentService } from '../../services/assessment.service';
-import { Assessment, Batch } from '../../models/assessment.model';
+import { Assessment, AssessmentOutcome, Batch } from '../../models/assessment.model';
+
+interface SummaryRow {
+  assessment: Assessment;
+  outcomeLabel: string;
+  aiOutcomeLabel: string;
+  wasOverridden: boolean;
+  supplierId: string;
+}
 
 @Component({
   selector: 'app-batch-review',
@@ -17,6 +25,7 @@ export class BatchReviewComponent implements OnInit {
   bulkConfirmable: Assessment[] = [];
   exceptions: Assessment[] = [];
   completed: Assessment[] = [];
+  summaryRows: SummaryRow[] = [];
 
   supplierNames: Record<string, string> = {};
   supplierNameErrors: Record<string, boolean> = {};
@@ -32,6 +41,14 @@ export class BatchReviewComponent implements OnInit {
 
   get batchId(): string {
     return this.batch?.id ?? '';
+  }
+
+  get isSummaryMode(): boolean {
+    return this.batch?.status === 'completed';
+  }
+
+  get batchFormattedDate(): string {
+    return this.batch ? this.assessmentService.formatDate(this.batch.createdDate) : '';
   }
 
   get allResolved(): boolean {
@@ -66,6 +83,11 @@ export class BatchReviewComponent implements OnInit {
     }
 
     this.batch = batch;
+
+    if (batch.status === 'completed') {
+      this.buildSummary(batch.id);
+      return;
+    }
 
     const nav = this.router.getCurrentNavigation();
     const state = nav?.extras?.state as { successBanner?: string } | undefined;
@@ -147,6 +169,17 @@ export class BatchReviewComponent implements OnInit {
         this.supplierNames[a.id] = a.supplierName ?? '';
       }
     }
+  }
+
+  private buildSummary(batchId: string): void {
+    const assessments = this.assessmentService.getAssessmentsForBatch(batchId);
+    this.summaryRows = assessments.map(a => ({
+      assessment: a,
+      outcomeLabel: this.assessmentService.getOutcomeLabel(a.outcome),
+      aiOutcomeLabel: this.assessmentService.getOutcomeLabel(a.aiOutcome),
+      wasOverridden: a.aiOutcome !== null && a.aiOutcome !== a.outcome,
+      supplierId: a.supplierName.toLowerCase().replace(/\s+/g, '-'),
+    }));
   }
 
   confidencePct(a: Assessment): string {

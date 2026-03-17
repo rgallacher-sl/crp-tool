@@ -43,6 +43,12 @@ export class AssessmentService {
           aiConfidence: typeof a.aiConfidence === 'number' ? a.aiConfidence : 0.9,
           reviewRequired: typeof a.reviewRequired === 'boolean' ? a.reviewRequired : false,
           reviewCompleted: typeof a.reviewCompleted === 'boolean' ? a.reviewCompleted : false,
+          aiOutcome: a.aiOutcome ?? null,
+          confirmationType: a.confirmationType ?? null,
+          overriddenBy: a.overriddenBy ?? undefined,
+          overriddenAt: a.overriddenAt ? new Date(a.overriddenAt) : null,
+          overrideReason: a.overrideReason ?? undefined,
+          previousOutcome: a.previousOutcome ?? null,
         }));
       }
     } catch {
@@ -144,8 +150,10 @@ export class AssessmentService {
       errorCode: null,
       errorMessage: null,
       failedStep: null,
+      aiOutcome: null,
       outcome: null,
       notes: '',
+      confirmationType: null,
       createdDate: new Date(),
       completedDate: null,
     };
@@ -206,7 +214,7 @@ export class AssessmentService {
     for (const id of ids) {
       const a = this.assessments.find(x => x.id === id);
       if (a && a.status === 'ready') {
-        this.completeAssessment(id, outcome, notes);
+        this.completeAssessment(id, outcome, notes, 'You', 'bulk');
         if (a.batchId) this.updateBatchStatus(a.batchId);
       }
     }
@@ -347,6 +355,8 @@ export class AssessmentService {
         this.markFailed(id, shouldFail!.code, shouldFail!.message, 'persistence');
         return;
       }
+      const a = this.assessments.find(x => x.id === id);
+      if (a) a.aiOutcome = this.deriveAiOutcome(a);
       this.markReady(id);
       this.clearPipelineTimers(id);
     });
@@ -389,15 +399,33 @@ export class AssessmentService {
     return index === -1 ? 0 : index;
   }
 
-  completeAssessment(id: string, outcome: 'meets' | 'does_not_meet' | 'unclear', notes: string): void {
+  completeAssessment(id: string, outcome: 'meets' | 'does_not_meet' | 'unclear', notes: string, actionedBy = 'You', confirmationType: 'bulk' | 'individual' = 'individual'): void {
     const assessment = this.assessments.find(a => a.id === id);
     if (assessment) {
       assessment.status = 'completed';
       assessment.outcome = outcome;
       assessment.notes = notes;
+      assessment.actionedBy = actionedBy;
+      assessment.confirmationType = confirmationType;
       assessment.completedDate = new Date();
       this.saveToStorage();
     }
+  }
+
+  manualOverride(id: string, newOutcome: AssessmentOutcome, reason: string): void {
+    const a = this.assessments.find(x => x.id === id);
+    if (!a) return;
+    a.previousOutcome = a.outcome as AssessmentOutcome;
+    a.outcome = newOutcome;
+    a.overriddenBy = 'You';
+    a.overriddenAt = new Date();
+    a.overrideReason = reason;
+    a.status = 'completed';
+    this.saveToStorage();
+  }
+
+  getBatches(): Batch[] {
+    return [...this.batches].sort((a, b) => b.createdDate.getTime() - a.createdDate.getTime());
   }
 
   getOutcomeLabel(outcome: string | null): string {

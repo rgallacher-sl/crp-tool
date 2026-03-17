@@ -8,17 +8,92 @@
 
     <div class="assessment-list">
       @for (assessment of assessments; track assessment.id) {
-        <a class="assessment-entry" [routerLink]="['/assessments', assessment.id]">
+        <div class="assessment-entry">
           <div class="assessment-header">
-            <span class="assessment-date">{{ assessment.formattedDate }}</span>
-            <span class="assessment-outcome" [attr.data-outcome]="assessment.outcome">
+            <a class="assessment-link" [routerLink]="['/assessments', assessment.id]">
+              {{ assessment.formattedDate }}
+            </a>
+            <span class="assessment-tag" [attr.data-outcome]="assessment.outcome">
               {{ assessment.outcomeLabel }}
             </span>
           </div>
+
           <div class="assessment-doc">
-            {{ assessment.documentLabel }}
+            @if (assessment.documentReference) {
+              <a class="doc-link" [href]="assessment.documentReference" target="_blank" rel="noopener">
+                {{ assessment.documentLabel }}
+              </a>
+            } @else {
+              {{ assessment.documentLabel }}
+            }
           </div>
-        </a>
+
+          <dl class="assessment-meta">
+            <div class="assessment-meta-row">
+              <dt>Actioned by</dt>
+              <dd>
+                {{ assessment.actionedBy ?? 'You' }}
+                @if (assessment.confirmationType === 'bulk') {
+                  <span class="meta-badge">Bulk confirmed</span>
+                }
+              </dd>
+            </div>
+            @if (assessment.wasOverridden) {
+              <div class="assessment-meta-row">
+                <dt>AI recommendation</dt>
+                <dd class="overridden">{{ assessment.aiOutcomeLabel }} <span class="override-note">(overridden)</span></dd>
+              </div>
+            }
+            @if (assessment.overriddenBy) {
+              <div class="assessment-meta-row">
+                <dt>Manually overridden by</dt>
+                <dd>{{ assessment.overriddenBy }} — "{{ assessment.overrideReason }}"</dd>
+              </div>
+            }
+            @if (assessment.notes) {
+              <div class="assessment-meta-row">
+                <dt>Rationale</dt>
+                <dd>{{ assessment.notes }}</dd>
+              </div>
+            }
+          </dl>
+
+          @if (activeOverrideId === assessment.id) {
+            <div class="override-form">
+              <p class="override-form-label">Change decision</p>
+              <div class="override-outcomes">
+                <label class="override-radio">
+                  <input type="radio" [name]="'override-' + assessment.id" value="meets" [(ngModel)]="overrideDraftOutcome" />
+                  Compliant
+                </label>
+                <label class="override-radio">
+                  <input type="radio" [name]="'override-' + assessment.id" value="does_not_meet" [(ngModel)]="overrideDraftOutcome" />
+                  Non-compliant
+                </label>
+                <label class="override-radio">
+                  <input type="radio" [name]="'override-' + assessment.id" value="unclear" [(ngModel)]="overrideDraftOutcome" />
+                  Unclear
+                </label>
+              </div>
+              <textarea
+                class="override-reason"
+                placeholder="Reason for override (required)"
+                [(ngModel)]="overrideDraftReason"
+                rows="2"
+              ></textarea>
+              <div class="override-actions">
+                <button class="btn-link" (click)="cancelOverride()">Cancel</button>
+                <button
+                  class="btn-primary btn-sm"
+                  [disabled]="!overrideDraftOutcome || !overrideDraftReason.trim()"
+                  (click)="saveOverride(assessment.id)"
+                >Save override</button>
+              </div>
+            </div>
+          } @else {
+            <button class="override-trigger" (click)="openOverride(assessment.id, assessment.outcome)">Override decision</button>
+          }
+        </div>
       } @empty {
         <p class="no-assessments">No assessments recorded.</p>
       }

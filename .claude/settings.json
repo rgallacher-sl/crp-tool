@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(npm start:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Read(//c/Users/Ryan/Documents/GitHub/**)",
+      "Bash(cp -r \"c:/Users/Ryan/Documents/GitHub/agentic-dev-boilerplate/.claude/hooks\" \"c:/Users/Ryan/Documents/GitHub/crp-tool-postmvp/.claude/hooks\")",
+      "Bash(cp -r \"c:/Users/Ryan/Documents/GitHub/agentic-dev-boilerplate/.claude/commands\" \"c:/Users/Ryan/Documents/GitHub/crp-tool-postmvp/.claude/commands\")",
+      "Bash(cp -r \"c:/Users/Ryan/Documents/GitHub/agentic-dev-boilerplate/skills\" \"c:/Users/Ryan/Documents/GitHub/crp-tool-postmvp/skills\")",
+      "Bash(ls -la \"c:\\\\Users\\\\Ryan\\\\Documents\\\\GitHub\\\\crp-tool-postmvp\\\\src\\\\app\\\\pages\"\" 2>/dev/null | grep \"^d \")",
+      "Bash(ls -1d /c/Users/Ryan/Documents/GitHub/crp-tool-postmvp/src/app/pages/*/)"
     ]
   }
 }

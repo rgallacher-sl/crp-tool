@@ -1,6 +1,50 @@
 <div class="batch-review-page">
   <div class="batch-review-content">
 
+    <a routerLink="/batches" class="back-link">&larr; Upload history</a>
+
+    @if (isSummaryMode) {
+      <h2>{{ batchFormattedDate }}</h2>
+      <p class="summary-count">{{ summaryRows.length }} document{{ summaryRows.length === 1 ? '' : 's' }}</p>
+
+      <div class="summary-list">
+        @for (row of summaryRows; track row.assessment.id) {
+          <div class="summary-row">
+            <div class="summary-row-header">
+              <a class="summary-supplier-link" [routerLink]="['/suppliers', row.supplierId]">
+                {{ row.assessment.supplierName || '—' }}
+              </a>
+              <span class="assessment-tag" [attr.data-outcome]="row.assessment.outcome">
+                {{ row.outcomeLabel }}
+              </span>
+            </div>
+            <div class="summary-doc">
+              @if (row.assessment.documentReference) {
+                <a class="doc-link" [href]="row.assessment.documentReference" target="_blank" rel="noopener">
+                  {{ row.assessment.documentLabel }}
+                </a>
+              } @else {
+                {{ row.assessment.documentLabel }}
+              }
+            </div>
+            <div class="summary-meta">
+              @if (row.assessment.confirmationType === 'bulk') {
+                <span class="meta-chip">Bulk confirmed</span>
+              } @else {
+                <span class="meta-chip">Individually reviewed</span>
+              }
+              @if (row.wasOverridden) {
+                <span class="meta-chip override">AI said {{ row.aiOutcomeLabel }} — overridden</span>
+              }
+              @if (row.assessment.notes) {
+                <span class="summary-notes">"{{ row.assessment.notes }}"</span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    } @else {
+
     <h2>Review results</h2>
 
     @if (successBanner) {
@@ -163,6 +207,8 @@
         </ul>
       </section>
     }
+
+    } <!-- end @else (action mode) -->
 
   </div>
 </div>

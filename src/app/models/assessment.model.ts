@@ -31,8 +31,15 @@ export interface Assessment {
   errorCode?: string | null;
   errorMessage?: string | null;
   failedStep?: string | null;
+  aiOutcome: AssessmentOutcome | null;
   outcome: 'meets' | 'does_not_meet' | 'unclear' | null;
   notes: string;
+  actionedBy?: string;
+  confirmationType: 'bulk' | 'individual' | null;
+  overriddenBy?: string;
+  overriddenAt?: Date | null;
+  overrideReason?: string;
+  previousOutcome?: AssessmentOutcome | null;
   createdDate: Date;
   completedDate: Date | null;
 }
