@@ -438,6 +438,6 @@ export class AssessmentService {
   }
 
   formatDate(date: Date): string {
-    return date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
+    return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
   }
 }

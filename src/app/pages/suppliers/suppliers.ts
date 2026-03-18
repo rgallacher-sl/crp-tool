@@ -11,7 +11,7 @@ import { Supplier } from '../../models/assessment.model';
   styleUrl: './suppliers.scss',
 })
 export class SuppliersComponent implements OnInit {
-  suppliers: Array<Supplier & { outcomeLabel: string; lastChecked: string }> = [];
+  suppliers: Array<Supplier & { outcome: string | null; outcomeLabel: string; lastChecked: string; lastActionedBy: string }> = [];
   hasAssessments = false;
   successBanner = '';
 
@@ -29,13 +29,24 @@ export class SuppliersComponent implements OnInit {
       const latest = this.assessmentService.getLatestAssessmentForSupplier(s.name);
       return {
         ...s,
-        outcomeLabel: latest ? this.assessmentService.getOutcomeLabel(latest.outcome) : '',
+        outcome: latest?.outcome ?? null,
+        outcomeLabel: this.getComplianceLabel(latest?.outcome ?? null),
         lastChecked: latest ? this.assessmentService.formatDate(latest.createdDate) : '',
+        lastActionedBy: latest?.actionedBy ?? '',
       };
     });
   }
 
   startFirstAssessment(): void {
     this.router.navigate(['/assessments/new/provide-crp']);
+  }
+
+  getComplianceLabel(outcome: string | null): string {
+    switch (outcome) {
+      case 'meets': return 'Compliant';
+      case 'does_not_meet': return 'Not compliant';
+      case 'unclear': return 'Unclear';
+      default: return '—';
+    }
   }
 }

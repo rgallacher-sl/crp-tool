@@ -22,6 +22,14 @@ export class SupplierDetailComponent implements OnInit {
   supplier: Supplier | null = null;
   assessments: EnrichedAssessment[] = [];
 
+  get latestAssessment(): EnrichedAssessment | null {
+    return this.assessments[0] ?? null;
+  }
+
+  get olderAssessments(): EnrichedAssessment[] {
+    return this.assessments.slice(1);
+  }
+
   activeOverrideId: string | null = null;
   overrideDraftOutcome: AssessmentOutcome | null = null;
   overrideDraftReason = '';

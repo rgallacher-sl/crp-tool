@@ -1,7 +1,18 @@
 .suppliers-page {
-  max-width: 640px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: var(--sx-7) var(--space-6);
+  padding: var(--sx-5) var(--sx-5) var(--sx-8);
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--sx-5);
+
+  h1 {
+    margin: 0;
+  }
 }
 
 .empty-state {
@@ -35,47 +46,62 @@
   }
 }
 
-.supplier-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  background: var(--color-border-default);
+.supplier-table {
+  width: 100%;
+  border-collapse: collapse;
   border: 1px solid var(--color-border-default);
   border-radius: var(--radius-sm);
   overflow: hidden;
+  font-size: var(--font-size-sm);
+
+  thead tr {
+    height: 32px;
+    background: var(--color-surface-subtle);
+
+    th {
+      padding: 0 var(--sx-3);
+      text-align: left;
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text-secondary);
+      font-size: var(--font-size-sm);
+      border-bottom: 1px solid var(--color-border-default);
+      white-space: nowrap;
+    }
+  }
+
+  tbody tr {
+    height: 48px;
+    background: var(--color-bg-canvas);
+    border-bottom: 1px solid var(--color-border-default);
+    cursor: pointer;
+    transition: background-color var(--duration-fast) var(--easing-standard);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: var(--color-bg-hover);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-focus);
+      outline-offset: -2px;
+    }
+
+    td {
+      padding: 0 var(--sx-3);
+      color: var(--color-text-primary);
+      vertical-align: middle;
+    }
+  }
 }
 
-.supplier-card {
-  display: block;
-  padding: var(--space-4) var(--space-5);
-  background: var(--color-bg-canvas);
-  text-decoration: none;
-  color: inherit;
-  transition: background-color var(--duration-fast) var(--easing-standard);
-
-  &:hover {
-    background: var(--color-bg-hover);
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--color-focus);
-    outline-offset: -2px;
-  }
-
-  .supplier-name {
-    font-weight: var(--font-weight-medium);
-    color: var(--color-text-primary);
-    margin-bottom: var(--space-1);
-  }
-
-  .supplier-meta {
-    display: flex;
-    gap: var(--space-4);
-    font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
-  }
+.supplier-name {
+  font-weight: var(--font-weight-medium);
 }
 
-.actions {
-  margin-top: var(--space-6);
+.supplier-date,
+.supplier-actioned {
+  color: var(--color-text-secondary);
 }

@@ -6,10 +6,18 @@
   --color-brand-light: #dff0f3;
   --color-brand-zebra: #f5fafb;
   --color-neutral-600: #5e666c;
-  --color-neutral-500: #8a939a;
+  --color-neutral-500: #7e868c;
   --color-neutral-400: #aeb5ba;
   --color-neutral-300: #d3d8dc;
   --color-success-green: #4f8a3a;
+  --color-aa-pink: #c41565;
+  --color-aa-orange: #d96a2f;
+  --color-sl-yellow: #f8be4f;
+  --color-light-orange: #fdede4;
+  --color-light-turq: #dff0f3;
+  --color-light-yellow: #fef9ef;
+  --color-light-green: #e7f2de;
+  --color-light-blue: #e6f2fa;
   --color-link-blue: #0073e6;
 
   --color-text-primary: var(--color-text-default);
@@ -25,7 +33,7 @@
   --color-link: var(--color-link-blue);
   --color-focus: var(--color-link-blue);
   --color-focus-ring: rgba(0, 115, 230, 0.12);
-  --color-danger: #c5221f;
+  --color-danger: #c0392b;
   --color-danger-soft: rgba(197, 34, 31, 0.12);
   --color-success: var(--color-success-green);
   --color-success-soft: rgba(79, 138, 58, 0.08);
@@ -37,17 +45,18 @@
   --color-action-primary-active: #141414;
 
   /* Outcome tokens */
-  --color-outcome-meets-text: #005a30;
-  --color-outcome-meets-bg: #cce2d8;
-  --color-outcome-fail-text: #942514;
-  --color-outcome-fail-bg: #f6d7d2;
-  --color-outcome-unclear-text: #594d00;
-  --color-outcome-unclear-bg: #fff7bf;
+  --color-outcome-meets-text: #4f8a3a;
+  --color-outcome-meets-bg: #e7f2de;
+  --color-outcome-fail-text: #c41565;
+  --color-outcome-fail-bg: #fdede4;
+  --color-outcome-unclear-text: #d96a2f;
+  --color-outcome-unclear-bg: #fef9ef;
 
   /* Interactive tokens */
   --color-interactive-default: var(--color-brand-primary);
-  --color-interactive-hover: #1a6b71;
+  --color-interactive-hover: #1f7a81;
   --color-interactive-disabled: var(--color-neutral-300);
+  --color-interactive-active: #1a6a71;
   --color-text-on-interactive: #ffffff;
 
   /* Surface tokens */
@@ -115,6 +124,7 @@
   --radius-md: 8px;
   --radius-lg: 10px;
   --radius-pill: 999px;
+  --radius-xs: 4px;
 
   /* Motion */
   --duration-fast: 0.1s;
@@ -190,8 +200,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-weight-semibold);
 }
 
-h1 { font-size: var(--font-size-2xl); }
-h2 { font-size: var(--font-size-xl); }
+h1 { font-size: var(--font-size-4xl); line-height: 2.75rem; }
+h2 { font-size: var(--font-size-2xl); line-height: 1.75rem; }
 h3 { font-size: var(--font-size-lg); }
 
 a {
@@ -204,7 +214,7 @@ a {
   align-items: center;
   justify-content: center;
   padding: 10px var(--space-5);
-  background: var(--text-primary);
+  background: var(--color-brand-primary);
   color: var(--color-text-on-interactive);
   border: none;
   border-radius: var(--radius-sm);
@@ -216,11 +226,11 @@ a {
   font-family: var(--font-family-ui);
 
   &:hover {
-    background: var(--color-action-primary-hover);
+    background: var(--color-interactive-hover);
   }
 
   &:active {
-    background: var(--color-action-primary-active);
+    background: var(--color-interactive-active);
   }
 
   &:focus-visible {
@@ -397,30 +407,36 @@ a {
   align-items: center;
   font-size: var(--font-size-xs);
   font-weight: 700;
-  padding: 3px 8px;
-  border-radius: var(--radius-sm);
+  padding: 2px 4px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-border-default);
   background: var(--color-surface-subtle);
   color: var(--color-text-secondary);
 
   &[data-outcome="meets"], &.meets {
     color: var(--color-outcome-meets-text);
     background: var(--color-outcome-meets-bg);
+    border-color: var(--color-outcome-meets-text);
   }
   &[data-outcome="does_not_meet"], &.does_not_meet, &.does-not-meet {
     color: var(--color-outcome-fail-text);
     background: var(--color-outcome-fail-bg);
+    border-color: var(--color-outcome-fail-text);
   }
   &[data-outcome="unclear"], &.unclear {
     color: var(--color-outcome-unclear-text);
     background: var(--color-outcome-unclear-bg);
+    border-color: var(--color-outcome-unclear-text);
   }
   &[data-outcome="failed"], &.failed {
     color: var(--color-outcome-fail-text);
     background: var(--color-outcome-fail-bg);
+    border-color: var(--color-outcome-fail-text);
   }
   &[data-outcome="pending"], &.pending {
     color: var(--color-text-secondary);
     background: var(--color-surface-subtle);
+    border-color: var(--color-border-default);
   }
 }
 
@@ -471,9 +487,9 @@ a {
 
 /* Success banner */
 .success-banner {
-  background: var(--color-success-soft);
-  color: var(--color-success);
-  border: 1px solid var(--color-success);
+  background: var(--color-light-turq);
+  color: var(--color-brand-primary);
+  border: 1px solid var(--color-brand-primary);
   border-radius: var(--radius-sm);
   padding: var(--space-3) var(--space-4);
   font-size: var(--font-size-sm);

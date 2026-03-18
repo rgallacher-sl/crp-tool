@@ -4,9 +4,9 @@
       Decision recorded for <strong>{{ successBanner }}</strong>.
     </div>
   }
-  <h1>Suppliers</h1>
 
   @if (!hasAssessments) {
+    <h1>Suppliers</h1>
     <div class="empty-state">
       <p class="empty-lead">You haven't assessed any suppliers yet.</p>
       <p class="empty-description">
@@ -26,21 +26,36 @@
       </button>
     </div>
   } @else {
-    <div class="supplier-list">
-      @for (supplier of suppliers; track supplier.id) {
-        <a class="supplier-card" [routerLink]="['/suppliers', supplier.id]">
-          <div class="supplier-name">{{ supplier.name }}</div>
-          <div class="supplier-meta">
-            <span class="outcome">PPN 006: {{ supplier.outcomeLabel }}</span>
-            <span class="last-checked">Last checked: {{ supplier.lastChecked }}</span>
-          </div>
-        </a>
-      }
-    </div>
-    <div class="actions">
+    <div class="page-header">
+      <h1>Suppliers</h1>
       <a routerLink="/assessments/new/provide-crp" class="btn-primary">
         New assessment
       </a>
     </div>
+
+    <table class="supplier-table">
+      <thead>
+        <tr>
+          <th>Supplier</th>
+          <th>Compliance status</th>
+          <th>Date of last assessment</th>
+          <th>Last actioned by</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (supplier of suppliers; track supplier.id) {
+          <tr class="supplier-row" [routerLink]="['/suppliers', supplier.id]">
+            <td class="supplier-name">{{ supplier.name }}</td>
+            <td>
+              <span class="outcome-tag" [attr.data-outcome]="supplier.outcome">
+                {{ supplier.outcomeLabel }}
+              </span>
+            </td>
+            <td class="supplier-date">{{ supplier.lastChecked }}</td>
+            <td class="supplier-actioned">{{ supplier.lastActionedBy }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
   }
 </div>

@@ -1,7 +1,7 @@
 .provide-crp-page {
   max-width: 928px;
   margin: 0 auto;
-  padding: var(--sx-7) var(--sx-4) var(--sx-8);
+  padding: var(--sx-5) var(--sx-3) var(--sx-8);
 }
 
 .content-column {
@@ -16,10 +16,6 @@
 
 h1 {
   margin: 0 0 var(--sx-5);
-  font-size: 2rem;
-  line-height: 44px;
-  font-weight: var(--font-weight-semibold);
-  color: var(--text-primary);
 }
 
 .form-section {
@@ -82,7 +78,7 @@ h1 {
 }
 
 .upload-panel {
-  border: 1px dashed var(--color-neutral-500);
+  border: 1px dashed var(--color-border-muted);
   border-radius: var(--radius-sm);
   min-height: 72px;
   padding: var(--sx-3);
