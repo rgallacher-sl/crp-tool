@@ -27,7 +27,7 @@ h1 {
   font-weight: 400;
   color: var(--text-primary);
   margin-bottom: var(--sx-2);
-  font-size: 1rem;
+  font-size: var(--font-size-md);
   line-height: 24px;
 }
 
@@ -37,7 +37,7 @@ h1 {
   padding: 0 var(--sx-3);
   border: 1px solid var(--color-border-muted);
   border-radius: var(--radius-sm);
-  font-size: 1rem;
+  font-size: var(--font-size-md);
   line-height: 24px;
   color: var(--text-primary);
   background: var(--bg-disabled);
@@ -65,7 +65,7 @@ h1 {
   gap: var(--sx-4);
   margin: var(--sx-4) 0;
   color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: var(--font-size-md);
   line-height: 24px;
 
   &::before,
@@ -117,7 +117,7 @@ h1 {
   background: none;
   border: none;
   padding: 0;
-  font-size: 0.875rem;
+  font-size: var(--font-size-sm);
   line-height: 20px;
   font-family: inherit;
 
@@ -134,7 +134,7 @@ h1 {
 
 .upload-hint {
   margin: 0;
-  font-size: 0.75rem;
+  font-size: var(--font-size-xs);
   line-height: 16px;
   color: var(--color-neutral-600);
 }
@@ -196,7 +196,7 @@ h1 {
 
 .status-label {
   margin: 0;
-  font-size: 1rem;
+  font-size: var(--font-size-md);
   line-height: 20px;
   color: var(--text-primary);
 }
@@ -204,7 +204,7 @@ h1 {
 .file-name {
   margin: 0;
   padding-left: calc(var(--sx-4) + var(--sx-2));
-  font-size: 1rem;
+  font-size: var(--font-size-md);
   line-height: 20px;
   color: var(--text-primary);
 }
@@ -214,7 +214,7 @@ h1 {
   border: none;
   color: var(--text-primary);
   cursor: pointer;
-  font-size: 1rem;
+  font-size: var(--font-size-md);
   line-height: 20px;
   font-weight: var(--font-weight-semibold);
   padding: 0;
@@ -268,7 +268,7 @@ h1 {
   background: none;
   border: none;
   padding: 0;
-  font-size: 0.875rem;
+  font-size: var(--font-size-sm);
   font-family: inherit;
   cursor: pointer;
   color: var(--link-color);
@@ -306,7 +306,7 @@ h1 {
   .file-name {
     margin: 0;
     padding: 0;
-    font-size: 0.9375rem;
+    font-size: var(--font-size-md);
     line-height: 20px;
     color: var(--text-primary);
     white-space: nowrap;
@@ -316,7 +316,7 @@ h1 {
   }
 
   .file-state-label {
-    font-size: 0.875rem;
+    font-size: var(--font-size-sm);
     color: var(--text-secondary);
   }
 
@@ -329,7 +329,7 @@ h1 {
 .error-message {
   margin-top: var(--sx-2);
   color: var(--error-color);
-  font-size: 0.875rem;
+  font-size: var(--font-size-sm);
   line-height: 20px;
 }
 

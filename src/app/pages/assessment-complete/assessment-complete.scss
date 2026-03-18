@@ -22,7 +22,7 @@
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: var(--font-size-xl);
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 24px;
@@ -39,7 +39,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   padding: 12px 16px;
-  font-size: 0.9375rem;
+  font-size: var(--font-size-md);
 
   & + .summary-row {
     border-top: 1px solid var(--border-color);
