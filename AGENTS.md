@@ -13,6 +13,22 @@ This file defines guardrails for AI-assisted changes in this repository.
 2. Keep changes minimal and consistent with current architecture.
 3. Do not rewrite unrelated code.
 
+## Design System
+
+**IBM Carbon Design System — behaviour and UX reference only**
+**GOV.UK Design System — behaviour and UX reference only**
+Use both as starting points for how components should behave: interactions, states, keyboard patterns, ARIA roles, and UX patterns. The user's provided designs and descriptions take precedence — these systems are references, not rules. Do not use their tokens or visual styles. All visual styling comes from the project's own design tokens in `src/styles.scss` and designs provided by the user.
+
+**Visual implementation**
+Styling is driven by designs and image references provided by the user. Implement those exactly using the existing tokens in `src/styles.scss`. Do not invent visual decisions not covered by the provided design.
+
+**Accessibility**
+This is a government tool. WCAG 2.2 AA compliance is required:
+- Sufficient colour contrast on all text and interactive elements
+- Full keyboard accessibility with visible focus states
+- Semantic HTML and ARIA where needed
+- Colour must never be the sole way to convey information
+
 ## Styling Rules
 1. Use design tokens from `src/styles.scss` for color, spacing, radius, and motion.
 2. Use Primer-like spacing scale for new layout spacing:

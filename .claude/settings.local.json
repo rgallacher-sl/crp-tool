@@ -11,7 +11,12 @@
       "Bash(curl:*)",
       "Bash(netstat:*)",
       "Bash(findstr:*)",
-      "Bash(npx ng:*)"
+      "Bash(npx ng:*)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "WebFetch(domain:carbondesignsystem.com)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_click"
     ]
   }
 }

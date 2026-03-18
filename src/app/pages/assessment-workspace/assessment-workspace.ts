@@ -257,4 +257,31 @@ export class AssessmentWorkspaceComponent implements OnInit {
   get recordedOutcomeLabel(): string {
     return this.assessmentService.getOutcomeLabel(this.assessment?.outcome ?? null);
   }
+
+  get assessmentTitle(): string {
+    const date = this.assessment?.completedDate ?? this.assessment?.createdDate;
+    if (!date) return '';
+    const dateStr = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    const mins = date.getMinutes().toString().padStart(2, '0');
+    return `${dateStr}, ${date.getHours()}:${mins}`;
+  }
+
+  get wasOverridden(): boolean {
+    if (!this.assessment) return false;
+    if (this.assessment.overriddenBy) return true;
+    return this.assessment.outcome !== null && this.assessment.outcome !== this.aiOutcome;
+  }
+
+  get overrideByLabel(): string {
+    return this.assessment?.overriddenBy ?? this.assessment?.actionedBy ?? 'Unknown';
+  }
+
+  get overrideWhenLabel(): string {
+    const date = this.assessment?.overriddenAt ?? this.assessment?.completedDate;
+    return date ? date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
+  }
+
+  get overrideReasonLabel(): string {
+    return this.assessment?.overrideReason ?? '';
+  }
 }

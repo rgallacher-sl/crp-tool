@@ -4,7 +4,15 @@
       @if (isReadOnly) {
         <a [routerLink]="['/suppliers', supplierId]" class="back-link">&larr; {{ supplierName }}</a>
       }
-      <h1 class="page-title">{{ isReadOnly ? 'Assessment results' : 'Review assessment results' }}</h1>
+      <h1 class="page-title">{{ isReadOnly ? assessmentTitle : 'Review assessment results' }}</h1>
+      @if (isReadOnly) {
+        <div class="recorded-decision-top">
+          <span class="outcome-tag" [attr.data-outcome]="assessment.outcome">{{ recordedOutcomeLabel }}</span>
+          @if (assessment.notes) {
+            <p class="recorded-notes">{{ assessment.notes }}</p>
+          }
+        </div>
+      }
       <div class="source-links">
         @if (assessment.documentSource === 'link' && assessment.documentReference) {
           <a
@@ -112,11 +120,15 @@
       </div>
 
       @if (isReadOnly) {
-        <div class="recorded-decision">
-          <h3>Recorded decision</h3>
-          <p class="recorded-outcome" [attr.data-outcome]="assessment.outcome">{{ recordedOutcomeLabel }}</p>
-          @if (assessment.notes) {
-            <p class="recorded-notes">{{ assessment.notes }}</p>
+        <div class="override-notice" [class.override-notice--overridden]="wasOverridden">
+          @if (wasOverridden) {
+            <p class="override-notice-title">AI recommendation overridden</p>
+            <p class="override-notice-body">AI recommended <strong>{{ aiOutcomeLabel }}</strong>. Overridden by <strong>{{ overrideByLabel }}</strong> on {{ overrideWhenLabel }}.</p>
+            @if (overrideReasonLabel) {
+              <p class="override-notice-reason">Reason: {{ overrideReasonLabel }}</p>
+            }
+          } @else {
+            <p class="override-notice-body">Final verdict aligns with the AI recommendation.</p>
           }
         </div>
       } @else {

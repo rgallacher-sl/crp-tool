@@ -415,19 +415,47 @@
   color: var(--color-text-primary);
 }
 
+
+.recorded-decision-top {
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border-default);
+}
+
+.override-notice {
+  border: 1px solid var(--color-border-default);
+  background: var(--color-surface-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  margin-bottom: var(--space-5);
+  font-size: var(--font-size-sm);
+
+  &--overridden {
+    border-color: var(--color-warning-border);
+    background: var(--color-warning-subtle);
+  }
+}
+
+.override-notice-title {
+  font-weight: var(--font-weight-semibold);
+  margin: 0 0 6px;
+  color: var(--color-text-primary);
+}
+
+.override-notice-body {
+  margin: 0 0 4px;
+  color: var(--color-text-secondary);
+}
+
+.override-notice-reason {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
 .recorded-decision {
   margin-bottom: var(--space-6);
 }
 
-.recorded-outcome {
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-medium);
-  margin-bottom: var(--space-2);
-
-  &[data-outcome="meets"] { color: var(--color-success); }
-  &[data-outcome="does_not_meet"] { color: var(--color-danger); }
-  &[data-outcome="unclear"] { color: var(--color-warning); }
-}
 
 .recorded-notes {
   font-size: var(--font-size-sm);
