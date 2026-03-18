@@ -13,19 +13,19 @@
           </div>
           <div class="batch-outcomes">
             @if (row.meets > 0) {
-              <span class="outcome-chip meets">{{ row.meets }} compliant</span>
+              <span class="outcome-tag" data-outcome="meets">{{ row.meets }} compliant</span>
             }
             @if (row.does_not_meet > 0) {
-              <span class="outcome-chip does-not-meet">{{ row.does_not_meet }} non-compliant</span>
+              <span class="outcome-tag" data-outcome="does_not_meet">{{ row.does_not_meet }} non-compliant</span>
             }
             @if (row.unclear > 0) {
-              <span class="outcome-chip unclear">{{ row.unclear }} unclear</span>
+              <span class="outcome-tag" data-outcome="unclear">{{ row.unclear }} unclear</span>
             }
             @if (row.failed > 0) {
-              <span class="outcome-chip failed">{{ row.failed }} failed</span>
+              <span class="outcome-tag" data-outcome="failed">{{ row.failed }} failed</span>
             }
             @if (row.pending > 0) {
-              <span class="outcome-chip pending">{{ row.pending }} in progress</span>
+              <span class="outcome-tag" data-outcome="pending">{{ row.pending }} in progress</span>
             }
           </div>
         </a>

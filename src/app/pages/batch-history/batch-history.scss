@@ -1,33 +1,31 @@
 .batch-history-page {
   max-width: 640px;
   margin: 0 auto;
-  padding: 48px 24px;
-}
-
-h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 32px;
+  padding: var(--sx-7) var(--space-6);
 }
 
 .empty {
-  color: var(--text-tertiary);
+  color: var(--color-text-tertiary);
 }
 
 .batch-list {
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--color-border-default);
 }
 
 .batch-entry {
   display: block;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border-color);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border-default);
   text-decoration: none;
   color: inherit;
 
   &:hover {
-    background: var(--bg-hover);
+    background: var(--color-bg-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: -2px;
   }
 }
 
@@ -35,55 +33,23 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 8px;
+  margin-bottom: var(--space-2);
 }
 
 .batch-date {
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--link-color);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-md);
+  color: var(--color-link);
   text-decoration: underline;
 }
 
 .batch-count {
-  font-size: 0.875rem;
-  color: var(--text-tertiary);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
 }
 
 .batch-outcomes {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-}
-
-.outcome-chip {
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 3px 8px;
-  border-radius: 2px;
-
-  &.meets {
-    color: #005a30;
-    background: #cce2d8;
-  }
-
-  &.does-not-meet {
-    color: #942514;
-    background: #f6d7d2;
-  }
-
-  &.unclear {
-    color: #594d00;
-    background: #fff7bf;
-  }
-
-  &.failed {
-    color: #942514;
-    background: #f6d7d2;
-  }
-
-  &.pending {
-    color: var(--text-secondary);
-    background: var(--bg-subtle);
-  }
 }

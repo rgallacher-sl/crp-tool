@@ -3,7 +3,7 @@
     <h1>New assessment</h1>
 
     <fieldset class="source-group">
-      <p class="sr-only-copy" [id]="sourceHelpId">
+      <p class="sr-only" [id]="sourceHelpId">
         Provide links and PDFs for the suppliers you want to assess. You can add multiple.
       </p>
 
@@ -88,7 +88,7 @@
           accept=".pdf,application/pdf"
           multiple
           (change)="onFileSelected($event)"
-          class="sr-only-input"
+          class="sr-only"
           tabindex="-1"
           aria-hidden="true"
         />
@@ -101,7 +101,7 @@
       }
     </fieldset>
 
-    <p [id]="sourceStatusId" class="sr-only-status" aria-live="polite">
+    <p [id]="sourceStatusId" class="sr-only" aria-live="polite">
       {{ announcement }}
     </p>
 

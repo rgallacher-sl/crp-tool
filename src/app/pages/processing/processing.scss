@@ -1,7 +1,7 @@
 .processing-page {
   max-width: 640px;
   margin: 0 auto;
-  padding: 48px 24px;
+  padding: var(--sx-7) var(--space-6);
 }
 
 .processing-content {
@@ -9,23 +9,16 @@
   margin: 0 auto;
 }
 
-h2 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 6px;
-}
-
 .document-chip {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   padding: 4px 10px 4px 8px;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  font-size: 0.8125rem;
-  color: var(--text-secondary);
-  margin-bottom: 20px;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-5);
   max-width: 100%;
 
   svg {
@@ -40,50 +33,35 @@ h2 {
 }
 
 .reassurance {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  margin-bottom: 20px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-5);
   line-height: 1.5;
 }
 
 .page-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-.btn-cancel {
-  background: none;
-  border: none;
-  padding: 0;
-  font-size: 0.9375rem;
-  font-family: inherit;
-  cursor: pointer;
-  color: var(--text-secondary);
-  margin-left: auto;
-
-  &:hover {
-    color: var(--text-primary);
-  }
+  gap: var(--space-3);
+  margin-top: var(--space-5);
 }
 
 .notify-confirmed {
-  font-size: 0.875rem;
-  color: var(--success-color);
+  font-size: var(--font-size-sm);
+  color: var(--color-success);
 }
 
 .notify-denied {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
 }
 
 .status-steps {
   list-style: none;
   padding: 0;
-  margin: 0 0 24px;
+  margin: 0 0 var(--space-6);
   display: grid;
-  gap: 8px;
+  gap: var(--space-2);
 }
 
 .status-step {
@@ -91,11 +69,10 @@ h2 {
   justify-content: space-between;
   align-items: center;
   padding: 10px 14px;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  transition: color 0.3s ease, border-color 0.3s ease;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
   transition: color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
 
   &[data-state="pending"] {
@@ -103,21 +80,20 @@ h2 {
   }
 
   &[data-state="active"] {
-    border-color: var(--focus-color);
-    color: var(--text-primary);
+    border-color: var(--color-focus);
+    color: var(--color-text-primary);
   }
 
   &[data-state="done"] {
-    border-color: var(--success-color);
-    color: var(--success-color);
+    border-color: var(--color-success);
+    color: var(--color-success);
   }
 
   &[data-state="error"] {
-    border-color: var(--error-color);
-    color: var(--error-color);
+    border-color: var(--color-danger);
+    color: var(--color-danger);
   }
 }
-
 
 .step-icon {
   display: flex;
@@ -127,29 +103,7 @@ h2 {
   height: 16px;
 }
 
-.step-spinner {
-  display: block;
-  width: 14px;
-  height: 14px;
-  border: 2px solid currentColor;
-  border-top-color: transparent;
-  border-radius: 50%;
-  animation: spin 0.7s linear infinite;
-  opacity: 0.6;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-.error-message {
-  color: var(--error-color);
-  margin: 4px 0 20px;
-  font-size: 0.875rem;
-  line-height: 1.5;
-}
-
 .actions {
   display: flex;
-  gap: 12px;
+  gap: var(--space-3);
 }

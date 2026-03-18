@@ -230,14 +230,6 @@ h1 {
   }
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .url-inputs {
   display: flex;
@@ -352,19 +344,6 @@ h1 {
   gap: var(--sx-2);
 }
 
-.sr-only-copy,
-.sr-only-input,
-.sr-only-status {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
 
 @media (max-width: 640px) {
   .provide-crp-page {

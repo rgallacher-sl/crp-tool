@@ -113,7 +113,7 @@
               </span>
               <span class="row-doc-label">{{ a.documentLabel }}</span>
               <span class="row-confidence">{{ confidencePct(a) }}</span>
-              <span class="row-outcome meets">{{ aiOutcomeLabel(a) }}</span>
+              <span class="row-outcome" data-outcome="meets">{{ aiOutcomeLabel(a) }}</span>
               <div class="row-supplier">
                 <label [for]="'supplier-' + a.id" class="sr-only">Supplier name for {{ a.documentLabel }}</label>
                 <input
@@ -167,7 +167,7 @@
               </span>
               <span class="row-doc-label">{{ a.documentLabel }}</span>
               <span class="row-confidence low">{{ confidencePct(a) }}</span>
-              <span class="row-outcome" [class]="'row-outcome ' + assessmentService.deriveAiOutcome(a)">
+              <span class="row-outcome" [attr.data-outcome]="assessmentService.deriveAiOutcome(a)">
                 {{ aiOutcomeLabel(a) }}
               </span>
               <div class="row-supplier">

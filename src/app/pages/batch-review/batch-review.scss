@@ -1,84 +1,54 @@
 .batch-review-page {
   max-width: 820px;
   margin: 0 auto;
-  padding: 40px 24px 64px;
+  padding: var(--sx-6) var(--space-6) var(--sx-8);
 }
 
 .batch-review-content {
   max-width: 760px;
 }
 
-.back-link {
-  display: inline-block;
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: 0.875rem;
-  margin-bottom: 24px;
-
-  &:hover { color: var(--text-primary); }
-}
-
-h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 20px;
-}
-
-/* ── Summary (read-only) mode ── */
-
 .summary-count {
-  font-size: 0.9375rem;
-  color: var(--text-secondary);
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
   margin-bottom: 28px;
 }
 
 .summary-list {
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--color-border-default);
 }
 
 .summary-row {
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border-color);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border-default);
 }
 
 .summary-row-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4px;
+  margin-bottom: var(--space-1);
 }
 
 .summary-supplier-link {
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--link-color);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-md);
+  color: var(--color-link);
   text-decoration: underline;
 
-  &:hover { color: var(--text-primary); }
-}
-
-.assessment-tag {
-  font-size: 0.8125rem;
-  font-weight: 700;
-  padding: 3px 8px;
-  border-radius: 2px;
-
-  &[data-outcome="meets"] { color: #005a30; background: #cce2d8; }
-  &[data-outcome="does_not_meet"] { color: #942514; background: #f6d7d2; }
-  &[data-outcome="unclear"] { color: #594d00; background: #fff7bf; }
+  &:hover { color: var(--color-text-primary); }
 }
 
 .summary-doc {
-  font-size: 0.9375rem;
-  color: var(--text-secondary);
-  margin-bottom: 8px;
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2);
 }
 
 .doc-link {
-  color: var(--link-color);
+  color: var(--color-link);
   text-decoration: underline;
-  &:hover { color: var(--text-primary); }
+  &:hover { color: var(--color-text-primary); }
 }
 
 .summary-meta {
@@ -89,64 +59,53 @@ h2 {
 }
 
 .meta-chip {
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 2px;
-  background: var(--bg-subtle);
-  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-subtle);
+  color: var(--color-text-secondary);
 
   &.override {
     background: var(--color-warning-subtle);
-    color: var(--warning-color);
+    color: var(--color-warning);
   }
 }
 
 .summary-notes {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
   font-style: italic;
 }
 
-.success-banner {
-  background: var(--success-bg);
-  color: var(--success-color);
-  border: 1px solid var(--success-color);
-  border-radius: 6px;
-  padding: 10px 14px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
 .all-done {
-  padding: 24px 0;
+  padding: var(--space-6) 0;
 }
 
 .all-done-heading {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 12px;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-3);
 }
 
 .outcome-summary {
   list-style: none;
   padding: 0;
-  margin: 0 0 20px;
+  margin: 0 0 var(--space-5);
   display: flex;
-  gap: 20px;
-  font-size: 0.875rem;
-  color: var(--text-secondary);
+  gap: var(--space-5);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
 }
 
 .outcome-count {
   font-weight: 700;
-  margin-right: 4px;
+  margin-right: var(--space-1);
 
-  &.meets { color: var(--success-color); }
-  &.does-not-meet { color: var(--error-color); }
-  &.unclear { color: var(--warning-color); }
+  &.meets { color: var(--color-success); }
+  &.does-not-meet { color: var(--color-danger); }
+  &.unclear { color: var(--color-warning); }
 }
 
 .review-section {
@@ -154,23 +113,17 @@ h2 {
 }
 
 .section-heading {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 4px;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1);
 }
 
 .section-desc {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
   margin-bottom: 14px;
   line-height: 1.5;
-}
-
-.error-message {
-  color: var(--error-color);
-  font-size: 0.875rem;
-  margin-bottom: 10px;
 }
 
 /* ── Shared row grid ── */
@@ -192,21 +145,21 @@ h2 {
   display: grid;
   align-items: center;
   gap: 10px;
-  padding: 10px 12px;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  font-size: 0.8125rem;
+  padding: 10px var(--space-3);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
 }
 
 /* ── Failed rows ── */
 .failed-row {
   grid-template-columns: 1fr auto auto;
-  border-color: var(--error-color);
+  border-color: var(--color-danger);
 }
 
 .failed-message {
-  color: var(--text-secondary);
-  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
 }
 
 /* ── Confirm rows (bulk-confirmable) ── */
@@ -226,7 +179,7 @@ h2 {
 /* ── Exception rows ── */
 .exception-row {
   grid-template-columns: 16px 1fr 48px 120px 200px auto;
-  border-color: var(--color-warning-border, var(--border-color));
+  border-color: var(--color-warning-border);
 
   @media (max-width: 600px) {
     grid-template-columns: 16px 1fr auto;
@@ -242,23 +195,17 @@ h2 {
 .completed-row {
   grid-template-columns: 1fr 1fr auto;
   opacity: 0.7;
-
-  .row-outcome {
-    &[data-outcome="meets"] { color: var(--success-color); }
-    &[data-outcome="does_not_meet"] { color: var(--error-color); }
-    &[data-outcome="unclear"] { color: var(--warning-color); }
-  }
 }
 
 .row-source-icon {
   display: flex;
   align-items: center;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   flex-shrink: 0;
 }
 
 .row-doc-label {
-  color: var(--text-primary);
+  color: var(--color-text-primary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -266,43 +213,44 @@ h2 {
 }
 
 .row-supplier-name {
-  color: var(--text-secondary);
-  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
 }
 
 .row-confidence {
-  color: var(--success-color);
-  font-weight: 600;
-  font-size: 0.75rem;
+  color: var(--color-success);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xs);
   text-align: right;
 
   &.low {
-    color: var(--warning-color);
+    color: var(--color-warning);
   }
 }
 
+/* row-outcome inherits outcome tag colors from global .outcome-tag via [data-outcome] */
 .row-outcome {
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 999px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-pill);
   text-align: center;
-  background: var(--bg-subtle);
-  color: var(--text-secondary);
+  background: var(--color-surface-subtle);
+  color: var(--color-text-secondary);
 
-  &.meets {
-    background: var(--success-bg);
-    color: var(--success-color);
+  &[data-outcome="meets"] {
+    background: var(--color-outcome-meets-bg);
+    color: var(--color-outcome-meets-text);
   }
 
-  &.does_not_meet {
-    background: var(--color-danger-soft);
-    color: var(--error-color);
+  &[data-outcome="does_not_meet"] {
+    background: var(--color-outcome-fail-bg);
+    color: var(--color-outcome-fail-text);
   }
 
-  &.unclear {
-    background: var(--color-warning-soft);
-    color: var(--warning-color);
+  &[data-outcome="unclear"] {
+    background: var(--color-outcome-unclear-bg);
+    color: var(--color-outcome-unclear-text);
   }
 }
 
@@ -314,52 +262,58 @@ h2 {
 
 .supplier-input {
   width: 100%;
-  padding: 6px 8px;
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
-  font-size: 0.8125rem;
-  color: var(--text-primary);
+  padding: 6px var(--space-2);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-primary);
   background: var(--color-bg-canvas);
   font-family: inherit;
   box-sizing: border-box;
 
   &::placeholder {
-    color: var(--text-tertiary);
+    color: var(--color-text-tertiary);
   }
 
   &:focus {
     outline: none;
-    border-color: var(--focus-color);
-    box-shadow: 0 0 0 2px var(--focus-ring);
+    border-color: var(--color-focus);
+    box-shadow: 0 0 0 2px var(--color-focus-ring);
   }
 
   &.input-error {
-    border-color: var(--error-color);
+    border-color: var(--color-danger);
   }
 }
 
 .input-error-msg {
-  font-size: 0.6875rem;
-  color: var(--error-color);
+  font-size: var(--font-size-xs);
+  color: var(--color-danger);
 }
 
 .confirm-all-btn {
-  margin-top: 4px;
+  margin-top: var(--space-1);
 }
 
 .btn-link {
   background: none;
   border: none;
   padding: 0;
-  font-size: 0.8125rem;
+  font-size: var(--font-size-xs);
   font-family: inherit;
   cursor: pointer;
-  color: var(--link-color);
+  color: var(--color-link);
   text-decoration: none;
   white-space: nowrap;
 
   &:hover {
     text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
   }
 }
 
@@ -367,18 +321,7 @@ h2 {
   opacity: 0.85;
 
   .section-heading {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
   }
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
 }
