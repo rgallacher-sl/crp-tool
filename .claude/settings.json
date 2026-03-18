@@ -8,7 +8,8 @@
       "Bash(cp -r \"c:/Users/Ryan/Documents/GitHub/agentic-dev-boilerplate/.claude/commands\" \"c:/Users/Ryan/Documents/GitHub/crp-tool-postmvp/.claude/commands\")",
       "Bash(cp -r \"c:/Users/Ryan/Documents/GitHub/agentic-dev-boilerplate/skills\" \"c:/Users/Ryan/Documents/GitHub/crp-tool-postmvp/skills\")",
       "Bash(ls -la \"c:\\\\Users\\\\Ryan\\\\Documents\\\\GitHub\\\\crp-tool-postmvp\\\\src\\\\app\\\\pages\"\" 2>/dev/null | grep \"^d \")",
-      "Bash(ls -1d /c/Users/Ryan/Documents/GitHub/crp-tool-postmvp/src/app/pages/*/)"
+      "Bash(ls -1d /c/Users/Ryan/Documents/GitHub/crp-tool-postmvp/src/app/pages/*/)",
+      "Bash(find C:UsersRyanDocumentsGitHubrg-design-system -type f \\\\\\(-name *.json -o -name *.md -o -name *.config.js -o -name *.config.ts \\\\\\))"
     ]
   },
   "hooks": {
