@@ -165,32 +165,16 @@ h1 {
 }
 
 .status-icon {
-  display: inline-block;
-  width: var(--sx-4);
-  height: var(--sx-4);
-  border-radius: 50%;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--text-secondary);
 
   &.uploading {
-    border: 3px solid var(--color-neutral-400);
-    border-top-color: var(--text-primary);
     animation: spin 1s linear infinite;
   }
 
-  &.uploaded {
-    border: 3px solid var(--success-color);
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      left: 4px;
-      top: 1px;
-      width: 4px;
-      height: 8px;
-      border-right: 2px solid var(--success-color);
-      border-bottom: 2px solid var(--success-color);
-      transform: rotate(45deg);
-    }
+  .uploaded & {
+    color: var(--success-color);
   }
 }
 
@@ -254,6 +238,7 @@ h1 {
   align-items: center;
   flex-shrink: 0;
   border-radius: var(--radius-sm);
+  font-size: 16px;
 
   &:hover { color: var(--text-primary); }
 
@@ -297,33 +282,7 @@ h1 {
 }
 
 .file-row {
-  display: grid;
-  grid-template-columns: var(--sx-4) 1fr auto auto;
-  align-items: center;
-  gap: var(--sx-2);
   padding: var(--sx-1) 0;
-
-  .file-name {
-    margin: 0;
-    padding: 0;
-    font-size: var(--font-size-md);
-    line-height: 20px;
-    color: var(--text-primary);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    min-width: 0;
-  }
-
-  .file-state-label {
-    font-size: var(--font-size-sm);
-    color: var(--text-secondary);
-  }
-
-  &.uploaded .file-state-label {
-    color: var(--success-color);
-    font-weight: var(--font-weight-semibold);
-  }
 }
 
 .error-message {

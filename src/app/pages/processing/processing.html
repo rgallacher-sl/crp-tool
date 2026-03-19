@@ -5,15 +5,9 @@
     @if (!isFailed && assessment) {
       <div class="document-chip">
         @if (assessment.documentSource === 'upload') {
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path d="M4 2h6l4 4v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
-            <path d="M10 2v4h4" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
-          </svg>
+          <span class="material-symbols-outlined" aria-hidden="true">description</span>
         } @else {
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.25"/>
-            <path d="M2 8h12M8 2c-2 2-3 4-3 6s1 4 3 6M8 2c2 2 3 4 3 6s-1 4-3 6" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
-          </svg>
+          <span class="material-symbols-outlined" aria-hidden="true">language</span>
         }
         <span>{{ assessment.documentSource === 'link' ? assessment.documentReference : assessment.documentLabel }}</span>
       </div>
@@ -31,9 +25,9 @@
             @if (step.state === 'active') {
               <span class="step-spinner"></span>
             } @else if (step.state === 'done') {
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="material-symbols-outlined" aria-hidden="true">check</span>
             } @else if (step.state === 'error') {
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+              <span class="material-symbols-outlined" aria-hidden="true">close</span>
             }
           </span>
         </li>

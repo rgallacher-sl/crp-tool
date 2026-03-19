@@ -21,11 +21,12 @@
   margin-bottom: var(--space-5);
   max-width: 100%;
 
-  svg {
+  .material-symbols-outlined {
     flex-shrink: 0;
+    font-size: 14px;
   }
 
-  span {
+  span:not(.material-symbols-outlined) {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -101,6 +102,7 @@
   flex-shrink: 0;
   width: 16px;
   height: 16px;
+  font-size: 16px;
 }
 
 .actions {

@@ -31,9 +31,7 @@
                   (click)="removeLinkInput($index)"
                   [attr.aria-label]="'Remove link ' + ($index + 1)"
                 >
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                    <path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
-                  </svg>
+                  <span class="material-symbols-outlined" aria-hidden="true">close</span>
                 </button>
               }
             </div>
@@ -63,13 +61,23 @@
         @if (fileEntries.length > 0) {
           <ul class="file-list" (click)="$event.stopPropagation()">
             @for (entry of fileEntries; track entry.file.name; let i = $index) {
-              <li class="file-row" [class.uploaded]="entry.state === 'uploaded'">
-                <span class="status-icon" [class.uploading]="entry.state === 'uploading'" [class.uploaded]="entry.state === 'uploaded'" aria-hidden="true"></span>
-                <span class="file-name">{{ entry.file.name }}</span>
-                <span class="file-state-label">{{ entry.state === 'uploading' ? 'Uploading...' : 'Uploaded' }}</span>
-                @if (entry.state === 'uploaded') {
-                  <button class="remove-file" (click)="removeFile(i); $event.stopPropagation()" type="button">Remove</button>
-                }
+              <li class="file-row">
+                <div class="file-state" [class.uploaded]="entry.state === 'uploaded'">
+                  <div class="status-line">
+                    <div class="status-left">
+                      @if (entry.state === 'uploading') {
+                        <span class="material-symbols-outlined status-icon uploading" aria-hidden="true">autorenew</span>
+                      } @else {
+                        <span class="material-symbols-outlined status-icon" aria-hidden="true">check_circle</span>
+                      }
+                      <span class="status-label">{{ entry.state === 'uploading' ? 'Uploading...' : 'Uploaded' }}</span>
+                    </div>
+                    @if (entry.state === 'uploaded') {
+                      <button class="remove-file" (click)="removeFile(i); $event.stopPropagation()" type="button">Remove</button>
+                    }
+                  </div>
+                  <p class="file-name">{{ entry.file.name }}</p>
+                </div>
               </li>
             }
           </ul>
