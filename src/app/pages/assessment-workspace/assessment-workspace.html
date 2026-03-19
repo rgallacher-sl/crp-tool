@@ -36,6 +36,7 @@
           <span class="material-symbols-outlined external-icon" aria-hidden="true">open_in_new</span>
         </a>
       </div>
+
       <h2 class="section-title">Extracted details</h2>
       @if (isReadOnly) {
         <div class="supplier-static">
@@ -56,18 +57,13 @@
       }
 
       <div class="ai-assessment">
-        <div class="ai-summary">
-          <div class="ai-summary-header">
-            <div>
-              <p class="ai-title">AI assessment</p>
-            </div>
-          </div>
-
+        <h2 class="section-title">AI assessment results</h2>
+        <div class="ai-table">
           <dl class="ai-summary-list" id="ai-criteria">
             <div class="ai-summary-columns" aria-hidden="true">
               <span class="ai-summary-column">Entry</span>
-              <span class="ai-summary-column">Assessment criteria</span>
-              <span class="ai-summary-column ai-summary-column-right">AI recommendation</span>
+              <span class="ai-summary-column">Assessment Criteria</span>
+              <span class="ai-summary-column ai-summary-column-right">AI Recommendation</span>
             </div>
             @for (finding of ppnFindings; track finding.code) {
               <div class="ai-summary-row">
@@ -114,103 +110,103 @@
           }
         </div>
       } @else {
-      <div class="decision-section">
-        <h3>Does this supplier meet PPN 006 requirements?</h3>
+        <div class="decision-section">
+          <h2 class="decision-question">Does this supplier meet PPN 006 requirements?</h2>
 
-        <div class="outcome-options">
-          <label class="outcome-option">
-            <input
-              type="radio"
-              name="outcome"
-              value="meets"
-              [checked]="selectedOutcome === 'meets'"
-              (change)="selectOutcome('meets')"
-            />
-            <span class="radio-label">Meets requirements</span>
-          </label>
+          <div class="outcome-options">
+            <label class="outcome-option">
+              <input
+                type="radio"
+                name="outcome"
+                value="meets"
+                [checked]="selectedOutcome === 'meets'"
+                (change)="selectOutcome('meets')"
+              />
+              <span class="radio-label">Meets requirements</span>
+            </label>
 
-          <label class="outcome-option">
-            <input
-              type="radio"
-              name="outcome"
-              value="does_not_meet"
-              [checked]="selectedOutcome === 'does_not_meet'"
-              (change)="selectOutcome('does_not_meet')"
-            />
-            <span class="radio-label">Does not meet requirements</span>
-          </label>
+            <label class="outcome-option">
+              <input
+                type="radio"
+                name="outcome"
+                value="does_not_meet"
+                [checked]="selectedOutcome === 'does_not_meet'"
+                (change)="selectOutcome('does_not_meet')"
+              />
+              <span class="radio-label">Does not meet requirements</span>
+            </label>
 
-          <label class="outcome-option">
-            <input
-              type="radio"
-              name="outcome"
-              value="unclear"
-              [checked]="selectedOutcome === 'unclear'"
-              (change)="selectOutcome('unclear')"
-            />
-            <span class="radio-label">Unclear</span>
-          </label>
-        </div>
-
-        <div class="notes-section">
-          <label class="field-label" for="notes">Notes</label>
-          <textarea
-            id="notes"
-            class="text-area"
-            [(ngModel)]="notes"
-            rows="4"
-          ></textarea>
-        </div>
-
-        @if (showOverridePanel) {
-          <div class="override-guardrail">
-            <p class="override-title">Your decision differs from the AI result</p>
-            <p class="override-summary">
-              AI result: <strong>{{ aiOutcomeLabel }}</strong><br />
-              Your decision: <strong>{{ selectedOutcomeLabel }}</strong>
-            </p>
-            <p class="override-copy">
-              Please review the flagged criteria and confirm you want to continue.
-            </p>
-            <ul class="override-findings">
-              @for (finding of disagreementFindings; track finding.code) {
-                <li><strong>{{ finding.code }}</strong> - {{ finding.rule }}</li>
-              }
-            </ul>
-            <label class="override-confirm">
-              <input type="checkbox" [(ngModel)]="overrideConfirmed" />
-              <span>I confirm I reviewed the criteria and want to override the AI result.</span>
+            <label class="outcome-option">
+              <input
+                type="radio"
+                name="outcome"
+                value="unclear"
+                [checked]="selectedOutcome === 'unclear'"
+                (change)="selectOutcome('unclear')"
+              />
+              <span class="radio-label">Unclear</span>
             </label>
           </div>
-        }
 
-        @if (error) {
-          <p class="error-message">{{ error }}</p>
-        }
+          <div class="notes-section">
+            <label class="field-label" for="notes">Rationale</label>
+            <textarea
+              id="notes"
+              class="text-area"
+              [(ngModel)]="notes"
+              rows="5"
+            ></textarea>
+          </div>
 
-        <p class="decision-consequence">
-          Recording this decision will finalize the assessment and update supplier history.
-        </p>
-
-        @if (showCancelConfirm) {
-          <div class="cancel-confirm" role="alert" aria-labelledby="cancel-confirm-heading">
-            <p id="cancel-confirm-heading" class="cancel-confirm-text">If you leave now, this assessment will not be recorded and the AI results will be lost.</p>
-            <div class="cancel-confirm-actions">
-              <button #leaveBtn class="btn-danger" type="button" (click)="confirmCancel()">Leave without recording</button>
-              <button class="btn-secondary cancel-confirm-stay" type="button" (click)="dismissCancel()">Stay on this page</button>
+          @if (showOverridePanel) {
+            <div class="override-guardrail">
+              <p class="override-title">Your decision differs from the AI result</p>
+              <p class="override-summary">
+                AI result: <strong>{{ aiOutcomeLabel }}</strong><br />
+                Your decision: <strong>{{ selectedOutcomeLabel }}</strong>
+              </p>
+              <p class="override-copy">
+                Please review the flagged criteria and confirm you want to continue.
+              </p>
+              <ul class="override-findings">
+                @for (finding of disagreementFindings; track finding.code) {
+                  <li><strong>{{ finding.code }}</strong> - {{ finding.rule }}</li>
+                }
+              </ul>
+              <label class="override-confirm">
+                <input type="checkbox" [(ngModel)]="overrideConfirmed" />
+                <span>I confirm I reviewed the criteria and want to override the AI result.</span>
+              </label>
             </div>
-          </div>
-        } @else {
-          <div class="decision-actions">
-            <button #cancelBtn class="btn-secondary" type="button" (click)="cancel()">
-              Cancel
-            </button>
-            <button class="btn-primary btn-record" type="button" (click)="recordDecision()">
-              Record decision
-            </button>
-          </div>
-        }
-      </div>
+          }
+
+          @if (error) {
+            <p class="error-message">{{ error }}</p>
+          }
+
+          <p class="decision-consequence">
+            Recording this decision will finalize the assessment and update supplier history.
+          </p>
+
+          @if (showCancelConfirm) {
+            <div class="cancel-confirm" role="alert" aria-labelledby="cancel-confirm-heading">
+              <p id="cancel-confirm-heading" class="cancel-confirm-text">If you leave now, this assessment will not be recorded and the AI results will be lost.</p>
+              <div class="cancel-confirm-actions">
+                <button #leaveBtn class="btn-danger" type="button" (click)="confirmCancel()">Leave without recording</button>
+                <button class="btn-secondary cancel-confirm-stay" type="button" (click)="dismissCancel()">Stay on this page</button>
+              </div>
+            </div>
+          } @else {
+            <div class="decision-actions">
+              <button #cancelBtn class="btn-secondary" type="button" (click)="cancel()">
+                Cancel
+              </button>
+              <button class="btn-primary btn-record" type="button" (click)="recordDecision()">
+                Record compliance decision
+              </button>
+            </div>
+          }
+        </div>
       }
     </div>
   </div>

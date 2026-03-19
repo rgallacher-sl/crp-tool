@@ -15,6 +15,7 @@ export class ProcessingComponent implements OnInit, OnDestroy {
   statusLabel = 'Checking your document';
   isFailed = false;
   errorMessage = '';
+  showCancelConfirm = false;
   steps: Array<{ label: string; state: 'pending' | 'active' | 'done' | 'error' }> = [];
   notifyState: 'idle' | 'granted' | 'denied' | 'unsupported' = 'idle';
   private tickId: ReturnType<typeof setInterval> | null = null;
@@ -89,8 +90,16 @@ export class ProcessingComponent implements OnInit, OnDestroy {
   }
 
   cancel(): void {
+    this.showCancelConfirm = true;
+  }
+
+  confirmCancel(): void {
     this.clearTicker();
     this.router.navigate(['/suppliers']);
+  }
+
+  dismissCancel(): void {
+    this.showCancelConfirm = false;
   }
 
   async requestNotification(): Promise<void> {
