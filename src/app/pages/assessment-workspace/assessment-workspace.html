@@ -2,48 +2,139 @@
   <div class="workspace">
     <div class="decision-panel">
       @if (isReadOnly) {
-        <a [routerLink]="['/suppliers', supplierId]" class="back-link">&larr; {{ supplierName }}</a>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a routerLink="/suppliers">Suppliers</a>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <a [routerLink]="['/suppliers', supplierId]">{{ supplierName }}</a>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <span aria-current="page">{{ assessmentTitle }}</span>
+        </nav>
       }
       <h1 class="page-title">{{ isReadOnly ? assessmentTitle : 'Review assessment results' }}</h1>
       @if (isReadOnly) {
-        <div class="recorded-decision-top">
-          <span class="outcome-tag" [attr.data-outcome]="assessment.outcome">{{ recordedOutcomeLabel }}</span>
-          @if (assessment.notes) {
-            <p class="recorded-notes">{{ assessment.notes }}</p>
+        <dl class="decision-dl">
+          <div class="decision-dl-row">
+            <dt>Decision</dt>
+            <dd><span class="outcome-tag" [attr.data-outcome]="assessment.outcome">{{ recordedOutcomeLabel }}</span></dd>
+          </div>
+          <div class="decision-dl-row">
+            <dt>Recorded by</dt>
+            <dd>
+              {{ decisionBy }}
+              @if (assessment.confirmationType === 'bulk') {
+                <span class="decision-badge">Bulk</span>
+              }
+            </dd>
+          </div>
+          @if (wasOverridden) {
+            <div class="decision-dl-row">
+              <dt>AI outcome</dt>
+              <dd>
+                {{ aiOutcomeLabel }}
+                <span class="decision-badge decision-badge--overridden">Overridden</span>
+              </dd>
+            </div>
           }
-        </div>
-      }
-      <div class="source-links">
-        @if (assessment.documentSource === 'link' && assessment.documentReference) {
+          @if (assessment.overriddenBy) {
+            <div class="decision-dl-row">
+              <dt>Updated by</dt>
+              <dd>{{ assessment.overriddenBy }} on {{ overrideWhenLabel }}</dd>
+            </div>
+            @if (overrideReasonLabel) {
+              <div class="decision-dl-row">
+                <dt>Reason</dt>
+                <dd>{{ overrideReasonLabel }}</dd>
+              </div>
+            }
+          }
+          @if (assessment.notes) {
+            <div class="decision-dl-row">
+              <dt>Rationale</dt>
+              <dd class="recorded-notes">{{ assessment.notes }}</dd>
+            </div>
+          }
+          @if (assessment.documentSource === 'link' && assessment.documentReference) {
+            <div class="decision-dl-row">
+              <dt>Document</dt>
+              <dd>
+                <a class="doc-link" [href]="assessment.documentReference" target="_blank" rel="noopener noreferrer">
+                  View original document
+                  <span class="material-symbols-outlined external-icon" aria-hidden="true">open_in_new</span>
+                </a>
+              </dd>
+            </div>
+          }
+          <div class="decision-dl-row">
+            <dt>Criteria</dt>
+            <dd>
+              <a class="doc-link" href="https://www.gov.uk/government/publications/procurement-policy-note-0621-taking-account-of-carbon-reduction-plans-in-the-procurement-of-major-government-contracts/guidance-on-adopting-and-applying-ppn-0621-selection-criteria-html" target="_blank" rel="noopener noreferrer">
+                View PPN 006 criteria (GOV.UK)
+                <span class="material-symbols-outlined external-icon" aria-hidden="true">open_in_new</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+        @if (displayHistory.length > 1) {
+          <section class="status-history" aria-label="Decision history">
+            <h2 class="section-title">Decision history</h2>
+            <ol class="history-list">
+              @for (entry of displayHistory; track entry.changedAt) {
+                <li class="history-entry">
+                  <span class="history-dot" aria-hidden="true"></span>
+                  <div class="history-body">
+                    <p class="history-meta">
+                      @if (entry.type === 'override') {
+                        <strong>Overridden by {{ entry.changedBy }}</strong>
+                      } @else {
+                        <strong>Recorded by {{ entry.changedBy }}</strong>
+                      }
+                      <span class="history-date"> &middot; {{ formatHistoryDate(entry.changedAt) }}</span>
+                    </p>
+                    <p class="history-change">
+                      @if (entry.from) {
+                        <span class="outcome-tag outcome-tag" [attr.data-outcome]="entry.from">{{ outcomeLabel(entry.from) }}</span>
+                        <span class="history-arrow" aria-label="changed to"> &rarr; </span>
+                      }
+                      <span class="outcome-tag outcome-tag" [attr.data-outcome]="entry.to">{{ outcomeLabel(entry.to) }}</span>
+                    </p>
+                    @if (entry.reason && entry.type === 'override') {
+                      <p class="history-reason">&ldquo;{{ entry.reason }}&rdquo;</p>
+                    }
+                  </div>
+                </li>
+              }
+            </ol>
+          </section>
+        }
+      } @else {
+        <div class="source-links">
+          @if (assessment.documentSource === 'link' && assessment.documentReference) {
+            <a
+              class="doc-link"
+              [href]="assessment.documentReference"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View original document
+              <span class="material-symbols-outlined external-icon" aria-hidden="true">open_in_new</span>
+            </a>
+          }
+          <span class="source-separator" aria-hidden="true"></span>
           <a
             class="doc-link"
-            [href]="assessment.documentReference"
+            href="https://www.gov.uk/government/publications/procurement-policy-note-0621-taking-account-of-carbon-reduction-plans-in-the-procurement-of-major-government-contracts/guidance-on-adopting-and-applying-ppn-0621-selection-criteria-html"
             target="_blank"
             rel="noopener noreferrer"
           >
-            View original document
+            View PPN 006 criteria (GOV.UK)
             <span class="material-symbols-outlined external-icon" aria-hidden="true">open_in_new</span>
           </a>
-        }
-        <span class="source-separator" aria-hidden="true"></span>
-        <a
-          class="doc-link"
-          href="https://www.gov.uk/government/publications/procurement-policy-note-0621-taking-account-of-carbon-reduction-plans-in-the-procurement-of-major-government-contracts/guidance-on-adopting-and-applying-ppn-0621-selection-criteria-html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View PPN 006 criteria (GOV.UK)
-          <span class="material-symbols-outlined external-icon" aria-hidden="true">open_in_new</span>
-        </a>
-      </div>
-
-      <h2 class="section-title">Extracted details</h2>
-      @if (isReadOnly) {
-        <div class="supplier-static">
-          <span class="field-label">Supplier name</span>
-          <span class="supplier-static-value">{{ supplierName }}</span>
         </div>
-      } @else {
+      }
+
+      @if (!isReadOnly) {
+        <h2 class="section-title">Extracted details</h2>
         <div class="supplier-edit">
           <label class="field-label" for="supplier-name">Supplier name</label>
           <input
@@ -97,19 +188,7 @@
         </div>
       </div>
 
-      @if (isReadOnly) {
-        <div class="override-notice" [class.override-notice--overridden]="wasOverridden">
-          @if (wasOverridden) {
-            <p class="override-notice-title">AI recommendation overridden</p>
-            <p class="override-notice-body">AI recommended <strong>{{ aiOutcomeLabel }}</strong>. Overridden by <strong>{{ overrideByLabel }}</strong> on {{ overrideWhenLabel }}.</p>
-            @if (overrideReasonLabel) {
-              <p class="override-notice-reason">Reason: {{ overrideReasonLabel }}</p>
-            }
-          } @else {
-            <p class="override-notice-body">Final verdict aligns with the AI recommendation.</p>
-          }
-        </div>
-      } @else {
+      @if (!isReadOnly) {
         <div class="decision-section">
           <h2 class="decision-question">Does this supplier meet PPN 006 requirements?</h2>
 

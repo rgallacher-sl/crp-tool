@@ -5,6 +5,15 @@ export interface Batch {
   createdDate: Date;
 }
 
+export interface StatusChange {
+  changedAt: Date;
+  changedBy: string;
+  from: AssessmentOutcome | null;
+  to: AssessmentOutcome;
+  reason?: string;
+  type: 'initial' | 'override';
+}
+
 export interface Assessment {
   id: string;
   batchId?: string;
@@ -40,6 +49,7 @@ export interface Assessment {
   overriddenAt?: Date | null;
   overrideReason?: string;
   previousOutcome?: AssessmentOutcome | null;
+  statusHistory: StatusChange[];
   createdDate: Date;
   completedDate: Date | null;
 }

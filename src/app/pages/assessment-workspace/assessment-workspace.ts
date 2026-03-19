@@ -3,7 +3,7 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AssessmentService } from '../../services/assessment.service';
-import { Assessment, AssessmentOutcome } from '../../models/assessment.model';
+import { Assessment, AssessmentOutcome, StatusChange } from '../../models/assessment.model';
 
 @Component({
   selector: 'app-assessment-workspace',
@@ -283,5 +283,49 @@ export class AssessmentWorkspaceComponent implements OnInit {
 
   get overrideReasonLabel(): string {
     return this.assessment?.overrideReason ?? '';
+  }
+
+  get decisionBy(): string {
+    return this.assessment?.actionedBy ?? 'Unknown';
+  }
+
+  get displayHistory(): StatusChange[] {
+    const a = this.assessment;
+    if (!a) return [];
+
+    if (a.statusHistory?.length) {
+      return [...a.statusHistory].reverse();
+    }
+
+    // Backwards-compat: reconstruct from legacy flat fields
+    const history: StatusChange[] = [];
+    if (a.overriddenBy && a.overriddenAt && a.previousOutcome) {
+      history.push({
+        changedAt: a.overriddenAt,
+        changedBy: a.overriddenBy,
+        from: a.previousOutcome,
+        to: a.outcome as AssessmentOutcome,
+        reason: a.overrideReason,
+        type: 'override',
+      });
+    }
+    if (a.actionedBy && a.completedDate) {
+      history.push({
+        changedAt: a.completedDate,
+        changedBy: a.actionedBy,
+        from: null,
+        to: (a.overriddenBy ? a.previousOutcome : a.outcome) as AssessmentOutcome,
+        type: 'initial',
+      });
+    }
+    return history;
+  }
+
+  outcomeLabel(outcome: AssessmentOutcome | null): string {
+    return this.assessmentService.getOutcomeLabel(outcome);
+  }
+
+  formatHistoryDate(date: Date): string {
+    return this.assessmentService.formatDate(date);
   }
 }

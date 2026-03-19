@@ -9,6 +9,34 @@
   flex-direction: column;
 }
 
+/* ── Breadcrumb ───────────────────────────────────────── */
+
+.breadcrumb {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-5);
+
+  a {
+    color: var(--color-link);
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-focus);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+  }
+}
+
+.breadcrumb-sep {
+  margin: 0 var(--space-2);
+  color: var(--color-text-tertiary);
+}
+
 /* ── Page header ─────────────────────────────────────── */
 
 .page-title {
@@ -27,35 +55,35 @@
   padding-bottom: var(--space-4);
   border-bottom: 1px solid var(--color-border-default);
 
-  .doc-link {
-    font-size: var(--font-size-sm);
-    color: var(--color-link);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-
-    &:hover {
-      text-decoration: underline;
-    }
-
-    &:focus-visible {
-      outline: 2px solid var(--color-focus);
-      outline-offset: 2px;
-      border-radius: 2px;
-    }
-  }
-
-  .external-icon {
-    font-size: 14px;
-    line-height: 1;
-  }
-
   .source-separator {
     width: 1px;
     height: 14px;
     background: var(--color-border-muted);
   }
+}
+
+.doc-link {
+  font-size: var(--font-size-sm);
+  color: var(--color-link);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+.external-icon {
+  font-size: 14px;
+  line-height: 1;
 }
 
 /* ── Section titles ───────────────────────────────────── */
@@ -435,45 +463,143 @@
   }
 }
 
-/* ── Read-only state ──────────────────────────────────── */
+/* ── Read-only state — GOV.UK Summary List pattern ───── */
 
-.recorded-decision-top {
-  margin-bottom: var(--space-4);
+.decision-dl {
+  margin: 0 0 var(--space-5);
+  padding: 0;
+  border-top: 1px solid var(--color-border-default);
 }
 
-.recorded-notes {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
-  white-space: pre-wrap;
-  margin: var(--space-2) 0 0;
-}
-
-.override-notice {
-  border: 1px solid var(--color-border-default);
-  background: var(--color-surface-subtle);
-  border-radius: var(--radius-md);
-  padding: var(--space-3);
-  margin-top: var(--space-5);
+.decision-dl-row {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border-default);
   font-size: var(--font-size-sm);
 
-  &--overridden {
-    border-color: var(--color-warning-border);
-    background: var(--color-warning-subtle);
+  dt {
+    flex: 0 0 120px;
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-semibold);
+    margin: 0;
+  }
+
+  dd {
+    flex: 1;
+    color: var(--color-text-primary);
+    margin: 0;
+
+    a {
+      color: var(--color-link);
+    }
   }
 }
 
-.override-notice-title {
-  font-weight: var(--font-weight-semibold);
-  margin: 0 0 6px;
-  color: var(--color-text-primary);
+.recorded-notes {
+  white-space: pre-wrap;
 }
 
-.override-notice-body {
-  margin: 0 0 4px;
-  color: var(--color-text-secondary);
+/* ── Decision history timeline ────────────────────────── */
+
+.status-history {
+  margin-bottom: var(--space-5);
 }
 
-.override-notice-reason {
+.history-list {
+  list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+.history-entry {
+  display: flex;
+  gap: var(--space-3);
+  position: relative;
+  padding-bottom: var(--space-4);
+
+  &:last-child {
+    padding-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  /* Vertical connector line */
+  &::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 12px;
+    bottom: 0;
+    width: 1px;
+    background: var(--color-border-default);
+  }
+}
+
+.history-dot {
+  flex-shrink: 0;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--color-bg-canvas);
+  border: 2px solid var(--color-border-default);
+  margin-top: 3px;
+}
+
+.history-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.history-meta {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-1);
+  line-height: 1.4;
+}
+
+.history-date {
+  color: var(--color-text-tertiary);
+  font-weight: var(--font-weight-normal);
+}
+
+.history-change {
+  margin: 0 0 var(--space-1);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.history-arrow {
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-sm);
+}
+
+.history-reason {
+  margin: 0;
+  font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.decision-badge {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-default);
+  background: var(--color-surface-subtle);
+  color: var(--color-text-secondary);
+  margin-left: var(--space-2);
+  vertical-align: middle;
+
+  &--overridden {
+    color: var(--color-text-secondary);
+    background: var(--color-surface-subtle);
+    border-color: var(--color-border-default);
+  }
 }

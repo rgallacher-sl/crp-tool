@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Assessment, AssessmentOutcome, Batch, Supplier } from '../models/assessment.model';
+import { Assessment, AssessmentOutcome, Batch, StatusChange, Supplier } from '../models/assessment.model';
 
 @Injectable({ providedIn: 'root' })
 export class AssessmentService {
@@ -49,6 +49,9 @@ export class AssessmentService {
           overriddenAt: a.overriddenAt ? new Date(a.overriddenAt) : null,
           overrideReason: a.overrideReason ?? undefined,
           previousOutcome: a.previousOutcome ?? null,
+          statusHistory: Array.isArray(a.statusHistory)
+            ? a.statusHistory.map((s: any) => ({ ...s, changedAt: new Date(s.changedAt) }))
+            : [],
         }));
       }
     } catch {
@@ -154,6 +157,7 @@ export class AssessmentService {
       outcome: null,
       notes: '',
       confirmationType: null,
+      statusHistory: [],
       createdDate: new Date(),
       completedDate: null,
     };
@@ -408,20 +412,92 @@ export class AssessmentService {
       assessment.actionedBy = actionedBy;
       assessment.confirmationType = confirmationType;
       assessment.completedDate = new Date();
+      const entry: StatusChange = {
+        changedAt: assessment.completedDate,
+        changedBy: actionedBy,
+        from: null,
+        to: outcome,
+        reason: notes || undefined,
+        type: 'initial',
+      };
+      if (!Array.isArray(assessment.statusHistory)) assessment.statusHistory = [];
+      assessment.statusHistory.push(entry);
       this.saveToStorage();
     }
   }
 
-  manualOverride(id: string, newOutcome: AssessmentOutcome, reason: string): void {
+  manualOverride(id: string, newOutcome: AssessmentOutcome, reason: string, overriddenBy = 'You'): void {
     const a = this.assessments.find(x => x.id === id);
     if (!a) return;
     a.previousOutcome = a.outcome as AssessmentOutcome;
     a.outcome = newOutcome;
-    a.overriddenBy = 'You';
+    a.overriddenBy = overriddenBy;
     a.overriddenAt = new Date();
     a.overrideReason = reason;
     a.status = 'completed';
+    const entry: StatusChange = {
+      changedAt: a.overriddenAt,
+      changedBy: overriddenBy,
+      from: a.previousOutcome,
+      to: newOutcome,
+      reason: reason || undefined,
+      type: 'override',
+    };
+    if (!Array.isArray(a.statusHistory)) a.statusHistory = [];
+    a.statusHistory.push(entry);
     this.saveToStorage();
+  }
+
+  seedOverrideExample(): Assessment {
+    const id = this.generateId();
+    const initialDate = new Date('2026-03-10T09:15:00');
+    const overrideDate = new Date('2026-03-14T14:42:00');
+    const assessment: Assessment = {
+      id,
+      supplierName: 'Acme Construction Ltd',
+      documentLabel: 'Carbon Reduction Plan 2025',
+      documentSource: 'link',
+      documentReference: 'https://example.com/acme-crp-2025.pdf',
+      aiConfidence: 0.91,
+      reviewRequired: false,
+      reviewCompleted: true,
+      status: 'completed',
+      errorCode: null,
+      errorMessage: null,
+      failedStep: null,
+      aiOutcome: 'meets',
+      outcome: 'meets',
+      notes: 'Supplier confirmed Scope 3 category 5 is not applicable to their operations.',
+      actionedBy: 'J. Smith',
+      confirmationType: 'individual',
+      overriddenBy: 'Sarah Chen',
+      overriddenAt: overrideDate,
+      overrideReason: 'Supplier provided updated certification post-submission confirming all criteria are met.',
+      previousOutcome: 'does_not_meet',
+      statusHistory: [
+        {
+          changedAt: initialDate,
+          changedBy: 'J. Smith',
+          from: null,
+          to: 'does_not_meet',
+          reason: 'Missing Scope 3 category 5 data.',
+          type: 'initial',
+        },
+        {
+          changedAt: overrideDate,
+          changedBy: 'Sarah Chen',
+          from: 'does_not_meet',
+          to: 'meets',
+          reason: 'Supplier provided updated certification post-submission confirming all criteria are met.',
+          type: 'override',
+        },
+      ],
+      createdDate: new Date('2026-03-09T11:00:00'),
+      completedDate: initialDate,
+    };
+    this.assessments.push(assessment);
+    this.saveToStorage();
+    return assessment;
   }
 
   getBatches(): Batch[] {
