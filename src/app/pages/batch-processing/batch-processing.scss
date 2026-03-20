@@ -31,7 +31,7 @@
   padding: 0;
   margin: 0 0 var(--space-6);
   display: grid;
-  gap: 6px;
+  gap: var(--space-2);
 }
 
 .assessment-row {
@@ -39,11 +39,12 @@
   grid-template-columns: 16px 1fr auto 16px;
   align-items: center;
   gap: var(--space-2);
-  padding: 10px var(--space-3);
+  padding: var(--space-3);
   border: 1px solid var(--color-border-default);
   border-radius: var(--radius-sm);
   font-size: var(--font-size-xs);
-  transition: border-color 0.3s ease, color 0.3s ease;
+  transition: border-color var(--duration-slow) var(--easing-standard),
+    color var(--duration-slow) var(--easing-standard);
 
   &[data-state="active"] {
     border-color: var(--color-focus);
@@ -63,7 +64,7 @@
   align-items: center;
   color: var(--color-text-secondary);
   flex-shrink: 0;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
 }
 
 .row-label {
@@ -95,7 +96,7 @@
   flex-shrink: 0;
   width: 16px;
   height: 16px;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
 
   [data-state="done"] & {
     color: var(--color-success);

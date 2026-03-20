@@ -21,8 +21,8 @@
 .document-chip {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 4px 12px 4px 8px;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-3) var(--space-1) var(--space-2);
   border: 1px solid var(--color-border-default);
   border-radius: var(--radius-pill);
   font-size: var(--font-size-xs);
@@ -33,7 +33,7 @@
 
   .material-symbols-outlined {
     flex-shrink: 0;
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     color: var(--color-brand-primary);
   }
 
@@ -96,7 +96,7 @@
     .stepper-circle {
       border-color: var(--color-success);
       background: var(--color-success);
-      color: #fff;
+      color: var(--color-text-on-interactive);
     }
 
     .stepper-label {
@@ -112,7 +112,7 @@
     .stepper-circle {
       border-color: var(--color-danger);
       background: var(--color-danger);
-      color: #fff;
+      color: var(--color-text-on-interactive);
     }
 
     .stepper-label {
@@ -142,10 +142,11 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: border-color 0.3s ease, background 0.3s ease;
+  transition: border-color var(--duration-slow) var(--easing-standard),
+    background var(--duration-slow) var(--easing-standard);
 
   .material-symbols-outlined {
-    font-size: 15px;
+    font-size: var(--font-size-md);
     line-height: 1;
   }
 
@@ -160,14 +161,14 @@
 .stepper-line {
   width: 2px;
   flex: 1;
-  min-height: 18px;
-  margin: 4px 0;
+  min-height: 16px;
+  margin: var(--space-1) 0;
   background: var(--color-border-default);
-  transition: background 0.4s ease;
+  transition: background var(--duration-slow) var(--easing-standard);
 }
 
 .stepper-body {
-  padding-top: 5px;
+  padding-top: var(--space-1);
   padding-bottom: var(--space-5);
 }
 
@@ -175,7 +176,7 @@
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
   line-height: 1.4;
-  transition: color 0.3s ease;
+  transition: color var(--duration-slow) var(--easing-standard);
 }
 
 /* ── Actions ─────────────────────────────────────────────── */
@@ -189,12 +190,12 @@
 .notify-confirmed {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--space-2);
   font-size: var(--font-size-sm);
   color: var(--color-success);
 
   .material-symbols-outlined {
-    font-size: 16px;
+    font-size: var(--font-size-md);
   }
 }
 
@@ -209,8 +210,8 @@
   display: flex;
   gap: var(--space-3);
   background: var(--color-danger-soft);
-  border: 1px solid rgba(192, 57, 43, 0.3);
-  border-radius: var(--radius-md);
+  border: 1px solid var(--color-danger-border);
+  border-radius: var(--radius-sm);
   padding: var(--space-4);
   margin-bottom: var(--space-5);
 }
@@ -218,8 +219,8 @@
 .error-banner-icon {
   color: var(--color-danger);
   flex-shrink: 0;
-  font-size: 20px;
-  margin-top: 1px;
+  font-size: var(--font-size-xl);
+  margin-top: 0;
 }
 
 .error-banner-message {
@@ -237,8 +238,8 @@
 /* ── Cancel confirm ──────────────────────────────────────── */
 
 .cancel-confirm {
-  border: 1px solid rgba(192, 57, 43, 0.3);
-  border-radius: var(--radius-md);
+  border: 1px solid var(--color-danger-border);
+  border-radius: var(--radius-sm);
   padding: var(--space-4);
   background: var(--color-danger-soft);
   margin-top: var(--space-4);
@@ -263,7 +264,7 @@
 
 .btn-danger {
   width: 100%;
-  padding: 10px var(--space-4);
+  padding: var(--space-3) var(--space-4);
   border: none;
   border-radius: var(--radius-sm);
   font-size: var(--font-size-md);

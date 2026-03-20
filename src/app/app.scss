@@ -1,5 +1,5 @@
 .app-header {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--color-border-default);
   background: var(--color-bg-canvas);
   position: sticky;
   top: 0;
@@ -11,32 +11,32 @@
   align-items: center;
   gap: var(--space-6);
   padding: 0 var(--space-6);
-  height: 64px;
+  height: var(--sx-8);
 }
 
 .nav-brand {
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-md);
-  color: var(--text-primary);
+  color: var(--color-text-primary);
   text-decoration: none;
   margin-right: var(--space-2);
 }
 
 .nav-link {
   font-size: var(--font-size-sm);
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   text-decoration: none;
-  padding: 4px 0;
+  padding: var(--space-1) 0;
   border-bottom: 2px solid transparent;
-  line-height: 48px;
+  line-height: var(--sx-7);
 
   &:hover {
-    color: var(--text-primary);
+    color: var(--color-text-primary);
   }
 
   &.active {
-    color: var(--text-primary);
-    border-bottom-color: var(--text-primary);
+    color: var(--color-text-primary);
+    border-bottom-color: var(--color-text-primary);
   }
 }
 
@@ -49,15 +49,15 @@
   border: none;
   cursor: pointer;
   font-size: var(--font-size-sm);
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   font-family: inherit;
-  padding: 4px 0;
+  padding: var(--space-1) 0;
 
   &:hover {
-    color: var(--text-primary);
+    color: var(--color-text-primary);
   }
 }
 
 .app-main {
-  min-height: calc(100vh - 65px);
+  min-height: calc(100vh - var(--sx-8) - 1px);
 }

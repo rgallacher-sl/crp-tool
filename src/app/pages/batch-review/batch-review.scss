@@ -11,7 +11,7 @@
 .summary-count {
   font-size: var(--font-size-md);
   color: var(--color-text-secondary);
-  margin-bottom: 28px;
+  margin-bottom: var(--space-8);
 }
 
 .summary-list {
@@ -55,13 +55,13 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 6px;
+  gap: var(--space-2);
 }
 
 .meta-chip {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
-  padding: 2px var(--space-2);
+  padding: var(--space-1) var(--space-2);
   border-radius: var(--radius-sm);
   background: var(--color-surface-subtle);
   color: var(--color-text-secondary);
@@ -109,7 +109,7 @@
 }
 
 .review-section {
-  margin-bottom: 36px;
+  margin-bottom: var(--space-8);
 }
 
 .section-heading {
@@ -122,7 +122,7 @@
 .section-desc {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
-  margin-bottom: 14px;
+  margin-bottom: var(--space-4);
   line-height: 1.5;
 }
 
@@ -133,9 +133,9 @@
 .completed-rows {
   list-style: none;
   padding: 0;
-  margin: 0 0 14px;
+  margin: 0 0 var(--space-4);
   display: grid;
-  gap: 6px;
+  gap: var(--space-2);
 }
 
 .failed-row,
@@ -144,8 +144,8 @@
 .completed-row {
   display: grid;
   align-items: center;
-  gap: 10px;
-  padding: 10px var(--space-3);
+  gap: var(--space-3);
+  padding: var(--space-3);
   border: 1px solid var(--color-border-default);
   border-radius: var(--radius-sm);
   font-size: var(--font-size-xs);
@@ -202,7 +202,7 @@
   align-items: center;
   color: var(--color-text-secondary);
   flex-shrink: 0;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
 }
 
 .row-doc-label {
@@ -233,7 +233,7 @@
 .row-outcome {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
-  padding: 2px var(--space-2);
+  padding: var(--space-1) var(--space-2);
   border-radius: var(--radius-pill);
   text-align: center;
   background: var(--color-surface-subtle);
@@ -258,12 +258,12 @@
 .row-supplier {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: var(--space-1);
 }
 
 .supplier-input {
   width: 100%;
-  padding: 6px var(--space-2);
+  padding: var(--space-2);
   border: 1px solid var(--color-border-default);
   border-radius: var(--radius-sm);
   font-size: var(--font-size-xs);

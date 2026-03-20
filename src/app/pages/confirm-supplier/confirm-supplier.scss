@@ -1,7 +1,7 @@
 .confirm-supplier-page {
   display: flex;
   justify-content: center;
-  padding: 80px 24px;
+  padding: var(--sx-9) var(--space-6);
 }
 
 .confirm-content {
@@ -10,52 +10,52 @@
 }
 
 .context {
-  color: var(--text-secondary);
-  margin-bottom: 8px;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2);
 }
 
 .supplier-name {
   font-size: var(--font-size-2xl);
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 8px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
 }
 
 .instruction {
-  color: var(--text-secondary);
-  margin-bottom: 24px;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
 }
 
 .edit-section {
-  margin-bottom: 24px;
+  margin-bottom: var(--space-6);
 
   .field-label {
     display: block;
-    font-weight: 500;
-    color: var(--text-primary);
-    margin-bottom: 8px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-2);
     font-size: var(--font-size-md);
   }
 
   .text-input {
     width: 100%;
-    padding: 10px 12px;
-    border: 1px solid var(--border-color);
+    padding: var(--space-3);
+    border: 1px solid var(--color-border-default);
     border-radius: var(--radius-sm);
     font-size: var(--font-size-lg);
-    color: var(--text-primary);
+    color: var(--color-text-primary);
     background: var(--color-bg-canvas);
     box-sizing: border-box;
 
     &:focus {
       outline: none;
-      border-color: var(--focus-color);
-      box-shadow: 0 0 0 2px var(--focus-ring);
+      border-color: var(--color-focus);
+      box-shadow: 0 0 0 2px var(--color-focus-ring);
     }
   }
 }
 
 .actions {
   display: flex;
-  gap: 12px;
+  gap: var(--space-3);
 }

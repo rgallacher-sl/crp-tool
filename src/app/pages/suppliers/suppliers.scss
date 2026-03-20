@@ -39,7 +39,7 @@
 
   ul {
     list-style: disc;
-    padding-left: 20px;
+    padding-left: var(--space-5);
     color: var(--color-text-secondary);
     line-height: 1.8;
     margin-bottom: var(--space-8);
@@ -55,7 +55,7 @@
   font-size: var(--font-size-sm);
 
   thead tr {
-    height: 32px;
+    height: var(--space-8);
     background: var(--color-surface-subtle);
 
     th {
@@ -70,7 +70,7 @@
   }
 
   tbody tr {
-    height: 48px;
+    height: var(--sx-7);
     background: var(--color-bg-canvas);
     border-bottom: 1px solid var(--color-border-default);
     cursor: pointer;

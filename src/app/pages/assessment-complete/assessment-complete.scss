@@ -1,7 +1,7 @@
 .complete-page {
   display: flex;
   justify-content: center;
-  padding: 80px 24px;
+  padding: var(--sx-9) var(--space-6);
 }
 
 .complete-content {
@@ -10,60 +10,60 @@
 }
 
 .check-icon {
-  width: 40px;
-  height: 40px;
+  width: var(--sx-6);
+  height: var(--sx-6);
   border-radius: 50%;
-  background: var(--success-bg);
-  color: var(--success-color);
+  background: var(--color-success-soft);
+  color: var(--color-success);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
-  font-size: 24px;
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-2xl);
 }
 
 h2 {
   font-size: var(--font-size-xl);
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 24px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-6);
 }
 
 .summary {
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
   overflow: hidden;
-  margin-bottom: 32px;
+  margin-bottom: var(--space-8);
 }
 
 .summary-row {
   display: flex;
   justify-content: space-between;
-  padding: 12px 16px;
+  padding: var(--space-3) var(--space-4);
   font-size: var(--font-size-md);
 
   & + .summary-row {
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--color-border-default);
   }
 
   .summary-label {
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
   }
 
   .summary-value {
-    font-weight: 500;
-    color: var(--text-primary);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
   }
 
   .outcome[data-outcome="meets"] {
-    color: var(--success-color);
+    color: var(--color-success);
   }
 
   .outcome[data-outcome="does_not_meet"] {
-    color: var(--error-color);
+    color: var(--color-danger);
   }
 
   .outcome[data-outcome="unclear"] {
-    color: var(--warning-color);
+    color: var(--color-warning);
   }
 }

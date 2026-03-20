@@ -51,7 +51,7 @@ h2 {
 
 .assessment-card {
   border: 1px solid var(--color-border-default);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   overflow: hidden;
   background: var(--color-bg-canvas);
 }
@@ -60,7 +60,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 16px;
+  padding: var(--space-4) var(--space-4);
   border-bottom: 1px solid var(--color-border-default);
 }
 
@@ -90,7 +90,7 @@ h2 {
   display: grid;
   grid-template-columns: auto 1fr;
   margin: 0;
-  padding: 0 16px;
+  padding: 0 var(--space-4);
 }
 
 .assessment-meta-row {
@@ -99,7 +99,7 @@ h2 {
   dt {
     font-size: var(--font-size-sm);
     color: var(--color-text-secondary);
-    padding: 10px 0;
+    padding: var(--space-3) 0;
     border-bottom: 1px solid var(--color-border-default);
   }
 
@@ -107,7 +107,7 @@ h2 {
     font-size: var(--font-size-sm);
     color: var(--color-text-primary);
     margin: 0;
-    padding: 10px 0 10px var(--space-6);
+    padding: var(--space-3) 0 var(--space-3) var(--space-6);
     border-bottom: 1px solid var(--color-border-default);
   }
 
@@ -125,7 +125,7 @@ h2 {
   color: var(--color-text-secondary);
   background: var(--color-surface-subtle);
   border-radius: var(--radius-sm);
-  padding: 1px 6px;
+  padding: 0 var(--space-2);
   margin-left: var(--space-2);
   vertical-align: middle;
 }
