@@ -22,7 +22,13 @@
       "WebFetch(domain:github.com)",
       "mcp__playwright__browser_take_screenshot",
       "mcp__playwright__browser_fill_form",
-      "mcp__context7__query-docs"
+      "mcp__context7__query-docs",
+      "mcp__playwright__browser_wait_for",
+      "mcp__playwright__browser_evaluate",
+      "mcp__playwright__browser_resize",
+      "Bash(open /tmp/ukri-ia-hires.png)",
+      "Bash(open /tmp/ukri-ia.svg)",
+      "Bash(open -a Preview /tmp/ukri-ia-hires.png)"
     ]
   }
 }
