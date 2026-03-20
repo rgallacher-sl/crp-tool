@@ -28,7 +28,19 @@
       "mcp__playwright__browser_resize",
       "Bash(open /tmp/ukri-ia-hires.png)",
       "Bash(open /tmp/ukri-ia.svg)",
-      "Bash(open -a Preview /tmp/ukri-ia-hires.png)"
+      "Bash(open -a Preview /tmp/ukri-ia-hires.png)",
+      "Bash(for f:*)",
+      "Bash(do)",
+      "Bash(echo \"=== $f.py ===\")",
+      "Read(//Users/ryangallacher/Documents/GitHub/crp-tool/.claude/hooks/**)",
+      "Bash(done)",
+      "Bash(cat ~/Documents/GitHub/crp-tool/skills/*.md)",
+      "Read(//Users/ryangallacher/Documents/GitHub/crp-tool/**)",
+      "Bash(cat ~/Documents/GitHub/crp-tool/skills/rg-ui-standards/*)",
+      "Bash(cat ~/Documents/GitHub/crp-tool/skills/idea-refine/*)",
+      "Bash(grep -r source: ~/Documents/GitHub/crp-tool/skills/*/SKILL.md)",
+      "WebFetch(domain:mcpservers.org)",
+      "WebFetch(domain:mcp.so)"
     ]
   }
 }
