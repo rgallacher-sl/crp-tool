@@ -23,6 +23,11 @@ export class AssessmentWorkspaceComponent implements OnInit {
   pendingOverrideConfirmation = false;
   overrideConfirmed = false;
   showCancelConfirm = false;
+  showOverrideForm = false;
+  overrideOutcome: AssessmentOutcome | null = null;
+  overrideReason = '';
+  overrideError = '';
+  activeTab: 'assessment' | 'history' = 'assessment';
   private returnUrl: string | null = null;
   ppnFindings = [
     {
@@ -266,6 +271,34 @@ export class AssessmentWorkspaceComponent implements OnInit {
     return `${dateStr}, ${date.getHours()}:${mins}`;
   }
 
+  openOverrideForm(): void {
+    this.showOverrideForm = true;
+    this.overrideOutcome = null;
+    this.overrideReason = '';
+    this.overrideError = '';
+  }
+
+  cancelOverride(): void {
+    this.showOverrideForm = false;
+    this.overrideError = '';
+  }
+
+  submitOverride(): void {
+    if (!this.assessment) return;
+    if (!this.overrideOutcome) {
+      this.overrideError = 'Please select a new outcome.';
+      return;
+    }
+    if (this.overrideReason.trim().length < 20) {
+      this.overrideError = 'Please provide at least 20 characters explaining the reason.';
+      return;
+    }
+    this.assessmentService.manualOverride(this.assessment.id, this.overrideOutcome, this.overrideReason.trim());
+    this.assessment = this.assessmentService.getAssessmentById(this.assessment.id)!;
+    this.showOverrideForm = false;
+    this.overrideError = '';
+  }
+
   get wasOverridden(): boolean {
     if (!this.assessment) return false;
     if (this.assessment.overriddenBy) return true;
@@ -286,7 +319,7 @@ export class AssessmentWorkspaceComponent implements OnInit {
   }
 
   get decisionBy(): string {
-    return this.assessment?.actionedBy ?? 'Unknown';
+    return this.assessment?.overriddenBy ?? this.assessment?.actionedBy ?? 'Unknown';
   }
 
   get displayHistory(): StatusChange[] {

@@ -12,72 +12,99 @@
       }
       <h1 class="page-title">{{ isReadOnly ? assessmentTitle : 'Review assessment results' }}</h1>
       @if (isReadOnly) {
-        <dl class="decision-dl">
-          <div class="decision-dl-row">
-            <dt>Decision</dt>
-            <dd><span class="outcome-tag" [attr.data-outcome]="assessment.outcome">{{ recordedOutcomeLabel }}</span></dd>
-          </div>
-          <div class="decision-dl-row">
-            <dt>Recorded by</dt>
-            <dd>
-              {{ decisionBy }}
-              @if (assessment.confirmationType === 'bulk') {
-                <span class="decision-badge">Bulk</span>
-              }
-            </dd>
-          </div>
-          @if (wasOverridden) {
+        <nav class="tab-nav" aria-label="Assessment sections">
+          <button
+            class="tab-btn"
+            [class.tab-btn--active]="activeTab === 'assessment'"
+            type="button"
+            (click)="activeTab = 'assessment'"
+          >Assessment</button>
+          <button
+            class="tab-btn"
+            [class.tab-btn--active]="activeTab === 'history'"
+            type="button"
+            (click)="activeTab = 'history'"
+          >Decision history</button>
+        </nav>
+
+        @if (activeTab === 'assessment') {
+          <dl class="decision-dl">
             <div class="decision-dl-row">
-              <dt>AI outcome</dt>
+              <dt>Decision</dt>
               <dd>
-                {{ aiOutcomeLabel }}
-                <span class="decision-badge decision-badge--overridden">Overridden</span>
+                <span class="outcome-tag" [attr.data-outcome]="assessment.outcome">{{ recordedOutcomeLabel }}</span>
+                @if (wasOverridden) {
+                  <span class="decision-badge decision-badge--overridden">Overridden</span>
+                }
               </dd>
             </div>
-          }
-          @if (assessment.overriddenBy) {
             <div class="decision-dl-row">
-              <dt>Updated by</dt>
-              <dd>{{ assessment.overriddenBy }} on {{ overrideWhenLabel }}</dd>
+              <dt>Decided by</dt>
+              <dd>
+                {{ decisionBy }}
+                @if (assessment.confirmationType === 'bulk') {
+                  <span class="decision-badge">Bulk</span>
+                }
+              </dd>
             </div>
-            @if (overrideReasonLabel) {
+            @if (assessment.documentSource === 'link' && assessment.documentReference) {
               <div class="decision-dl-row">
-                <dt>Reason</dt>
-                <dd>{{ overrideReasonLabel }}</dd>
+                <dt>Document</dt>
+                <dd>
+                  <a class="doc-link" [href]="assessment.documentReference" target="_blank" rel="noopener noreferrer">
+                    View original document
+                    <span class="material-symbols-outlined external-icon" aria-hidden="true">open_in_new</span>
+                  </a>
+                </dd>
               </div>
             }
-          }
-          @if (assessment.notes) {
             <div class="decision-dl-row">
-              <dt>Rationale</dt>
-              <dd class="recorded-notes">{{ assessment.notes }}</dd>
-            </div>
-          }
-          @if (assessment.documentSource === 'link' && assessment.documentReference) {
-            <div class="decision-dl-row">
-              <dt>Document</dt>
+              <dt>Criteria</dt>
               <dd>
-                <a class="doc-link" [href]="assessment.documentReference" target="_blank" rel="noopener noreferrer">
-                  View original document
+                <a class="doc-link" href="https://www.gov.uk/government/publications/procurement-policy-note-0621-taking-account-of-carbon-reduction-plans-in-the-procurement-of-major-government-contracts/guidance-on-adopting-and-applying-ppn-0621-selection-criteria-html" target="_blank" rel="noopener noreferrer">
+                  View PPN 006 criteria (GOV.UK)
                   <span class="material-symbols-outlined external-icon" aria-hidden="true">open_in_new</span>
                 </a>
               </dd>
             </div>
-          }
-          <div class="decision-dl-row">
-            <dt>Criteria</dt>
-            <dd>
-              <a class="doc-link" href="https://www.gov.uk/government/publications/procurement-policy-note-0621-taking-account-of-carbon-reduction-plans-in-the-procurement-of-major-government-contracts/guidance-on-adopting-and-applying-ppn-0621-selection-criteria-html" target="_blank" rel="noopener noreferrer">
-                View PPN 006 criteria (GOV.UK)
-                <span class="material-symbols-outlined external-icon" aria-hidden="true">open_in_new</span>
-              </a>
-            </dd>
-          </div>
-        </dl>
+          </dl>
 
-        @if (displayHistory.length > 1) {
+          @if (showOverrideForm) {
+            <div class="override-form">
+              <h2 class="section-title">Override decision</h2>
+              <div class="outcome-options">
+                <label class="outcome-option">
+                  <input type="radio" name="override-outcome" value="meets" [checked]="overrideOutcome === 'meets'" (change)="overrideOutcome = 'meets'" />
+                  <span class="radio-label">Meets requirements</span>
+                </label>
+                <label class="outcome-option">
+                  <input type="radio" name="override-outcome" value="does_not_meet" [checked]="overrideOutcome === 'does_not_meet'" (change)="overrideOutcome = 'does_not_meet'" />
+                  <span class="radio-label">Does not meet requirements</span>
+                </label>
+                <label class="outcome-option">
+                  <input type="radio" name="override-outcome" value="unclear" [checked]="overrideOutcome === 'unclear'" (change)="overrideOutcome = 'unclear'" />
+                  <span class="radio-label">Unclear</span>
+                </label>
+              </div>
+              <div class="notes-section">
+                <label class="field-label" for="override-reason">Reason for override</label>
+                <textarea id="override-reason" class="text-area" [(ngModel)]="overrideReason" rows="4"></textarea>
+              </div>
+              @if (overrideError) {
+                <p class="error-message">{{ overrideError }}</p>
+              }
+              <div class="decision-actions">
+                <button class="btn-secondary" type="button" (click)="cancelOverride()">Cancel</button>
+                <button class="btn-primary btn-record" type="button" (click)="submitOverride()">Confirm override</button>
+              </div>
+            </div>
+          } @else {
+            <button class="btn-secondary" type="button" (click)="openOverrideForm()">Override decision</button>
+          }
+        }
+
+        @if (activeTab === 'history') {
           <section class="status-history" aria-label="Decision history">
-            <h2 class="section-title">Decision history</h2>
             <ol class="history-list">
               @for (entry of displayHistory; track entry.changedAt) {
                 <li class="history-entry">
@@ -93,10 +120,10 @@
                     </p>
                     <p class="history-change">
                       @if (entry.from) {
-                        <span class="outcome-tag outcome-tag" [attr.data-outcome]="entry.from">{{ outcomeLabel(entry.from) }}</span>
+                        <span class="outcome-tag" [attr.data-outcome]="entry.from">{{ outcomeLabel(entry.from) }}</span>
                         <span class="history-arrow" aria-label="changed to"> &rarr; </span>
                       }
-                      <span class="outcome-tag outcome-tag" [attr.data-outcome]="entry.to">{{ outcomeLabel(entry.to) }}</span>
+                      <span class="outcome-tag" [attr.data-outcome]="entry.to">{{ outcomeLabel(entry.to) }}</span>
                     </p>
                     @if (entry.reason && entry.type === 'override') {
                       <p class="history-reason">&ldquo;{{ entry.reason }}&rdquo;</p>
@@ -147,6 +174,7 @@
         </div>
       }
 
+      @if (!isReadOnly || activeTab === 'assessment') {
       <div class="ai-assessment">
         <h2 class="section-title">AI assessment results</h2>
         <div class="ai-table">
@@ -187,6 +215,7 @@
           </dl>
         </div>
       </div>
+      }
 
       @if (!isReadOnly) {
         <div class="decision-section">
