@@ -61,6 +61,27 @@ This is a government tool. WCAG 2.2 AA compliance is required:
 - `npm run build`
 2. If checks cannot run, state that clearly in the final summary.
 
+## Information Architecture
+
+When new information, documentation, or research arrives — use this table to decide where it goes. Prefer repo-local, agent-agnostic locations over agent-specific memory.
+
+| Type of content | Where it goes | Notes |
+|----------------|---------------|-------|
+| Architectural or strategic decisions | `references/` (create if needed) | Agent-readable, load when relevant |
+| Specs for new features | `spec.md` or `specs/` | Written before implementation begins |
+| ADRs | `docs/decisions/` | When a decision needs permanent record with context |
+| Research or external articles | `references/` | Summarise key points and relevance — don't just link |
+| Sensitive config, secrets, env vars | `.env` (never committed) | Never write secrets to the repo |
+
+**Rules:**
+- Repo-local always beats agent-specific memory. If it's worth keeping, it belongs in the repo.
+- Do not create a `docs/` file when a `references/` entry would do.
+- If content doesn't fit any category above, ask before creating a new top-level directory.
+
+## Principles
+
+- **Agent agnostic by default:** Any tooling, config, docs, or conventions should work across agents (Claude, Cursor, Copilot, etc.) unless there's a specific reason to go agent-specific. Prefer `AGENTS.md` over `CLAUDE.md`, repo-local files over agent memory, and open formats over proprietary ones.
+
 ## Change Hygiene
 1. Preserve existing behavior unless the task requests behavior changes.
 2. Prefer incremental refactors over large rewrites.
