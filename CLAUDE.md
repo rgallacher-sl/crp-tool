@@ -1,6 +1,6 @@
 # CRP Tool – Claude Instructions
 
-See [AGENTS.md](./AGENTS.md) for shared rules that apply to all agents.
+Read [AGENTS.md](./AGENTS.md) before your first response to any task. It contains the skills table, conventions, and information architecture rules that must inform your approach.
 
 ## Claude-specific tooling
 
