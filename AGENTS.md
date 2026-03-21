@@ -72,6 +72,7 @@ When new information, documentation, or research arrives — use this table to d
 | ADRs | `docs/decisions/` | When a decision needs permanent record with context |
 | Research or external articles | `references/` | Summarise key points and relevance — don't just link |
 | Sensitive config, secrets, env vars | `.env` (never committed) | Never write secrets to the repo |
+| Reusable AI workflow playbooks | `sense-check/playbooks/` | Always write here regardless of which repo you're working in |
 
 **Rules:**
 - Repo-local always beats agent-specific memory. If it's worth keeping, it belongs in the repo.
