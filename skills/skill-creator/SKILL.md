@@ -171,6 +171,31 @@ skill-name/
 
 ---
 
+## Quality Criteria
+
+### System Prompt and Skill Instruction Quality
+
+Common instruction mistakes and their fixes:
+
+| Mistake | Problem | Fix |
+|---------|---------|-----|
+| Too vague ("be helpful", "be careful") | The model has no specific guidance — behaviour is unpredictable | Define the role explicitly: scope, permitted actions, prohibited actions |
+| Too long (2000+ words) | Key instructions are lost in noise; the model attends to early and late text, missing the middle | Keep focused; use headers and bullet structure; move detail to L3 references |
+| No tool guidance | The model guesses when to call each tool — wrong tool selection, missed calls | State which tool to use for each category of task |
+| No error handling | The agent has no instruction for failure cases — it either retries blindly or stops | Add fallback instructions: what to do when a tool fails, when confidence is low, when the user is frustrated |
+| No boundaries | The agent attempts to handle everything, including out-of-scope requests | Explicitly list what is out of scope; provide a redirect (e.g., "For billing questions, direct to billing@example.com") |
+
+### Skill Writing Principles (from the Agent Skills specification)
+
+- **Focus on one domain.** A skill should do one thing well. Separate code review, deployment, and documentation into distinct skills rather than combining them.
+- **Write for the LLM, not a human.** Be explicit about when to use the skill, the ordered steps to follow, how to handle edge cases (decision points), and what good output looks like.
+- **Include decision points.** Real expertise includes knowing when to deviate from the standard process. State the condition and the alternative action explicitly.
+- **Show expected output.** Include an example of the skill's output format or a template reference. The model uses this to calibrate its response structure.
+- **Keep L2 instructions under 5,000 tokens.** If instructions are growing beyond this, move detailed reference material to `references/` files at L3 and link to them from the main body.
+- **The description is the trigger.** Write it as "Use when [scenario]..." — not as a keyword list. It is the primary mechanism by which an agent decides whether to load the skill. False triggers (too broad) and missed triggers (too narrow) are the two failure modes to avoid.
+
+---
+
 ## Checklist
 
 - [ ] `name` field matches the directory name exactly

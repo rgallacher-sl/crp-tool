@@ -119,3 +119,59 @@ res.status(500).json({
 | 8 | Data Integrity Failures | Verify updates/dependencies, signed artifacts |
 | 9 | Logging Failures | Log security events, don't log secrets |
 | 10 | SSRF | Validate/allowlist URLs, restrict outbound requests |
+
+## Agent Safety
+
+### Design Phase
+
+- [ ] Define explicit permitted actions — list what the agent IS allowed to do and what it is NOT
+- [ ] Apply least-privilege access: agents get only the tools and data they actually need
+- [ ] Identify high-stakes actions (deleting data, financial transactions, permission changes) that require human approval before execution
+- [ ] Document escalation paths for edge cases and policy ambiguities
+- [ ] Treat the agent as a distinct principal with its own identity, permissions, and audit trail — separate from the user it serves
+
+### Implementation Phase
+
+- [ ] Write specific, unambiguous safety instructions in the system prompt — not "be careful", but explicit rules with concrete boundaries
+- [ ] Implement input validation and content classification before the model processes user input
+- [ ] Add output guardrails: PII scrubbing, content safety checks, format validation before responses reach users or execute actions
+- [ ] Wrap all tools with argument validation and scope checks in code — do not rely solely on the model's judgment
+- [ ] Set rate limits and cost budgets per session
+- [ ] Set maximum step counts and timeout limits on agent loops to prevent infinite iteration
+- [ ] Log all tool calls and agent decisions for audit trails
+
+### Attack Vector Mitigations
+
+| Attack Vector | Description | Mitigation |
+|---------------|-------------|------------|
+| **Tool misuse — parameter manipulation** | Agent is manipulated into passing malicious arguments to a tool | Validate all tool arguments against strict schemas in tool code before execution |
+| **Tool misuse — tool chaining abuse** | Agent combines tools in harmful sequences | Limit tool call sequences; require human approval for multi-step chains involving high-stakes actions |
+| **Tool misuse — excessive tool use** | Attacker causes the agent to make thousands of API calls | Rate limit tool calls per session and per time window |
+| **Data exfiltration via API calls** | Agent sends internal data to an attacker-controlled URL | Allowlist outbound domains; inspect tool call URLs before execution |
+| **Data exfiltration via response** | Agent reveals sensitive data in its user-facing response | Output PII scrubbing; context-aware filtering on all responses |
+| **Privilege escalation — role confusion** | Attacker tricks the agent into believing it has admin rights | Enforce role checks in the tool layer, not just in the system prompt |
+| **Privilege escalation — credential leakage** | Agent is manipulated into revealing API keys or tokens | Never put credentials in the system prompt; use a secrets manager |
+| **Privilege escalation — permission bypass** | Agent is manipulated into accessing restricted resources | Enforce permissions in tool code; never rely on prompt-level boundaries alone |
+| **Prompt injection — direct** | User explicitly attempts to override system instructions | Detect known injection patterns with deterministic input checks before the model processes input |
+| **Prompt injection — indirect** | Malicious instructions embedded in retrieved documents, emails, or web pages | Treat retrieved content as data with lower priority than system instructions; validate planned actions before execution; use a second model to review planned actions |
+| **Denial of service — context stuffing** | Attacker sends inputs that fill the context window | Input length limits; summarise long inputs before processing |
+| **Denial of service — resource exhaustion** | Attacker triggers expensive tool calls repeatedly | Cost budgets per session; rate limiting per time window |
+
+### Escalation Triggers
+
+Escalate to a human when any of the following conditions are met:
+
+- [ ] Requested action involves financial transactions, data deletion, or permission modification
+- [ ] Agent confidence is low or the request is ambiguous
+- [ ] Request falls outside defined policy boundaries
+- [ ] Agent has failed to resolve the task after multiple attempts
+- [ ] Request involves personal, legal, or medical topics
+- [ ] User has expressed frustration more than twice in the same session
+
+### Testing Phase
+
+- [ ] Run prompt injection tests — both direct (user input) and indirect (via retrieved content)
+- [ ] Test tool misuse scenarios: malformed arguments, chained harmful calls, excessive call rates
+- [ ] Verify all escalation paths trigger correctly under test conditions
+- [ ] Conduct red team exercises: attempt to bypass policy instructions, exfiltrate data, and escalate privileges
+- [ ] Run automated safety evals on every deployment — include boundary adherence, injection resistance, PII handling, and tool safety cases
