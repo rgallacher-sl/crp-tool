@@ -1,14 +1,14 @@
 .suppliers-page {
   max-width: 960px;
   margin: 0 auto;
-  padding: var(--sx-5) var(--sx-5) var(--sx-8);
+  padding: var(--space-header-to-content) var(--sx-5) var(--sx-8);
 }
 
 .page-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--sx-5);
+  margin-bottom: var(--space-title-to-content);
 
   h1 {
     margin: 0;

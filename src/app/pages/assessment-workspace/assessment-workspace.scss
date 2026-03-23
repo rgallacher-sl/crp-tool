@@ -1,7 +1,7 @@
 .workspace {
   max-width: 680px;
   margin: 0 auto;
-  padding: var(--sx-7) var(--space-6);
+  padding: var(--space-header-to-content) var(--space-6);
 }
 
 .decision-panel {
@@ -51,7 +51,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-3);
-  margin-bottom: var(--sx-5); /* 32px to Extracted details */
+  margin-bottom: var(--space-title-to-content);
   padding-bottom: var(--space-4);
   border-bottom: 1px solid var(--color-border-default);
 
@@ -152,7 +152,7 @@
   border: 1px solid var(--color-neutral-300);
   border-radius: var(--radius-sm);
   overflow: hidden;
-  margin-bottom: var(--sx-5); /* 32px to decision section */
+  margin-bottom: var(--space-between-blocks);
 }
 
 .ai-summary-list {
@@ -255,7 +255,7 @@
 /* ── Decision section ─────────────────────────────────── */
 
 .decision-section {
-  padding-top: var(--sx-5); /* 32px gap from table */
+  padding-top: var(--space-between-blocks);
 }
 
 .decision-question {

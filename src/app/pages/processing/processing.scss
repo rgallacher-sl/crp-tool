@@ -1,7 +1,7 @@
 .processing-page {
   display: flex;
   justify-content: center;
-  padding: var(--sx-8) var(--space-6);
+  padding: var(--space-header-to-content) var(--space-6);
   min-height: calc(100vh - 64px);
 }
 

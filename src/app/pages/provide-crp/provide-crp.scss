@@ -1,7 +1,7 @@
 .provide-crp-page {
   max-width: 928px;
   margin: 0 auto;
-  padding: var(--sx-5) var(--sx-3) var(--sx-8);
+  padding: var(--space-header-to-content) var(--sx-3) var(--sx-8);
 }
 
 .content-column {
@@ -15,7 +15,7 @@
 }
 
 h1 {
-  margin: 0 0 var(--sx-5);
+  margin: 0 0 var(--space-title-to-content);
 }
 
 .form-section {

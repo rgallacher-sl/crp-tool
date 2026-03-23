@@ -120,6 +120,14 @@
   --space-6: 24px;
   --space-8: 32px;
 
+  /* Layout spacing — semantic layer */
+  /* Distance from the page header to the first content element (eyebrow, breadcrumb, or h1) */
+  --space-header-to-content: var(--base-size-64);
+  /* Distance from the page title area (h1, underline, etc.) to the first content block */
+  --space-title-to-content: var(--base-size-32);
+  /* Distance between content blocks on a page */
+  --space-between-blocks: var(--base-size-40);
+
   /* Radius */
   --radius-sm: 6px;
   --radius-xs: 4px;
