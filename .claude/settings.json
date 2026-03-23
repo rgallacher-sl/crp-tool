@@ -79,6 +79,16 @@
             "timeout": 10
           }
         ]
+      },
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/structure-check.py 2>/dev/null || python .claude/hooks/structure-check.py",
+            "timeout": 10
+          }
+        ]
       }
     ]
   }

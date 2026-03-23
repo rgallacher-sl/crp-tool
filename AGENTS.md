@@ -61,6 +61,18 @@ This is a government tool. WCAG 2.2 AA compliance is required:
 - `npm run build`
 2. If checks cannot run, state that clearly in the final summary.
 
+## Skills
+
+| Skill | When to use |
+|-------|-------------|
+| [repo-structure](skills/repo-structure/SKILL.md) | Before creating, naming, moving, or deleting any file or directory |
+
+## Hooks
+
+| Hook | Event | Purpose |
+|------|-------|---------|
+| `structure-check.py` | `PostToolUse` (Write) | Checks written files for depth violations, invalid .md locations, and generic names — prompts agent to correct per `skills/repo-structure/SKILL.md` |
+
 ## Information Architecture
 
 When new information, documentation, or research arrives — use this table to decide where it goes. Prefer repo-local, agent-agnostic locations over agent-specific memory.
