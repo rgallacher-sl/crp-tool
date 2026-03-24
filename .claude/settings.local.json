@@ -43,7 +43,11 @@
       "WebFetch(domain:mcp.so)",
       "Bash(find /Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/src/app/services -type f -name *.ts)",
       "Bash(npm run:*)",
-      "Bash(grep -A 20 '\"\"budgets\"\"' angular.json)"
+      "Bash(grep -A 20 '\"\"budgets\"\"' angular.json)",
+      "WebFetch(domain:www.carbondesignsystem.com)",
+      "WebFetch(domain:owasp.org)",
+      "WebFetch(domain:cheatsheetseries.owasp.org)",
+      "WebFetch(domain:www.ncsc.gov.uk)"
     ]
   }
 }

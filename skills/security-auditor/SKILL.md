@@ -23,6 +23,10 @@ metadata:
 - Can users access resources belonging to other users (IDOR)?
 - Are password reset tokens time-limited and single-use?
 - Is rate limiting applied to authentication endpoints?
+- Do error messages reveal whether an account exists (account enumeration)? — sign-up, sign-in, and reset flows all must use generic messages (OWASP AuthN Cheat Sheet)
+- Do auth responses take consistent time regardless of outcome (timing attack prevention)? (OWASP AuthN Cheat Sheet)
+- Is credential stuffing mitigated? (rate limiting, MFA, breach password checks) (OWASP A07)
+- Is password policy free of counterproductive complexity rules and forced rotation? (NCSC)
 
 ### 3. Data Protection
 - Are secrets in environment variables (not code)?
@@ -92,3 +96,10 @@ metadata:
 5. Check the OWASP Top 10 as a minimum baseline
 6. Review dependencies for known CVEs
 7. Never suggest disabling security controls as a "fix"
+
+## Sources
+
+- OWASP Authentication Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
+- OWASP Top 10 A07 – Identification and Authentication Failures: https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/
+- NCSC Passwords Guidance: https://www.ncsc.gov.uk/collection/passwords/updating-your-approach
+- NCSC Secure Development: https://www.ncsc.gov.uk/collection/developers-collection

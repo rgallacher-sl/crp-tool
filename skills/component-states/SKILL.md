@@ -26,6 +26,8 @@ Load this before designing or implementing any UI component. Use it to produce a
    - For keyboard interaction patterns and ARIA roles, use the W3C ARIA Authoring Practices Guide (APG) — this is a web standard, not a design system
    - Always state which source informed each state
 
+1a. **For auth components** (sign-up, sign-in, password reset, email change) — load [references/auth-security.md](../../references/auth-security.md) and apply its constraints as design inputs before defining states
+
 2. **Cross-reference WCAG 2.2 AA** — the following states are required for all interactive components:
    - Visible focus state (2.4.11 — focus appearance)
    - Error identification (3.3.1)
@@ -76,8 +78,8 @@ Load this before designing or implementing any UI component. Use it to produce a
 - Empty field: "Enter [thing]" — e.g. "Enter your email address"
 - Invalid format: "Enter a valid [thing]" — e.g. "Enter a valid email address"
 - Too short/long: "[Thing] must be [n] characters or more/less"
-- Already exists: "An account with this email address already exists"
 - Error summary: list all errors at the top of the page with anchor links to each field — critical for screen reader users
+
 
 ---
 

@@ -2,6 +2,9 @@
   <div class="sign-in-card">
     <h1>Create account</h1>
     <form (ngSubmit)="submit()" novalidate>
+      @if (serverError) {
+        <p class="server-error" role="alert">{{ serverError }}</p>
+      }
       <div class="field" [class.field--error]="nameError">
         <label for="name">Full name</label>
         @if (nameError) {
@@ -41,6 +44,7 @@
         @if (passwordError) {
           <p class="field-error" id="password-error" role="alert">{{ passwordError }}</p>
         }
+        <p class="field-hint" id="password-hint">Must be at least 8 characters.</p>
         <div class="password-wrapper">
           <input
             id="password"
@@ -49,15 +53,17 @@
             name="password"
             autocomplete="new-password"
             [attr.aria-invalid]="passwordError ? 'true' : null"
-            [attr.aria-describedby]="passwordError ? 'password-error' : null"
+            [attr.aria-describedby]="passwordError ? 'password-hint password-error' : 'password-hint'"
           />
           <button type="button" class="show-hide-btn" (click)="showPassword = !showPassword">
-            {{ showPassword ? 'Hide' : 'Show' }}
+            {{ showPassword ? 'Hide password' : 'Show password' }}
           </button>
         </div>
       </div>
 
-      <button type="submit" class="btn-primary full-width">Create account</button>
+      <button type="submit" class="btn-primary full-width" [disabled]="submitting">
+        {{ submitting ? 'Creating account…' : 'Create account' }}
+      </button>
     </form>
 
     <p class="sign-in-link">Already have an account? <a routerLink="/sign-in">Sign in</a></p>

@@ -26,6 +26,10 @@ Use both as starting points for how components should behave: interactions, stat
 **Visual implementation**
 Styling is driven by designs and image references provided by the user. Implement those exactly using the existing tokens in `src/styles.scss`. Do not invent visual decisions not covered by the provided design.
 
+**Security**
+- Never confirm whether an email address is registered in error messages — this enables account enumeration. Apply to sign-up, sign-in, and password reset flows.
+- Do not surface internal failure reasons to users; use generic messages for all server/auth errors.
+
 **Accessibility**
 This is a government tool. WCAG 2.2 AA compliance is required:
 - Sufficient colour contrast on all text and interactive elements
@@ -67,11 +71,15 @@ This is a government tool. WCAG 2.2 AA compliance is required:
 
 ## Skills
 
-| Skill | When to use |
-|-------|-------------|
-| [repo-structure](skills/repo-structure/SKILL.md) | Before creating, naming, moving, or deleting any file or directory |
-| [component-states](skills/component-states/SKILL.md) | Before designing or implementing any UI component — produces a full state inventory |
-| [accessibility](skills/accessibility/SKILL.md) | After building a component — audits implemented states for WCAG 2.2 AA compliance |
+Security runs through three stages — design, implementation, audit. Load the right skill at the right stage; do not defer security to the audit.
+
+| Skill | Stage | When to use |
+|-------|-------|-------------|
+| [repo-structure](skills/repo-structure/SKILL.md) | — | Whenever deciding where information belongs — before creating, naming, moving, or deleting any file or directory (including skills, references, and docs). Use it to decide *whether* to create something new, not just *how* to name it once you have |
+| [component-states](skills/component-states/SKILL.md) | Design | Before designing or implementing any UI component — produces a full state inventory. For auth components also applies security constraints from OWASP/NCSC as design inputs |
+| [security-and-hardening](skills/security-and-hardening/SKILL.md) | Implementation | When writing any code that handles user input, authentication, sessions, data storage, or external integrations |
+| [accessibility](skills/accessibility/SKILL.md) | Implementation | After building a component — audits implemented states for WCAG 2.2 AA compliance |
+| [security-auditor](skills/security-auditor/SKILL.md) | Audit | After a feature is built — dedicated security audit before release |
 
 ## Hooks
 

@@ -14,7 +14,7 @@ Security-first development practices for web applications. Treat every external 
 ## When to Use
 
 - Building anything that accepts user input
-- Implementing authentication or authorization
+- Implementing authentication or authorization — also load [references/auth-security.md](../../references/auth-security.md)
 - Storing or transmitting sensitive data
 - Integrating with external APIs or services
 - Adding file uploads, webhooks, or callbacks
@@ -69,6 +69,35 @@ const user = await prisma.user.findUnique({ where: { id: userId } });
 ```
 
 ### 2. Broken Authentication
+
+**Account enumeration** — return identical responses regardless of whether a user exists, password is wrong, or account is locked. Different messages or different response times both leak account existence. (OWASP AuthN Cheat Sheet)
+
+```typescript
+// BAD: reveals whether account exists
+if (!user) return res.status(404).json({ error: 'User not found' });
+if (!passwordMatch) return res.status(401).json({ error: 'Incorrect password' });
+
+// GOOD: generic response for all auth failures
+if (!user || !passwordMatch) {
+  return res.status(401).json({ error: 'Invalid user ID or password' });
+}
+```
+
+**Timing attacks** — ensure all auth paths take equivalent time to prevent account enumeration via response timing. (OWASP AuthN Cheat Sheet)
+
+```typescript
+// Always run the hash comparison even if user not found
+const dummyHash = '$2b$12$invalidhashfortimingpurposesonly';
+const hash = user?.passwordHash ?? dummyHash;
+await compare(plaintext, hash); // constant time regardless of user existence
+```
+
+**Password policy** — do not enforce complexity rules or periodic rotation; both are counterproductive. (NCSC passwords guidance, OWASP AuthN Cheat Sheet)
+- Minimum 8 chars with MFA; 15 without
+- Maximum at least 64 chars
+- No complexity requirements (uppercase, symbols etc.)
+- No forced rotation — change only on confirmed compromise
+- Check against breached password lists
 
 ```typescript
 // Password hashing
@@ -319,3 +348,10 @@ After implementing security-relevant code:
 - [ ] Security headers present in response (check with browser DevTools)
 - [ ] Error responses don't expose internal details
 - [ ] Rate limiting active on auth endpoints
+
+## Sources
+
+- OWASP Authentication Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
+- OWASP Top 10 A07 – Identification and Authentication Failures: https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/
+- NCSC Passwords Guidance: https://www.ncsc.gov.uk/collection/passwords/updating-your-approach
+- NCSC Secure Development: https://www.ncsc.gov.uk/collection/developers-collection

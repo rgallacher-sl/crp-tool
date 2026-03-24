@@ -15,10 +15,12 @@ export class SignUpComponent {
   email = '';
   password = '';
   showPassword = false;
+  submitting = false;
 
   nameError = '';
   emailError = '';
   passwordError = '';
+  serverError = '';
 
   constructor(
     private auth: AuthService,
@@ -29,6 +31,7 @@ export class SignUpComponent {
     this.nameError = '';
     this.emailError = '';
     this.passwordError = '';
+    this.serverError = '';
 
     if (!this.name.trim()) this.nameError = 'Enter your full name.';
     if (!this.email) {
@@ -41,11 +44,18 @@ export class SignUpComponent {
 
     if (this.nameError || this.emailError || this.passwordError) return;
 
-    const ok = this.auth.register(this.name.trim(), this.email, this.password);
-    if (ok) {
-      this.router.navigate(['/assessments/new/provide-crp']);
-    } else {
-      this.emailError = 'An account with this email address already exists.';
+    this.submitting = true;
+    try {
+      const ok = this.auth.register(this.name.trim(), this.email, this.password);
+      if (ok) {
+        this.router.navigate(['/assessments/new/provide-crp']);
+      } else {
+        this.serverError = 'Unable to create your account. Please try again.';
+      }
+    } catch {
+      this.serverError = 'Something went wrong. Please try again.';
+    } finally {
+      this.submitting = false;
     }
   }
 }
