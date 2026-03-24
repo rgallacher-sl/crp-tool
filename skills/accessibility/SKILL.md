@@ -1,15 +1,13 @@
 ---
 name: accessibility
-description: Audit and improve web accessibility following WCAG 2.1 guidelines. Use when asked to "improve accessibility", "a11y audit", "WCAG compliance", "screen reader support", "keyboard navigation", or "make accessible".
-license: MIT
-metadata:
-  author: web-quality-skills
-  version: "1.0"
+description: Audit and verify web accessibility following WCAG 2.2 AA. Load after component-states to verify implemented states are correctly accessible.
 ---
 
 # Accessibility (a11y)
 
-Comprehensive accessibility guidelines based on WCAG 2.1 and Lighthouse accessibility audits. Goal: make content usable by everyone, including people with disabilities.
+Audit and verify accessibility of implemented components against WCAG 2.2 AA. Load this after building — use [component-states](../component-states/SKILL.md) before building to define what states are needed.
+
+This project also uses GOV.UK Design System and IBM Carbon as behaviour references — their accessibility patterns take precedence over generic guidance where they conflict.
 
 ## WCAG Principles: POUR
 
@@ -516,7 +514,7 @@ axe https://example.com
 
 ## References
 
-- [WCAG 2.1 Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/)
+- [WCAG 2.2 Quick Reference](https://www.w3.org/WAI/WCAG22/quickref/)
 - [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)
 - [Deque axe Rules](https://dequeuniversity.com/rules/axe/)
 - [Web Quality Audit](../web-quality-audit/SKILL.md)

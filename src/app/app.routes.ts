@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { authGuard } from './guards/auth.guard';
 import { SignInComponent } from './pages/sign-in/sign-in';
+import { SignUpComponent } from './pages/sign-up/sign-up';
 import { DevProcessingComponent } from './pages/dev-processing/dev-processing';
 import { DevSeedOverrideComponent } from './pages/dev-seed-override/dev-seed-override';
 import { SuppliersComponent } from './pages/suppliers/suppliers';
@@ -16,6 +17,7 @@ import { BatchHistoryComponent } from './pages/batch-history/batch-history';
 
 export const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
+  { path: 'sign-up', component: SignUpComponent },
   { path: 'dev/processing', component: DevProcessingComponent },
   { path: 'dev/seed-override', component: DevSeedOverrideComponent },
   { path: '', redirectTo: 'suppliers', pathMatch: 'full' },

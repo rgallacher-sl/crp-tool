@@ -19,6 +19,10 @@ This file defines guardrails for AI-assisted changes in this repository.
 **GOV.UK Design System — behaviour and UX reference only**
 Use both as starting points for how components should behave: interactions, states, keyboard patterns, ARIA roles, and UX patterns. The user's provided designs and descriptions take precedence — these systems are references, not rules. Do not use their tokens or visual styles. All visual styling comes from the project's own design tokens in `src/styles.scss` and designs provided by the user.
 
+**Before making any design or UI change**, proactively consult the relevant design system(s) — do not wait to be asked. This applies to: new components, new pages, form patterns, navigation, error states, account flows, and any interaction design decision. Use whatever tooling your agent supports to look up the pattern; Claude-specific tooling is documented in `CLAUDE.md`.
+
+**Do not limit research to these two systems.** If neither covers a pattern adequately, search more broadly — other reputable design systems (Material, SAP Fiori, etc.) or the W3C ARIA Authoring Practices Guide (APG) for keyboard and ARIA behaviour. Always state which source informed a decision.
+
 **Visual implementation**
 Styling is driven by designs and image references provided by the user. Implement those exactly using the existing tokens in `src/styles.scss`. Do not invent visual decisions not covered by the provided design.
 
@@ -66,6 +70,8 @@ This is a government tool. WCAG 2.2 AA compliance is required:
 | Skill | When to use |
 |-------|-------------|
 | [repo-structure](skills/repo-structure/SKILL.md) | Before creating, naming, moving, or deleting any file or directory |
+| [component-states](skills/component-states/SKILL.md) | Before designing or implementing any UI component — produces a full state inventory |
+| [accessibility](skills/accessibility/SKILL.md) | After building a component — audits implemented states for WCAG 2.2 AA compliance |
 
 ## Hooks
 
@@ -94,6 +100,7 @@ When new information, documentation, or research arrives — use this table to d
 ## Principles
 
 - **Agent agnostic by default:** Any tooling, config, docs, or conventions should work across agents (Claude, Cursor, Copilot, etc.) unless there's a specific reason to go agent-specific. Prefer `AGENTS.md` over `CLAUDE.md`, repo-local files over agent memory, and open formats over proprietary ones.
+- **Keep AGENTS.md lean:** Rules only — no rationale or elaboration. If a rule needs context, put it in `references/` and link from here.
 
 ## Change Hygiene
 1. Preserve existing behavior unless the task requests behavior changes.

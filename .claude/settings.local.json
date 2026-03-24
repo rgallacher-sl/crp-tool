@@ -40,7 +40,10 @@
       "Bash(cat ~/Documents/GitHub/crp-tool/skills/idea-refine/*)",
       "Bash(grep -r source: ~/Documents/GitHub/crp-tool/skills/*/SKILL.md)",
       "WebFetch(domain:mcpservers.org)",
-      "WebFetch(domain:mcp.so)"
+      "WebFetch(domain:mcp.so)",
+      "Bash(find /Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/src/app/services -type f -name *.ts)",
+      "Bash(npm run:*)",
+      "Bash(grep -A 20 '\"\"budgets\"\"' angular.json)"
     ]
   }
 }

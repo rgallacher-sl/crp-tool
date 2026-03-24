@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Assessment, AssessmentOutcome, Batch, StatusChange, Supplier } from '../models/assessment.model';
+import { UserService } from './user.service';
 
 @Injectable({ providedIn: 'root' })
 export class AssessmentService {
@@ -23,7 +24,7 @@ export class AssessmentService {
     'failed',
   ];
 
-  constructor() {
+  constructor(private userService: UserService) {
     this.loadFromStorage();
   }
 
@@ -218,7 +219,7 @@ export class AssessmentService {
     for (const id of ids) {
       const a = this.assessments.find(x => x.id === id);
       if (a && a.status === 'ready') {
-        this.completeAssessment(id, outcome, notes, 'You', 'bulk');
+        this.completeAssessment(id, outcome, notes, undefined, 'bulk');
         if (a.batchId) this.updateBatchStatus(a.batchId);
       }
     }
@@ -403,18 +404,19 @@ export class AssessmentService {
     return index === -1 ? 0 : index;
   }
 
-  completeAssessment(id: string, outcome: 'meets' | 'does_not_meet' | 'unclear', notes: string, actionedBy = 'You', confirmationType: 'bulk' | 'individual' = 'individual'): void {
+  completeAssessment(id: string, outcome: 'meets' | 'does_not_meet' | 'unclear', notes: string, actionedBy?: string, confirmationType: 'bulk' | 'individual' = 'individual'): void {
+    const resolvedActionedBy = actionedBy ?? this.userService.getCurrentUser()?.name ?? 'You';
     const assessment = this.assessments.find(a => a.id === id);
     if (assessment) {
       assessment.status = 'completed';
       assessment.outcome = outcome;
       assessment.notes = notes;
-      assessment.actionedBy = actionedBy;
+      assessment.actionedBy = resolvedActionedBy;
       assessment.confirmationType = confirmationType;
       assessment.completedDate = new Date();
       const entry: StatusChange = {
         changedAt: assessment.completedDate,
-        changedBy: actionedBy,
+        changedBy: resolvedActionedBy,
         from: null,
         to: outcome,
         reason: notes || undefined,
@@ -426,18 +428,19 @@ export class AssessmentService {
     }
   }
 
-  manualOverride(id: string, newOutcome: AssessmentOutcome, reason: string, overriddenBy = 'You'): void {
+  manualOverride(id: string, newOutcome: AssessmentOutcome, reason: string, overriddenBy?: string): void {
+    const resolvedOverriddenBy = overriddenBy ?? this.userService.getCurrentUser()?.name ?? 'You';
     const a = this.assessments.find(x => x.id === id);
     if (!a) return;
     a.previousOutcome = a.outcome as AssessmentOutcome;
     a.outcome = newOutcome;
-    a.overriddenBy = overriddenBy;
+    a.overriddenBy = resolvedOverriddenBy;
     a.overriddenAt = new Date();
     a.overrideReason = reason;
     a.status = 'completed';
     const entry: StatusChange = {
       changedAt: a.overriddenAt,
-      changedBy: overriddenBy,
+      changedBy: resolvedOverriddenBy,
       from: a.previousOutcome,
       to: newOutcome,
       reason: reason || undefined,

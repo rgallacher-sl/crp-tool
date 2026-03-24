@@ -16,7 +16,7 @@ export class App {
   ) {}
 
   get isSignInPage(): boolean {
-    return this.router.url === '/sign-in';
+    return this.router.url === '/sign-in' || this.router.url === '/sign-up';
   }
 
   signOut(): void {

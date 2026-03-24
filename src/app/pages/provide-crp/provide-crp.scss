@@ -15,7 +15,14 @@
 }
 
 h1 {
+  margin: 0 0 var(--sx-3);
+}
+
+.page-intro {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
   margin: 0 0 var(--space-title-to-content);
+  line-height: 1.6;
 }
 
 .form-section {
