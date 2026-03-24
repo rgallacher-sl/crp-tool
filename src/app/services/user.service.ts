@@ -42,10 +42,9 @@ export class UserService {
     return this.getUsers().some(u => u.email.toLowerCase() === email.toLowerCase());
   }
 
-  createProfile(name: string, email: string, password: string): UserProfile {
+  createProfile(email: string, password: string): UserProfile {
     return {
       id: crypto.randomUUID(),
-      name,
       email,
       password,
       role: 'procurement_officer' as UserRole,

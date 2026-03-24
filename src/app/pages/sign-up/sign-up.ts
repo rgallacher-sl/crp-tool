@@ -11,13 +11,11 @@ import { AuthService } from '../../services/auth.service';
   styleUrl: './sign-up.scss',
 })
 export class SignUpComponent {
-  name = '';
   email = '';
   password = '';
   showPassword = false;
   submitting = false;
 
-  nameError = '';
   emailError = '';
   passwordError = '';
   serverError = '';
@@ -28,12 +26,10 @@ export class SignUpComponent {
   ) {}
 
   submit(): void {
-    this.nameError = '';
     this.emailError = '';
     this.passwordError = '';
     this.serverError = '';
 
-    if (!this.name.trim()) this.nameError = 'Enter your full name.';
     if (!this.email) {
       this.emailError = 'Enter your email address.';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email)) {
@@ -42,11 +38,11 @@ export class SignUpComponent {
     if (!this.password) this.passwordError = 'Enter a password.';
     else if (this.password.length < 8) this.passwordError = 'Password must be at least 8 characters.';
 
-    if (this.nameError || this.emailError || this.passwordError) return;
+    if (this.emailError || this.passwordError) return;
 
     this.submitting = true;
     try {
-      const ok = this.auth.register(this.name.trim(), this.email, this.password);
+      const ok = this.auth.register(this.email, this.password);
       if (ok) {
         this.router.navigate(['/assessments/new/provide-crp']);
       } else {

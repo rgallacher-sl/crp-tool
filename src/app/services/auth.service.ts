@@ -36,10 +36,10 @@ export class AuthService {
     return false;
   }
 
-  register(name: string, email: string, password: string): boolean {
+  register(email: string, password: string): boolean {
     if (this.userService.emailExists(email)) return false;
 
-    const profile = this.userService.createProfile(name, email, password);
+    const profile = this.userService.createProfile(email, password);
     this.userService.addUser(profile);
     sessionStorage.setItem(this.SESSION_FLAG, 'true');
     this.userService.setCurrentUserId(profile.id);
