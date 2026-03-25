@@ -19,7 +19,7 @@ This file defines guardrails for AI-assisted changes in this repository.
 **GOV.UK Design System — behaviour and UX reference only**
 Use both as starting points for how components should behave: interactions, states, keyboard patterns, ARIA roles, and UX patterns. The user's provided designs and descriptions take precedence — these systems are references, not rules. Do not use their tokens or visual styles. All visual styling comes from the project's own design tokens in `src/styles.scss` and designs provided by the user.
 
-**Before making any design or UI change**, proactively consult the relevant design system(s) — do not wait to be asked. This applies to: new components, new pages, form patterns, navigation, error states, account flows, and any interaction design decision. Use whatever tooling your agent supports to look up the pattern; Claude-specific tooling is documented in `CLAUDE.md`.
+**Before making any design recommendation or UI change**, proactively consult the relevant design system(s) — do not wait to be asked. This applies at the recommendation stage, not just implementation: new components, new pages, form patterns, navigation, error states, account flows, and any interaction design decision. Consultation must happen before an opinion is formed, not after. Use whatever tooling your agent supports to look up the pattern; Claude-specific tooling is documented in `CLAUDE.md`.
 
 **Do not limit research to these two systems.** If neither covers a pattern adequately, search more broadly — other reputable design systems (Material, SAP Fiori, etc.) or the W3C ARIA Authoring Practices Guide (APG) for keyboard and ARIA behaviour. Always state which source informed a decision.
 
@@ -73,13 +73,15 @@ This is a government tool. WCAG 2.2 AA compliance is required:
 
 Security runs through three stages — design, implementation, audit. Load the right skill at the right stage; do not defer security to the audit.
 
-| Skill | Stage | When to use |
-|-------|-------|-------------|
-| [repo-structure](skills/repo-structure/SKILL.md) | — | Whenever deciding where information belongs — before creating, naming, moving, or deleting any file or directory (including skills, references, and docs). Use it to decide *whether* to create something new, not just *how* to name it once you have |
-| [component-states](skills/component-states/SKILL.md) | Design | Before designing or implementing any UI component — produces a full state inventory. For auth components also applies security constraints from OWASP/NCSC as design inputs |
-| [security-and-hardening](skills/security-and-hardening/SKILL.md) | Implementation | When writing any code that handles user input, authentication, sessions, data storage, or external integrations |
-| [accessibility](skills/accessibility/SKILL.md) | Implementation | After building a component — audits implemented states for WCAG 2.2 AA compliance |
-| [security-auditor](skills/security-auditor/SKILL.md) | Audit | After a feature is built — dedicated security audit before release |
+**Before acting, scan this table and load every skill whose trigger matches the current task. Do not skip this step.**
+
+| Skill | Stage | Load when |
+|-------|-------|-----------|
+| [repo-structure](skills/repo-structure/SKILL.md) | — | About to create, rename, move, or delete any file or directory |
+| [component-states](skills/component-states/SKILL.md) | Design | Asked what states a component needs, or starting to design or build a component for the first time |
+| [security-and-hardening](skills/security-and-hardening/SKILL.md) | Implementation | About to write or edit code that handles form submission, authentication, session storage, localStorage, or API calls |
+| [accessibility](skills/accessibility/SKILL.md) | Implementation | Just finished writing or editing a component's HTML template |
+| [security-auditor](skills/security-auditor/SKILL.md) | Audit | Asked to audit security, or a feature is being marked ready for review or release |
 
 ## Hooks
 

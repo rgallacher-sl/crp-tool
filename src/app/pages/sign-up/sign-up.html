@@ -51,4 +51,9 @@
 
     <p class="sign-in-link">Already have an account? <a routerLink="/sign-in">Sign in</a></p>
   </div>
+
+  <label class="sim-toggle">
+    <input type="checkbox" [(ngModel)]="simulateServerError" name="simulateServerError" />
+    Simulate server error
+  </label>
 </div>

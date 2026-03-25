@@ -15,6 +15,7 @@ export class SignUpComponent {
   password = '';
   showPassword = false;
   submitting = false;
+  simulateServerError = false;
 
   emailError = '';
   passwordError = '';
@@ -39,6 +40,11 @@ export class SignUpComponent {
     else if (this.password.length < 8) this.passwordError = 'Password must be at least 8 characters.';
 
     if (this.emailError || this.passwordError) return;
+
+    if (this.simulateServerError) {
+      this.serverError = 'We couldn\'t create your account. Please try again.';
+      return;
+    }
 
     this.submitting = true;
     try {
