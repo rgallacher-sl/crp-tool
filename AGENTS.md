@@ -78,7 +78,7 @@ Security runs through three stages — design, implementation, audit. Load the r
 | Skill | Stage | Load when |
 |-------|-------|-----------|
 | [repo-structure](skills/repo-structure/SKILL.md) | — | About to create, rename, move, or delete any file or directory |
-| [component-states](skills/component-states/SKILL.md) | Design | Asked what states a component needs, or starting to design or build a component for the first time |
+| [component-states](skills/component-states/SKILL.md) | Design | About to commit a component design to Figma, a spec, or code — not for exploratory design conversation |
 | [security-and-hardening](skills/security-and-hardening/SKILL.md) | Implementation | About to write or edit code that handles form submission, authentication, session storage, localStorage, or API calls |
 | [accessibility](skills/accessibility/SKILL.md) | Implementation | Just finished writing or editing a component's HTML template |
 | [security-auditor](skills/security-auditor/SKILL.md) | Audit | Asked to audit security, or a feature is being marked ready for review or release |

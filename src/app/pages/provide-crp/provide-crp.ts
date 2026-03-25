@@ -4,8 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { AssessmentService } from '../../services/assessment.service';
 
 interface FileEntry {
+  id: number;
   file: File;
-  state: 'uploading' | 'uploaded';
+  state: 'uploading' | 'uploaded' | 'error';
+  errorMessage?: string;
+  canRetry?: boolean;
   timer: ReturnType<typeof setTimeout> | null;
 }
 
@@ -22,6 +25,7 @@ export class ProvideCrpComponent implements OnDestroy {
   isDragging = false;
   error = '';
   announcement = '';
+  private nextId = 0;
   readonly sourceHelpId = 'source-help';
   readonly sourceErrorId = 'source-error';
   readonly sourceStatusId = 'source-status';
@@ -42,7 +46,8 @@ export class ProvideCrpComponent implements OnDestroy {
   }
 
   canContinue(): boolean {
-    return this.totalInputCount > 0 && this.fileEntries.every(e => e.state === 'uploaded');
+    const uploadsInProgress = this.fileEntries.some(e => e.state === 'uploading');
+    return this.totalInputCount > 0 && !uploadsInProgress;
   }
 
   addLinkInput(): void {
@@ -76,40 +81,26 @@ export class ProvideCrpComponent implements OnDestroy {
     this.isDragging = false;
     const files = event.dataTransfer?.files;
     if (!files) return;
-    let anyRejected = false;
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
-      if (this.isPdfFile(file)) {
-        this.addFileEntry(file);
+      if (!this.isPdfFile(file)) {
+        this.addErrorEntry(file, 'The selected file must be a PDF');
       } else {
-        anyRejected = true;
+        this.addFileEntry(file);
       }
-    }
-    if (anyRejected) {
-      this.error = 'Some files were skipped — only PDF files are accepted.';
-      this.announcement = this.error;
-    } else {
-      this.error = '';
     }
   }
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
     if (!input.files) return;
-    let anyRejected = false;
     for (let i = 0; i < input.files.length; i++) {
       const file = input.files[i];
-      if (this.isPdfFile(file)) {
-        this.addFileEntry(file);
+      if (!this.isPdfFile(file)) {
+        this.addErrorEntry(file, 'The selected file must be a PDF');
       } else {
-        anyRejected = true;
+        this.addFileEntry(file);
       }
-    }
-    if (anyRejected) {
-      this.error = 'Some files were skipped — only PDF files are accepted.';
-      this.announcement = this.error;
-    } else {
-      this.error = '';
     }
     input.value = '';
   }
@@ -184,18 +175,58 @@ export class ProvideCrpComponent implements OnDestroy {
     return this.fileEntries.filter(e => e.state === 'uploaded').map(e => e.file);
   }
 
-  private addFileEntry(file: File): void {
-    const entry: FileEntry = { file, state: 'uploading', timer: null };
-    this.fileEntries.push(entry);
-    this.announcement = `Uploading ${file.name}.`;
+  retryUpload(index: number): void {
+    const entry = this.fileEntries[index];
+    entry.state = 'uploading';
+    entry.errorMessage = undefined;
+    entry.canRetry = undefined;
+    this.announcement = `Retrying upload for ${entry.file.name}.`;
     entry.timer = setTimeout(() => {
       this.ngZone.run(() => {
         entry.state = 'uploaded';
         entry.timer = null;
-        this.announcement = `Upload complete: ${file.name}.`;
+        this.announcement = `Upload complete: ${entry.file.name}.`;
         this.cdr.markForCheck();
       });
     }, 1200);
+  }
+
+  private addFileEntry(file: File): void {
+    if (file.size === 0) {
+      this.addErrorEntry(file, 'The selected file is empty');
+      return;
+    }
+    if (file.size > 10 * 1024 * 1024) {
+      this.addErrorEntry(file, 'The selected file must be smaller than 10MB');
+      return;
+    }
+    if (this.fileEntries.some(e => e.file.name === file.name && e.file.size === file.size)) {
+      this.addErrorEntry(file, 'This file has already been added');
+      return;
+    }
+    const entry: FileEntry = { id: this.nextId++, file, state: 'uploading', timer: null };
+    this.fileEntries.push(entry);
+    this.announcement = `Uploading ${file.name}.`;
+    entry.timer = setTimeout(() => {
+      this.ngZone.run(() => {
+        if (file.name.toLowerCase().includes('fail-upload')) {
+          entry.state = 'error';
+          entry.errorMessage = 'The selected file could not be uploaded – try again';
+          entry.canRetry = true;
+          this.announcement = `Upload failed: ${file.name}.`;
+        } else {
+          entry.state = 'uploaded';
+          this.announcement = `Upload complete: ${file.name}.`;
+        }
+        entry.timer = null;
+        this.cdr.markForCheck();
+      });
+    }, 1200);
+  }
+
+  private addErrorEntry(file: File, errorMessage: string): void {
+    this.fileEntries.push({ id: this.nextId++, file, state: 'error', errorMessage, canRetry: false, timer: null });
+    this.announcement = `${errorMessage}: ${file.name}.`;
   }
 
   private isPdfFile(file: File): boolean {

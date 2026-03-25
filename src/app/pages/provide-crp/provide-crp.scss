@@ -156,6 +156,15 @@ h1 {
     color: var(--success-color);
     font-weight: var(--font-weight-semibold);
   }
+
+  &.error .status-label {
+    color: var(--error-color);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  &.error .status-icon {
+    color: var(--error-color);
+  }
 }
 
 .status-line {
@@ -182,6 +191,31 @@ h1 {
 
   .uploaded & {
     color: var(--success-color);
+  }
+}
+
+.file-error-message {
+  margin: 0;
+  padding-left: calc(var(--sx-4) + var(--sx-2));
+  font-size: var(--font-size-sm);
+  line-height: 20px;
+  color: var(--error-color);
+}
+
+.retry-file {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  line-height: 20px;
+  font-weight: var(--font-weight-semibold);
+  padding: 0;
+
+  &:focus-visible {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
   }
 }
 

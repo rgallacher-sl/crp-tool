@@ -64,23 +64,38 @@
       >
         @if (fileEntries.length > 0) {
           <ul class="file-list" (click)="$event.stopPropagation()">
-            @for (entry of fileEntries; track entry.file.name; let i = $index) {
+            @for (entry of fileEntries; track entry.id; let i = $index) {
               <li class="file-row">
-                <div class="file-state" [class.uploaded]="entry.state === 'uploaded'">
+                <div class="file-state"
+                     [class.uploaded]="entry.state === 'uploaded'"
+                     [class.error]="entry.state === 'error'">
                   <div class="status-line">
                     <div class="status-left">
                       @if (entry.state === 'uploading') {
                         <span class="material-symbols-outlined status-icon uploading" aria-hidden="true">autorenew</span>
-                      } @else {
+                        <span class="status-label">Uploading...</span>
+                      } @else if (entry.state === 'uploaded') {
                         <span class="material-symbols-outlined status-icon" aria-hidden="true">check_circle</span>
+                        <span class="status-label">Uploaded</span>
+                      } @else {
+                        <span class="material-symbols-outlined status-icon" aria-hidden="true">error</span>
+                        <span class="status-label">Error</span>
                       }
-                      <span class="status-label">{{ entry.state === 'uploading' ? 'Uploading...' : 'Uploaded' }}</span>
                     </div>
                     @if (entry.state === 'uploaded') {
                       <button class="remove-file" (click)="removeFile(i); $event.stopPropagation()" type="button">Remove</button>
+                    } @else if (entry.state === 'error') {
+                      @if (entry.canRetry) {
+                        <button class="retry-file" (click)="retryUpload(i); $event.stopPropagation()" type="button">Try again</button>
+                      } @else {
+                        <button class="remove-file" (click)="removeFile(i); $event.stopPropagation()" type="button">Remove</button>
+                      }
                     }
                   </div>
                   <p class="file-name">{{ entry.file.name }}</p>
+                  @if (entry.state === 'error' && entry.errorMessage) {
+                    <p class="file-error-message">{{ entry.errorMessage }}</p>
+                  }
                 </div>
               </li>
             }
