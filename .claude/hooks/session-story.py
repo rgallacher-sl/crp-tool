@@ -103,8 +103,11 @@ def parse_transcript(messages):
     commands_run = []
 
     for msg in messages:
-        role = msg.get("role") or msg.get("type")
-        content = msg.get("content", "")
+        # Claude Code transcripts wrap messages: {"type": "user", "message": {"role": "user", "content": [...]}}
+        # Fall back to flat format for forward compatibility
+        inner = msg.get("message", msg)
+        role = inner.get("role") or msg.get("type")
+        content = inner.get("content", "")
 
         if role == "user":
             for text in extract_text_blocks(content):
