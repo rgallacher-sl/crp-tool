@@ -82,6 +82,7 @@ Security runs through three stages — design, implementation, audit. Load the r
 | [security-and-hardening](skills/security-and-hardening/SKILL.md) | Implementation | About to write or edit code that handles form submission, authentication, session storage, localStorage, or API calls |
 | [accessibility](skills/accessibility/SKILL.md) | Implementation | Just finished writing or editing a component's HTML template |
 | [security-auditor](skills/security-auditor/SKILL.md) | Audit | Asked to audit security, or a feature is being marked ready for review or release |
+| [context-eval](skills/context-eval/SKILL.md) | — | Evaluating whether a proposed context document (knowledge file, skill, or reference) is worth writing — run before creating any new context document |
 
 ## Hooks
 
@@ -141,6 +142,8 @@ When new information, documentation, or research arrives — use this table to d
 - If content doesn't fit any category above, ask before creating a new top-level directory.
 
 ## Principles
+
+- **Security by default:** When writing code that handles user input, authentication, authorization, APIs, or data storage, apply OWASP Top 10 considerations proactively — don't wait to be asked.
 
 - **Agent agnostic by default:** Any tooling, config, docs, or conventions should work across agents (Claude, Cursor, Copilot, etc.) unless there's a specific reason to go agent-specific. Prefer `AGENTS.md` over `CLAUDE.md`, repo-local files over agent memory, and open formats over proprietary ones.
 - **Keep AGENTS.md lean:** Rules only — no rationale or elaboration. If a rule needs context, put it in `references/` and link from here.

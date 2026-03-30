@@ -1,6 +1,6 @@
 # Accessibility Checklist
 
-Quick reference for WCAG 2.1 AA compliance. Use alongside the `accessibility` skill.
+Quick reference checklist for WCAG 2.1 AA compliance. Supplement to WCAG — not a replacement. Use alongside the `accessibility` skill and refer to the full WCAG spec for anything not covered here.
 
 ## Essential Checks
 
