@@ -50,7 +50,10 @@
       "WebFetch(domain:www.ncsc.gov.uk)",
       "Bash(find /Users/ryangallacher/Library/CloudStorage/OneDrive-ScottLogicLtd/Documents/GitHub/crp-tool/src/app -type f \\\\\\(-name *new* -o -name *create* \\\\\\))",
       "WebFetch(domain:service-manual.ons.gov.uk)",
-      "WebFetch(domain:atlassian.design)"
+      "WebFetch(domain:atlassian.design)",
+      "Bash(npm audit:*)",
+      "Bash(npm list:*)",
+      "Bash(npm install:*)"
     ]
   }
 }
