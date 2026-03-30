@@ -144,6 +144,7 @@ When new information, documentation, or research arrives — use this table to d
 ## Principles
 
 - **Security by default:** When writing code that handles user input, authentication, authorization, APIs, or data storage, apply OWASP Top 10 considerations proactively — don't wait to be asked.
+- **Evaluate before creating context:** Before writing any new knowledge file, skill, or reference, run the [context-eval](skills/context-eval/SKILL.md) skill and state the verdict. Do not create the file until the verdict is WRITE.
 
 - **Agent agnostic by default:** Any tooling, config, docs, or conventions should work across agents (Claude, Cursor, Copilot, etc.) unless there's a specific reason to go agent-specific. Prefer `AGENTS.md` over `CLAUDE.md`, repo-local files over agent memory, and open formats over proprietary ones.
 - **Keep AGENTS.md lean:** Rules only — no rationale or elaboration. If a rule needs context, put it in `references/` and link from here.
