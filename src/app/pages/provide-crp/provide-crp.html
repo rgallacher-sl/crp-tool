@@ -134,7 +134,7 @@
 
     <div class="actions">
       <a routerLink="/suppliers" class="btn-secondary">
-        Back to suppliers
+        Cancel
       </a>
       <button
         class="btn-primary"
@@ -144,5 +144,24 @@
         {{ continueLabel }}
       </button>
     </div>
+
+    <details class="dev-hint">
+      <summary class="dev-hint-summary">Dev: failure keywords</summary>
+      <table class="dev-hint-table">
+        <thead>
+          <tr>
+            <th>URL</th>
+            <th>Fails at</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><code>https://example.com/crp-fail-network.pdf</code></td><td>Upload / fetch</td></tr>
+          <tr><td><code>https://example.com/crp-fail-upload.pdf</code></td><td>Upload / fetch</td></tr>
+          <tr><td><code>https://example.com/crp-fail-extract.pdf</code></td><td>Extraction</td></tr>
+          <tr><td><code>https://example.com/crp-fail-semantic.pdf</code></td><td>Semantic analysis</td></tr>
+          <tr><td><code>https://example.com/crp-fail-storage.pdf</code></td><td>Persistence (final save)</td></tr>
+        </tbody>
+      </table>
+    </details>
   </div>
 </div>

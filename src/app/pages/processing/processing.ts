@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, NgZone, OnInit, OnDestroy } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, NgZone, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { AssessmentService } from '../../services/assessment.service';
 import { Assessment } from '../../models/assessment.model';
@@ -11,6 +11,8 @@ import { Assessment } from '../../models/assessment.model';
   styleUrl: './processing.scss',
 })
 export class ProcessingComponent implements OnInit, OnDestroy {
+  @ViewChild('heading') private headingRef!: ElementRef<HTMLElement>;
+
   assessment: Assessment | null = null;
   statusLabel = 'Checking your document';
   isFailed = false;
@@ -34,6 +36,16 @@ export class ProcessingComponent implements OnInit, OnDestroy {
     private ngZone: NgZone,
     private cdr: ChangeDetectorRef,
   ) {}
+
+  private readonly transientCodes = new Set(['network_error', 'upload_failed', 'storage_failed']);
+
+  get isTransientFailure(): boolean {
+    return this.isFailed && this.transientCodes.has(this.assessment?.errorCode ?? '');
+  }
+
+  get isTerminalFailure(): boolean {
+    return this.isFailed && !this.transientCodes.has(this.assessment?.errorCode ?? '');
+  }
 
   get visibleSteps() {
     return this.steps.filter(s => s.state !== 'pending');
@@ -124,7 +136,11 @@ export class ProcessingComponent implements OnInit, OnDestroy {
     this.steps = this.buildSteps(this.assessment);
     if (this.assessment.status === 'failed') {
       this.isFailed = true;
-      this.statusLabel = 'We couldn\'t process this document';
+      const isTransient = this.transientCodes.has(this.assessment.errorCode ?? '');
+      if (!isTransient) {
+        this.statusLabel = 'Processing interrupted';
+        setTimeout(() => this.headingRef?.nativeElement.focus());
+      }
       this.errorMessage = this.assessment.errorMessage ?? 'An unexpected error occurred.';
       return;
     }
@@ -280,8 +296,9 @@ export class ProcessingComponent implements OnInit, OnDestroy {
 
   private getStepState(assessment: Assessment, key: string): 'pending' | 'active' | 'done' | 'error' {
     if (assessment.status === 'failed') {
+      const isTransient = this.transientCodes.has(assessment.errorCode ?? '');
       const thisKey = this.mapFailureStep(key);
-      if (thisKey === assessment.failedStep) return 'error';
+      if (thisKey === assessment.failedStep) return isTransient ? 'active' : 'error';
       const order = ['upload', 'extraction', 'semantic', 'validation', 'persistence'];
       return order.indexOf(thisKey) < order.indexOf(assessment.failedStep ?? '') ? 'done' : 'pending';
     }
@@ -296,8 +313,12 @@ export class ProcessingComponent implements OnInit, OnDestroy {
 
   private getPpnStepState(assessment: Assessment): 'pending' | 'active' | 'done' | 'error' {
     if (assessment.status === 'failed') {
+      const isTransient = this.transientCodes.has(assessment.errorCode ?? '');
       const ppnFailures = ['semantic', 'validation', 'persistence'];
-      return ppnFailures.includes(assessment.failedStep ?? '') ? 'error' : 'pending';
+      if (ppnFailures.includes(assessment.failedStep ?? '')) {
+        return isTransient ? 'active' : 'error';
+      }
+      return 'pending';
     }
 
     const rank = this.getStatusRank(assessment.status);

@@ -341,6 +341,59 @@ h1 {
 }
 
 
+/* ── Dev hint ──────────────────────────────────────────────── */
+
+.dev-hint {
+  margin-top: var(--sx-8);
+  border: 1px dashed var(--color-border-muted);
+  border-radius: var(--radius-sm);
+  padding: var(--sx-3);
+}
+
+.dev-hint-summary {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  user-select: none;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+}
+
+.dev-hint-table {
+  margin-top: var(--sx-3);
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-xs);
+
+  th {
+    text-align: left;
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-medium);
+    padding: var(--sx-1) var(--sx-2) var(--sx-1) 0;
+    border-bottom: 1px solid var(--color-border-muted);
+  }
+
+  td {
+    padding: var(--sx-1) var(--sx-2) var(--sx-1) 0;
+    color: var(--color-text-primary);
+    vertical-align: middle;
+
+    code {
+      font-family: monospace;
+      font-size: var(--font-size-xs);
+      background: var(--color-surface-subtle);
+      padding: 1px var(--sx-1);
+      border-radius: var(--radius-sm);
+      cursor: text;
+      user-select: all;
+    }
+  }
+}
+
 @media (max-width: 640px) {
   .provide-crp-page {
     padding: var(--sx-6) var(--sx-3) var(--sx-7);

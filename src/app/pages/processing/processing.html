@@ -1,87 +1,102 @@
 <div class="processing-page">
-  <div class="processing-content">
-    <h1 class="processing-heading">{{ statusLabel }}</h1>
+  @if (isTransientFailure) {
+    <div class="connectivity-banner" role="alert">
+      <span class="material-symbols-outlined connectivity-banner-icon" aria-hidden="true">wifi_off</span>
+      <p class="connectivity-banner-message">{{ errorMessage }}</p>
+    </div>
+  }
 
-    @if (!isFailed && assessment) {
-      <div class="document-chip">
-        @if (assessment.documentSource === 'upload') {
-          <span class="material-symbols-outlined" aria-hidden="true">description</span>
-        } @else {
-          <span class="material-symbols-outlined" aria-hidden="true">language</span>
-        }
-        <span>{{ assessment.documentSource === 'link' ? assessment.documentReference : assessment.documentLabel }}</span>
-      </div>
-    }
+  <div class="processing-centered">
+    <div class="processing-content">
+      <h1 #heading tabindex="-1" class="processing-heading">{{ statusLabel }}</h1>
 
-    @if (!isFailed) {
-      <p class="reassurance">This can take a few minutes. You can leave this page and come back.</p>
-    }
+      @if (assessment) {
+        <div class="document-chip">
+          @if (assessment.documentSource === 'upload') {
+            <span class="material-symbols-outlined" aria-hidden="true">description</span>
+          } @else {
+            <span class="material-symbols-outlined" aria-hidden="true">language</span>
+          }
+          <span>{{ assessment.documentSource === 'link' ? assessment.documentReference : assessment.documentLabel }}</span>
+        </div>
+      }
 
-    <ol class="stepper" aria-label="Processing steps">
-      @for (step of steps; track step.label; let last = $last) {
-        <li class="stepper-step" [attr.data-state]="step.state">
-          <div class="stepper-indicator">
-            <div class="stepper-circle">
-              @if (step.state === 'active') {
-                <span class="step-spinner"></span>
-              } @else if (step.state === 'done') {
-                <span class="material-symbols-outlined" aria-hidden="true">check</span>
-              } @else if (step.state === 'error') {
-                <span class="material-symbols-outlined" aria-hidden="true">close</span>
+      @if (isTerminalFailure) {
+        <p class="error-description">{{ errorMessage }}</p>
+      }
+
+      @if (!isFailed) {
+        <p class="reassurance">This can take a few minutes. You can leave this page and come back.</p>
+      }
+
+      <ol class="stepper" aria-label="Processing steps">
+        @for (step of visibleSteps; track step.label; let last = $last) {
+          <li class="stepper-step" [attr.data-state]="step.state">
+            <div class="stepper-indicator">
+              <div class="stepper-circle">
+                @if (step.state === 'active') {
+                  <span class="step-spinner"></span>
+                } @else if (step.state === 'done') {
+                  <span class="material-symbols-outlined" aria-hidden="true">check</span>
+                } @else if (step.state === 'error') {
+                  <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                }
+              </div>
+              @if (!last) {
+                <div class="stepper-line"></div>
               }
             </div>
-            @if (!last) {
-              <div class="stepper-line"></div>
-            }
-          </div>
-          <div class="stepper-body">
-            <span class="stepper-label">{{ step.label }}</span>
-          </div>
-        </li>
-      }
-    </ol>
+            <div class="stepper-body">
+              <span class="stepper-label">{{ step.label }}</span>
+            </div>
+          </li>
+        }
+      </ol>
 
-    @if (!isFailed) {
-      @if (showCancelConfirm) {
-        <div class="cancel-confirm" role="alert" aria-labelledby="cancel-confirm-heading">
-          <p id="cancel-confirm-heading" class="cancel-confirm-text">
-            @if (assessment?.documentSource === 'upload') {
-              If you cancel, this assessment will be deleted. You'll need to re-upload your document to start again.
-            } @else {
-              If you cancel, this assessment will be deleted. You can restart by entering the link again.
-            }
-          </p>
-          <div class="cancel-confirm-actions">
-            <button class="btn-danger" type="button" (click)="confirmCancel()">Yes, cancel</button>
-            <button class="btn-secondary cancel-confirm-stay" type="button" (click)="dismissCancel()">Keep waiting</button>
+      @if (!isFailed) {
+        @if (showCancelConfirm) {
+          <div class="cancel-confirm" role="alert" aria-labelledby="cancel-confirm-heading">
+            <p id="cancel-confirm-heading" class="cancel-confirm-text">
+              @if (assessment?.documentSource === 'upload') {
+                If you cancel, this assessment will be deleted. You'll need to re-upload your document to start again.
+              } @else {
+                If you cancel, this assessment will be deleted. You can restart by entering the link again.
+              }
+            </p>
+            <div class="cancel-confirm-actions">
+              <button class="btn-danger" type="button" (click)="confirmCancel()">Yes, cancel</button>
+              <button class="btn-secondary cancel-confirm-stay" type="button" (click)="dismissCancel()">Keep waiting</button>
+            </div>
           </div>
-        </div>
-      } @else {
-        <div class="page-actions">
-          @if (notifyState === 'idle') {
-            <button class="btn-secondary" (click)="requestNotification()">Notify me when done</button>
-          } @else if (notifyState === 'granted') {
-            <span class="notify-confirmed">
-              <span class="material-symbols-outlined" aria-hidden="true">notifications_active</span>
-              You'll be notified when it's ready
-            </span>
-          } @else if (notifyState === 'denied') {
-            <span class="notify-denied">Notifications blocked — check your browser settings</span>
-          }
-          <button class="btn-ghost" (click)="cancel()">Cancel</button>
+        } @else {
+          <div class="page-actions">
+            @if (notifyState === 'idle') {
+              <button class="btn-secondary" (click)="requestNotification()">Notify me when done</button>
+            } @else if (notifyState === 'granted') {
+              <span class="notify-confirmed">
+                <span class="material-symbols-outlined" aria-hidden="true">notifications_active</span>
+                You'll be notified when it's ready
+              </span>
+            } @else if (notifyState === 'denied') {
+              <span class="notify-denied">Notifications blocked — check your browser settings</span>
+            }
+            <button class="btn-ghost" (click)="cancel()">Cancel</button>
+          </div>
+        }
+      }
+
+      @if (isTerminalFailure) {
+        <div class="actions">
+          <a routerLink="/suppliers" class="btn-secondary">Back to suppliers</a>
+          <button class="btn-primary" (click)="retry()">Try again</button>
         </div>
       }
-    }
 
-    @if (isFailed) {
-      <div class="error-banner" role="alert">
-        <span class="material-symbols-outlined error-banner-icon" aria-hidden="true">error</span>
-        <p class="error-banner-message">{{ errorMessage }}</p>
-      </div>
-      <div class="actions">
-        <button class="btn-primary" (click)="retry()">Try again</button>
-        <a routerLink="/suppliers" class="btn-secondary">Back to suppliers</a>
-      </div>
-    }
+      @if (isTransientFailure) {
+        <div class="actions">
+          <button class="btn-ghost" (click)="confirmCancel()">Cancel</button>
+        </div>
+      }
+    </div>
   </div>
 </div>
