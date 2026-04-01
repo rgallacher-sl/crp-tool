@@ -67,7 +67,10 @@
       "WebFetch(domain:m1.material.io)",
       "WebFetch(domain:www.w3.org)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "WebFetch(domain:www.tpgi.com)"
+      "WebFetch(domain:www.tpgi.com)",
+      "WebFetch(domain:medium.com)",
+      "WebFetch(domain:fonts.google.com)",
+      "WebFetch(domain:materialui.co)"
     ]
   }
 }
