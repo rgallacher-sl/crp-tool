@@ -1,0 +1,955 @@
+- generic [ref=e1]:
+  - region "Cookie preferences.":
+    - button "Set cookie preferences." [ref=e2] [cursor=pointer]:
+      - img [ref=e3]
+  - banner [ref=e9]:
+    - link "Skip to main content" [ref=e10] [cursor=pointer]:
+      - /url: "#skipnav-target"
+    - navigation "Main" [ref=e12]:
+      - generic [ref=e15]:
+        - link "UK Research and Innovation home" [ref=e18] [cursor=pointer]:
+          - /url: /
+          - img "UK Research and Innovation home" [ref=e19]
+        - generic [ref=e45]:
+          - search [ref=e47]:
+            - generic [ref=e48]: Search term
+            - textbox "Search term" [ref=e49]:
+              - /placeholder: Search
+            - button "Search" [ref=e50] [cursor=pointer]:
+              - generic [ref=e51]: Search
+          - navigation "Top level" [ref=e54]:
+            - list [ref=e56]:
+              - listitem [ref=e57]:
+                - link "Apply for funding" [ref=e58] [cursor=pointer]:
+                  - /url: https://www.ukri.org/apply-for-funding/
+              - listitem [ref=e59]:
+                - link "Manage your award" [ref=e60] [cursor=pointer]:
+                  - /url: https://www.ukri.org/manage-your-award/
+              - listitem [ref=e61]:
+                - link "What we do" [ref=e62] [cursor=pointer]:
+                  - /url: https://www.ukri.org/what-we-do/
+              - listitem [ref=e63]:
+                - link "News and events" [ref=e64] [cursor=pointer]:
+                  - /url: https://www.ukri.org/news-and-events/
+              - listitem [ref=e65]:
+                - link "Who we are" [ref=e66] [cursor=pointer]:
+                  - /url: https://www.ukri.org/who-we-are/
+              - listitem [ref=e67]:
+                - link "Our councils" [ref=e68] [cursor=pointer]:
+                  - /url: https://www.ukri.org/councils/
+      - navigation "Secondary" [ref=e74]:
+        - list [ref=e76]:
+          - listitem [ref=e77]:
+            - list [ref=e78]:
+              - listitem [ref=e79]:
+                - link "Funding finder" [ref=e80] [cursor=pointer]:
+                  - /url: https://www.ukri.org/opportunity/
+              - listitem [ref=e81]:
+                - link "Before you apply" [ref=e82] [cursor=pointer]:
+                  - /url: https://www.ukri.org/apply-for-funding/before-you-apply/
+              - listitem [ref=e83]:
+                - link "Develop your application" [ref=e84] [cursor=pointer]:
+                  - /url: https://www.ukri.org/apply-for-funding/develop-your-application/
+              - listitem [ref=e85]:
+                - link "How we make decisions" [ref=e86] [cursor=pointer]:
+                  - /url: https://www.ukri.org/apply-for-funding/how-we-make-decisions/
+              - listitem [ref=e87]:
+                - link "Improving your funding experience" [ref=e88] [cursor=pointer]:
+                  - /url: https://www.ukri.org/apply-for-funding/improving-your-funding-experience/
+              - listitem [ref=e89]:
+                - link "Horizon Europe" [ref=e90] [cursor=pointer]:
+                  - /url: https://www.ukri.org/apply-for-funding/horizon-europe/
+  - main [ref=e93]:
+    - generic [ref=e94]:
+      - generic [ref=e95]: Funding opportunity
+      - 'heading "Funding opportunity: UKRI Creating Opportunities Trial Accelerator Fund" [level=1] [ref=e96]':
+        - generic [ref=e97]: "Funding opportunity:"
+        - text: UKRI Creating Opportunities Trial Accelerator Fund
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - generic [ref=e102]:
+            - generic [ref=e103]:
+              - term [ref=e104]: "Opportunity status:"
+              - definition [ref=e105]: Closed
+            - generic [ref=e106]:
+              - term [ref=e107]: "Funders:"
+              - definition [ref=e108]:
+                - link "Economic and Social Research Council (ESRC)" [ref=e109] [cursor=pointer]:
+                  - /url: https://www.ukri.org/councils/esrc/
+                - text: ","
+                - link "Arts and Humanities Research Council (AHRC)" [ref=e110] [cursor=pointer]:
+                  - /url: https://www.ukri.org/councils/ahrc/
+                - text: ","
+                - link "Biotechnology and Biological Sciences Research Council (BBSRC)" [ref=e111] [cursor=pointer]:
+                  - /url: https://www.ukri.org/councils/bbsrc/
+                - text: ","
+                - link "Engineering and Physical Sciences Research Council (EPSRC)" [ref=e112] [cursor=pointer]:
+                  - /url: https://www.ukri.org/councils/epsrc/
+                - text: ","
+                - link "Innovate UK" [ref=e113] [cursor=pointer]:
+                  - /url: https://www.ukri.org/councils/innovate-uk/
+                - text: ","
+                - link "Medical Research Council (MRC)" [ref=e114] [cursor=pointer]:
+                  - /url: https://www.ukri.org/councils/mrc/
+                - text: ","
+                - link "Natural Environment Research Council (NERC)" [ref=e115] [cursor=pointer]:
+                  - /url: https://www.ukri.org/councils/nerc/
+            - generic [ref=e116]:
+              - term [ref=e117]: "Funding type:"
+              - definition [ref=e118]: Grant
+            - generic [ref=e119]:
+              - term [ref=e120]: "Total fund:"
+              - definition [ref=e121]: £12,000,000
+            - generic [ref=e122]:
+              - term [ref=e123]: "Award range:"
+              - definition [ref=e124]: £1,000,000 - £2,500,000
+            - generic [ref=e125]:
+              - term [ref=e126]: "Publication date:"
+              - definition [ref=e127]: 20 June 2023
+            - generic [ref=e128]:
+              - term [ref=e129]: "Opening date:"
+              - definition [ref=e130]:
+                - time [ref=e131]: 20 June 2023 9:00am UK time
+            - generic [ref=e132]:
+              - term [ref=e133]: "Closing date:"
+              - definition [ref=e134]:
+                - time [ref=e135]: 31 October 2023 4:00pm UK time
+          - generic [ref=e137]:
+            - paragraph [ref=e138]: Apply for funding to test and rigorously evaluate the effectiveness of interventions aimed at spreading opportunities and reducing disparities in economic, health and social outcomes for people and places across the UK.
+            - paragraph [ref=e139]: You must be based at a UK research organisation eligible for UK Research and Innovation (UKRI) funding.
+            - paragraph [ref=e140]: The full economic cost of your project can be between £1,000,000 and £2,500,000. UKRI will fund 80% of the full economic cost.
+            - paragraph [ref=e141]: Projects should last between 13 and 48 months and must start by 1 July 2024.
+          - generic [ref=e142]:
+            - button "Close all sections" [expanded] [active] [ref=e298] [cursor=pointer]:
+              - text: Close all
+              - generic [ref=e299]: sections
+            - generic [ref=e146]:
+              - heading "Who can apply" [level=2] [ref=e148] [cursor=pointer]:
+                - button "Who can apply" [expanded] [ref=e149]
+              - generic "Who can apply" [ref=e300]:
+                - paragraph [ref=e301]: "Before applying for funding, check the following:"
+                - list [ref=e302]:
+                  - listitem [ref=e303]:
+                    - link "the eligibility of your organisation" [ref=e304] [cursor=pointer]:
+                      - /url: /apply-for-funding/before-you-apply/check-if-you-are-eligible-for-research-and-innovation-funding/eligibility-as-an-organisation/#contents-list
+                - paragraph [ref=e305]: UKRI is introducing new role types for opportunities being run on the new Funding Service.
+                - paragraph [ref=e306]:
+                  - text: For full details please see
+                  - link "eligibility as an individual" [ref=e307] [cursor=pointer]:
+                    - /url: /apply-for-funding/before-you-apply/check-if-you-are-eligible-for-research-and-innovation-funding/eligibility-as-an-individual/#contents-list
+                - heading "Who is eligible to apply" [level=3] [ref=e308]
+                - paragraph [ref=e309]: This is a UKRI wide funding opportunity.
+                - paragraph [ref=e310]: The project lead for this funding opportunity must be based at an organisation eligible for UKRI funding for the duration of the grant.
+                - paragraph [ref=e311]: Applications may be submitted jointly by more than one applicant. In such cases, one person must be regarded as the project lead taking the lead responsibility for the conduct of the project and the observance of the terms and conditions.
+                - paragraph [ref=e312]: Correspondence regarding the proposal and grant will be addressed to the project lead only (and in the case of any offer letter, to their research office).
+                - paragraph [ref=e313]: All project co-leads must make a significant contribution to the conduct of the project.
+                - paragraph [ref=e314]:
+                  - text: See the ESRC
+                  - link "Research Funding Guide" [ref=e315] [cursor=pointer]:
+                    - /url: /publications/esrc-research-funding-guide/
+                  - text: for further information on costs that can be included
+                - heading "International applicants" [level=3] [ref=e316]
+                - paragraph [ref=e317]: Project leads from non-UK organisations are not eligible to apply for funding for this opportunity.
+                - paragraph [ref=e318]:
+                  - text: Project co-leads based in non-UK research organisations can be included in research grant applications. Read
+                  - link "project co-lead (international) policy guidance – ESRC" [ref=e319] [cursor=pointer]:
+                    - /url: /publications/international-co-investigator-policy-guidance/
+                  - text: for details of eligible organisations and costs.
+                - heading "Business, third sector or government body project co-leads" [level=3] [ref=e320]
+                - paragraph [ref=e321]:
+                  - text: Business, third sector or government body project co-leads based in the UK can also be included on research grant proposals as a project co-lead. Read
+                  - link "Including project co-leads from business, third sector or government bodies – ESRC" [ref=e322] [cursor=pointer]:
+                    - /url: /publications/including-co-investigators-from-business-third-sector-or-government-bodies/
+                  - text: for details of eligible organisations and costs.
+                - heading "Equality, diversity and inclusion" [level=3] [ref=e323]
+                - paragraph [ref=e324]: We are committed to achieving equality of opportunity for all funding applicants. We encourage applications from a diverse range of researchers.
+                - paragraph [ref=e325]: "We support people to work in a way that suits their personal circumstances. This includes:"
+                - list [ref=e326]:
+                  - listitem [ref=e327]: career breaks
+                  - listitem [ref=e328]: support for people with caring responsibilities
+                  - listitem [ref=e329]: flexible working
+                  - listitem [ref=e330]: alternative working patterns
+                  - listitem [ref=e331]: joint lead applicants
+                - paragraph [ref=e332]:
+                  - text: Find out more about
+                  - link "equality, diversity and inclusion at UKRI" [ref=e333] [cursor=pointer]:
+                    - /url: /what-we-offer/supporting-healthy-research-and-innovation-culture/equality-diversity-and-inclusion/
+                  - text: .
+            - generic [ref=e151]:
+              - heading "What we're looking for" [level=2] [ref=e153] [cursor=pointer]:
+                - button "What we're looking for" [expanded] [ref=e154]
+              - generic "What we're looking for" [ref=e334]:
+                - paragraph [ref=e335]:
+                  - text: This opportunity falls under UKRI’s “
+                  - link "Creating Opportunities, Improving Outcomes" [ref=e336] [cursor=pointer]:
+                    - /url: /what-we-offer/browse-our-areas-of-investment-and-support/creating-opportunities-and-improving-outcomes/
+                  - text: ” strategic theme, which seeks to improve outcomes for people and places across the UK by identifying solutions that promote economic and social prosperity.
+                - heading "Scope" [level=3] [ref=e337]
+                - paragraph [ref=e338]: The UKRI Creating Opportunities Trial Accelerator Fund is aimed at enabling the research and innovation community to test interventions that will spread opportunities and reduce spatial disparities in economic, health and social outcomes for people and places across the UK by using, primarily, robust counterfactual impact evaluation methods.
+                - paragraph [ref=e339]: In doing so, grant holders will help address gaps and weaknesses in the existing evidence base underpinning the thematic areas covered by the UKRI “Creating Opportunities, Improving Outcomes” strategic theme.
+                - heading "Objectives" [level=3] [ref=e340]
+                - paragraph [ref=e341]: "The overarching objectives are to:"
+                - list [ref=e342]:
+                  - listitem [ref=e343]: generate causal evidence on what works to spread opportunities and reduce spatial disparities in outcomes for people and places across the UK
+                  - listitem [ref=e344]: accelerate the development of innovative and ethical methods for robustly testing and evaluating the impact of interventions related to the thematic areas outlined below
+                  - listitem [ref=e345]: build the capacity of the research and innovation system to forge interdisciplinary collaborations and lasting partnerships with local communities (including those with lived experience) in designing and delivering robust research trials and related evaluation activity
+                  - listitem [ref=e346]: provide actionable evidence that responds to the needs of decision makers and informs policy or practice at a local, regional, national, or international scale
+                - heading "Thematic areas" [level=3] [ref=e347]
+                - paragraph [ref=e348]: "Proposals will be required to address one or more of the following three thematic areas:"
+                - list [ref=e349]:
+                  - listitem [ref=e350]: "sustainable economic growth and innovation: addressing long-standing regional economic disparities and delivering solutions that focus on sustainable, inclusive growth and innovation"
+                  - listitem [ref=e351]: "Place-based health inequalities: identifying sustainable and cost-effective solutions to address spatial disparities in population health across the UK; the term “health inequalities” is used to refer to varying definitions of inequality and inequity, including the unfair and avoidable differences in health across different groups"
+                  - listitem [ref=e352]: "community connectedness: strengthening civic engagements, relationships, trust, and local pride to reduce the social and economic marginalisation of groups and areas"
+                - paragraph [ref=e353]: In addressing one or more of the above themes, you will need to consider the role of place and the implications that the proposed activity will have on spatial inequalities, as explained below in the sub-section “Place”.
+                - heading "Place" [level=4] [ref=e354]
+                - paragraph [ref=e355]: The fund will support research trials that have the potential to deliver a step-change in approaches to reducing place-based inequalities. Therefore, proposals must demonstrate how the role of place has been considered.
+                - paragraph [ref=e356]: For example, you could evaluate place-focused interventions or place agnostic interventions involving individuals, groups or organisations that have clear implications for addressing place-based inequalities.
+                - paragraph [ref=e357]: You must provide a rationale for your approach to defining the geography most relevant to your proposed activity and explain how the proposed activity could support the reduction of place-based inequalities.
+                - paragraph [ref=e358]: You should consider the potential to extrapolate learning from your proposed research trials to address placed-based inequalities in other areas of the UK. If research trials are conducted in a single locality or small number of research sites, you should set out how your findings will be applicable to other areas.
+                - paragraph [ref=e359]: To support a focus on place, successful applicants will be expected to engage with a strategic coordination hub that will be commissioned to support grant holders via a series of grant holder workshops and events to showcase findings. Projects should budget sufficient travel and subsistence costs to attend at least four one-day programme events based in the UK.
+                - heading "Employing experimental and quasi-experimental approaches" [level=3] [ref=e360]
+                - paragraph [ref=e361]: "The fund will support ambitious research trials that are focused on tackling urgent local and regional inequalities within the UK under one or more of the above themes (see ‘Thematic areas’). We will primarily fund research trials, which:"
+                - list [ref=e362]:
+                  - listitem [ref=e363]: use experimental approaches such as randomised control trials (RCTs) where participants are allocated prospectively and randomly to treatment groups that receive interventions and control or comparison groups that do not
+                - paragraph [ref=e364]: "or:"
+                - list [ref=e365]:
+                  - listitem [ref=e366]: where random allocation is not possible, practical, or ethical, use quasi-experimental approaches to compare outcomes for groups that have been exposed to an intervention or policy and estimate an appropriate comparison group
+                - paragraph [ref=e367]: "We will fund trials at a variety of scales. This includes:"
+                - list [ref=e368]:
+                  - listitem [ref=e369]: pilot studies where an intervention is at an early stage of development. Evaluation activity would be focused on developing and refining the approach and testing the feasibility of the intervention. Initial, indicative data would be collected to assess the intervention’s potential to improve outcomes
+                  - listitem [ref=e370]: efficacy trials where an intervention or programme is tested under controlled conditions. Evaluation activity would be focused on assessing the impact of the intervention on outcomes of interest, supported by an implementation and process evaluation to identify delivery challenges
+                  - listitem [ref=e371]: effectiveness trials that test a scalable intervention under everyday conditions. Evaluation activity would be focused on assessing the impact of the intervention on outcomes of interest, supported by an implementation and process evaluation to identify the challenges for delivery at scale
+                - paragraph [ref=e372]:
+                  - text: "(This categorisation is based on the Education Endowment Foundation’s (EEF) ‘Pipeline of EEF trials’:"
+                  - link "Pipeline of EEF trials | EEF (educationendowmentfoundation.org.uk)" [ref=e373] [cursor=pointer]:
+                    - /url: https://educationendowmentfoundation.org.uk/projects-and-evaluation/evaluation/process-and-people/pipeline-of-eef-trials
+                - paragraph [ref=e374]: You may propose a single trial (including multiarm trials that test multiple interventions or variations of an intervention) or a programme of trials.
+                - paragraph [ref=e375]: If proposing a programme of trials, individual trials can run concurrently or be sequenced. If you propose undertaking pilot studies, there is an expectation that proposals also include plans to test the intervention under controlled conditions if found to be feasible.
+                - paragraph [ref=e376]: Proposals are also welcome from applicants proposing to conduct rapid RCTs or the use of rapid-cycle RCTs.
+                - heading "Alternative Methods" [level=4] [ref=e377]
+                - paragraph [ref=e378]: For some interventions it may not be possible to use either experimental or quasi-experimental approaches.
+                - paragraph [ref=e379]: Although the primary aim of this fund is to support experimental and quasi-experimental impact evaluation approaches, we may also fund projects that partially or largely employ alternative methods such as theory-based approaches to impact evaluation providing that clear justification has been provided for employing these methodologies.
+                - paragraph [ref=e380]:
+                  - text: "Further guidance on designing an evaluation using experimental, quasi-experimental or theory-based approaches can be found in HM Treasury (2020) The Magenta Book: Guidance for Evaluation,"
+                  - link "The Magenta Book – GOV.UK" [ref=e381] [cursor=pointer]:
+                    - /url: https://www.gov.uk/government/publications/the-magenta-book
+                  - text: .
+                - heading "Requirements" [level=3] [ref=e382]
+                - paragraph [ref=e383]: "Proposals should also address the following requirements:"
+                - heading "Interventions" [level=4] [ref=e384]
+                - paragraph [ref=e385]: Proposals must clearly identify a specific intervention or series of interventions they intend to evaluate. This could include interventions that are already being delivered on the ground but have not previously been robustly evaluated or testing and evaluating new interventions.
+                - paragraph [ref=e386]: You should explain the rationale for the intervention(s), what is being delivered, and how it links to outcomes of interest.
+                - paragraph [ref=e387]: You should clearly set out how the outcomes being measured relate to one or more of the three thematic areas of this opportunity, as set out in the ‘Thematic areas’ section.
+                - paragraph [ref=e388]: Proposals should also demonstrate how the intervention(s) and approach to evaluation address an evidence gap for decision makers and practitioners involved in policymaking or the delivery of services including, where possible, how the evaluation proposed will help to inform and improve the delivery of the intervention.
+                - heading "Impact evaluation designs" [level=4] [ref=e389]
+                - paragraph [ref=e390]: This funding opportunity is primarily aimed at supporting research trials that use experimental or quasi-experimental methods.
+                - paragraph [ref=e391]: "Proposals should describe appropriate methodological approaches and techniques that will be used for the impact evaluation, including where appropriate:"
+                - list [ref=e392]:
+                  - listitem [ref=e393]: how randomisation will be achieved
+                  - listitem [ref=e394]: how comparison groups will be established to enable a valid comparison of outcomes
+                  - listitem [ref=e395]: what outcomes will be captured and the rationale for these
+                  - listitem [ref=e396]: datasets or instruments that will be used to measure these
+                  - listitem [ref=e397]: how data will be collected, including capitalising where appropriate on existing data to reduce costs and the burden on participants; and
+                  - listitem [ref=e398]: how data will be analysed to deliver against the research objectives and provide robust findings
+                - paragraph [ref=e399]: Applicants proposing to partially or largely use alternative methods such as theory-based approaches to impact evaluation should explain why these methods are appropriate.
+                - heading "Supporting impact evaluations with an implementation and process evaluation" [level=4] [ref=e400]
+                - paragraph [ref=e401]
+                - paragraph [ref=e402]: To ensure that the causal factors and mechanisms for the impact of an intervention are also captured and well understood, applicants are strongly encouraged to include, where appropriate, an evaluation of the delivery of the intervention paying attention to issues of compliance and programme fidelity.
+                - paragraph [ref=e403]: Where an implementation and process evaluation are included in a proposal, you should provide a clear rationale and description of your intended methodological approach.
+                - heading "Building interdisciplinary collaborations and partnerships" [level=4] [ref=e404]
+                - paragraph [ref=e405]: This funding opportunity aims to harness the knowledge and expertise of the various research communities supported by UKRI and enable working across disciplines to leverage knowledge and expertise in addressing its objectives. We particularly welcome interdisciplinary collaborations that build the capacity of a broad range of disciplines to use experimental and quasi-experimental methods in understanding what works to spread opportunities and reduce spatial disparities in outcomes for people and places across the UK.
+                - paragraph [ref=e406]: To ensure proposals are feasible and grounded in local priorities, you are strongly encouraged to engage community partners and those with lived experience in the development of bids. Engagement with communities must be equitable and your plans must demonstrate that you have identified their needs and interests, and the ways in which they will positively benefit from participating in the project.
+                - paragraph [ref=e407]: The funding available can only be used for evaluation purposes and not for the delivery of the interventions. Therefore, partnerships with non-academic organisations that will be funding or delivering the intervention will be essential to a competitive proposal.
+                - paragraph [ref=e408]: You should demonstrate that an equitable and sustainable partnership with co-creation and co-delivery at its heart has been established.
+                - paragraph [ref=e409]: "A non-exhaustive list of the type of non-academic organisations that could be involved in projects include:"
+                - list [ref=e410]:
+                  - listitem [ref=e411]: local authorities
+                  - listitem [ref=e412]: healthcare delivery organisations
+                  - listitem [ref=e413]: regional or local industrial bodies
+                  - listitem [ref=e414]: community groups
+                  - listitem [ref=e415]: charities
+                  - listitem [ref=e416]: schools and colleges
+                  - listitem [ref=e417]: government departments
+                  - listitem [ref=e418]: devolved administrations
+                  - listitem [ref=e419]: other public sector organisations
+                  - listitem [ref=e420]: private sector partners
+                - paragraph [ref=e421]:
+                  - text: More information on including project co-leads and partners can be found in the
+                  - link "ESRC Research Funding Guide" [ref=e422] [cursor=pointer]:
+                    - /url: /publications/esrc-research-funding-guide/
+                  - text: .
+                - heading "Ethical and data management considerations" [level=4] [ref=e423]
+                - paragraph [ref=e424]: We require that the research we support is designed and conducted in such a way that it
+                - paragraph [ref=e425]:
+                  - text: meets ethical principles and is subject to proper professional and institutional oversight in terms of research governance. We have agreed a Framework for Research Ethics that all submitted proposals must comply with. Read further details about the
+                  - link "Framework for Research Ethics and guidance on compliance" [ref=e426] [cursor=pointer]:
+                    - /url: /councils/esrc/guidance-for-applicants/research-ethics-guidance/
+                  - text: .
+                - paragraph [ref=e427]:
+                  - text: Grant holders will be expected to follow good practice in producing trial or research protocols that set out the key features of their research plan following appropriate guidance prior to the start of funded trials. We also strongly recommend that trials are registered in an appropriate register (e.g.,
+                  - link "ISRCTN" [ref=e428] [cursor=pointer]:
+                    - /url: https://www.isrctn.com/
+                  - text: ","
+                  - link "AEA" [ref=e429] [cursor=pointer]:
+                    - /url: https://www.socialscienceregistry.org/
+                  - text: ","
+                  - link "IGL database" [ref=e430] [cursor=pointer]:
+                    - /url: https://www.innovationgrowthlab.org/igl-database-v2
+                  - text: ). You can include any registration costs in your requested budget.
+                - paragraph [ref=e431]:
+                  - text: Data collection and management should be in accordance with ESRC
+                  - link "research data policy" [ref=e432] [cursor=pointer]:
+                    - /url: /publications/esrc-research-data-policy/
+                  - text: .
+                - paragraph [ref=e433]: Results of the studies, whether positive or negative, must be published or made publicly available within 24 months of the end of the study or trial. Publications must cite the grant reference number.
+                - paragraph [ref=e434]: You must ensure plans to meet these ethics and transparency requirements are included in their proposal.
+                - paragraph [ref=e435]: A list of additional guidance on good practice can be found in the ‘Related Content’ section.
+                - heading "Using existing datasets" [level=4] [ref=e436]
+                - paragraph [ref=e437]: UKRI supports a range of data resources. Where relevant, we encourage applicants to consider whether the use of these resources could add value to the project.
+                - paragraph [ref=e438]: "Please find more details about the datasets available across the UK on Facilities and resources:"
+                - paragraph [ref=e439]:
+                  - link "Facilities and resources – BBSRC – UKRI" [ref=e440] [cursor=pointer]:
+                    - /url: /councils/bbsrc/facilities-and-resources/
+                - paragraph [ref=e441]:
+                  - link "Facilities and resources – EPSRC – UKRI" [ref=e442] [cursor=pointer]:
+                    - /url: /councils/epsrc/facilities-and-resources/
+                - paragraph [ref=e443]:
+                  - link "Facilities and resources – ESRC – UKRI" [ref=e444] [cursor=pointer]:
+                    - /url: /councils/esrc/facilities-and-resources/
+                  - text: (including ADR UK)
+                - paragraph [ref=e445]:
+                  - link "Facilities and resources – MRC – UKRI" [ref=e446] [cursor=pointer]:
+                    - /url: /councils/mrc/facilities-and-resources/
+                - paragraph [ref=e447]:
+                  - link "Facilities and resources – NERC – UKRI" [ref=e448] [cursor=pointer]:
+                    - /url: /councils/nerc/facilities-and-resources/
+                - paragraph [ref=e449]:
+                  - link "Facilities and resources – STFC – UKRI" [ref=e450] [cursor=pointer]:
+                    - /url: /councils/stfc/facilities-and-resources/
+                - paragraph [ref=e451]: Details of any datasets and infrastructure to be used in your project should be given in the Facilities section.
+                - heading "A related funding opportunity" [level=3] [ref=e452]
+                - paragraph [ref=e453]: The UKRI Creating Opportunities Trial Accelerator Fund is one of two funding opportunities focused on supporting evaluation activity under UKRI’s “Creating Opportunities, Improving Outcomes” strategic theme.
+                - paragraph [ref=e454]: The second opportunity is for the UKRI Creating Opportunities Evaluation Development Fund, which will be open during the same period. Although both opportunities have the same thematic focus, the duration, funding available, and requirements differ.
+                - paragraph [ref=e455]: You cannot submit the same or similar proposals to both funding opportunities. Applicants that submit the same or a similar proposal to both will be withdrawn from the UKRI Creating Opportunities Evaluation Development Fund.
+                - heading "Additional Information" [level=3] [ref=e456]
+                - heading "Duration" [level=4] [ref=e457]
+                - paragraph [ref=e458]: Projects should last for between 13 months and 48 months. Grants should start by 1 July 2024.
+                - paragraph [ref=e459]:
+                  - text: Applicants wishing to undertake projects lasting 12 months or less should review details of the
+                  - link "UKRI Creating Opportunities Evaluation Development Fund" [ref=e460] [cursor=pointer]:
+                    - /url: /opportunity/creating-opportunities-evaluation-development-fund/
+                  - text: .
+                - heading "Funding available" [level=4] [ref=e461]
+                - paragraph [ref=e462]: The full economic cost of your project can range from £1,000,000 to £2,500,000.
+                - paragraph [ref=e463]: UKRI will fund 80% of the full economic cost.
+                - heading "What we will fund" [level=4] [ref=e464]
+                - paragraph [ref=e465]: "You can request funding for costs primarily relating to undertaking the evaluation activities:"
+                - list [ref=e466]:
+                  - listitem [ref=e467]: a contribution to the salary of the project lead and project co-leads
+                  - listitem [ref=e468]: support for other posts such as research, technical, project management, and administration
+                  - listitem [ref=e469]: research consumables
+                  - listitem [ref=e470]: equipment
+                  - listitem [ref=e471]: travel costs, including costs of participating in workshops and showcase events with other grant holders
+                  - listitem [ref=e472]: data preservation, data sharing and dissemination costs
+                  - listitem [ref=e473]: trial registration costs
+                  - listitem [ref=e474]: estates and indirect costs
+                - heading "What we will not fund" [level=4] [ref=e475]
+                - paragraph [ref=e476]: "We will not fund:"
+                - list [ref=e477]:
+                  - listitem [ref=e478]: the delivery of the interventions; the cost of an intervention should be met by the organisation that provides that intervention
+                  - listitem [ref=e479]: clinical research
+                  - listitem [ref=e480]: unspecified research work
+                  - listitem [ref=e481]: research already carried out
+                  - listitem [ref=e482]: writing up previous research
+                  - listitem [ref=e483]: literature surveys
+                  - listitem [ref=e484]: conference attendance, other than within an award
+                  - listitem [ref=e485]: travel for general study
+                  - listitem [ref=e486]: expeditions
+                  - listitem [ref=e487]: requests to hold conferences, workshops or seminars
+                  - listitem [ref=e488]: preparation of books and publications
+                  - listitem [ref=e489]: preparation and production of materials such as curriculum materials and software development where these constitute the primary project component
+                - paragraph [ref=e490]: Associated studentships cannot be funded under this funding opportunity.
+                - heading "Team project partner" [level=4] [ref=e491]
+                - paragraph [ref=e492]: "You may include project partners that will support your research project through cash or in-kind contributions, such as:"
+                - list [ref=e493]:
+                  - listitem [ref=e494]: staff time
+                  - listitem [ref=e495]: access to equipment
+                  - listitem [ref=e496]: sites or facilities
+                  - listitem [ref=e497]: the provision of data
+                - heading "Supporting skills and talent" [level=4] [ref=e498]
+                - paragraph [ref=e499]:
+                  - text: We will be looking for evidence of a strong commitment to supporting the development of researchers at all stages of their career. We encourage you to follow the principles of the
+                  - link "Concordat to Support the Career Development of Researchers" [ref=e500] [cursor=pointer]:
+                    - /url: https://researcherdevelopmentconcordat.ac.uk/
+                  - text: and the
+                  - link "Technician Commitment" [ref=e501] [cursor=pointer]:
+                    - /url: https://www.techniciancommitment.org.uk/
+                  - text: . We expect this to include a strong career development programme, shaped to suit the stage of the researchers’ career and providing increased opportunities for professional development.
+                - paragraph [ref=e502]: This should include, but not be limited to, the early career stage. Increasing capacity contributes to the quality and impact of the research. We encourage you to consider how you can support capacity building for all members of the project team.
+                - heading "Impact, innovation and interdisciplinarity" [level=4] [ref=e503]
+                - paragraph [ref=e504]: We expect you to consider the potential scientific, societal and economic impacts of your project. Outputs, dissemination and impact are a key part of the assessment criteria. We also encourage applications that demonstrate innovation and interdisciplinarity (projects combining approaches from more than one discipline).
+                - heading "Knowledge exchange and collaboration" [level=4] [ref=e505]
+                - paragraph [ref=e506]: We are committed to knowledge exchange and encouraging collaboration between researchers and the private, public and civil society sectors. Collaborative working benefits both the researchers and the individuals or organisations involved.
+                - paragraph [ref=e507]: Through collaboration partners learn about each other’s expertise, share knowledge and gain an appreciation of different professional cultures. Collaborative activity can therefore lead to a better understanding of the ways that academic research can add value and offer insights to key issues of concern for policy and practice.
+                - paragraph [ref=e508]: Knowledge exchange should not be treated as an ‘add-on’ at the end of a project but considered before the start and built into a project.
+                - heading "Trusted Research" [level=4] [ref=e509]
+                - paragraph [ref=e510]:
+                  - text: If your application includes international applicants, project partners or collaborators, visit
+                  - link "Trusted Research" [ref=e511] [cursor=pointer]:
+                    - /url: https://www.npsa.gov.uk/trusted-research
+                  - text: for more information on protection of those working in our thriving and collaborative international research and innovation sector.
+            - generic [ref=e156]:
+              - heading "How to apply" [level=2] [ref=e158] [cursor=pointer]:
+                - button "How to apply" [expanded] [ref=e159]
+              - generic "How to apply" [ref=e512]:
+                - paragraph [ref=e513]: We are running this funding opportunity on the new UKRI Funding Service. You cannot apply on the Joint Electronic Submissions (Je-S) system.
+                - paragraph [ref=e514]: The project lead is responsible for completing the application process on the Funding Service, but we expect all team members and project partners to contribute to the application.
+                - paragraph [ref=e515]: Only the lead research organisation can submit an application to UKRI.
+                - paragraph [ref=e516]: "To apply:"
+                - list [ref=e517]:
+                  - listitem [ref=e518]: Select ‘Start application’ near the beginning of this page
+                  - listitem [ref=e519]: Confirm you are the project lead
+                  - listitem [ref=e520]:
+                    - text: Sign in or create a Funding Service account. To create an account, select your organisation, verify your email address, and set a password. If your organisation is not listed, email
+                    - link "support@funding-service.ukri.org" [ref=e521] [cursor=pointer]:
+                      - /url: mailto:support@funding-service.ukri.org
+                  - listitem [ref=e522]: Answer questions directly in the text boxes. You can save your answers and come back to them or work offline and return to copy and paste your answers. All questions and assessment criteria are listed in the ‘How to apply’ section on this Funding finder page.
+                  - listitem [ref=e523]: Send the completed application to your research office for checking. They will return it to you if it needs editing
+                  - listitem [ref=e524]: Your research office will submit the completed and checked application to UKRI.
+                - paragraph [ref=e525]:
+                  - text: Watch our
+                  - link "research office webinars about the new UKRI Funding Service" [ref=e526] [cursor=pointer]:
+                    - /url: /apply-for-funding/improving-your-funding-experience/about-simpler-and-better-funding/
+                  - text: .
+                - heading "Deadline" [level=3] [ref=e527]
+                - paragraph [ref=e528]: We must receive your application by 31 October 2023 at 4:00pm UK time.
+                - paragraph [ref=e529]: You will not be able to apply after this time.
+                - paragraph [ref=e530]: Make sure you are aware of and follow any internal institutional deadlines.
+                - paragraph [ref=e531]: UKRI will need to collect some personal information to manage your funding service account and the registration of your funding applications.
+                - paragraph [ref=e532]:
+                  - text: We will handle personal data in line with UK data protection legislation and manage it securely. For more information, including how to exercise your rights, read our
+                  - link "privacy notice" [ref=e533] [cursor=pointer]:
+                    - /url: /about-us/privacy-notice/
+                  - text: .
+                - paragraph [ref=e534]:
+                  - text: ESRC, as part of UKRI, will publish the outcomes of this funding Opportunity at
+                  - link "What ESRC has funded – UKRI" [ref=e535] [cursor=pointer]:
+                    - /url: /what-we-offer/what-we-have-funded/esrc/
+                - paragraph [ref=e536]:
+                  - text: If your application is successful, some personal information will be published via the
+                  - link "UKRI Gateway to Research" [ref=e537] [cursor=pointer]:
+                    - /url: https://gtr.ukri.org/
+                  - text: .
+                - 'heading "UKRI Funding Service: section guidance" [level=3] [ref=e538]'
+                - heading "Summary" [level=4] [ref=e539]
+                - paragraph [ref=e540]: In plain English, provide a summary that can be sent to potential reviewers to determine if your proposal is within their field of expertise.
+                - paragraph [ref=e541]: "This summary may be made publicly available on external facing websites, so please ensure it can be understood by a variety of readers, for example:"
+                - list [ref=e542]:
+                  - listitem [ref=e543]: opinion-formers
+                  - listitem [ref=e544]: policymakers
+                  - listitem [ref=e545]: the general public
+                  - listitem [ref=e546]: the wider research community.
+                - heading "Guidance for writing a summary" [level=5] [ref=e547]
+                - paragraph [ref=e548]: "Succinctly describe your proposed work in terms of:"
+                - list [ref=e549]:
+                  - listitem [ref=e550]: its context
+                  - listitem [ref=e551]: the challenge the project addresses and how it will be applied to this
+                  - listitem [ref=e552]: its aims and objectives
+                  - listitem [ref=e553]: its potential applications and benefits.
+                - paragraph [ref=e554]: "Word count: 550"
+                - heading "Core team" [level=4] [ref=e555]
+                - paragraph [ref=e556]: "List the key members of your team and assign them roles from the following:"
+                - list [ref=e557]:
+                  - listitem [ref=e558]: project lead (PL)
+                  - listitem [ref=e559]: project co-lead UK (PcL)
+                  - listitem [ref=e560]: project co-lead (International) (PcL (I))
+                  - listitem [ref=e561]: specialist
+                  - listitem [ref=e562]: grant manager
+                  - listitem [ref=e563]: professional enabling staff
+                  - listitem [ref=e564]: research and innovation associate
+                  - listitem [ref=e565]: technician
+                  - listitem [ref=e566]: visiting researcher
+                - paragraph [ref=e567]: Only list one individual as project lead.
+                - paragraph [ref=e568]:
+                  - text: Find out more about
+                  - link "UKRI’s new grant roles" [ref=e569] [cursor=pointer]:
+                    - /url: /apply-for-funding/before-you-apply/check-if-you-are-eligible-for-research-and-innovation-funding/eligibility-as-an-individual/#contents-list
+                - 'heading "Section: Thematic Area" [level=4] [ref=e570]'
+                - paragraph [ref=e571]: "Question: State which of the thematic areas your project will address"
+                - heading "What the assessors are looking for in your response" [level=5] [ref=e572]
+                - list [ref=e573]:
+                  - listitem [ref=e574]: sustainable economic growth and innovation
+                  - listitem [ref=e575]: health inequalities
+                  - listitem [ref=e576]: community connectedness
+                - paragraph [ref=e577]: "Word count: 20"
+                - 'heading "Section: Vision and Approach" [level=4] [ref=e578]'
+                - paragraph [ref=e579]: "Question: What are you hoping to achieve with your proposed work and how will you deliver it?"
+                - paragraph [ref=e580]: We will ask you to submit a single seven-page PDF attachment covering the ‘Vision’ and ‘Approach’ sections of the application, including the project plan. Please enter the words ‘attachment supplied’ in the text box below. The document must have single line spacing, margins of at least 2 cm and be typed using Arial 11pt, or another ‘sans serif’ font with an equivalent size to Arial 11pt.
+                - heading "What the assessors are looking for in your response" [level=5] [ref=e581]
+                - paragraph [ref=e582]: "For the Vision, explain how your proposed work:"
+                - list [ref=e583]:
+                  - listitem [ref=e584]: is of excellent quality and importance within or beyond the field(s) or area(s)
+                  - listitem [ref=e585]: aligns with one or more the thematic areas of this opportunity (sustainable economic growth and innovation; health inequalities; and community connectedness)
+                  - listitem [ref=e586]: addresses an evidence gap for decision makers involved in relevant policymaking or the delivery of services
+                  - listitem [ref=e587]: has the potential to advance current understanding, generates new knowledge, thinking or discovery within or beyond the field or area
+                  - listitem [ref=e588]: is timely given current trends, context and needs
+                  - listitem [ref=e589]: impacts world-leading research, society, the economy or the environment
+                - paragraph [ref=e590]: "Within the Vision section we also expect you to:"
+                - list [ref=e591]:
+                  - listitem [ref=e592]: identify a specific intervention or series of interventions that will be evaluated and explain the rationale for the intervention(s) and how it will be delivered
+                  - listitem [ref=e593]: identify the potential direct or indirect benefits and who the beneficiaries might be
+                - paragraph [ref=e594]: "For the Approach section, explain how you have designed your approach so that it:"
+                - list [ref=e595]:
+                  - listitem [ref=e596]: is effective and appropriate to achieve your objectives
+                  - listitem [ref=e597]: is feasible, and comprehensively identifies any risks to delivery and how they will be managed
+                  - listitem [ref=e598]: if applicable, uses a clear and transparent methodology
+                  - listitem [ref=e599]: if applicable, summarises the previous work and describes how this will be built upon and progressed
+                  - listitem [ref=e600]: will maximise translation of outputs into outcomes and impacts
+                  - listitem [ref=e601]: describes how your, and if applicable your team’s, research environment (in terms of the place, its location, and relevance to the project) will contribute to the success of the work
+                  - listitem [ref=e602]: ensures equitable, ethical, and inclusive collaboration and co-design between researchers, partners, and participants
+                - paragraph [ref=e603]: "Within the Approach section we also expect you to:"
+                - list [ref=e604]:
+                  - listitem [ref=e605]:
+                    - text: "describe appropriate methodological approaches and techniques that will be used for the impact evaluation, including where appropriate:"
+                    - list [ref=e606]:
+                      - listitem [ref=e607]: how randomisation will be achieved
+                      - listitem [ref=e608]: how comparison groups will be established to enable a valid comparison of outcomes
+                      - listitem [ref=e609]: what outcomes will be captured and the rationale for these
+                      - listitem [ref=e610]: datasets or instruments that will be used to measure these outcomes
+                      - listitem [ref=e611]: how data will be collected, including capitalising where appropriate on existing data
+                      - listitem [ref=e612]: how data will be analysed to deliver against the research objectives and provide robust findings
+                  - listitem [ref=e613]: provide a rationale for your approach to defining the geography most appropriate to the proposed activity and how the proposed activity could support the reduction of place-based inequalities
+                  - listitem [ref=e614]: if proposing to partially or largely use alternative methods to experimental and quasi-experimental evaluation approaches (for example, a theory-based approach to impact evaluation), provide a clear justification for why your approach is more feasible or appropriate than the use of experimental or quasi-experimental methods
+                  - listitem [ref=e615]: explain the rationale and methodological approach to an implementation or process evaluation if used to support the impact evaluation
+                  - listitem [ref=e616]: demonstrate access to the appropriate services, facilities, infrastructure, or equipment to deliver the proposal, including access to secondary administrative or other data essential to the project
+                  - listitem [ref=e617]: provide information about the delivery partners, those with lived experience, and study participants that will be involved
+                  - listitem [ref=e618]: provide a one-page A4 detailed and comprehensive project plan including milestones and timelines
+                - paragraph [ref=e619]: A list of references used to support your application can be added in the References question.
+                - 'heading "Section: References" [level=4] [ref=e620]'
+                - paragraph [ref=e621]: "Question: List the references you’ve use to support your application."
+                - heading "What the assessors are looking for in your response:" [level=5] [ref=e622]
+                - paragraph [ref=e623]: You should not include any other information in this section.
+                - paragraph [ref=e624]: We advise you not to include hyperlinks as assessors are not obliged to access the information they lead to or consider it in their assessment of your application. If linking to web resources, use persistent identifiers such as digital object identifiers to ensure the information’s integrity is maintained.
+                - paragraph [ref=e625]: "Word count: 1,000"
+                - 'heading "Section: Applicant and team capability to deliver" [level=4] [ref=e626]'
+                - paragraph [ref=e627]: "Question: Why are you the right individual or team to successfully deliver the proposed work?"
+                - heading "What the assessors are looking for in your response" [level=5] [ref=e628]
+                - paragraph [ref=e629]: "Evidence of how you, and if relevant your team, have:"
+                - list [ref=e630]:
+                  - listitem [ref=e631]: the relevant experience (appropriate to career stage) to deliver the proposed work
+                  - listitem [ref=e632]: the right balance of skills and expertise to cover the proposed work including the expertise needed to employ the evaluation approaches proposed
+                  - listitem [ref=e633]: the appropriate leadership and management skills to deliver the work and your approach to develop others
+                  - listitem [ref=e634]: contributed to developing a positive research environment and wider community
+                - paragraph [ref=e635]: The word count for this section is 1,500 words, 1,000 words to be used for R4RI modules and, if necessary, a further 500 words for Additions.
+                - paragraph [ref=e636]: Use the Résumé for Research and Innovation (R4RI) format to showcase the range of relevant skills you, and if relevant your team (investigators, researchers, other (technical) staff for example research software engineers, data scientists and so on, and partners), have and how this will help to deliver the proposed work. You can include individuals’ specific achievements but only choose past contributions that best evidence their ability to deliver this work.
+                - paragraph [ref=e637]:
+                  - text: Complete this section using the R4RI module headings listed below. You should use each heading once and include a response for the whole team, see the
+                  - link "UKRI guidance on R4RI" [ref=e638] [cursor=pointer]:
+                    - /url: /apply-for-funding/before-you-apply/resume-for-research-and-innovation-r4ri-guidance/
+                  - text: ". You should consider how to balance your answer, and emphasise where appropriate the key skills each team member brings:"
+                - list [ref=e639]:
+                  - listitem [ref=e640]: contributions to the generation of new ideas, tools, methodologies, or knowledge
+                  - listitem [ref=e641]: the development of others and maintenance of effective working relationships
+                  - listitem [ref=e642]: contributions to the wider research and innovation community
+                  - listitem [ref=e643]: contributions to broader research or innovation users and audiences and towards wider societal benefit
+                - paragraph [ref=e644]: "Additions: Provide any further details relevant to your application. This section is optional and can be up to 500 words. You should not use it to describe additional skills, experiences or outputs, but any factors that provide context for the rest of your R4RI (for example, details of career breaks if you wish to disclose them)."
+                - paragraph [ref=e645]: You should complete this as a narrative and you should avoid CV type format.
+                - paragraph [ref=e646]: "Word count: 1,500"
+                - 'heading "Section: Project partners" [level=4] [ref=e647]'
+                - paragraph [ref=e648]: "Question: Provide details of any project partners’ contributions, and letters or emails of support from each named partner."
+                - heading "What the assessors are looking for in your response" [level=5] [ref=e649]
+                - paragraph [ref=e650]: If you do not have any project partners, simply add ‘N/A’ into the text box, mark this section as complete and move to the next section.
+                - paragraph [ref=e651]:
+                  - text: Download and complete the
+                  - link "project partner contributions template" [ref=e652] [cursor=pointer]:
+                    - /url: https://ukri-tfs-prod-assets.s3.eu-west-2.amazonaws.com/Project-partner-contributions-template.docx
+                  - text: then copy and paste into the text box below.
+                - paragraph [ref=e653]: Include letters or emails of support from each partner in a single PDF and upload.
+                - paragraph [ref=e654]: "Each letter or email you provide should:"
+                - list [ref=e655]:
+                  - listitem [ref=e656]: confirm the partner’s commitment to the project
+                  - listitem [ref=e657]: clearly explain the value, relevance, and possible benefits of the work to them
+                  - listitem [ref=e658]: describe any additional value that they bring to the project
+                  - listitem [ref=e659]: be no more than one A4 page in length
+                - paragraph [ref=e660]: The Funding Service will provide document upload details when you apply. If you do not have any project partners, you will be able to indicate this in the Funding Service.
+                - paragraph [ref=e661]: Ensure you have prior agreement from project partners so that if you are offered funding, they will support your project as indicated in the template.
+                - paragraph [ref=e662]: For audit purposes, UKRI requires formal collaboration agreements to be put in place if an award is made.
+                - paragraph [ref=e663]: Unless specifically requested, do not provide letters of support from host and project co-leads’ research organisations.
+                - paragraph [ref=e664]: "Word count: 1,000"
+                - 'heading "Section: Facilities" [level=4] [ref=e665]'
+                - paragraph [ref=e666]: "Question: Does your proposed research require the support and use of a facility?"
+                - heading "What the assessors are looking for in your response" [level=5] [ref=e667]
+                - paragraph [ref=e668]: If not, enter N/A into the text box, mark this section as complete and move on to the next section.
+                - paragraph [ref=e669]: If you will need to use a facility, (including access to, and use of data, infrastructure and resources) you should follow your proposed facility’s normal access request procedures. Where prior agreement is required, ensure you obtain their agreement that, should you be offered funding, they will support the use of their facility on your project.
+                - paragraph [ref=e670]: "In the text box below, for each requested facility you should provide:"
+                - list [ref=e671]:
+                  - listitem [ref=e672]:
+                    - text: the name of facility, copied and pasted from
+                    - link "this list" [ref=e673] [cursor=pointer]:
+                      - /url: https://ukri-tfs-prod-assets.s3.eu-west-2.amazonaws.com/Facility+Information+for+TFS.docx
+                  - listitem [ref=e674]: the proposed usage or costs, or costs per unit where indicated on that list
+                  - listitem [ref=e675]: confirmation you have their agreement where required
+                - paragraph [ref=e676]: Do not put the facility contact details in your response.
+                - paragraph [ref=e677]: "Word count: 250"
+                - 'heading "Section: Data management" [level=4] [ref=e678]'
+                - paragraph [ref=e679]: "Question: how will you manage and share data collected or acquired through the proposed research?"
+                - heading "What the assessors are looking for in your response" [level=5] [ref=e680]
+                - paragraph [ref=e681]:
+                  - text: Provide a data management plan which should clearly detail how you will comply with ESRC’s published
+                  - link "Data Sharing Policy" [ref=e682] [cursor=pointer]:
+                    - /url: /publications/esrc-research-data-policy/
+                  - text: ", which includes detailed guidance notes."
+                - paragraph [ref=e683]: If you are not generating new data as part of your grant application, you are not required to complete this section. Please enter ‘N/A’ in the text box, mark this section as complete and move to the next question.
+                - paragraph [ref=e684]: UKRI recognises the importance of research data quality and provenance. Research data generated by UKRI-funded research must be well-managed by the grant holder to enable their data to be exploited to the maximum potential for further research.
+                - paragraph [ref=e685]: "Using the text box below you should:"
+                - list [ref=e686]:
+                  - listitem [ref=e687]:
+                    - text: describe how you will
+                    - link "publish your research findings" [ref=e688] [cursor=pointer]:
+                      - /url: /manage-your-award/publishing-your-research-findings/#contents-list
+                    - text: ","
+                  - listitem [ref=e689]:
+                    - text: demonstrate that you comply with ESRC’s Research Data Policy and
+                    - link "ESRC Framework for Research Ethics" [ref=e690] [cursor=pointer]:
+                      - /url: /councils/esrc/guidance-for-applicants/research-ethics-guidance/
+                    - text: . This should include confirmation that existing datasets have been reviewed and why currently available datasets are inadequate for the proposed research. You should cover any legal and ethical considerations of collecting, releasing or storing the data, including consent, confidentiality, anonymisation, security and other ethical issues
+                  - listitem [ref=e691]:
+                    - text: explain how data collected, generated or acquired through the proposed research (such as primary input into research and first order results of that research) will be managed, including planning for the research through the life cycle of the award until data is accepted for archiving by the UK Data Service (UKDS). See
+                    - link "the importance of managing and sharing data" [ref=e692] [cursor=pointer]:
+                      - /url: https://ukdataservice.ac.uk/learning-hub/research-data-management/
+                    - text: on the UKDS website for further information. Detailed advice on what assessors are looking for in your response can also be found on the
+                    - link "UKDS site" [ref=e693] [cursor=pointer]:
+                      - /url: https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/esrc-data-management-plan-and-policy/
+                    - text: . We expect you to provide a summary of the points provided
+                  - listitem [ref=e694]: critically consider any challenges to data sharing (e.g., copyright or data confidentiality), with possible solutions discussed to optimise data sharing. Most data collected, generated or acquired as a result of economic and social research can be successfully archived and shared. However, some research data are more sensitive than others. It is a responsibility of the grant holders to consider all issues related to confidentiality, ethics, security and copyright before initiating the research
+                - paragraph [ref=e695]: "Word count: 500"
+                - 'heading "Section: Ethics and Responsible Research and Innovation (RRI)" [level=4] [ref=e696]'
+                - paragraph [ref=e697]: "Question: What are the ethical or RRI implications and issues relating to the proposed work? If you do not think that the proposed work raises any ethical or RRI issues, explain why."
+                - heading "What the assessors are looking for in your response" [level=5] [ref=e698]
+                - paragraph [ref=e699]: Using the text box, demonstrate that you have identified and evaluated the relevant ethical or responsible research and innovation considerations, and how you will manage them.
+                - paragraph [ref=e700]:
+                  - text: All proposals have to comply with the
+                  - link "ESRC Framework for Research Ethics" [ref=e701] [cursor=pointer]:
+                    - /url: /councils/esrc/guidance-for-applicants/research-ethics-guidance/
+                  - text: which includes guidance for applicants and links to related web resources.
+                - paragraph [ref=e702]: All necessary ethical approvals must be in place before the project commences, but do not need to have been secured at the time of application.
+                - paragraph [ref=e703]: If you are generating new data as part of your project, you should complete the Data Management question and should cover ethical considerations relating to data in your response.
+                - paragraph [ref=e704]: If you are not generating new data and have not completed the Data Management question you should address any legal or ethical considerations relating to your use of data here.
+                - paragraph [ref=e705]: "Additional sub-questions (to be answered only if appropriate) relating to research involving:"
+                - list [ref=e706]:
+                  - listitem [ref=e707]: human participants
+                  - listitem [ref=e708]: genetically modified organisms
+                - paragraph [ref=e709]: "Word count: 500"
+                - 'heading "Section: Resources and cost justification" [level=4] [ref=e710]'
+                - paragraph [ref=e711]: "Question: What will you need to deliver your proposed work and how much will it cost?"
+                - heading "What the assessors are looking for in your response" [level=5] [ref=e712]
+                - paragraph [ref=e713]: "Use the resources and cost summary table to enter the full costs. Include high-level costs only, not a breakdown of individual items. Use the justification text box to demonstrate how the resources you anticipate needing for your proposed work:"
+                - list [ref=e714]:
+                  - listitem [ref=e715]: are comprehensive, appropriate, and justified
+                  - listitem [ref=e716]: represent the optimal use of resources to achieve the intended outcomes
+                  - listitem [ref=e717]: maximise potential outcomes and impacts
+                - paragraph [ref=e718]:
+                  - text: This section should not simply be a list of the resources requested, as this will already be given in the costs table. Costings should be justified on the basis of
+                  - link "full economic costs (FEC)" [ref=e719] [cursor=pointer]:
+                    - /url: /councils/epsrc/guidance-for-applicants/costs-you-can-apply-for/principles-of-full-economic-costing-fec/
+                  - text: of the project, not just on the costs expected from UKRI. For some items we do not expect you to justify the monetary value, rather the type of resource, such as amount of time or type of staff requested.
+                - paragraph [ref=e720]: Where you do not provide adequate justification for a resource, we may deduct it from any funding awarded.
+                - paragraph [ref=e721]: "You should explain:"
+                - list [ref=e722]:
+                  - listitem [ref=e723]: support for activities to either increase impact, for public engagement, knowledge exchange or to support responsible innovation
+                  - listitem [ref=e724]: support for access to facilities, infrastructure or procurement of equipment
+                  - listitem [ref=e725]: support for preserving, long-term storage, or sharing of data
+                  - listitem [ref=e726]: support from your organisation or partner organisations and how that enhances value for money
+                  - listitem [ref=e727]: support for activities outsourced to a third party (such as consultancy or social surveys)
+                  - listitem [ref=e728]: support for project co-leads under ESRC’s international, business and third sector eligibility policies
+                - paragraph [ref=e729]:
+                  - text: For detailed guidance on eligible costs please see the
+                  - link "ESRC Research Funding Guide" [ref=e730] [cursor=pointer]:
+                    - /url: /publications/esrc-research-funding-guide/
+                  - text: .
+                - paragraph [ref=e731]: "Word count: 1,000"
+            - generic [ref=e161]:
+              - heading "How we will assess your application" [level=2] [ref=e163] [cursor=pointer]:
+                - button "How we will assess your application" [expanded] [ref=e164]
+              - generic "How we will assess your application" [ref=e732]:
+                - heading "Assessment process" [level=3] [ref=e733]
+                - paragraph [ref=e734]: We will assess your application using the following process.
+                - heading "Peer Review" [level=4] [ref=e735]
+                - paragraph [ref=e736]: Following eligibility checks, we will invite experts to review your application independently against the specified criteria for this opportunity.
+                - paragraph [ref=e737]: Applications are sent to three reviewers. Sometimes more reviewers will be approached depending on the nature of the project.
+                - paragraph [ref=e738]: Applicants to opportunities offered through the new Funding Service will not be able to nominate reviewers for their applications. Expert reviewers will continue to be selected by research councils.
+                - paragraph [ref=e739]: We are monitoring the requirement for applicant-nominated reviewers as we review policies and processes as part of the continued development of the new UKRI Funding Service.
+                - heading "Application sift and applicant response" [level=4] [ref=e740]
+                - paragraph [ref=e741]: Applications receiving sufficiently supportive reviewers’ comments (average score of 4.5 or above on a one to six scale) will be invited to respond to reviewers’ comments. You will be given 14 calendar days to provide a response or ten working days if longer. Applications with an average score below 4.5 will normally be rejected at this stage.
+                - heading "Panel" [level=4] [ref=e742]
+                - paragraph [ref=e743]: Following peer review, we will invite peers to collectively review your application against the criteria and rank it alongside other applications after which the panel will make a funding recommendation.
+                - paragraph [ref=e744]: "In making a funding recommendation, the panel will also seek to ensure a balanced portfolio of awards across the three thematic areas of the priority. These are:"
+                - list [ref=e745]:
+                  - listitem [ref=e746]: sustainable economic growth and innovation
+                  - listitem [ref=e747]: health inequalities
+                  - listitem [ref=e748]: community connectedness
+                - heading "Timescale" [level=4] [ref=e749]
+                - paragraph [ref=e750]: We aim to complete the assessment process by May 2024.
+                - heading "Principles of assessment" [level=3] [ref=e751]
+                - paragraph [ref=e752]:
+                  - text: We support the San Francisco
+                  - link "declaration on research assessment (DORA)" [ref=e753] [cursor=pointer]:
+                    - /url: https://sfdora.org/read/
+                  - text: and recognise the relationship between research assessment and research integrity.
+                - paragraph [ref=e754]:
+                  - text: Find out about the
+                  - link "UKRI Principles of Assessment and Decision Making" [ref=e755] [cursor=pointer]:
+                    - /url: /publications/ukri-principles-of-assessment-and-decision-making/
+                  - text: .
+                - paragraph [ref=e756]: We reserve the right to modify the assessment process as needed.
+                - heading "Assessment criteria" [level=3] [ref=e757]
+                - paragraph [ref=e758]: The criteria we will assess your application against are Vision, Approach, Applicant and team capability to deliver, Resources and cost justification, Ethics and Responsible Research and Innovation (RRI) listed under the ‘Questions and criteria’ heading in the ‘How to apply’ section.
+            - generic [ref=e166]:
+              - heading "Contact details" [level=2] [ref=e168] [cursor=pointer]:
+                - button "Contact details" [expanded] [ref=e169]
+              - generic "Contact details" [ref=e759]:
+                - heading "Get help with your application" [level=3] [ref=e760]
+                - paragraph [ref=e761]: For help on costings and writing your application, contact your research office. Allow enough time for your organisation’s submission process.
+                - heading "Ask about this funding opportunity" [level=3] [ref=e762]
+                - paragraph [ref=e763]:
+                  - text: "Email:"
+                  - link "support@funding-service.ukri.org" [ref=e764] [cursor=pointer]:
+                    - /url: mailto:support@funding-service.ukri.org
+                - paragraph [ref=e765]: "Phone: 01793 547490"
+                - paragraph [ref=e766]: Our phone lines are open Monday-Thursday 8:30am to 5:00pm and Friday 8:30am to 4:30pm
+                - heading "Questions about eligibility" [level=3] [ref=e767]
+                - paragraph [ref=e768]:
+                  - text: Read UKRI’s
+                  - link "research organisation" [ref=e769] [cursor=pointer]:
+                    - /url: /apply-for-funding/before-you-apply/check-if-you-are-eligible-for-research-and-innovation-funding/eligibility-as-an-organisation/#contents-list
+                  - text: and
+                  - link "applicant" [ref=e770] [cursor=pointer]:
+                    - /url: /apply-for-funding/before-you-apply/check-if-you-are-eligible-for-research-and-innovation-funding/eligibility-as-an-individual/
+                  - text: eligibility guidance.
+                - heading "Sensitive information" [level=3] [ref=e771]
+                - paragraph [ref=e772]:
+                  - text: If you, or a key team member, need to tell us something you wish to remain confidential, email the Funding Service helpdesk on
+                  - link "support@funding-service.ukri.org" [ref=e773] [cursor=pointer]:
+                    - /url: mailto:support@funding-service.ukri.org
+                  - text: ". You must include in the subject line: UKRI Creating Opportunities Trial Accelerator Fund, sensitive info, Funding Service application number"
+                - paragraph [ref=e774]: "Typical examples of confidential information include:"
+                - list [ref=e775]:
+                  - listitem [ref=e776]: applicant is unavailable until a certain date (for example due to parental leave)
+                  - listitem [ref=e777]: declaration of interest
+                  - listitem [ref=e778]: additional information about eligibility to apply that would not be appropriately shared in the Applicant and team capability section
+                  - listitem [ref=e779]: conflict of interest for UKRI to consider in reviewer or panel participant selection
+                  - listitem [ref=e780]: the application is an invited resubmission (please include reference number of original submission and a brief overview of changes made)
+                - paragraph [ref=e781]:
+                  - text: For information about how UKRI handles personal data, see
+                  - link "UKRI’s privacy notice" [ref=e782] [cursor=pointer]:
+                    - /url: /about-us/privacy-notice/
+                  - text: .
+            - generic [ref=e171]:
+              - heading "Additional info" [level=2] [ref=e173] [cursor=pointer]:
+                - button "Additional info" [expanded] [ref=e174]
+              - generic "Additional info" [ref=e783]:
+                - heading "Background" [level=3] [ref=e784]
+                - paragraph [ref=e785]:
+                  - text: “Creating Opportunities, Improving Outcomes” is one of five strategic themes set out in UKRI’s Strategy,
+                  - link "Transforming Tomorrow Together 2022 to 2027" [ref=e786] [cursor=pointer]:
+                    - /url: /publications/ukri-strategy-2022-to-2027/
+                  - text: . The theme addresses the causes and effects of place-based disparities and aims to identify empowering new solutions that promote prosperity and improve outcomes for people and communities across the UK.
+                - paragraph [ref=e787]: Investments made under the theme are intended to develop the capacity of the research and innovation system to work at a local and national level in testing approaches that accelerate prosperity and support the scaling of effective practices.
+                - paragraph [ref=e788]: The theme is led by the ESRC’s Executive Chair, supported by a programme board made up of representatives from across UKRI’s research councils.
+                - paragraph [ref=e789]: For the purposes of this funding opportunity, research trials are defined as studies in which participants (people, organisations, places etc.) receive specific interventions in accordance with a research plan or protocol that allows for the effectiveness of that intervention to be understood. The funders are particularly interested in the use of randomised controlled trials and quasi-experimental methods to understand the effectiveness of different interventions. However, in some contexts, other approaches such as observational studies or theory-based evaluations may be more appropriate.
+                - paragraph [ref=e790]:
+                  - text: In developing this funding opportunity, the funders have drawn on the experience of the Cabinet Office-administered
+                  - link "Evaluation Accelerator Fund" [ref=e791] [cursor=pointer]:
+                    - /url: https://www.gov.uk/government/publications/evaluation-accelerator-fund
+                  - text: that was announced by the chancellor in the autumn 2021 budget.
+                - heading "Supporting links" [level=3] [ref=e792]
+                - paragraph [ref=e793]: "If applying to use experimental approaches to evaluate public health interventions, applicants are encouraged to make use of the following resources:"
+                - list [ref=e794]:
+                  - listitem [ref=e795]:
+                    - link "MRC policy on registration and publication of clinical trials and public health intervention studies" [ref=e796] [cursor=pointer]:
+                      - /url: /publications/open-research-data-from-clinical-trials-and-public-health-intervention-studies/
+                  - listitem [ref=e797]:
+                    - text: "RSC:"
+                    - link "MRC Regulatory Support Centre" [ref=e798] [cursor=pointer]:
+                      - /url: /councils/mrc/facilities-and-resources/find-an-mrc-facility-or-resource/mrc-regulatory-support-centre/
+                  - listitem [ref=e799]:
+                    - link "TMRP resources" [ref=e800] [cursor=pointer]:
+                      - /url: https://www.methodologyhubs.mrc.ac.uk/advice/network-guidance/
+                  - listitem [ref=e801]:
+                    - text: "HRA:"
+                    - link "Increasing the diversity of people taking part in research" [ref=e802] [cursor=pointer]:
+                      - /url: https://www.hra.nhs.uk/planning-and-improving-research/best-practice/increasing-diversity-people-taking-part-research/
+                  - listitem [ref=e803]:
+                    - text: "NIHR:"
+                    - link "Innovations in Clinical Trial Design and Delivery for the Under-served (INCLUDE) | NIHR" [ref=e804] [cursor=pointer]:
+                      - /url: https://www.nihr.ac.uk/documents/improving-inclusion-of-under-served-groups-in-clinical-research-guidance-from-include-project/25435
+                - paragraph [ref=e805]:
+                  - text: The above is not an exhaustive list and will depend on the thematic remit of your proposed trial. For example, the Education Endowment Foundation (EEF) also provides evaluation guidance and resources,
+                  - link "Evaluation guidance and resources | EEF (educationendowmentfoundation.org.uk)" [ref=e806] [cursor=pointer]:
+                    - /url: https://educationendowmentfoundation.org.uk/projects-and-evaluation/evaluation/evaluation-guidance-and-resources
+                  - text: ", for those undertaking randomised control trials and other evaluations in schools."
+                - heading "Global Talent visa" [level=3] [ref=e807]
+                - paragraph [ref=e808]:
+                  - text: Fellowship holders are eligible for a
+                  - link "Global Talent visa" [ref=e809] [cursor=pointer]:
+                    - /url: /what-we-offer/international-funding/get-funding-and-visas-to-do-research-in-the-uk/
+                  - text: under the ‘exceptional promise’ category for future research leaders.
+                - heading "Research disruption due to COVID-19" [level=3] [ref=e810]
+                - paragraph [ref=e811]: "We recognise that the COVID-19 pandemic has caused major interruptions and disruptions across our communities. We are committed to ensuring that individual applicants and their wider team, including partners and networks, are not penalised for any disruption to their career, such as:"
+                - list [ref=e812]:
+                  - listitem [ref=e813]: breaks and delays
+                  - listitem [ref=e814]: disruptive working patterns and conditions
+                  - listitem [ref=e815]: the loss of ongoing work
+                  - listitem [ref=e816]: role changes that may have been caused by the pandemic
+                - paragraph [ref=e817]: Reviewers and panel members will be advised to consider the unequal impacts that COVID-19 related disruption might have had on the capability to deliver and career development of those individuals included in the application. They will be asked to consider the capability of the applicant and their wider team to deliver the research they are proposing.
+                - paragraph [ref=e818]: Where disruptions have occurred, you can highlight this within your application if you wish, but there is no requirement to detail the specific circumstances that caused the disruption.
+                - heading "Supporting documents" [level=3] [ref=e819]
+                - paragraph [ref=e820]:
+                  - link "EIA relevant to opportunity (PDF, 284KB)" [ref=e821] [cursor=pointer]:
+                    - /url: /wp-content/uploads/2023/06/ESRC-130623-Trial-Accelerator-Fund-Call-2023-Equality-Impact-Assessment.pdf
+        - complementary [ref=e176]:
+          - generic [ref=e177]:
+            - heading "Print and download options" [level=2] [ref=e178]
+            - list [ref=e179]:
+              - listitem [ref=e180]:
+                - img "icon-printer" [ref=e182]
+                - link "Print this guidance or save as PDF" [ref=e186] [cursor=pointer]:
+                  - /url: javascript:window.print()
+          - generic [ref=e187]:
+            - heading "Guidance on good research" [level=2] [ref=e188]
+            - list [ref=e190]:
+              - listitem [ref=e191]:
+                - link "Good research resource hub" [ref=e192] [cursor=pointer]:
+                  - /url: /manage-your-award/good-research-resource-hub/
+          - generic [ref=e193]:
+            - heading "Related content" [level=2] [ref=e194]
+            - list [ref=e195]:
+              - listitem [ref=e196]:
+                - link "ESRC Research Funding Guide" [ref=e197] [cursor=pointer]:
+                  - /url: /publications/esrc-research-funding-guide/
+              - listitem [ref=e198]:
+                - link "ESRC Guidance for Applicants" [ref=e199] [cursor=pointer]:
+                  - /url: /councils/esrc/guidance-for-applicants/
+              - listitem [ref=e200]:
+                - link "UKRI policies and standards" [ref=e201] [cursor=pointer]:
+                  - /url: /about-us/policies-standards-and-data/corporate-policies-and-standards/
+              - listitem [ref=e202]:
+                - link "Accessibility statement for the UKRI Funding Service" [ref=e203] [cursor=pointer]:
+                  - /url: /about-us/accessibility-statement/ukri-funding-service-accessibility-statement/
+          - generic [ref=e204]:
+            - heading "Related opportunities" [level=2] [ref=e205]
+            - list [ref=e206]:
+              - listitem [ref=e207]:
+                - link "UKRI Creating Opportunities Evaluation Development Fund" [ref=e208] [cursor=pointer]:
+                  - /url: https://www.ukri.org/opportunity/creating-opportunities-evaluation-development-fund/
+          - generic [ref=e209]:
+            - heading "This funding opportunity is part of:" [level=2] [ref=e210]
+            - list [ref=e211]:
+              - listitem [ref=e212]:
+                - 'link "Creating opportunities, improving outcomes: strategic theme" [ref=e213] [cursor=pointer]':
+                  - /url: https://www.ukri.org/what-we-do/browse-our-areas-of-investment-and-support/creating-opportunities-and-improving-outcomes/
+          - generic [ref=e215]:
+            - heading "Subscribe to UKRI emails" [level=2] [ref=e216]
+            - paragraph [ref=e217]: Keep up to date with funding, news and events, and a weekly newsletter.
+            - button "Subscribe to UKRI emails" [ref=e218] [cursor=pointer]: Subscribe
+  - region "Site announcements" [ref=e219]:
+    - paragraph [ref=e223]:
+      - text: "This is the website for UKRI: our seven research councils, Research England and Innovate UK. Let us know if you have"
+      - link "feedback" [ref=e224] [cursor=pointer]:
+        - /url: /feedback/
+      - text: or would like to
+      - link "help improve our online products and services" [ref=e225] [cursor=pointer]:
+        - /url: /user-research/
+      - text: .
+  - contentinfo [ref=e226]:
+    - generic [ref=e227]:
+      - generic [ref=e228]:
+        - generic [ref=e229]:
+          - heading "Our councils" [level=2] [ref=e230]
+          - list [ref=e232]:
+            - listitem [ref=e233]:
+              - link "AHRC" [ref=e234] [cursor=pointer]:
+                - /url: /councils/ahrc/
+            - listitem [ref=e235]:
+              - link "BBSRC" [ref=e236] [cursor=pointer]:
+                - /url: /councils/bbsrc/
+            - listitem [ref=e237]:
+              - link "ESRC" [ref=e238] [cursor=pointer]:
+                - /url: /councils/esrc/
+            - listitem [ref=e239]:
+              - link "EPSRC" [ref=e240] [cursor=pointer]:
+                - /url: /councils/epsrc/
+            - listitem [ref=e241]:
+              - link "Innovate UK" [ref=e242] [cursor=pointer]:
+                - /url: /councils/innovate-uk/
+            - listitem [ref=e243]:
+              - link "MRC" [ref=e244] [cursor=pointer]:
+                - /url: /councils/mrc/
+            - listitem [ref=e245]:
+              - link "NERC" [ref=e246] [cursor=pointer]:
+                - /url: /councils/nerc/
+            - listitem [ref=e247]:
+              - link "Research England" [ref=e248] [cursor=pointer]:
+                - /url: /councils/research-england/
+            - listitem [ref=e249]:
+              - link "STFC" [ref=e250] [cursor=pointer]:
+                - /url: /councils/stfc/
+        - generic [ref=e251]:
+          - heading "Useful links" [level=2] [ref=e252]
+          - list [ref=e254]:
+            - listitem [ref=e255]:
+              - link "Accessibility statement" [ref=e256] [cursor=pointer]:
+                - /url: https://www.ukri.org/who-we-are/accessibility-statement/
+            - listitem [ref=e257]:
+              - link "Contact us" [ref=e258] [cursor=pointer]:
+                - /url: https://www.ukri.org/who-we-are/contact-us/
+            - listitem [ref=e259]:
+              - link "Cymraeg" [ref=e260] [cursor=pointer]:
+                - /url: https://www.ukri.org/who-we-are/amdanom-ni/
+            - listitem [ref=e261]:
+              - link "Freedom of information" [ref=e262] [cursor=pointer]:
+                - /url: https://www.ukri.org/who-we-are/contact-us/freedom-of-information-request/
+            - listitem [ref=e263]:
+              - link "Modern slavery and human trafficking" [ref=e264] [cursor=pointer]:
+                - /url: https://www.ukri.org/who-we-are/policies-standards-and-data/modern-slavery-and-human-trafficking/
+            - listitem [ref=e265]:
+              - 'link "Work for us: jobs and advisory roles" [ref=e266] [cursor=pointer]':
+                - /url: https://www.ukri.org/who-we-are/work-for-us/
+        - generic [ref=e267]:
+          - heading "Connect with us" [level=2] [ref=e268]
+          - list [ref=e270]:
+            - listitem [ref=e271]:
+              - link "UKRI LinkedIn" [ref=e272] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/uk-research-and-innovation/
+            - listitem [ref=e273]:
+              - link "UKRI for researchers YouTube" [ref=e274] [cursor=pointer]:
+                - /url: https://www.youtube.com/@ukriforresearchers
+            - listitem [ref=e275]:
+              - link "UKRI stories YouTube" [ref=e276] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UCkf0YxotdFTrxDKcfTV5tiA
+            - listitem [ref=e277]:
+              - link "UKRI Instagram" [ref=e278] [cursor=pointer]:
+                - /url: https://www.instagram.com/weareukri/
+            - listitem [ref=e279]:
+              - link "UKRI Facebook" [ref=e280] [cursor=pointer]:
+                - /url: https://www.facebook.com/weareUKRI
+            - listitem [ref=e281]:
+              - link "UKRI Medium" [ref=e282] [cursor=pointer]:
+                - /url: https://medium.com/@UKRI
+      - separator [ref=e283]
+      - generic [ref=e285]:
+        - heading "Support links" [level=2] [ref=e286]
+        - generic [ref=e287]: © 2026 Copyright UKRI
+        - list [ref=e289]:
+          - listitem [ref=e290]:
+            - link "Cookie policy" [ref=e291] [cursor=pointer]:
+              - /url: https://www.ukri.org/who-we-are/cookie-policy/
+          - listitem [ref=e292]:
+            - link "Privacy notice" [ref=e293] [cursor=pointer]:
+              - /url: https://www.ukri.org/who-we-are/privacy-notice/
+          - listitem [ref=e294]:
+            - link "Terms of use" [ref=e295] [cursor=pointer]:
+              - /url: https://www.ukri.org/who-we-are/terms-of-use/
+          - listitem [ref=e296]:
+            - link "National Fraud Initiative" [ref=e297] [cursor=pointer]:
+              - /url: https://www.ukri.org/who-we-are/our-involvement-in-the-national-fraud-initiative/

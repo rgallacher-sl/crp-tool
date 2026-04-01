@@ -1,8 +1,8 @@
 <div class="processing-page">
   @if (isTransientFailure) {
-    <div class="connectivity-banner" role="alert">
+    <div class="connectivity-banner" role="status">
       <span class="material-symbols-outlined connectivity-banner-icon" aria-hidden="true">wifi_off</span>
-      <p class="connectivity-banner-message">{{ errorMessage }}</p>
+      <p class="connectivity-banner-message">Connection lost — retrying</p>
     </div>
   }
 
@@ -30,25 +30,18 @@
       }
 
       <ol class="stepper" aria-label="Processing steps">
-        @for (step of visibleSteps; track step.label; let last = $last) {
+        @for (step of visibleSteps; track step.label) {
           <li class="stepper-step" [attr.data-state]="step.state">
-            <div class="stepper-indicator">
-              <div class="stepper-circle">
-                @if (step.state === 'active') {
-                  <span class="step-spinner"></span>
-                } @else if (step.state === 'done') {
-                  <span class="material-symbols-outlined" aria-hidden="true">check</span>
-                } @else if (step.state === 'error') {
-                  <span class="material-symbols-outlined" aria-hidden="true">close</span>
-                }
-              </div>
-              @if (!last) {
-                <div class="stepper-line"></div>
+            <div class="stepper-icon" aria-hidden="true">
+              @if (step.state === 'active') {
+                <span class="step-spinner"></span>
+              } @else if (step.state === 'done') {
+                <span class="material-symbols-outlined step-icon-done">check_circle</span>
+              } @else if (step.state === 'error') {
+                <span class="material-symbols-outlined step-icon-error">cancel</span>
               }
             </div>
-            <div class="stepper-body">
-              <span class="stepper-label">{{ step.label }}</span>
-            </div>
+            <span class="stepper-label">{{ step.label }}</span>
           </li>
         }
       </ol>

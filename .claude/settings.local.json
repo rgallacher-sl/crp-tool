@@ -53,7 +53,21 @@
       "WebFetch(domain:atlassian.design)",
       "Bash(npm audit:*)",
       "Bash(npm list:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "WebFetch(domain:www.ukri.org)",
+      "mcp__playwright__browser_snapshot",
+      "WebFetch(domain:designsystem.gov.scot)",
+      "WebFetch(domain:www.patternfly.org)",
+      "WebFetch(domain:skyline.benevity.org)",
+      "WebFetch(domain:ux.redhat.com)",
+      "WebFetch(domain:www.nngroup.com)",
+      "WebFetch(domain:m2.material.io)",
+      "WebFetch(domain:m3.material.io)",
+      "WebFetch(domain:www.uxmatters.com)",
+      "WebFetch(domain:m1.material.io)",
+      "WebFetch(domain:www.w3.org)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:www.tpgi.com)"
     ]
   }
 }

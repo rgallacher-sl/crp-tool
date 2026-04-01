@@ -18,7 +18,7 @@ export class ProcessingComponent implements OnInit, OnDestroy {
   isFailed = false;
   errorMessage = '';
   showCancelConfirm = false;
-  steps: Array<{ label: string; state: 'pending' | 'active' | 'done' | 'error' }> = [];
+  steps: Array<{ label: string; state: 'pending' | 'active' | 'done' | 'error' | 'stalled' }> = [];
   notifyState: 'idle' | 'granted' | 'denied' | 'unsupported' = 'idle';
   private tickId: ReturnType<typeof setInterval> | null = null;
   private plan: Array<{ status: Assessment['status']; durationMs: number }> = [];
@@ -37,14 +37,18 @@ export class ProcessingComponent implements OnInit, OnDestroy {
     private cdr: ChangeDetectorRef,
   ) {}
 
+  isRetrying = false;
+  private retryCount = 0;
+  private nextRetryAt: number | null = null;
+  private readonly retryDelays = [2000, 4000, 8000];
   private readonly transientCodes = new Set(['network_error', 'upload_failed', 'storage_failed']);
 
   get isTransientFailure(): boolean {
-    return this.isFailed && this.transientCodes.has(this.assessment?.errorCode ?? '');
+    return this.isRetrying;
   }
 
   get isTerminalFailure(): boolean {
-    return this.isFailed && !this.transientCodes.has(this.assessment?.errorCode ?? '');
+    return this.isFailed;
   }
 
   get visibleSteps() {
@@ -95,6 +99,9 @@ export class ProcessingComponent implements OnInit, OnDestroy {
   retry(): void {
     if (!this.assessment) return;
     this.isFailed = false;
+    this.isRetrying = false;
+    this.retryCount = 0;
+    this.nextRetryAt = null;
     this.errorMessage = '';
     this.assessmentService.restartProcessing(this.assessment.id, false);
     this.updateViewState();
@@ -151,6 +158,9 @@ export class ProcessingComponent implements OnInit, OnDestroy {
 
   private startStepSequence(): void {
     if (!this.assessment) return;
+    this.isRetrying = false;
+    this.retryCount = 0;
+    this.nextRetryAt = null;
     this.clearTicker();
 
     this.plan = this.buildPlan(this.assessment);
@@ -177,7 +187,36 @@ export class ProcessingComponent implements OnInit, OnDestroy {
     if (!this.assessment) return;
     const elapsed = Date.now() - this.startedAt;
 
+    if (this.isRetrying) {
+      if (this.nextRetryAt !== null && Date.now() >= this.nextRetryAt) {
+        if (this.retryCount >= this.retryDelays.length) {
+          this.isRetrying = false;
+          this.assessmentService.markFailed(
+            this.assessment.id,
+            this.failureScenario!.code,
+            this.failureScenario!.message,
+            this.failureScenario!.step,
+          );
+          this.refreshAssessment();
+          this.updateViewState();
+          this.clearTicker();
+        } else {
+          this.nextRetryAt = Date.now() + this.retryDelays[this.retryCount];
+          this.retryCount++;
+        }
+      }
+      return;
+    }
+
     if (this.failureAtMs !== null && elapsed >= this.failureAtMs) {
+      const isTransient = this.transientCodes.has(this.failureScenario!.code);
+      if (isTransient) {
+        this.isRetrying = true;
+        this.retryCount = 1;
+        this.nextRetryAt = Date.now() + this.retryDelays[0];
+        this.steps = this.buildSteps(this.assessment);
+        return;
+      }
       this.assessmentService.markFailed(
         this.assessment.id,
         this.failureScenario!.code,
@@ -283,7 +322,7 @@ export class ProcessingComponent implements OnInit, OnDestroy {
     }
   }
 
-  private buildSteps(assessment: Assessment): Array<{ label: string; state: 'pending' | 'active' | 'done' | 'error' }> {
+  private buildSteps(assessment: Assessment): Array<{ label: string; state: 'pending' | 'active' | 'done' | 'error' | 'stalled' }> {
     const fetchLabel = assessment.documentSource === 'link' ? 'Fetching document' : 'Uploading document';
     const fetchKey  = assessment.documentSource === 'link' ? 'fetching' : 'uploading';
 
@@ -294,11 +333,16 @@ export class ProcessingComponent implements OnInit, OnDestroy {
     ];
   }
 
-  private getStepState(assessment: Assessment, key: string): 'pending' | 'active' | 'done' | 'error' {
+  private getStepState(assessment: Assessment, key: string): 'pending' | 'active' | 'done' | 'error' | 'stalled' {
+    if (this.isRetrying && this.failureScenario) {
+      const thisKey = this.mapFailureStep(key);
+      if (thisKey === this.failureScenario.step) return 'active';
+    }
+
     if (assessment.status === 'failed') {
       const isTransient = this.transientCodes.has(assessment.errorCode ?? '');
       const thisKey = this.mapFailureStep(key);
-      if (thisKey === assessment.failedStep) return isTransient ? 'active' : 'error';
+      if (thisKey === assessment.failedStep) return isTransient ? 'stalled' : 'error';
       const order = ['upload', 'extraction', 'semantic', 'validation', 'persistence'];
       return order.indexOf(thisKey) < order.indexOf(assessment.failedStep ?? '') ? 'done' : 'pending';
     }
@@ -311,7 +355,12 @@ export class ProcessingComponent implements OnInit, OnDestroy {
     return 'pending';
   }
 
-  private getPpnStepState(assessment: Assessment): 'pending' | 'active' | 'done' | 'error' {
+  private getPpnStepState(assessment: Assessment): 'pending' | 'active' | 'done' | 'error' | 'stalled' {
+    if (this.isRetrying && this.failureScenario) {
+      const ppnFailures = ['semantic', 'validation', 'persistence'];
+      if (ppnFailures.includes(this.failureScenario.step)) return 'active';
+    }
+
     if (assessment.status === 'failed') {
       const isTransient = this.transientCodes.has(assessment.errorCode ?? '');
       const ppnFailures = ['semantic', 'validation', 'persistence'];
