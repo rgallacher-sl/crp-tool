@@ -1,0 +1,913 @@
+- generic [ref=e2]:
+  - region
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=e6]:
+      - heading "Navigation Menu" [level=2] [ref=e7]
+      - generic [ref=e8]:
+        - link "Homepage" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - img [ref=e11]
+        - generic [ref=e13]:
+          - navigation "Global" [ref=e16]:
+            - list [ref=e17]:
+              - listitem [ref=e18]:
+                - button "Platform" [ref=e20] [cursor=pointer]:
+                  - text: Platform
+                  - img [ref=e21]
+              - listitem [ref=e23]:
+                - button "Solutions" [ref=e25] [cursor=pointer]:
+                  - text: Solutions
+                  - img [ref=e26]
+              - listitem [ref=e28]:
+                - button "Resources" [ref=e30] [cursor=pointer]:
+                  - text: Resources
+                  - img [ref=e31]
+              - listitem [ref=e33]:
+                - button "Open Source" [ref=e35] [cursor=pointer]:
+                  - text: Open Source
+                  - img [ref=e36]
+              - listitem [ref=e38]:
+                - button "Enterprise" [ref=e40] [cursor=pointer]:
+                  - text: Enterprise
+                  - img [ref=e41]
+              - listitem [ref=e43]:
+                - link "Pricing" [ref=e44] [cursor=pointer]:
+                  - /url: https://github.com/pricing
+                  - generic [ref=e45]: Pricing
+          - generic [ref=e46]:
+            - button "Search or jump to…" [ref=e49] [cursor=pointer]:
+              - img [ref=e51]
+            - link "Sign in" [ref=e54] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Factions%3Fquery%3Dis%253Afailure
+            - link "Sign up" [ref=e55] [cursor=pointer]:
+              - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Factions%2Findex&source=header-repo&source_repo=vercel%2Fnext.js
+            - button "Appearance settings" [ref=e58] [cursor=pointer]:
+              - img
+  - main [ref=e62]:
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e66]:
+          - img [ref=e67]
+          - link "vercel" [ref=e70] [cursor=pointer]:
+            - /url: /vercel
+          - generic [ref=e71]: /
+          - strong [ref=e72]:
+            - link "next.js" [ref=e73] [cursor=pointer]:
+              - /url: /vercel/next.js
+          - generic [ref=e74]: Public
+        - generic [ref=e75]:
+          - list:
+            - listitem [ref=e76]:
+              - link "You must be signed in to change notification settings" [ref=e77] [cursor=pointer]:
+                - /url: /login?return_to=%2Fvercel%2Fnext.js
+                - img [ref=e78]
+                - text: Notifications
+            - listitem [ref=e80]:
+              - link "Fork 30.7k" [ref=e81] [cursor=pointer]:
+                - /url: /login?return_to=%2Fvercel%2Fnext.js
+                - img [ref=e82]
+                - text: Fork
+                - generic "30,748" [ref=e84]: 30.7k
+            - listitem [ref=e85]:
+              - link "You must be signed in to star a repository" [ref=e87] [cursor=pointer]:
+                - /url: /login?return_to=%2Fvercel%2Fnext.js
+                - img [ref=e88]
+                - text: Star
+                - generic "138572 users starred this repository" [ref=e90]: 139k
+      - navigation "Repository" [ref=e91]:
+        - list [ref=e92]:
+          - listitem [ref=e93]:
+            - link "Code" [ref=e94] [cursor=pointer]:
+              - /url: /vercel/next.js
+              - img [ref=e95]
+              - generic [ref=e97]: Code
+          - listitem [ref=e98]:
+            - link "Issues 2.1k" [ref=e99] [cursor=pointer]:
+              - /url: /vercel/next.js/issues
+              - img [ref=e100]
+              - generic [ref=e103]: Issues
+              - generic "2,097" [ref=e104]: 2.1k
+          - listitem [ref=e105]:
+            - link "Pull requests 1.5k" [ref=e106] [cursor=pointer]:
+              - /url: /vercel/next.js/pulls
+              - img [ref=e107]
+              - generic [ref=e109]: Pull requests
+              - generic "1,546" [ref=e110]: 1.5k
+          - listitem [ref=e111]:
+            - link "Discussions" [ref=e112] [cursor=pointer]:
+              - /url: /vercel/next.js/discussions
+              - img [ref=e113]
+              - generic [ref=e115]: Discussions
+          - listitem [ref=e116]:
+            - link "Actions" [ref=e117] [cursor=pointer]:
+              - /url: /vercel/next.js/actions
+              - img [ref=e118]
+              - generic [ref=e120]: Actions
+          - listitem [ref=e121]:
+            - link "Security and quality 36" [ref=e122] [cursor=pointer]:
+              - /url: /vercel/next.js/security
+              - img [ref=e123]
+              - generic [ref=e125]: Security and quality
+              - generic "36" [ref=e126]
+          - listitem [ref=e127]:
+            - link "Insights" [ref=e128] [cursor=pointer]:
+              - /url: /vercel/next.js/pulse
+              - img [ref=e129]
+              - generic [ref=e131]: Insights
+    - generic [ref=e133]:
+      - 'heading "Actions: vercel/next.js" [level=1] [ref=e134]'
+      - generic [ref=e137]:
+        - generic [ref=e138]:
+          - heading "Actions" [level=2] [ref=e140]
+          - navigation "Actions Workflows" [ref=e144]:
+            - list [ref=e146]:
+              - listitem [ref=e147]:
+                - link "All workflows" [ref=e148] [cursor=pointer]:
+                  - /url: /vercel/next.js/actions?query=is%3Afailure
+                  - generic [ref=e149]: All workflows
+              - listitem [ref=e150]
+              - listitem [ref=e151]:
+                - generic [ref=e154]:
+                  - list "Workflows" [ref=e155]:
+                    - listitem [ref=e156]:
+                      - link "build-and-deploy" [ref=e157] [cursor=pointer]:
+                        - /url: /vercel/next.js/actions/workflows/build_and_deploy.yml?query=is%3Afailure
+                        - generic [ref=e158]: build-and-deploy
+                        - generic:
+                          - img "pinned"
+                    - listitem [ref=e159]:
+                      - link "build-and-test" [ref=e160] [cursor=pointer]:
+                        - /url: /vercel/next.js/actions/workflows/build_and_test.yml?query=is%3Afailure
+                        - generic [ref=e161]: build-and-test
+                        - generic:
+                          - img "pinned"
+                    - listitem [ref=e162]:
+                      - link "Create Release Branch" [ref=e163] [cursor=pointer]:
+                        - /url: /vercel/next.js/actions/workflows/create_release_branch.yml?query=is%3Afailure
+                        - generic [ref=e164]: Create Release Branch
+                        - generic:
+                          - img "pinned"
+                    - listitem [ref=e165]:
+                      - link "test-e2e-deploy-release" [ref=e166] [cursor=pointer]:
+                        - /url: /vercel/next.js/actions/workflows/test_e2e_deploy_release.yml?query=is%3Afailure
+                        - generic [ref=e167]: test-e2e-deploy-release
+                        - generic:
+                          - img "pinned"
+                    - listitem [ref=e168]:
+                      - link "Trigger Release" [ref=e169] [cursor=pointer]:
+                        - /url: /vercel/next.js/actions/workflows/trigger_release.yml?query=is%3Afailure
+                        - generic [ref=e170]: Trigger Release
+                        - generic:
+                          - img "pinned"
+                    - listitem [ref=e171]:
+                      - link ".github/workflows/main.yml" [ref=e172] [cursor=pointer]:
+                        - /url: /vercel/next.js/actions/workflows/main.yml?query=is%3Afailure
+                        - generic [ref=e173]: .github/workflows/main.yml
+                    - listitem [ref=e174]:
+                      - link ".github/workflows/release-rspack-binding.yml" [ref=e175] [cursor=pointer]:
+                        - /url: /vercel/next.js/actions/workflows/release-rspack-binding.yml?query=is%3Afailure
+                        - generic [ref=e176]: .github/workflows/release-rspack-binding.yml
+                    - listitem [ref=e177]:
+                      - link "Benchmark" [ref=e178] [cursor=pointer]:
+                        - /url: /vercel/next.js/actions/workflows/bench.yml?query=is%3Afailure
+                        - generic [ref=e179]: Benchmark
+                    - listitem [ref=e180]:
+                      - link "Build Reusable" [ref=e181] [cursor=pointer]:
+                        - /url: /vercel/next.js/actions/workflows/build_reusable.yml?query=is%3Afailure
+                        - generic [ref=e182]: Build Reusable
+                    - listitem [ref=e183]:
+                      - link "Build, test, and deploy" [ref=e184] [cursor=pointer]:
+                        - /url: /vercel/next.js/actions/workflows/build_test_deploy.yml?query=is%3Afailure
+                        - generic [ref=e185]: Build, test, and deploy
+                  - button "Show more workflows..." [ref=e187] [cursor=pointer]:
+                    - generic [ref=e188]: Show more workflows...
+              - listitem [ref=e189]
+              - listitem [ref=e190]:
+                - generic [ref=e193]:
+                  - heading "Management" [level=3] [ref=e195]
+                  - list "Management" [ref=e196]:
+                    - listitem [ref=e197]:
+                      - link "Caches" [ref=e198] [cursor=pointer]:
+                        - /url: /vercel/next.js/actions/caches
+                        - generic:
+                          - img
+                        - generic [ref=e199]: Caches
+                    - listitem [ref=e200]:
+                      - link "Deployments" [ref=e201] [cursor=pointer]:
+                        - /url: /vercel/next.js/deployments
+                        - generic:
+                          - img
+                        - generic [ref=e202]: Deployments
+                        - generic:
+                          - img
+        - generic [ref=e205]:
+          - generic [ref=e206]:
+            - generic [ref=e207]:
+              - heading "All workflows" [level=2] [ref=e209]:
+                - generic [ref=e211]: All workflows
+              - search [ref=e215]:
+                - combobox "Filter workflow runs" [ref=e216]: is:failure
+                - img
+                - button "Clear filters" [ref=e217] [cursor=pointer]:
+                  - img [ref=e218]
+            - generic [ref=e220]: Showing runs from all workflows
+          - generic [ref=e221]:
+            - generic [ref=e222]:
+              - strong [ref=e225]: 44,125 workflow run results
+              - generic [ref=e226]:
+                - button "Event" [ref=e229] [cursor=pointer]:
+                  - generic [ref=e231]: Event
+                  - generic:
+                    - img
+                - button "Status" [ref=e234] [cursor=pointer]:
+                  - generic [ref=e236]: Status
+                  - generic:
+                    - img
+                - button "Branch" [ref=e239] [cursor=pointer]:
+                  - generic [ref=e241]: Branch
+                  - generic:
+                    - img
+                - button "Actor" [ref=e244] [cursor=pointer]:
+                  - generic [ref=e246]: Actor
+                  - generic:
+                    - img
+            - generic [ref=e247]:
+              - generic [ref=e249]:
+                - generic [ref=e250]:
+                  - 'link "failed: Run 132759 of Generate Stats. fix(turbopack): skip preset-env when browserslist-rs returns no versions" [ref=e251] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23892018900
+                    - img "failed:" [ref=e253]
+                    - generic [ref=e255]: "fix(turbopack): skip preset-env when browserslist-rs returns no versions"
+                  - generic [ref=e256]:
+                    - text: "Generate Stats #132759:"
+                    - generic [ref=e257]:
+                      - text: Pull request
+                      - link "#92244" [ref=e258] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/92244
+                      - text: synchronize by
+                      - link "mhdsdt" [ref=e259] [cursor=pointer]:
+                        - /url: /mhdsdt
+                - link "mhdsdt:fix/turbopack-browserslist-unknown-versions" [ref=e261] [cursor=pointer]:
+                  - /url: /mhdsdt/next.js/tree/refs/heads/fix/turbopack-browserslist-unknown-versions
+                - generic [ref=e263]:
+                  - generic [ref=e264]:
+                    - generic [ref=e265]:
+                      - img [ref=e267]
+                      - generic "Apr 2, 2026, 9:42 AM GMT+1" [ref=e269]: 31 minutes ago
+                    - generic [ref=e270]:
+                      - img "Run duration" [ref=e271]
+                      - text: 40s
+                  - group [ref=e274]:
+                    - generic "Show options" [ref=e275] [cursor=pointer]:
+                      - img "Show options" [ref=e276]
+              - generic [ref=e279]:
+                - generic [ref=e280]:
+                  - 'link "failed: Run 20157 of Turbopack Benchmark. fix(turbopack): skip preset-env when browserslist-rs returns no versions" [ref=e281] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23892018896
+                    - img "failed:" [ref=e283]
+                    - generic [ref=e285]: "fix(turbopack): skip preset-env when browserslist-rs returns no versions"
+                  - generic [ref=e286]:
+                    - text: "Turbopack Benchmark #20157:"
+                    - generic [ref=e287]:
+                      - text: Pull request
+                      - link "#92244" [ref=e288] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/92244
+                      - text: synchronize by
+                      - link "mhdsdt" [ref=e289] [cursor=pointer]:
+                        - /url: /mhdsdt
+                - link "mhdsdt:fix/turbopack-browserslist-unknown-versions" [ref=e291] [cursor=pointer]:
+                  - /url: /mhdsdt/next.js/tree/refs/heads/fix/turbopack-browserslist-unknown-versions
+                - generic [ref=e293]:
+                  - generic [ref=e294]:
+                    - generic [ref=e295]:
+                      - img [ref=e297]
+                      - generic "Apr 2, 2026, 9:42 AM GMT+1" [ref=e299]: 31 minutes ago
+                    - generic [ref=e300]:
+                      - img "Run duration" [ref=e301]
+                      - text: 34s
+                  - group [ref=e304]:
+                    - generic "Show options" [ref=e305] [cursor=pointer]:
+                      - img "Show options" [ref=e306]
+              - generic [ref=e309]:
+                - generic [ref=e310]:
+                  - 'link "failed: Run 103440 of build-and-test. fix(turbopack): skip preset-env when browserslist-rs returns no versions" [ref=e311] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23892018975
+                    - img "failed:" [ref=e313]
+                    - generic [ref=e315]: "fix(turbopack): skip preset-env when browserslist-rs returns no versions"
+                  - generic [ref=e316]:
+                    - text: "build-and-test #103440:"
+                    - generic [ref=e317]:
+                      - text: Pull request
+                      - link "#92244" [ref=e318] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/92244
+                      - text: synchronize by
+                      - link "mhdsdt" [ref=e319] [cursor=pointer]:
+                        - /url: /mhdsdt
+                - link "mhdsdt:fix/turbopack-browserslist-unknown-versions" [ref=e321] [cursor=pointer]:
+                  - /url: /mhdsdt/next.js/tree/refs/heads/fix/turbopack-browserslist-unknown-versions
+                - generic [ref=e323]:
+                  - generic [ref=e324]:
+                    - generic [ref=e325]:
+                      - img [ref=e327]
+                      - generic "Apr 2, 2026, 9:42 AM GMT+1" [ref=e329]: 31 minutes ago
+                    - generic [ref=e330]:
+                      - img "Run duration" [ref=e331]
+                      - text: 1m 32s
+                  - group [ref=e334]:
+                    - generic "Show options" [ref=e335] [cursor=pointer]:
+                      - img "Show options" [ref=e336]
+              - generic [ref=e339]:
+                - generic [ref=e340]:
+                  - 'link "failed: Run 104492 of build-and-deploy. fix(turbopack): skip preset-env when browserslist-rs returns no versions" [ref=e341] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23892018879
+                    - img "failed:" [ref=e343]
+                    - generic [ref=e345]: "fix(turbopack): skip preset-env when browserslist-rs returns no versions"
+                  - generic [ref=e346]:
+                    - text: "build-and-deploy #104492:"
+                    - generic [ref=e347]:
+                      - text: Pull request
+                      - link "#92244" [ref=e348] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/92244
+                      - text: synchronize by
+                      - link "mhdsdt" [ref=e349] [cursor=pointer]:
+                        - /url: /mhdsdt
+                - link "mhdsdt:fix/turbopack-browserslist-unknown-versions" [ref=e351] [cursor=pointer]:
+                  - /url: /mhdsdt/next.js/tree/refs/heads/fix/turbopack-browserslist-unknown-versions
+                - generic [ref=e353]:
+                  - generic [ref=e354]:
+                    - generic [ref=e355]:
+                      - img [ref=e357]
+                      - generic "Apr 2, 2026, 9:42 AM GMT+1" [ref=e359]: 31 minutes ago
+                    - generic [ref=e360]:
+                      - img "Run duration" [ref=e361]
+                      - text: 3m 45s
+                  - group [ref=e364]:
+                    - generic "Show options" [ref=e365] [cursor=pointer]:
+                      - img "Show options" [ref=e366]
+              - generic [ref=e369]:
+                - generic [ref=e370]:
+                  - 'link "failed: Run 132757 of Generate Stats. chore: upgrade next-rspack to rspack 2 rc" [ref=e371] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23891428513
+                    - img "failed:" [ref=e373]
+                    - generic [ref=e375]: "chore: upgrade next-rspack to rspack 2 rc"
+                  - generic [ref=e376]:
+                    - text: "Generate Stats #132757:"
+                    - generic [ref=e377]:
+                      - text: Pull request
+                      - link "#92222" [ref=e378] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/92222
+                      - text: synchronize by
+                      - link "SyMind" [ref=e379] [cursor=pointer]:
+                        - /url: /SyMind
+                - link "SyMind:symind/chore-upgrade-rspack-2-0-rc" [ref=e381] [cursor=pointer]:
+                  - /url: /SyMind/next.js/tree/refs/heads/symind/chore-upgrade-rspack-2-0-rc
+                - generic [ref=e383]:
+                  - generic [ref=e384]:
+                    - generic [ref=e385]:
+                      - img [ref=e387]
+                      - generic "Apr 2, 2026, 9:27 AM GMT+1" [ref=e389]: 46 minutes ago
+                    - generic [ref=e390]:
+                      - img "Run duration" [ref=e391]
+                      - text: 5m 26s
+                  - group [ref=e394]:
+                    - generic "Show options" [ref=e395] [cursor=pointer]:
+                      - img "Show options" [ref=e396]
+              - generic [ref=e399]:
+                - generic [ref=e400]:
+                  - 'link "failed: Run 103438 of build-and-test. chore: upgrade next-rspack to rspack 2 rc" [ref=e401] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23891428525
+                    - img "failed:" [ref=e403]
+                    - generic [ref=e405]: "chore: upgrade next-rspack to rspack 2 rc"
+                  - generic [ref=e406]:
+                    - text: "build-and-test #103438:"
+                    - generic [ref=e407]:
+                      - text: Pull request
+                      - link "#92222" [ref=e408] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/92222
+                      - text: synchronize by
+                      - link "SyMind" [ref=e409] [cursor=pointer]:
+                        - /url: /SyMind
+                - link "SyMind:symind/chore-upgrade-rspack-2-0-rc" [ref=e411] [cursor=pointer]:
+                  - /url: /SyMind/next.js/tree/refs/heads/symind/chore-upgrade-rspack-2-0-rc
+                - generic [ref=e413]:
+                  - generic [ref=e414]:
+                    - generic [ref=e415]:
+                      - img [ref=e417]
+                      - generic "Apr 2, 2026, 9:27 AM GMT+1" [ref=e419]: 46 minutes ago
+                    - generic [ref=e420]:
+                      - img "Run duration" [ref=e421]
+                      - text: 16m 52s
+                  - group [ref=e424]:
+                    - generic "Show options" [ref=e425] [cursor=pointer]:
+                      - img "Show options" [ref=e426]
+              - generic [ref=e429]:
+                - generic [ref=e430]:
+                  - 'link "failed: Run 6780 of Test examples." [ref=e431] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23891263482
+                    - img "failed:" [ref=e433]
+                    - generic [ref=e435]: Test examples
+                  - generic [ref=e436]: "Test examples #6780: Scheduled"
+                - link "canary" [ref=e438] [cursor=pointer]:
+                  - /url: /vercel/next.js/tree/refs/heads/canary
+                - generic [ref=e440]:
+                  - generic [ref=e441]:
+                    - generic [ref=e442]:
+                      - img [ref=e444]
+                      - generic "Apr 2, 2026, 9:22 AM GMT+1" [ref=e446]: 51 minutes ago
+                    - generic [ref=e447]:
+                      - img "Run duration" [ref=e448]
+                      - text: 4m 24s
+                  - group [ref=e451]:
+                    - generic "Show options" [ref=e452] [cursor=pointer]:
+                      - img "Show options" [ref=e453]
+              - generic [ref=e456]:
+                - generic [ref=e457]:
+                  - 'link "failed: Run 132756 of Generate Stats. fix(turbopack): skip preset-env when browserslist-rs returns no versions" [ref=e458] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23890454228
+                    - img "failed:" [ref=e460]
+                    - generic [ref=e462]: "fix(turbopack): skip preset-env when browserslist-rs returns no versions"
+                  - generic [ref=e463]:
+                    - text: "Generate Stats #132756:"
+                    - generic [ref=e464]:
+                      - text: Pull request
+                      - link "#92244" [ref=e465] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/92244
+                      - text: opened by
+                      - link "mhdsdt" [ref=e466] [cursor=pointer]:
+                        - /url: /mhdsdt
+                - link "mhdsdt:fix/turbopack-browserslist-unknown-versions" [ref=e468] [cursor=pointer]:
+                  - /url: /mhdsdt/next.js/tree/refs/heads/fix/turbopack-browserslist-unknown-versions
+                - generic [ref=e470]:
+                  - generic [ref=e471]:
+                    - generic [ref=e472]:
+                      - img [ref=e474]
+                      - generic "Apr 2, 2026, 9:01 AM GMT+1" [ref=e476]: Today at 9:01 AM
+                    - generic [ref=e477]:
+                      - img "Run duration" [ref=e478]
+                      - text: 43s
+                  - group [ref=e481]:
+                    - generic "Show options" [ref=e482] [cursor=pointer]:
+                      - img "Show options" [ref=e483]
+              - generic [ref=e486]:
+                - generic [ref=e487]:
+                  - 'link "failed: Run 103437 of build-and-test. fix(turbopack): skip preset-env when browserslist-rs returns no versions" [ref=e488] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23890454233
+                    - img "failed:" [ref=e490]
+                    - generic [ref=e492]: "fix(turbopack): skip preset-env when browserslist-rs returns no versions"
+                  - generic [ref=e493]:
+                    - text: "build-and-test #103437:"
+                    - generic [ref=e494]:
+                      - text: Pull request
+                      - link "#92244" [ref=e495] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/92244
+                      - text: opened by
+                      - link "mhdsdt" [ref=e496] [cursor=pointer]:
+                        - /url: /mhdsdt
+                - link "mhdsdt:fix/turbopack-browserslist-unknown-versions" [ref=e498] [cursor=pointer]:
+                  - /url: /mhdsdt/next.js/tree/refs/heads/fix/turbopack-browserslist-unknown-versions
+                - generic [ref=e500]:
+                  - generic [ref=e501]:
+                    - generic [ref=e502]:
+                      - img [ref=e504]
+                      - generic "Apr 2, 2026, 9:01 AM GMT+1" [ref=e506]: Today at 9:01 AM
+                    - generic [ref=e507]:
+                      - img "Run duration" [ref=e508]
+                      - text: 1m 31s
+                  - group [ref=e511]:
+                    - generic "Show options" [ref=e512] [cursor=pointer]:
+                      - img "Show options" [ref=e513]
+              - generic [ref=e516]:
+                - generic [ref=e517]:
+                  - 'link "failed: Run 104489 of build-and-deploy. fix(turbopack): skip preset-env when browserslist-rs returns no versions" [ref=e518] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23890454229
+                    - img "failed:" [ref=e520]
+                    - generic [ref=e522]: "fix(turbopack): skip preset-env when browserslist-rs returns no versions"
+                  - generic [ref=e523]:
+                    - text: "build-and-deploy #104489:"
+                    - generic [ref=e524]:
+                      - text: Pull request
+                      - link "#92244" [ref=e525] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/92244
+                      - text: opened by
+                      - link "mhdsdt" [ref=e526] [cursor=pointer]:
+                        - /url: /mhdsdt
+                - link "mhdsdt:fix/turbopack-browserslist-unknown-versions" [ref=e528] [cursor=pointer]:
+                  - /url: /mhdsdt/next.js/tree/refs/heads/fix/turbopack-browserslist-unknown-versions
+                - generic [ref=e530]:
+                  - generic [ref=e531]:
+                    - generic [ref=e532]:
+                      - img [ref=e534]
+                      - generic "Apr 2, 2026, 9:01 AM GMT+1" [ref=e536]: Today at 9:01 AM
+                    - generic [ref=e537]:
+                      - img "Run duration" [ref=e538]
+                      - text: 3m 51s
+                  - group [ref=e541]:
+                    - generic "Show options" [ref=e542] [cursor=pointer]:
+                      - img "Show options" [ref=e543]
+              - generic [ref=e546]:
+                - generic [ref=e547]:
+                  - 'link "failed: Run 437 of Update Rspack test manifest." [ref=e548] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23889202293
+                    - img "failed:" [ref=e550]
+                    - generic [ref=e552]: Update Rspack test manifest
+                  - generic [ref=e553]: "Update Rspack test manifest #437: Scheduled"
+                - link "canary" [ref=e555] [cursor=pointer]:
+                  - /url: /vercel/next.js/tree/refs/heads/canary
+                - generic [ref=e557]:
+                  - generic [ref=e558]:
+                    - generic [ref=e559]:
+                      - img [ref=e561]
+                      - generic "Apr 2, 2026, 8:26 AM GMT+1" [ref=e563]: Today at 8:26 AM
+                    - generic [ref=e564]:
+                      - img "Run duration" [ref=e565]
+                      - text: 1m 1s
+                  - group [ref=e568]:
+                    - generic "Show options" [ref=e569] [cursor=pointer]:
+                      - img "Show options" [ref=e570]
+              - generic [ref=e573]:
+                - generic [ref=e574]:
+                  - 'link "failed: Run 132755 of Generate Stats. fix(app-router): isolate route cache by parallel slot" [ref=e575] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23887631098
+                    - img "failed:" [ref=e577]
+                    - generic [ref=e579]: "fix(app-router): isolate route cache by parallel slot"
+                  - generic [ref=e580]:
+                    - text: "Generate Stats #132755:"
+                    - generic [ref=e581]:
+                      - text: Pull request
+                      - link "#92239" [ref=e582] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/92239
+                      - text: synchronize by
+                      - link "pedrolucas167" [ref=e583] [cursor=pointer]:
+                        - /url: /pedrolucas167
+                - link "pedrolucas167:fix/app-router-route-groups-prefetch-cache" [ref=e585] [cursor=pointer]:
+                  - /url: /pedrolucas167/next.js/tree/refs/heads/fix/app-router-route-groups-prefetch-cache
+                - generic [ref=e587]:
+                  - generic [ref=e588]:
+                    - generic [ref=e589]:
+                      - img [ref=e591]
+                      - generic "Apr 2, 2026, 7:39 AM GMT+1" [ref=e593]: Today at 7:39 AM
+                    - generic [ref=e594]:
+                      - img "Run duration" [ref=e595]
+                      - text: 35s
+                  - group [ref=e598]:
+                    - generic "Show options" [ref=e599] [cursor=pointer]:
+                      - img "Show options" [ref=e600]
+              - generic [ref=e603]:
+                - generic [ref=e604]:
+                  - 'link "failed: Run 103436 of build-and-test. fix(app-router): isolate route cache by parallel slot" [ref=e605] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23887631109
+                    - img "failed:" [ref=e607]
+                    - generic [ref=e609]: "fix(app-router): isolate route cache by parallel slot"
+                  - generic [ref=e610]:
+                    - text: "build-and-test #103436:"
+                    - generic [ref=e611]:
+                      - text: Pull request
+                      - link "#92239" [ref=e612] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/92239
+                      - text: synchronize by
+                      - link "pedrolucas167" [ref=e613] [cursor=pointer]:
+                        - /url: /pedrolucas167
+                - link "pedrolucas167:fix/app-router-route-groups-prefetch-cache" [ref=e615] [cursor=pointer]:
+                  - /url: /pedrolucas167/next.js/tree/refs/heads/fix/app-router-route-groups-prefetch-cache
+                - generic [ref=e617]:
+                  - generic [ref=e618]:
+                    - generic [ref=e619]:
+                      - img [ref=e621]
+                      - generic "Apr 2, 2026, 7:39 AM GMT+1" [ref=e623]: Today at 7:39 AM
+                    - generic [ref=e624]:
+                      - img "Run duration" [ref=e625]
+                      - text: 1m 40s
+                  - group [ref=e628]:
+                    - generic "Show options" [ref=e629] [cursor=pointer]:
+                      - img "Show options" [ref=e630]
+              - generic [ref=e633]:
+                - generic [ref=e634]:
+                  - 'link "failed: Run 104488 of build-and-deploy. fix(app-router): isolate route cache by parallel slot" [ref=e635] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23887631128
+                    - img "failed:" [ref=e637]
+                    - generic [ref=e639]: "fix(app-router): isolate route cache by parallel slot"
+                  - generic [ref=e640]:
+                    - text: "build-and-deploy #104488:"
+                    - generic [ref=e641]:
+                      - text: Pull request
+                      - link "#92239" [ref=e642] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/92239
+                      - text: synchronize by
+                      - link "pedrolucas167" [ref=e643] [cursor=pointer]:
+                        - /url: /pedrolucas167
+                - link "pedrolucas167:fix/app-router-route-groups-prefetch-cache" [ref=e645] [cursor=pointer]:
+                  - /url: /pedrolucas167/next.js/tree/refs/heads/fix/app-router-route-groups-prefetch-cache
+                - generic [ref=e647]:
+                  - generic [ref=e648]:
+                    - generic [ref=e649]:
+                      - img [ref=e651]
+                      - generic "Apr 2, 2026, 7:39 AM GMT+1" [ref=e653]: Today at 7:39 AM
+                    - generic [ref=e654]:
+                      - img "Run duration" [ref=e655]
+                      - text: 3m 55s
+                  - group [ref=e658]:
+                    - generic "Show options" [ref=e659] [cursor=pointer]:
+                      - img "Show options" [ref=e660]
+              - generic [ref=e663]:
+                - generic [ref=e664]:
+                  - 'link "failed: Run 132754 of Generate Stats. fix(app-router): isolate route cache by parallel slot" [ref=e665] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23887588866
+                    - img "failed:" [ref=e667]
+                    - generic [ref=e669]: "fix(app-router): isolate route cache by parallel slot"
+                  - generic [ref=e670]:
+                    - text: "Generate Stats #132754:"
+                    - generic [ref=e671]:
+                      - text: Pull request
+                      - link "#92239" [ref=e672] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/92239
+                      - text: synchronize by
+                      - link "pedrolucas167" [ref=e673] [cursor=pointer]:
+                        - /url: /pedrolucas167
+                - link "pedrolucas167:fix/app-router-route-groups-prefetch-cache" [ref=e675] [cursor=pointer]:
+                  - /url: /pedrolucas167/next.js/tree/refs/heads/fix/app-router-route-groups-prefetch-cache
+                - generic [ref=e677]:
+                  - generic [ref=e678]:
+                    - generic [ref=e679]:
+                      - img [ref=e681]
+                      - generic "Apr 2, 2026, 7:38 AM GMT+1" [ref=e683]: Today at 7:38 AM
+                    - generic [ref=e684]:
+                      - img "Run duration" [ref=e685]
+                      - text: 32s
+                  - group [ref=e688]:
+                    - generic "Show options" [ref=e689] [cursor=pointer]:
+                      - img "Show options" [ref=e690]
+              - generic [ref=e693]:
+                - generic [ref=e694]:
+                  - 'link "failed: Run 780 of Turbopack Next.js production integration tests." [ref=e695] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23887469631
+                    - img "failed:" [ref=e697]
+                    - generic [ref=e699]: Turbopack Next.js production integration tests
+                  - generic [ref=e700]: "Turbopack Next.js production integration tests #780: Scheduled"
+                - link "canary" [ref=e702] [cursor=pointer]:
+                  - /url: /vercel/next.js/tree/refs/heads/canary
+                - generic [ref=e704]:
+                  - generic [ref=e705]:
+                    - generic [ref=e706]:
+                      - img [ref=e708]
+                      - generic "Apr 2, 2026, 7:34 AM GMT+1" [ref=e710]: Today at 7:34 AM
+                    - generic [ref=e711]:
+                      - img "Run duration" [ref=e712]
+                      - text: 15m 30s
+                  - group [ref=e715]:
+                    - generic "Show options" [ref=e716] [cursor=pointer]:
+                      - img "Show options" [ref=e717]
+              - generic [ref=e720]:
+                - generic [ref=e721]:
+                  - 'link "failed: Run 781 of Turbopack Next.js development integration tests." [ref=e722] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23887176234
+                    - img "failed:" [ref=e724]
+                    - generic [ref=e726]: Turbopack Next.js development integration tests
+                  - generic [ref=e727]: "Turbopack Next.js development integration tests #781: Scheduled"
+                - link "canary" [ref=e729] [cursor=pointer]:
+                  - /url: /vercel/next.js/tree/refs/heads/canary
+                - generic [ref=e731]:
+                  - generic [ref=e732]:
+                    - generic [ref=e733]:
+                      - img [ref=e735]
+                      - generic "Apr 2, 2026, 7:25 AM GMT+1" [ref=e737]: Today at 7:25 AM
+                    - generic [ref=e738]:
+                      - img "Run duration" [ref=e739]
+                      - text: 20m 22s
+                  - group [ref=e742]:
+                    - generic "Show options" [ref=e743] [cursor=pointer]:
+                      - img "Show options" [ref=e744]
+              - generic [ref=e747]:
+                - generic [ref=e748]:
+                  - 'link "failed: Run 103433 of build-and-test. use sorted inserts to improve builder performance" [ref=e749] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23886694423
+                    - img "failed:" [ref=e751]
+                    - generic [ref=e753]: use sorted inserts to improve builder performance
+                  - generic [ref=e754]:
+                    - text: "build-and-test #103433:"
+                    - generic [ref=e755]:
+                      - text: Pull request
+                      - link "#91553" [ref=e756] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/91553
+                      - text: synchronize by
+                      - link "lukesandberg" [ref=e757] [cursor=pointer]:
+                        - /url: /lukesandberg
+                - link "sorted_insert" [ref=e759] [cursor=pointer]:
+                  - /url: /vercel/next.js/tree/refs/heads/sorted_insert
+                - generic [ref=e761]:
+                  - generic [ref=e762]:
+                    - generic [ref=e763]:
+                      - img [ref=e765]
+                      - generic "Apr 2, 2026, 7:09 AM GMT+1" [ref=e767]: Today at 7:09 AM
+                    - generic [ref=e768]:
+                      - img "Run duration" [ref=e769]
+                      - text: 35m 17s
+                  - group [ref=e772]:
+                    - generic "Show options" [ref=e773] [cursor=pointer]:
+                      - img "Show options" [ref=e774]
+              - generic [ref=e777]:
+                - generic [ref=e778]:
+                  - 'link "failed: Run 103431 of build-and-test. [turbopack] use zero copy qfilter deserialization" [ref=e779] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23886655025
+                    - img "failed:" [ref=e781]
+                    - generic [ref=e783]: "[turbopack] use zero copy qfilter deserialization"
+                  - generic [ref=e784]:
+                    - text: "build-and-test #103431:"
+                    - generic [ref=e785]:
+                      - text: Pull request
+                      - link "#90574" [ref=e786] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/90574
+                      - text: synchronize by
+                      - link "lukesandberg" [ref=e787] [cursor=pointer]:
+                        - /url: /lukesandberg
+                - link "filter_ref" [ref=e789] [cursor=pointer]:
+                  - /url: /vercel/next.js/tree/refs/heads/filter_ref
+                - generic [ref=e791]:
+                  - generic [ref=e792]:
+                    - generic [ref=e793]:
+                      - img [ref=e795]
+                      - generic "Apr 2, 2026, 7:08 AM GMT+1" [ref=e797]: Today at 7:08 AM
+                    - generic [ref=e798]:
+                      - img "Run duration" [ref=e799]
+                      - text: 35m 11s
+                  - group [ref=e802]:
+                    - generic "Show options" [ref=e803] [cursor=pointer]:
+                      - img "Show options" [ref=e804]
+              - generic [ref=e807]:
+                - generic [ref=e808]:
+                  - 'link "failed: Run 103429 of build-and-test. Optimize how we track data for persistence" [ref=e809] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23886549644
+                    - img "failed:" [ref=e811]
+                    - generic [ref=e813]: Optimize how we track data for persistence
+                  - generic [ref=e814]:
+                    - text: "build-and-test #103429:"
+                    - generic [ref=e815]:
+                      - text: Pull request
+                      - link "#89370" [ref=e816] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/89370
+                      - text: synchronize by
+                      - link "lukesandberg" [ref=e817] [cursor=pointer]:
+                        - /url: /lukesandberg
+                - link "optimized_change_tracking" [ref=e819] [cursor=pointer]:
+                  - /url: /vercel/next.js/tree/refs/heads/optimized_change_tracking
+                - generic [ref=e821]:
+                  - generic [ref=e822]:
+                    - generic [ref=e823]:
+                      - img [ref=e825]
+                      - generic "Apr 2, 2026, 7:04 AM GMT+1" [ref=e827]: Today at 7:04 AM
+                    - generic [ref=e828]:
+                      - img "Run duration" [ref=e829]
+                      - text: 39m 31s
+                  - group [ref=e832]:
+                    - generic "Show options" [ref=e833] [cursor=pointer]:
+                      - img "Show options" [ref=e834]
+              - generic [ref=e837]:
+                - generic [ref=e838]:
+                  - 'link "failed: Run 477 of Rspack Next.js development integration tests." [ref=e839] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23885650195
+                    - img "failed:" [ref=e841]
+                    - generic [ref=e843]: Rspack Next.js development integration tests
+                  - generic [ref=e844]: "Rspack Next.js development integration tests #477: Scheduled"
+                - link "canary" [ref=e846] [cursor=pointer]:
+                  - /url: /vercel/next.js/tree/refs/heads/canary
+                - generic [ref=e848]:
+                  - generic [ref=e849]:
+                    - generic [ref=e850]:
+                      - img [ref=e852]
+                      - generic "Apr 2, 2026, 6:33 AM GMT+1" [ref=e854]: Today at 6:33 AM
+                    - generic [ref=e855]:
+                      - img "Run duration" [ref=e856]
+                      - text: 41m 40s
+                  - group [ref=e859]:
+                    - generic "Show options" [ref=e860] [cursor=pointer]:
+                      - img "Show options" [ref=e861]
+              - generic [ref=e864]:
+                - generic [ref=e865]:
+                  - 'link "failed: Run 451 of Rspack Next.js production integration tests." [ref=e866] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23885572729
+                    - img "failed:" [ref=e868]
+                    - generic [ref=e870]: Rspack Next.js production integration tests
+                  - generic [ref=e871]: "Rspack Next.js production integration tests #451: Scheduled"
+                - link "canary" [ref=e873] [cursor=pointer]:
+                  - /url: /vercel/next.js/tree/refs/heads/canary
+                - generic [ref=e875]:
+                  - generic [ref=e876]:
+                    - generic [ref=e877]:
+                      - img [ref=e879]
+                      - generic "Apr 2, 2026, 6:31 AM GMT+1" [ref=e881]: Today at 6:31 AM
+                    - generic [ref=e882]:
+                      - img "Run duration" [ref=e883]
+                      - text: 1h 31m 37s
+                  - group [ref=e886]:
+                    - generic "Show options" [ref=e887] [cursor=pointer]:
+                      - img "Show options" [ref=e888]
+              - generic [ref=e891]:
+                - generic [ref=e892]:
+                  - 'link "failed: Run 132747 of Generate Stats. fix(app-router): isolate route cache by parallel slot" [ref=e893] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23885100024
+                    - img "failed:" [ref=e895]
+                    - generic [ref=e897]: "fix(app-router): isolate route cache by parallel slot"
+                  - generic [ref=e898]:
+                    - text: "Generate Stats #132747:"
+                    - generic [ref=e899]:
+                      - text: Pull request
+                      - link "#92239" [ref=e900] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/92239
+                      - text: opened by
+                      - link "pedrolucas167" [ref=e901] [cursor=pointer]:
+                        - /url: /pedrolucas167
+                - link "pedrolucas167:fix/app-router-route-groups-prefetch-cache" [ref=e903] [cursor=pointer]:
+                  - /url: /pedrolucas167/next.js/tree/refs/heads/fix/app-router-route-groups-prefetch-cache
+                - generic [ref=e905]:
+                  - generic [ref=e906]:
+                    - generic [ref=e907]:
+                      - img [ref=e909]
+                      - generic "Apr 2, 2026, 6:14 AM GMT+1" [ref=e911]: Today at 6:14 AM
+                    - generic [ref=e912]:
+                      - img "Run duration" [ref=e913]
+                      - text: 32s
+                  - group [ref=e916]:
+                    - generic "Show options" [ref=e917] [cursor=pointer]:
+                      - img "Show options" [ref=e918]
+              - generic [ref=e921]:
+                - generic [ref=e922]:
+                  - 'link "failed: Run 103428 of build-and-test. fix(app-router): isolate route cache by parallel slot" [ref=e923] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23885100038
+                    - img "failed:" [ref=e925]
+                    - generic [ref=e927]: "fix(app-router): isolate route cache by parallel slot"
+                  - generic [ref=e928]:
+                    - text: "build-and-test #103428:"
+                    - generic [ref=e929]:
+                      - text: Pull request
+                      - link "#92239" [ref=e930] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/92239
+                      - text: opened by
+                      - link "pedrolucas167" [ref=e931] [cursor=pointer]:
+                        - /url: /pedrolucas167
+                - link "pedrolucas167:fix/app-router-route-groups-prefetch-cache" [ref=e933] [cursor=pointer]:
+                  - /url: /pedrolucas167/next.js/tree/refs/heads/fix/app-router-route-groups-prefetch-cache
+                - generic [ref=e935]:
+                  - generic [ref=e936]:
+                    - generic [ref=e937]:
+                      - img [ref=e939]
+                      - generic "Apr 2, 2026, 6:14 AM GMT+1" [ref=e941]: Today at 6:14 AM
+                    - generic [ref=e942]:
+                      - img "Run duration" [ref=e943]
+                      - text: 1m 25s
+                  - group [ref=e946]:
+                    - generic "Show options" [ref=e947] [cursor=pointer]:
+                      - img "Show options" [ref=e948]
+              - generic [ref=e951]:
+                - generic [ref=e952]:
+                  - 'link "failed: Run 104476 of build-and-deploy. fix(app-router): isolate route cache by parallel slot" [ref=e953] [cursor=pointer]':
+                    - /url: /vercel/next.js/actions/runs/23885100022
+                    - img "failed:" [ref=e955]
+                    - generic [ref=e957]: "fix(app-router): isolate route cache by parallel slot"
+                  - generic [ref=e958]:
+                    - text: "build-and-deploy #104476:"
+                    - generic [ref=e959]:
+                      - text: Pull request
+                      - link "#92239" [ref=e960] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/92239
+                      - text: opened by
+                      - link "pedrolucas167" [ref=e961] [cursor=pointer]:
+                        - /url: /pedrolucas167
+                - link "pedrolucas167:fix/app-router-route-groups-prefetch-cache" [ref=e963] [cursor=pointer]:
+                  - /url: /pedrolucas167/next.js/tree/refs/heads/fix/app-router-route-groups-prefetch-cache
+                - generic [ref=e965]:
+                  - generic [ref=e966]:
+                    - generic [ref=e967]:
+                      - img [ref=e969]
+                      - generic "Apr 2, 2026, 6:14 AM GMT+1" [ref=e971]: Today at 6:14 AM
+                    - generic [ref=e972]:
+                      - img "Run duration" [ref=e973]
+                      - text: 3m 37s
+                  - group [ref=e976]:
+                    - generic "Show options" [ref=e977] [cursor=pointer]:
+                      - img "Show options" [ref=e978]
+          - navigation "Pagination" [ref=e982]:
+            - generic "Previous page" [ref=e983]: Previous
+            - emphasis [ref=e984] [cursor=pointer]: "1"
+            - link "Page 2" [ref=e985] [cursor=pointer]:
+              - /url: /vercel/next.js/actions?page=2&query=is%3Afailure
+              - text: "2"
+            - link "Page 3" [ref=e986] [cursor=pointer]:
+              - /url: /vercel/next.js/actions?page=3&query=is%3Afailure
+              - text: "3"
+            - link "Page 4" [ref=e987] [cursor=pointer]:
+              - /url: /vercel/next.js/actions?page=4&query=is%3Afailure
+              - text: "4"
+            - link "Page 5" [ref=e988] [cursor=pointer]:
+              - /url: /vercel/next.js/actions?page=5&query=is%3Afailure
+              - text: "5"
+            - generic [ref=e989]: …
+            - link "Page 1764" [ref=e990] [cursor=pointer]:
+              - /url: /vercel/next.js/actions?page=1764&query=is%3Afailure
+              - text: "1764"
+            - link "Page 1765" [ref=e991] [cursor=pointer]:
+              - /url: /vercel/next.js/actions?page=1765&query=is%3Afailure
+              - text: "1765"
+            - link "Next page" [ref=e992] [cursor=pointer]:
+              - /url: /vercel/next.js/actions?page=2&query=is%3Afailure
+              - text: Next

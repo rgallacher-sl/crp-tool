@@ -1,0 +1,652 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation "global" [ref=e3]:
+      - generic [ref=e4]:
+        - button "Close desktop version of navigation" [ref=e6] [cursor=pointer]:
+          - generic [ref=e7]:
+            - img
+        - link "Cloudscape Design System" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e12]: Cloudscape Design System
+      - generic [ref=e13]:
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - link "Get started" [ref=e16] [cursor=pointer]:
+              - /url: /get-started/
+          - listitem [ref=e17]:
+            - link "Foundation" [ref=e18] [cursor=pointer]:
+              - /url: /foundation/
+          - listitem [ref=e19]:
+            - link "Components" [ref=e20] [cursor=pointer]:
+              - /url: /components/
+          - listitem [ref=e21]:
+            - link "Patterns" [ref=e22] [cursor=pointer]:
+              - /url: /patterns/
+          - listitem [ref=e23]:
+            - link "Demos" [ref=e24] [cursor=pointer]:
+              - /url: /demos/
+          - listitem [ref=e25]:
+            - link "GitHub (opens new tab)" [ref=e26] [cursor=pointer]:
+              - /url: https://github.com/cloudscape-design/components
+              - text: GitHub
+              - img "(opens new tab)" [ref=e27]:
+                - generic [ref=e28]:
+                  - img
+        - button "Open search input" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - img
+      - button "Mode toggle" [ref=e35] [cursor=pointer]:
+        - generic [ref=e36]:
+          - img
+    - generic [ref=e37]:
+      - button "Mode toggle" [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - img
+      - generic [ref=e44]:
+        - navigation "Side navigation" [ref=e47]:
+          - button "Close side navigation" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]:
+              - img
+          - generic [ref=e52]:
+            - heading "Patterns" [level=2] [ref=e53]:
+              - link "Patterns" [ref=e54] [cursor=pointer]:
+                - /url: /patterns/
+                - generic [ref=e55]: Patterns
+            - generic [ref=e56]:
+              - list [ref=e57]:
+                - listitem [ref=e58]:
+                  - generic [ref=e59]:
+                    - heading "General" [level=3] [ref=e60]
+                    - list [ref=e61]:
+                      - listitem [ref=e62]:
+                        - generic [ref=e64] [cursor=pointer]:
+                          - button "Actions" [ref=e65]:
+                            - generic [ref=e66]:
+                              - img
+                          - link "Actions" [ref=e67]:
+                            - /url: /patterns/general/actions/
+                      - listitem [ref=e68]:
+                        - link "Announcing new features" [ref=e69] [cursor=pointer]:
+                          - /url: /patterns/general/announcing-new-features/
+                      - listitem [ref=e70]:
+                        - link "Announcing beta and preview features" [ref=e71] [cursor=pointer]:
+                          - /url: /patterns/general/announcing-beta-preview-features/
+                      - listitem [ref=e72]:
+                        - link "Communicating unsaved changes" [ref=e73] [cursor=pointer]:
+                          - /url: /patterns/general/unsaved-changes/
+                      - listitem [ref=e74]:
+                        - generic [ref=e76] [cursor=pointer]:
+                          - button "Data visualization" [ref=e77]:
+                            - generic [ref=e78]:
+                              - img
+                          - link "Data visualization" [ref=e79]:
+                            - /url: /patterns/general/data-vis/
+                      - listitem [ref=e80]:
+                        - link "Density settings" [ref=e81] [cursor=pointer]:
+                          - /url: /patterns/general/density-settings/
+                      - listitem [ref=e82]:
+                        - link "Disabled and read-only states" [ref=e83] [cursor=pointer]:
+                          - /url: /patterns/general/disabled-and-read-only-states/
+                      - listitem [ref=e84]:
+                        - link "Drag-and-drop" [ref=e85] [cursor=pointer]:
+                          - /url: /patterns/general/drag-and-drop/
+                      - listitem [ref=e86]:
+                        - generic [ref=e88] [cursor=pointer]:
+                          - button "Errors" [ref=e89]:
+                            - generic [ref=e90]:
+                              - img
+                          - link "Errors" [ref=e91]:
+                            - /url: /patterns/general/errors/
+                      - listitem [ref=e92]:
+                        - link "Empty states" [ref=e93] [cursor=pointer]:
+                          - /url: /patterns/general/empty-states/
+                      - listitem [ref=e94]:
+                        - link "Feedback mechanisms" [ref=e95] [cursor=pointer]:
+                          - /url: /patterns/general/user-feedback/
+                      - listitem [ref=e96]:
+                        - generic [ref=e98] [cursor=pointer]:
+                          - button "Filtering patterns" [ref=e99]:
+                            - generic [ref=e100]:
+                              - img
+                          - link "Filtering patterns" [ref=e101]:
+                            - /url: /patterns/general/filter-patterns/
+                      - listitem [ref=e102]:
+                        - link "Hero header" [ref=e103] [cursor=pointer]:
+                          - /url: /patterns/general/hero-header/
+                      - listitem [ref=e104]:
+                        - link "Help system" [ref=e105] [cursor=pointer]:
+                          - /url: /patterns/general/help-system/
+                      - listitem [ref=e106]:
+                        - link "Image magnifier" [ref=e107] [cursor=pointer]:
+                          - /url: /patterns/general/image-magnifier/
+                      - listitem [ref=e108]:
+                        - link "Loading and refreshing" [ref=e109] [cursor=pointer]:
+                          - /url: /patterns/general/loading-and-refreshing/
+                      - listitem [ref=e110]:
+                        - generic [ref=e112] [cursor=pointer]:
+                          - button "Onboarding" [ref=e113]:
+                            - generic [ref=e114]:
+                              - img
+                          - link "Onboarding" [ref=e115]:
+                            - /url: /patterns/general/onboarding/
+                      - listitem [ref=e116]:
+                        - link "Selection in forms" [ref=e117] [cursor=pointer]:
+                          - /url: /patterns/general/selection/
+                      - listitem [ref=e118]:
+                        - generic [ref=e120] [cursor=pointer]:
+                          - button "Service navigation" [ref=e121]:
+                            - generic [ref=e122]:
+                              - img
+                          - link "Service navigation" [ref=e123]:
+                            - /url: /patterns/general/service-navigation/
+                      - listitem [ref=e124]:
+                        - generic [ref=e126] [cursor=pointer]:
+                          - button "Service Dashboard" [ref=e127]:
+                            - generic [ref=e128]:
+                              - img
+                          - link "Service Dashboard" [ref=e129]:
+                            - /url: /patterns/general/service-dashboard/
+                      - listitem [ref=e130]:
+                        - link "Secondary panels" [ref=e131] [cursor=pointer]:
+                          - /url: /patterns/general/secondary-panels/
+                      - listitem [ref=e132]:
+                        - link "Timestamps" [ref=e133] [cursor=pointer]:
+                          - /url: /patterns/general/timestamps/
+                      - listitem [ref=e134]:
+                        - link "User feedback" [ref=e135] [cursor=pointer]:
+                          - /url: /patterns/general/collect-user-feedback/
+              - separator [ref=e138]
+              - list [ref=e139]:
+                - listitem [ref=e140]:
+                  - generic [ref=e141]:
+                    - heading "Generative AI patterns" [level=3] [ref=e142]
+                    - list [ref=e143]:
+                      - listitem [ref=e144]:
+                        - link "Pattern abstraction" [ref=e145] [cursor=pointer]:
+                          - /url: /patterns/genai/genai-patterns/
+                      - listitem [ref=e146]:
+                        - link "Generative AI chat" [ref=e147] [cursor=pointer]:
+                          - /url: /patterns/genai/generative-AI-chat/
+                      - listitem [ref=e148]:
+                        - link "Ingress" [ref=e149] [cursor=pointer]:
+                          - /url: /patterns/genai/ingress/
+                      - listitem [ref=e150]:
+                        - link "Generative AI output label" [ref=e151] [cursor=pointer]:
+                          - /url: /patterns/genai/output-label/
+                      - listitem [ref=e152]:
+                        - link "Generative AI loading states" [ref=e153] [cursor=pointer]:
+                          - /url: /patterns/genai/genai-loading-states/
+                      - listitem [ref=e154]:
+                        - link "Progressive steps" [ref=e155] [cursor=pointer]:
+                          - /url: /patterns/genai/progressive-steps/
+                      - listitem [ref=e156]:
+                        - link "Follow-up questions" [ref=e157] [cursor=pointer]:
+                          - /url: /patterns/genai/follow-up-questions/
+                      - listitem [ref=e158]:
+                        - link "User authorized actions" [ref=e159] [cursor=pointer]:
+                          - /url: /patterns/genai/user-authorized-actions/
+                      - listitem [ref=e160]:
+                        - link "Variables" [ref=e161] [cursor=pointer]:
+                          - /url: /patterns/genai/variables/
+                      - listitem [ref=e162]:
+                        - link "Shortcut menus" [ref=e163] [cursor=pointer]:
+                          - /url: /patterns/genai/shortctut-menus/
+                      - listitem [ref=e164]:
+                        - link "Response regeneration" [ref=e165] [cursor=pointer]:
+                          - /url: /patterns/genai/response-regeneration/
+                      - listitem [ref=e166]:
+                        - link "Artifact previews" [ref=e167] [cursor=pointer]:
+                          - /url: /patterns/genai/artifact-previews/
+                      - listitem [ref=e168]:
+                        - link "Conversational history" [ref=e169] [cursor=pointer]:
+                          - /url: /patterns/genai/history/
+                      - listitem [ref=e170]:
+                        - link "Support prompts" [ref=e171] [cursor=pointer]:
+                          - /url: /patterns/genai/support-prompts/
+              - separator [ref=e174]
+              - list [ref=e175]:
+                - listitem [ref=e176]:
+                  - generic [ref=e177]:
+                    - heading "Resource management" [level=3] [ref=e178]
+                    - list [ref=e179]:
+                      - listitem [ref=e180]:
+                        - generic [ref=e182] [cursor=pointer]:
+                          - button "Create resource" [ref=e183]:
+                            - generic [ref=e184]:
+                              - img
+                          - link "Create resource" [ref=e185]:
+                            - /url: /patterns/resource-management/create/
+                      - listitem [ref=e186]:
+                        - generic [ref=e188] [cursor=pointer]:
+                          - button "Delete patterns" [ref=e189]:
+                            - generic [ref=e190]:
+                              - img
+                          - link "Delete patterns" [ref=e191]:
+                            - /url: /patterns/resource-management/delete/
+                      - listitem [ref=e192]:
+                        - generic [ref=e194] [cursor=pointer]:
+                          - button "Edit resource" [ref=e195]:
+                            - generic [ref=e196]:
+                              - img
+                          - link "Edit resource" [ref=e197]:
+                            - /url: /patterns/resource-management/edit/
+                      - listitem [ref=e198]:
+                        - generic [ref=e200] [cursor=pointer]:
+                          - button "View resources" [ref=e201]:
+                            - generic [ref=e202]:
+                              - img
+                          - link "View resources" [ref=e203]:
+                            - /url: /patterns/resource-management/view/
+                      - listitem [ref=e204]:
+                        - generic [ref=e206] [cursor=pointer]:
+                          - button "Resource details" [ref=e207]:
+                            - generic [ref=e208]:
+                              - img
+                          - link "Resource details" [ref=e209]:
+                            - /url: /patterns/resource-management/details/
+        - main [ref=e210]:
+          - generic [ref=e213]:
+            - generic [ref=e215]:
+              - navigation "Breadcrumbs" [ref=e220]:
+                - list [ref=e221]:
+                  - listitem [ref=e222]:
+                    - generic [ref=e223]:
+                      - link "Cloudscape Design System" [ref=e224] [cursor=pointer]:
+                        - /url: /
+                        - generic [ref=e225]: Cloudscape Design System
+                      - generic [ref=e227]:
+                        - img
+                  - listitem [ref=e228]:
+                    - generic [ref=e229]:
+                      - link "Patterns" [ref=e230] [cursor=pointer]:
+                        - /url: /patterns/
+                        - generic [ref=e231]: Patterns
+                      - generic [ref=e233]:
+                        - img
+                  - listitem [ref=e234]:
+                    - 'link "General: Loading and refreshing" [disabled] [ref=e236]':
+                      - generic [ref=e237]: "General: Loading and refreshing"
+                - list [ref=e238]:
+                  - listitem [ref=e239]:
+                    - generic [ref=e240]:
+                      - link [ref=e241] [cursor=pointer]:
+                        - /url: /
+                        - generic [ref=e242]: Cloudscape Design System
+                      - generic [ref=e244]:
+                        - img
+                  - listitem [ref=e245]:
+                    - generic [ref=e246]:
+                      - link [ref=e247] [cursor=pointer]:
+                        - /url: /patterns/
+                        - generic [ref=e248]: Patterns
+                      - generic [ref=e250]:
+                        - img
+                  - listitem [ref=e251]:
+                    - generic [ref=e254]: "General: Loading and refreshing"
+              - generic [ref=e259]:
+                - generic [ref=e263]:
+                  - heading "Loading and refreshing" [level=1] [ref=e266]
+                  - paragraph [ref=e267]:
+                    - generic [ref=e268]: Loading and refreshing is used to refresh collections of data in the interface.
+                - link "View demo (opens new tab)" [ref=e272] [cursor=pointer]:
+                  - /url: /examples/react/table-editable.html
+                  - generic [ref=e273]: View demo
+                  - generic [ref=e274]:
+                    - img
+              - generic [ref=e279]:
+                - generic [ref=e280]:
+                  - generic [ref=e282]:
+                    - heading "On this page" [level=2] [ref=e283]
+                    - navigation "On this page" [ref=e284]:
+                      - list [ref=e285]:
+                        - listitem [ref=e286]:
+                          - link "Key UX concepts" [ref=e287] [cursor=pointer]:
+                            - /url: "#key-ux-concepts"
+                            - generic [ref=e288]: Key UX concepts
+                        - listitem [ref=e289]:
+                          - link "Manual refresh" [ref=e290] [cursor=pointer]:
+                            - /url: "#manual-refresh"
+                            - generic [ref=e291]: Manual refresh
+                        - listitem [ref=e292]:
+                          - link "Loading" [ref=e293] [cursor=pointer]:
+                            - /url: "#loading"
+                            - generic [ref=e294]: Loading
+                        - listitem [ref=e295]:
+                          - link "General guidelines" [ref=e296] [cursor=pointer]:
+                            - /url: "#general-guidelines"
+                            - generic [ref=e297]: General guidelines
+                        - listitem [ref=e298]:
+                          - link "Writing guidelines" [ref=e299] [cursor=pointer]:
+                            - /url: "#writing-guidelines"
+                            - generic [ref=e300]: Writing guidelines
+                        - listitem [ref=e301]:
+                          - link "Accessibility guidelines" [ref=e302] [cursor=pointer]:
+                            - /url: "#accessibility-guidelines"
+                            - generic [ref=e303]: Accessibility guidelines
+                  - generic [ref=e304]:
+                    - heading "About this page" [level=2] [ref=e306]
+                    - generic [ref=e307]: "Published: June 8, 2020"
+                  - group "Website feedback form" [ref=e310]:
+                    - generic [ref=e311]:
+                      - generic [ref=e313]:
+                        - heading "Did this page help you?" [level=2] [ref=e314]
+                        - generic [ref=e315]: Your feedback helps us improve our documentation.
+                      - generic [ref=e317]:
+                        - button "Mark page as helpful" [ref=e319] [cursor=pointer]:
+                          - generic [ref=e320]:
+                            - img
+                          - text: "Yes"
+                        - button "Mark page as not helpful" [ref=e322] [cursor=pointer]:
+                          - generic [ref=e323]:
+                            - img
+                          - text: "No"
+                      - link "Provide additional feedback" [ref=e326]:
+                        - /url: https://github.com/cloudscape-design/components/issues/new?template=3_documentation.yaml
+                - generic [ref=e327]:
+                  - generic [ref=e329]:
+                    - generic [ref=e330]:
+                      - button "Copy link to Key UX concepts section" [ref=e335] [cursor=pointer]:
+                        - generic [ref=e336]:
+                          - img
+                      - heading "Key UX concepts" [level=2] [ref=e337]
+                    - generic [ref=e338]:
+                      - button "Copy link to Loading and refreshing section" [ref=e343] [cursor=pointer]:
+                        - generic [ref=e344]:
+                          - img
+                      - heading "Loading and refreshing" [level=3] [ref=e345]
+                    - paragraph [ref=e346]: Loading is the process of bringing data or content into an application or a web page. For example, loading at first page visit to make information available to users. Refreshing is the action of updating or reloading the current state of a system or application. It can be done manually by a user or automatically by the system, to ensure that the displayed information is current and up-to-date.
+                    - generic [ref=e347]:
+                      - button "Copy link to Refresh types section" [ref=e352] [cursor=pointer]:
+                        - generic [ref=e353]:
+                          - img
+                      - heading "Refresh types" [level=3] [ref=e354]
+                    - paragraph [ref=e355]:
+                      - text: Refresh can be applied in scenarios when data is fetched from the backend, such as in a
+                      - link "collection view" [ref=e356]:
+                        - /url: /patterns/resource-management/view/
+                      - text: ", within a data list."
+                    - list [ref=e357]:
+                      - listitem [ref=e358]:
+                        - paragraph [ref=e359]:
+                          - text: Manual refresh is triggered by user interaction, via a
+                          - link "button" [ref=e360]:
+                            - /url: /components/button/?tabId=playground&example=normal-button
+                          - text: ", ensuring control over when the data is updated. For example, a"
+                          - link "table" [ref=e361]:
+                            - /url: /components/table/
+                          - text: with a large data set where users need to perform actions on several resources.
+                      - listitem [ref=e362]:
+                        - paragraph [ref=e363]:
+                          - text: Automatic refresh is achieved by refreshing the data set at predefined intervals, for example 10 seconds, offering real-time updates and continuous synchronization with the dataset. For example, a
+                          - link "select" [ref=e364]:
+                            - /url: /components/select/
+                          - text: where the list represents resources created across consoles.
+                    - paragraph [ref=e365]: Choose the best refresh type depending on your use-case, user needs, and API type.
+                  - generic [ref=e367]:
+                    - generic [ref=e368]:
+                      - button "Copy link to Manual refresh section" [ref=e373] [cursor=pointer]:
+                        - generic [ref=e374]:
+                          - img
+                      - heading "Manual refresh" [level=2] [ref=e375]
+                    - generic [ref=e376]:
+                      - button "Copy link to Successful refresh section" [ref=e381] [cursor=pointer]:
+                        - generic [ref=e382]:
+                          - img
+                      - heading "Successful refresh" [level=3] [ref=e383]
+                    - paragraph [ref=e384]:
+                      - text: You can include a refresh button as part of the
+                      - link "header" [ref=e385]:
+                        - /url: /components/header/
+                      - text: ", for example in a"
+                      - link "table" [ref=e386]:
+                        - /url: /components/table/
+                      - text: . Keep the dataset visible while the refresh operation is ongoing, and enable users to perform actions on the resources. Once the data set is refreshed, display a timestamp to provide users with information on the outcome of the operation.
+                    - group "Component composition demo" [ref=e389]
+                    - generic [ref=e390]:
+                      - button "Copy link to Refreshing issues section" [ref=e395] [cursor=pointer]:
+                        - generic [ref=e396]:
+                          - img
+                      - heading "Refreshing issues" [level=3] [ref=e397]
+                    - paragraph [ref=e398]: Sometimes refreshing can take longer than expected or fail for some resources due to, for example, availability zone outages. When refreshing can’t be completed within 1-10 seconds, communicate that the process is taking longer by using a status indicator next to the refresh button.
+                    - list [ref=e399]:
+                      - listitem [ref=e400]:
+                        - paragraph [ref=e401]:
+                          - text: If the API call returns issues with the refreshing, use a
+                          - link "pending status indicator" [ref=e402]:
+                            - /url: /components/status-indicator/?tabId=playground&example=pending
+                          - text: to inform users. Include in the popover additional information to explain the issues, such as longer time required to perform the refresh.
+                      - listitem [ref=e403]:
+                        - paragraph [ref=e404]:
+                          - text: If the API call returns partial or total failure of the refreshing, use a
+                          - link "warning status indicator" [ref=e405]:
+                            - /url: /components/status-indicator/?tabId=playground&example=warning
+                          - text: to inform users. Include in the popover additional information to explain the failure and provide actions to support users, such as retry or filter out affected availability zones.
+                    - group "Component composition demo" [ref=e408]
+                    - group "Component composition demo" [ref=e411]
+                    - generic [ref=e412]:
+                      - button "Copy link to Form controls section" [ref=e417] [cursor=pointer]:
+                        - generic [ref=e418]:
+                          - img
+                      - heading "Form controls" [level=3] [ref=e419]
+                    - paragraph [ref=e420]:
+                      - text: You can include a refresh button next to a
+                      - link "form" [ref=e421]:
+                        - /url: /components/form/
+                      - text: control, for example a
+                      - link "select" [ref=e422]:
+                        - /url: /components/select/
+                      - text: ", to update the data set with the latest information. If an error occurs, display an"
+                      - link "error message" [ref=e423]:
+                        - /url: /patterns/general/errors/error-messages/
+                      - text: to communicate the status.
+                    - group "Component composition demo" [ref=e426]
+                  - generic [ref=e428]:
+                    - generic [ref=e429]:
+                      - button "Copy link to Loading section" [ref=e434] [cursor=pointer]:
+                        - generic [ref=e435]:
+                          - img
+                      - heading "Loading" [level=2] [ref=e436]
+                    - paragraph [ref=e437]:
+                      - text: Loading is the process of making information available to users, for example at first page visit. In a collection view a table in a
+                      - link "loading state" [ref=e438]:
+                        - /url: /components/table/?tabId=playground&example=loading-state
+                      - text: is used to indicate that the entire data set is being retrieved, and the page will be populated with available data.
+                    - group "Component composition demo" [ref=e441]
+                    - generic [ref=e442]:
+                      - button "Copy link to Loading issues section" [ref=e447] [cursor=pointer]:
+                        - generic [ref=e448]:
+                          - img
+                      - heading "Loading issues" [level=3] [ref=e449]
+                    - paragraph [ref=e450]:
+                      - text: Sometimes loading can fail unexpectedly, for example, due to server errors, request time-out, or network issues. To notify of a data fetching error, use an
+                      - link "alert" [ref=e451]:
+                        - /url: /components/alert/
+                      - text: inside the table. When using progressive loading in a table, if the loading fails, use an error status indicator with the reason for the error within a popover to communicate the status.
+                    - generic [ref=e452]:
+                      - button "Copy link to Form controls section" [ref=e457] [cursor=pointer]:
+                        - generic [ref=e458]:
+                          - img
+                      - heading "Form controls" [level=3] [ref=e459]
+                    - paragraph [ref=e460]:
+                      - text: In a form control, for example a
+                      - link "select" [ref=e461]:
+                        - /url: /components/select/
+                      - text: ", a"
+                      - link "loading state" [ref=e462]:
+                        - /url: /components/select/?tabId=playground&example=loading-state
+                      - text: is used to communicate that the entire data set is being retrieved.
+                    - group "Component composition demo" [ref=e465]
+                  - generic [ref=e467]:
+                    - generic [ref=e468]:
+                      - button "Copy link to General guidelines section" [ref=e473] [cursor=pointer]:
+                        - generic [ref=e474]:
+                          - img
+                      - heading "General guidelines" [level=2] [ref=e475]
+                    - generic [ref=e476]:
+                      - generic [ref=e478]:
+                        - generic [ref=e480]:
+                          - button "Copy link to Do section" [ref=e485] [cursor=pointer]:
+                            - generic [ref=e486]:
+                              - img
+                          - heading "Do" [level=3] [ref=e487]
+                        - list "Do" [ref=e488]:
+                          - listitem [ref=e489]:
+                            - text: For manual refresh, include the refresh button as part of the
+                            - link "header actions" [ref=e490]:
+                              - /url: /components/header/
+                            - text: . Include a timestamp to inform users on the outcome of the refresh operation.
+                      - generic [ref=e492]:
+                        - generic [ref=e494]:
+                          - button "Copy link to Don't section" [ref=e499] [cursor=pointer]:
+                            - generic [ref=e500]:
+                              - img
+                          - heading "Don't" [level=3] [ref=e501]
+                        - list "Don't" [ref=e502]:
+                          - listitem [ref=e503]: Don't add refresh buttons in the interface, except when users need to perform an explicit action to refresh only a part of the interface.
+                  - generic [ref=e505]:
+                    - generic [ref=e506]:
+                      - button "Copy link to Writing guidelines section" [ref=e511] [cursor=pointer]:
+                        - generic [ref=e512]:
+                          - img
+                      - heading "Writing guidelines" [level=2] [ref=e513]
+                    - generic [ref=e514]:
+                      - button "Copy link to General writing guidelines section" [ref=e519] [cursor=pointer]:
+                        - generic [ref=e520]:
+                          - img
+                      - heading "General writing guidelines" [level=3] [ref=e521]
+                    - list [ref=e522]:
+                      - listitem [ref=e523]:
+                        - paragraph [ref=e524]: Use sentence case, but continue to capitalize proper nouns and brand names correctly in context.
+                      - listitem [ref=e525]:
+                        - paragraph [ref=e526]:
+                          - text: Use end punctuation, except in
+                          - link "headers" [ref=e527]:
+                            - /url: /components/header/?tabId=usage
+                          - text: and
+                          - link "buttons" [ref=e528]:
+                            - /url: /components/button/?tabId=usage
+                          - text: . Don’t use exclamation points.
+                      - listitem [ref=e529]:
+                        - paragraph [ref=e530]: Use present-tense verbs and active voice.
+                      - listitem [ref=e531]:
+                        - paragraph [ref=e532]: Don't use please, thank you, ellipsis (...), ampersand (&), e.g., i.e., or etc. in writing.
+                      - listitem [ref=e533]:
+                        - paragraph [ref=e534]: Avoid directional language.
+                        - list [ref=e535]:
+                          - listitem [ref=e536]:
+                            - paragraph [ref=e537]: "For example: use previous not above, use following not below."
+                      - listitem [ref=e538]:
+                        - paragraph [ref=e539]: Use device-independent language.
+                        - list [ref=e540]:
+                          - listitem [ref=e541]:
+                            - paragraph [ref=e542]: "For example: use choose or select not click."
+                    - generic [ref=e543]:
+                      - button "Copy link to Component-specific guidelines section" [ref=e548] [cursor=pointer]:
+                        - generic [ref=e549]:
+                          - img
+                      - heading "Component-specific guidelines" [level=3] [ref=e550]
+                    - heading "Loading message" [level=4] [ref=e551]
+                    - list [ref=e552]:
+                      - listitem [ref=e553]:
+                        - paragraph [ref=e554]: Don't use articles (a, an, the).
+                      - listitem [ref=e555]:
+                        - paragraph [ref=e556]: Don't use end punctuation.
+                    - heading "Popover" [level=4] [ref=e557]
+                    - list [ref=e558]:
+                      - listitem [ref=e559]:
+                        - paragraph [ref=e560]:
+                          - text: Follow the guidelines for
+                          - link "popover" [ref=e561]:
+                            - /url: /components/popover/
+                          - text: .
+                    - heading "Table" [level=4] [ref=e562]
+                    - list [ref=e563]:
+                      - listitem [ref=e564]:
+                        - paragraph [ref=e565]:
+                          - text: Follow the guidelines for
+                          - link "table" [ref=e566]:
+                            - /url: /components/table/?tabId=playground&example=loading-state
+                          - text: .
+                    - heading "Select" [level=4] [ref=e567]
+                    - list [ref=e568]:
+                      - listitem [ref=e569]:
+                        - paragraph [ref=e570]:
+                          - text: Follow the guidelines for
+                          - link "select" [ref=e571]:
+                            - /url: /components/select/?tabId=playground
+                          - text: .
+                    - heading "Status indicator" [level=4] [ref=e572]
+                    - list [ref=e573]:
+                      - listitem [ref=e574]:
+                        - paragraph [ref=e575]:
+                          - text: Follow the guidelines for
+                          - link "status indicator" [ref=e576]:
+                            - /url: /components/status-indicator/
+                          - text: .
+                  - generic [ref=e578]:
+                    - generic [ref=e579]:
+                      - button "Copy link to Accessibility guidelines section" [ref=e584] [cursor=pointer]:
+                        - generic [ref=e585]:
+                          - img
+                      - heading "Accessibility guidelines" [level=2] [ref=e586]
+                    - generic [ref=e587]:
+                      - button "Copy link to General accessibility guidelines section" [ref=e592] [cursor=pointer]:
+                        - generic [ref=e593]:
+                          - img
+                      - heading "General accessibility guidelines" [level=3] [ref=e594]
+                    - list [ref=e595]:
+                      - listitem [ref=e596]:
+                        - paragraph [ref=e597]: Follow the guidelines on alternative text and Accessible Rich Internet Applications (ARIA) regions for each component.
+                      - listitem [ref=e598]:
+                        - paragraph [ref=e599]: Make sure to define ARIA labels aligned with the language context of your application.
+                      - listitem [ref=e600]:
+                        - paragraph [ref=e601]: Don't add unnecessary markup for roles and landmarks. Follow the guidelines for each component.
+                      - listitem [ref=e602]:
+                        - paragraph [ref=e603]: Provide keyboard functionality to all available content in a logical and predictable order. The flow of information should make sense.
+                    - generic [ref=e604]:
+                      - button "Copy link to Component-specific guidelines section" [ref=e609] [cursor=pointer]:
+                        - generic [ref=e610]:
+                          - img
+                      - heading "Component-specific guidelines" [level=3] [ref=e611]
+                    - list [ref=e612]:
+                      - listitem [ref=e613]:
+                        - paragraph [ref=e614]:
+                          - text: When using a refresh button, make it accessible by providing a label (aria-label). Describe the refresh action by setting the
+                          - code [ref=e615]: ariaLabel
+                          - text: property in the
+                          - link "button" [ref=e616]:
+                            - /url: /components/button/
+                          - text: component. Also set the
+                          - code [ref=e617]: loadingText
+                          - text: property to communicate the loading state.
+                      - listitem [ref=e618]:
+                        - paragraph [ref=e619]: Use an ARIA live region to announce updates to the last refresh timestamp.
+            - navigation "footer" [ref=e621]:
+              - generic [ref=e624]:
+                - list [ref=e625]:
+                  - listitem [ref=e626]:
+                    - link "About" [ref=e628]:
+                      - /url: /about/
+                  - listitem [ref=e629]:
+                    - link "Connect" [ref=e631]:
+                      - /url: /about/connect/
+                  - listitem [ref=e632]:
+                    - link "Privacy (opens new tab)" [ref=e634]:
+                      - /url: https://aws.amazon.com/privacy/
+                      - text: Privacy
+                      - img "(opens new tab)" [ref=e636]:
+                        - generic [ref=e637]:
+                          - img
+                  - listitem [ref=e638]:
+                    - link "Site terms (opens new tab)" [ref=e640]:
+                      - /url: https://aws.amazon.com/terms/
+                      - text: Site terms
+                      - img "(opens new tab)" [ref=e642]:
+                        - generic [ref=e643]:
+                          - img
+                  - listitem [ref=e644]:
+                    - button "Cookie preferences" [ref=e646] [cursor=pointer]
+                  - listitem [ref=e647]:
+                    - generic [ref=e648]: © 2026, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+                - generic [ref=e649]: Made with ❤️ at AWS
+  - alert [ref=e650]

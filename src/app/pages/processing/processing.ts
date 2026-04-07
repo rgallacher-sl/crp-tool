@@ -51,6 +51,12 @@ export class ProcessingComponent implements OnInit, OnDestroy {
     return this.isFailed;
   }
 
+  get isNetworkFailure(): boolean {
+    return this.isFailed && this.transientCodes.has(this.assessment?.errorCode ?? '');
+  }
+
+  simpleMode = false;
+
   get visibleSteps() {
     return this.steps.filter(s => s.state !== 'pending');
   }
@@ -77,6 +83,8 @@ export class ProcessingComponent implements OnInit, OnDestroy {
     }
 
     this.assessment = assessment;
+    const token = `${assessment.documentLabel} ${assessment.documentReference ?? ''}`.toLowerCase();
+    this.simpleMode = token.includes('no-steps');
     if (assessment.status === 'completed') {
       this.router.navigate(['/assessments', id, 'complete']);
       return;
@@ -143,11 +151,8 @@ export class ProcessingComponent implements OnInit, OnDestroy {
     this.steps = this.buildSteps(this.assessment);
     if (this.assessment.status === 'failed') {
       this.isFailed = true;
-      const isTransient = this.transientCodes.has(this.assessment.errorCode ?? '');
-      if (!isTransient) {
-        this.statusLabel = 'Processing interrupted';
-        setTimeout(() => this.headingRef?.nativeElement.focus());
-      }
+      this.statusLabel = this.simpleMode ? 'Something went wrong' : 'Processing failed';
+      setTimeout(() => this.headingRef?.nativeElement.focus());
       this.errorMessage = this.assessment.errorMessage ?? 'An unexpected error occurred.';
       return;
     }
@@ -315,6 +320,7 @@ export class ProcessingComponent implements OnInit, OnDestroy {
   }
 
   private getStatusLabel(assessment: Assessment): string {
+    if (this.simpleMode) return 'Checking your document';
     switch (assessment.status) {
       case 'uploading': return 'Uploading your document';
       case 'fetching':  return 'Fetching your document';

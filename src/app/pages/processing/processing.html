@@ -1,14 +1,26 @@
 <div class="processing-page">
   @if (isTransientFailure) {
     <div class="connectivity-banner" role="status">
+      <span class="material-symbols-outlined connectivity-banner-icon" aria-hidden="true">wifi_find</span>
+      <p class="connectivity-banner-message">Reconnecting…</p>
+    </div>
+  }
+
+  @if (isNetworkFailure) {
+    <div class="connectivity-banner connectivity-banner--error" role="alert">
       <span class="material-symbols-outlined connectivity-banner-icon" aria-hidden="true">wifi_off</span>
-      <p class="connectivity-banner-message">Connection lost — retrying</p>
+      <p class="connectivity-banner-message">No internet connection. Check your connection.</p>
     </div>
   }
 
   <div class="processing-centered">
     <div class="processing-content">
-      <h1 #heading tabindex="-1" class="processing-heading">{{ statusLabel }}</h1>
+      <div class="processing-heading-row">
+        @if (simpleMode && !isFailed) {
+          <div class="processing-spinner" role="status" aria-label="Processing in progress"></div>
+        }
+        <h1 #heading tabindex="-1" class="processing-heading">{{ statusLabel }}</h1>
+      </div>
 
       @if (assessment) {
         <div class="document-chip">
@@ -21,30 +33,43 @@
         </div>
       }
 
-      @if (isTerminalFailure) {
-        <p class="error-description">{{ errorMessage }}</p>
-      }
-
       @if (!isFailed) {
-        <p class="reassurance">This can take a few minutes. You can leave this page and come back.</p>
+        <p class="reassurance">Usually takes 1–2 minutes. You can leave and come back.</p>
       }
 
-      <ol class="stepper" aria-label="Processing steps">
-        @for (step of visibleSteps; track step.label) {
-          <li class="stepper-step" [attr.data-state]="step.state">
-            <div class="stepper-icon" aria-hidden="true">
-              @if (step.state === 'active') {
-                <span class="step-spinner"></span>
-              } @else if (step.state === 'done') {
-                <span class="material-symbols-outlined step-icon-done">check_circle</span>
-              } @else if (step.state === 'error') {
-                <span class="material-symbols-outlined step-icon-error">cancel</span>
-              }
-            </div>
-            <span class="stepper-label">{{ step.label }}</span>
-          </li>
-        }
-      </ol>
+      <!-- progress slot -->
+      @if (!simpleMode) {
+        <ol class="stepper" aria-label="Processing steps">
+          @for (step of visibleSteps; track step.label) {
+            <li class="stepper-step" [attr.data-state]="step.state">
+              <div class="stepper-icon" aria-hidden="true">
+                @if (step.state === 'active') {
+                  <span class="step-spinner"></span>
+                } @else if (step.state === 'done') {
+                  <span class="material-symbols-outlined step-icon-done">check_circle</span>
+                } @else if (step.state === 'error') {
+                  <span class="material-symbols-outlined step-icon-error">cancel</span>
+                }
+              </div>
+              <span class="stepper-label">{{ step.label }}</span>
+            </li>
+          }
+        </ol>
+      }
+
+      <!-- error slot -->
+      @if (isTerminalFailure) {
+        <div class="inline-notification inline-notification--error" role="alert">
+          <span class="material-symbols-outlined inline-notification-icon" aria-hidden="true">error</span>
+          <p class="inline-notification-message">
+            @if (isNetworkFailure) {
+              Select "Try again" to retry the remaining steps.
+            } @else {
+              {{ errorMessage }}
+            }
+          </p>
+        </div>
+      }
 
       @if (!isFailed) {
         @if (showCancelConfirm) {

@@ -1,0 +1,164 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "Skip to main content" [ref=e4] [cursor=pointer]:
+      - /url: "#main-content"
+    - banner "Main" [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - link "GitHub Docs" [ref=e9] [cursor=pointer]:
+            - /url: /en
+            - img [ref=e10]
+            - generic [ref=e12]: GitHub Docs
+          - generic [ref=e13]:
+            - 'button "Version: Free, Pro, & Team" [ref=e15] [cursor=pointer]':
+              - generic [ref=e17]: "Version: Free, Pro, & Team"
+              - generic:
+                - img
+            - button "Search or ask Copilot" [ref=e19] [cursor=pointer]:
+              - generic:
+                - generic:
+                  - generic:
+                    - text: Search or ask
+                    - img
+                    - text: Copilot
+              - generic:
+                - img
+        - generic [ref=e20]:
+          - 'button "Select language: current language is English" [ref=e23] [cursor=pointer]':
+            - img [ref=e24]
+          - link "Sign up" [ref=e27] [cursor=pointer]:
+            - /url: https://github.com/signup?ref_cta=Sign+up&ref_loc=docs+header&ref_page=docs
+      - generic [ref=e28]:
+        - button "Open Sidebar" [ref=e30] [cursor=pointer]:
+          - img [ref=e31]
+        - navigation "Breadcrumb" [ref=e34]:
+          - list [ref=e35]:
+            - listitem [ref=e36]:
+              - link "GitHub Actions" [ref=e37] [cursor=pointer]:
+                - /url: /en/actions
+              - text: /
+            - listitem [ref=e38]:
+              - link "How-tos" [ref=e39] [cursor=pointer]:
+                - /url: /en/actions/how-tos
+              - text: /
+            - listitem [ref=e40]:
+              - link "Monitor workflows" [ref=e41] [cursor=pointer]:
+                - /url: /en/actions/how-tos/monitor-workflows
+              - text: /
+            - listitem [ref=e42]:
+              - link "View workflow run history" [ref=e43] [cursor=pointer]:
+                - /url: /en/actions/how-tos/monitor-workflows/view-workflow-run-history
+    - generic [ref=e45]:
+      - main [ref=e46]:
+        - generic [ref=e48]:
+          - heading "Viewing workflow run history" [level=1] [ref=e51]
+          - generic [ref=e52]:
+            - paragraph [ref=e54]: You can view logs for each run of a workflow. Logs include the status for each job and step in a workflow.
+            - generic [ref=e55]:
+              - heading "Tool navigation" [level=2] [ref=e56]
+              - navigation "Tool" [ref=e57]:
+                - list [ref=e58]:
+                  - listitem [ref=e59]:
+                    - link "GitHub CLI" [ref=e60] [cursor=pointer]:
+                      - /url: "?tool=cli"
+                      - generic [ref=e61]: GitHub CLI
+                  - listitem [ref=e62]:
+                    - link "Web browser" [ref=e63] [cursor=pointer]:
+                      - /url: "?tool=webui"
+                      - generic [ref=e64]: Web browser
+          - generic [ref=e65]:
+            - generic [ref=e67]:
+              - button "Copy as Markdown" [ref=e69] [cursor=pointer]:
+                - generic [ref=e71]:
+                  - img [ref=e72]
+                  - text: Copy as Markdown
+              - button "More Markdown options" [ref=e76] [cursor=pointer]:
+                - img [ref=e77]
+            - heading "In this article" [level=2] [ref=e79]
+            - navigation "In this article" [ref=e80]:
+              - list [ref=e81]
+          - generic [ref=e84]:
+            - paragraph [ref=e85]: Read access to the repository is required to perform these steps.
+            - list [ref=e87]:
+              - listitem [ref=e88]:
+                - paragraph [ref=e89]: On GitHub, navigate to the main page of the repository.
+              - listitem [ref=e90]:
+                - paragraph [ref=e91]:
+                  - text: Under your repository name, click
+                  - strong [ref=e92]:
+                    - img "play" [ref=e93]
+                    - text: Actions
+                  - text: .
+                - paragraph
+                - img "Screenshot of the tabs for the \"github/docs\" repository. The \"Actions\" tab is highlighted with an orange outline." [ref=e97]
+                - paragraph
+              - listitem [ref=e98]:
+                - paragraph [ref=e99]: In the left sidebar, click the workflow you want to see.
+                - paragraph
+                - img "Screenshot of the left sidebar of the \"Actions\" tab. A workflow, \"CodeQL,\" is outlined in dark orange." [ref=e102]
+                - paragraph
+              - listitem [ref=e103]:
+                - paragraph [ref=e104]: From the list of workflow runs, click the name of the run to see the workflow run summary.
+      - contentinfo [ref=e105]:
+        - generic [ref=e106]:
+          - heading "Help and support" [level=2] [ref=e107]
+          - generic [ref=e108]:
+            - generic [ref=e109]:
+              - heading "Did you find what you needed?" [level=3] [ref=e110]
+              - radiogroup "Did you find what you needed?" [ref=e111]:
+                - radio "Yes" [ref=e112]
+                - generic [ref=e113] [cursor=pointer]:
+                  - img [ref=e114]
+                  - text: "Yes"
+                - radio "No" [ref=e116]
+                - generic [ref=e117] [cursor=pointer]:
+                  - img [ref=e118]
+                  - text: "No"
+              - link "Privacy policy" [ref=e120] [cursor=pointer]:
+                - /url: /en/site-policy/privacy-policies/github-privacy-statement
+            - generic [ref=e121]:
+              - heading "Help us make these docs great!" [level=3] [ref=e122]
+              - paragraph [ref=e123]: All GitHub docs are open source. See something that's wrong or unclear? Submit a pull request.
+              - link "Make a contribution" [ref=e124] [cursor=pointer]:
+                - /url: https://github.com/github/docs/blob/main/content/actions/how-tos/monitor-workflows/view-workflow-run-history.md
+                - img [ref=e125]
+                - text: Make a contribution
+              - paragraph [ref=e127]:
+                - link "Learn how to contribute" [ref=e128] [cursor=pointer]:
+                  - /url: /contributing
+            - generic [ref=e129]:
+              - heading "Still need help?" [level=3] [ref=e130]
+              - link "Ask the GitHub community" [ref=e132] [cursor=pointer]:
+                - /url: https://github.com/orgs/community/discussions
+                - img [ref=e133]
+                - text: Ask the GitHub community
+              - link "Contact support" [ref=e136] [cursor=pointer]:
+                - /url: https://support.github.com
+                - img [ref=e137]
+                - text: Contact support
+        - generic [ref=e139]:
+          - heading "Legal" [level=2] [ref=e140]
+          - list [ref=e141]:
+            - listitem [ref=e142]: © 2026 GitHub, Inc.
+            - listitem [ref=e143]:
+              - link "Terms" [ref=e144] [cursor=pointer]:
+                - /url: /en/site-policy/github-terms/github-terms-of-service
+            - listitem [ref=e145]:
+              - link "Privacy" [ref=e146] [cursor=pointer]:
+                - /url: /en/site-policy/privacy-policies/github-privacy-statement
+            - listitem [ref=e147]:
+              - link "Status" [ref=e148] [cursor=pointer]:
+                - /url: https://www.githubstatus.com/
+            - listitem [ref=e149]:
+              - link "Pricing" [ref=e150] [cursor=pointer]:
+                - /url: https://github.com/pricing
+            - listitem [ref=e151]:
+              - link "Expert services" [ref=e152] [cursor=pointer]:
+                - /url: https://services.github.com
+            - listitem [ref=e153]:
+              - link "Blog" [ref=e154] [cursor=pointer]:
+                - /url: https://github.blog
+        - tooltip "Scroll to top" [ref=e155]:
+          - button "Scroll to top" [ref=e156] [cursor=pointer]:
+            - img [ref=e157]
+  - alert [ref=e159]

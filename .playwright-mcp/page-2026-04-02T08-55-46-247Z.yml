@@ -1,0 +1,446 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "Page Flows brand logo icon." [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "Page Flows brand logo icon." [ref=e7]
+        - generic [ref=e8]:
+          - img [ref=e9]
+          - combobox [ref=e12]:
+            - textbox "Search iOS Products, Screens, UI Elements, Flows" [ref=e13]
+      - list [ref=e15]:
+        - listitem [ref=e16]:
+          - link "iOS" [ref=e17] [cursor=pointer]:
+            - /url: /ios/elements/error-state/
+        - listitem [ref=e18]:
+          - link "Android" [ref=e19] [cursor=pointer]:
+            - /url: /android/elements/error-state/
+        - listitem [ref=e20]:
+          - link "Web" [ref=e21] [cursor=pointer]:
+            - /url: /web/elements/error-state/
+        - listitem [ref=e22]:
+          - link "Emails" [ref=e23] [cursor=pointer]:
+            - /url: /emails/
+      - generic [ref=e26]:
+        - button "Login" [ref=e27] [cursor=pointer]:
+          - link "Login" [ref=e28]:
+            - /url: /login/
+        - button "Try It Free" [ref=e30] [cursor=pointer]
+    - generic [ref=e31]:
+      - list [ref=e33]:
+        - listitem [ref=e34]:
+          - link "Products" [ref=e35] [cursor=pointer]:
+            - /url: /ios/products/
+        - listitem [ref=e36]:
+          - link "Screens" [ref=e37] [cursor=pointer]:
+            - /url: /ios/screens/
+        - listitem [ref=e38]:
+          - link "UI Elements" [ref=e39] [cursor=pointer]:
+            - /url: /ios/elements/
+        - listitem [ref=e40]:
+          - link "Flows" [ref=e41] [cursor=pointer]:
+            - /url: /ios/flows/
+      - list [ref=e43]:
+        - listitem [ref=e44]:
+          - generic [ref=e45] [cursor=pointer]:
+            - text: "App Types:"
+            - generic [ref=e46]: "0"
+  - generic [ref=e48]:
+    - main [ref=e49]:
+      - heading "iOS Examples with Error state Elements" [level=1] [ref=e52]
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - img [ref=e58] [cursor=pointer]
+          - generic:
+            - generic:
+              - textbox "Search ios ui elements"
+        - generic [ref=e62]:
+          - list [ref=e63]:
+            - listitem [ref=e64]:
+              - link "All" [ref=e65] [cursor=pointer]:
+                - /url: /ios/elements/
+            - listitem [ref=e66]:
+              - link "Modal" [ref=e67] [cursor=pointer]:
+                - /url: /ios/elements/modal/
+            - listitem [ref=e68]:
+              - link "Form" [ref=e69] [cursor=pointer]:
+                - /url: /ios/elements/form/
+            - listitem [ref=e70]:
+              - link "Navigation" [ref=e71] [cursor=pointer]:
+                - /url: /ios/elements/navigation/
+            - listitem [ref=e72]:
+              - link "Tabs" [ref=e73] [cursor=pointer]:
+                - /url: /ios/elements/tabs/
+            - listitem [ref=e74]:
+              - link "Filter" [ref=e75] [cursor=pointer]:
+                - /url: /ios/elements/filter/
+            - listitem [ref=e76]:
+              - link "Dropdown" [ref=e77] [cursor=pointer]:
+                - /url: /ios/elements/dropdown/
+            - listitem [ref=e78]:
+              - link "Upgrade prompt" [ref=e79] [cursor=pointer]:
+                - /url: /ios/elements/upgrade-prompt/
+            - listitem [ref=e80]:
+              - link "Tooltip" [ref=e81] [cursor=pointer]:
+                - /url: /ios/elements/tooltip/
+            - listitem [ref=e82]:
+              - link "Activity feed" [ref=e83] [cursor=pointer]:
+                - /url: /ios/elements/activity-feed/
+            - listitem [ref=e84]:
+              - link "Timeline" [ref=e85] [cursor=pointer]:
+                - /url: /ios/elements/timeline/
+            - listitem [ref=e86]:
+              - link "Calendar" [ref=e87] [cursor=pointer]:
+                - /url: /ios/elements/calendar/
+            - listitem [ref=e88]:
+              - link "Chart" [ref=e89] [cursor=pointer]:
+                - /url: /ios/elements/chart/
+            - listitem [ref=e90]:
+              - link "Toggle" [ref=e91] [cursor=pointer]:
+                - /url: /ios/elements/toggle/
+            - listitem [ref=e92]:
+              - link "Color picker" [ref=e93] [cursor=pointer]:
+                - /url: /ios/elements/color-picker/
+            - listitem [ref=e94]:
+              - link "Comments" [ref=e95] [cursor=pointer]:
+                - /url: /ios/elements/comments/
+            - listitem [ref=e96]:
+              - link "Dashboard" [ref=e97] [cursor=pointer]:
+                - /url: /ios/elements/dashboard/
+            - listitem [ref=e98]:
+              - link "Drag and drop" [ref=e99] [cursor=pointer]:
+                - /url: /ios/elements/drag-and-drop/
+            - listitem [ref=e100]:
+              - link "Error state" [ref=e101] [cursor=pointer]:
+                - /url: /ios/elements/error-state/
+            - listitem [ref=e102]:
+              - link "Empty state" [ref=e103] [cursor=pointer]:
+                - /url: /ios/elements/empty-state/
+            - listitem [ref=e104]:
+              - link "Grid" [ref=e105] [cursor=pointer]:
+                - /url: /ios/elements/grid/
+            - listitem [ref=e106]:
+              - link "Pricing tiers" [ref=e107] [cursor=pointer]:
+                - /url: /ios/elements/pricing-tiers/
+            - listitem [ref=e108]:
+              - link "Progress bar" [ref=e109] [cursor=pointer]:
+                - /url: /ios/elements/progress-bar/
+            - listitem [ref=e110]:
+              - link "Sidebar" [ref=e111] [cursor=pointer]:
+                - /url: /ios/elements/sidebar/
+            - listitem [ref=e112]:
+              - link "Success state" [ref=e113] [cursor=pointer]:
+                - /url: /ios/elements/success-state/
+            - listitem [ref=e114]:
+              - link "Table" [ref=e115] [cursor=pointer]:
+                - /url: /ios/elements/table/
+            - listitem [ref=e116]:
+              - link "Search" [ref=e117] [cursor=pointer]:
+                - /url: /ios/elements/search/
+          - button [ref=e119] [cursor=pointer]:
+            - img [ref=e120]
+      - generic [ref=e126]:
+        - generic [ref=e127]:
+          - img "Enter phone number video thumbnail" [ref=e132] [cursor=pointer]
+          - generic [ref=e134]:
+            - link [ref=e135] [cursor=pointer]:
+              - /url: /post/ios/onboarding/open-table/
+              - img [ref=e136]
+            - link "OpenTable" [ref=e138] [cursor=pointer]:
+              - /url: /post/ios/onboarding/open-table/
+        - generic [ref=e139]:
+          - img "Enter password video thumbnail" [ref=e144] [cursor=pointer]
+          - generic [ref=e146]:
+            - link [ref=e147] [cursor=pointer]:
+              - /url: /post/ios/onboarding/nike-run-club/
+              - img [ref=e148]
+            - link "Nike Run Club" [ref=e150] [cursor=pointer]:
+              - /url: /post/ios/onboarding/nike-run-club/
+        - generic [ref=e151]:
+          - img "Error video thumbnail" [ref=e156] [cursor=pointer]
+          - generic [ref=e158]:
+            - link [ref=e159] [cursor=pointer]:
+              - /url: /post/ios/onboarding/zero/
+              - img [ref=e160]
+            - link "Zero" [ref=e162] [cursor=pointer]:
+              - /url: /post/ios/onboarding/zero/
+        - generic [ref=e163]:
+          - img "Enter email video thumbnail" [ref=e168] [cursor=pointer]
+          - generic [ref=e170]:
+            - link [ref=e171] [cursor=pointer]:
+              - /url: /post/ios/onboarding/twitch/
+              - img [ref=e172]
+            - link "Twitch" [ref=e174] [cursor=pointer]:
+              - /url: /post/ios/onboarding/twitch/
+        - generic [ref=e175]:
+          - img "Submit error video thumbnail" [ref=e180] [cursor=pointer]
+          - generic [ref=e182]:
+            - link [ref=e183] [cursor=pointer]:
+              - /url: /post/ios/onboarding/twitter/
+              - img [ref=e184]
+            - link "Twitter" [ref=e186] [cursor=pointer]:
+              - /url: /post/ios/onboarding/twitter/
+        - generic [ref=e187]:
+          - img "Submit error video thumbnail" [ref=e192] [cursor=pointer]
+          - generic [ref=e194]:
+            - link [ref=e195] [cursor=pointer]:
+              - /url: /post/ios/onboarding/goodrx/
+              - img [ref=e196]
+            - link "GoodRx" [ref=e198] [cursor=pointer]:
+              - /url: /post/ios/onboarding/goodrx/
+        - generic [ref=e199]:
+          - img "Enter email video thumbnail" [ref=e204] [cursor=pointer]
+          - generic [ref=e206]:
+            - link [ref=e207] [cursor=pointer]:
+              - /url: /post/ios/onboarding/vrbo/
+              - img [ref=e208]
+            - link "Vrbo" [ref=e210] [cursor=pointer]:
+              - /url: /post/ios/onboarding/vrbo/
+        - generic [ref=e211]:
+          - img "Submit error video thumbnail" [ref=e216] [cursor=pointer]
+          - generic [ref=e218]:
+            - link [ref=e219] [cursor=pointer]:
+              - /url: /post/ios/onboarding/lemon8/
+              - img [ref=e220]
+            - link "Lemon8" [ref=e222] [cursor=pointer]:
+              - /url: /post/ios/onboarding/lemon8/
+        - generic [ref=e223]:
+          - img "Password error video thumbnail" [ref=e228] [cursor=pointer]
+          - generic [ref=e230]:
+            - link [ref=e231] [cursor=pointer]:
+              - /url: /post/ios/onboarding/robinhood/
+              - img [ref=e232]
+            - link "Robinhood" [ref=e234] [cursor=pointer]:
+              - /url: /post/ios/onboarding/robinhood/
+        - generic [ref=e235]:
+          - img "Submit error video thumbnail" [ref=e240] [cursor=pointer]
+          - generic [ref=e242]:
+            - link [ref=e243] [cursor=pointer]:
+              - /url: /post/ios/onboarding/sephora/
+              - img [ref=e244]
+            - link "Sephora" [ref=e246] [cursor=pointer]:
+              - /url: /post/ios/onboarding/sephora/
+        - generic [ref=e247]:
+          - generic [ref=e251]:
+            - generic [ref=e253]:
+              - paragraph [ref=e254]: Sign up to unlock this user flow
+              - link "Try It Free" [ref=e255] [cursor=pointer]:
+                - /url: /signup
+                - img [ref=e256]
+                - text: Try It Free
+            - img "Submit error video thumbnail" [ref=e258] [cursor=pointer]
+          - generic [ref=e260]:
+            - link [ref=e261] [cursor=pointer]:
+              - /url: /post/ios/onboarding/paypal/
+              - img [ref=e262]
+            - link "PayPal" [ref=e264] [cursor=pointer]:
+              - /url: /post/ios/onboarding/paypal/
+        - generic [ref=e265]:
+          - generic [ref=e269]:
+            - generic [ref=e271]:
+              - paragraph [ref=e272]: Sign up to unlock this user flow
+              - link "Try It Free" [ref=e273] [cursor=pointer]:
+                - /url: /signup
+                - img [ref=e274]
+                - text: Try It Free
+            - img "Submit error video thumbnail" [ref=e276] [cursor=pointer]
+          - generic [ref=e278]:
+            - link [ref=e279] [cursor=pointer]:
+              - /url: /post/ios/onboarding/flipkart/
+              - img [ref=e280]
+            - link "FlipKart" [ref=e282] [cursor=pointer]:
+              - /url: /post/ios/onboarding/flipkart/
+        - generic [ref=e283]:
+          - generic [ref=e287]:
+            - generic [ref=e289]:
+              - paragraph [ref=e290]: Sign up to unlock this user flow
+              - link "Try It Free" [ref=e291] [cursor=pointer]:
+                - /url: /signup
+                - img [ref=e292]
+                - text: Try It Free
+            - img "Submit error video thumbnail" [ref=e294] [cursor=pointer]
+          - generic [ref=e296]:
+            - link [ref=e297] [cursor=pointer]:
+              - /url: /post/ios/onboarding/depop/
+              - img [ref=e298]
+            - link "Depop" [ref=e300] [cursor=pointer]:
+              - /url: /post/ios/onboarding/depop/
+        - generic [ref=e301]:
+          - generic [ref=e305]:
+            - generic [ref=e307]:
+              - paragraph [ref=e308]: Sign up to unlock this user flow
+              - link "Try It Free" [ref=e309] [cursor=pointer]:
+                - /url: /signup
+                - img [ref=e310]
+                - text: Try It Free
+            - img "Error video thumbnail" [ref=e312] [cursor=pointer]
+          - generic [ref=e314]:
+            - link [ref=e315] [cursor=pointer]:
+              - /url: /post/ios/onboarding/eventbrite/
+              - img [ref=e316]
+            - link "Eventbrite" [ref=e318] [cursor=pointer]:
+              - /url: /post/ios/onboarding/eventbrite/
+        - generic [ref=e319]:
+          - generic [ref=e323]:
+            - generic [ref=e325]:
+              - paragraph [ref=e326]: Sign up to unlock this user flow
+              - link "Try It Free" [ref=e327] [cursor=pointer]:
+                - /url: /signup
+                - img [ref=e328]
+                - text: Try It Free
+            - img "Error video thumbnail" [ref=e330] [cursor=pointer]
+          - generic [ref=e332]:
+            - link [ref=e333] [cursor=pointer]:
+              - /url: /post/ios/onboarding/reflectly/
+              - img [ref=e334]
+            - link "Reflectly" [ref=e336] [cursor=pointer]:
+              - /url: /post/ios/onboarding/reflectly/
+        - generic [ref=e337]:
+          - generic [ref=e341]:
+            - generic [ref=e343]:
+              - paragraph [ref=e344]: Sign up to unlock this user flow
+              - link "Try It Free" [ref=e345] [cursor=pointer]:
+                - /url: /signup
+                - img [ref=e346]
+                - text: Try It Free
+            - img "Submit error video thumbnail" [ref=e348] [cursor=pointer]
+          - generic [ref=e350]:
+            - link [ref=e351] [cursor=pointer]:
+              - /url: /post/ios/onboarding/sanvello/
+              - img [ref=e352]
+            - link "Sanvello" [ref=e354] [cursor=pointer]:
+              - /url: /post/ios/onboarding/sanvello/
+        - generic [ref=e355]:
+          - generic [ref=e359]:
+            - generic [ref=e361]:
+              - paragraph [ref=e362]: Sign up to unlock this user flow
+              - link "Try It Free" [ref=e363] [cursor=pointer]:
+                - /url: /signup
+                - img [ref=e364]
+                - text: Try It Free
+            - img "Photo rejected video thumbnail" [ref=e366] [cursor=pointer]
+          - generic [ref=e368]:
+            - link [ref=e369] [cursor=pointer]:
+              - /url: /post/ios/onboarding/freetrade/
+              - img [ref=e370]
+            - link "Freetrade" [ref=e372] [cursor=pointer]:
+              - /url: /post/ios/onboarding/freetrade/
+        - generic [ref=e373]:
+          - generic [ref=e377]:
+            - generic [ref=e379]:
+              - paragraph [ref=e380]: Sign up to unlock this user flow
+              - link "Try It Free" [ref=e381] [cursor=pointer]:
+                - /url: /signup
+                - img [ref=e382]
+                - text: Try It Free
+            - img "Verification failed video thumbnail" [ref=e384] [cursor=pointer]
+          - generic [ref=e386]:
+            - link [ref=e387] [cursor=pointer]:
+              - /url: /post/ios/onboarding/clubhouses/
+              - img [ref=e388]
+            - link "Clubhouse" [ref=e390] [cursor=pointer]:
+              - /url: /post/ios/onboarding/clubhouses/
+        - generic [ref=e391]:
+          - generic [ref=e395]:
+            - generic [ref=e397]:
+              - paragraph [ref=e398]: Sign up to unlock this user flow
+              - link "Try It Free" [ref=e399] [cursor=pointer]:
+                - /url: /signup
+                - img [ref=e400]
+                - text: Try It Free
+            - img "Validation error video thumbnail" [ref=e402] [cursor=pointer]
+          - generic [ref=e404]:
+            - link [ref=e405] [cursor=pointer]:
+              - /url: /post/ios/onboarding/docusign/
+              - img [ref=e406]
+            - link "Docusign" [ref=e408] [cursor=pointer]:
+              - /url: /post/ios/onboarding/docusign/
+        - generic [ref=e409]:
+          - generic [ref=e413]:
+            - generic [ref=e415]:
+              - paragraph [ref=e416]: Sign up to unlock this user flow
+              - link "Try It Free" [ref=e417] [cursor=pointer]:
+                - /url: /signup
+                - img [ref=e418]
+                - text: Try It Free
+            - img "Error video thumbnail" [ref=e420] [cursor=pointer]
+          - generic [ref=e422]:
+            - link [ref=e423] [cursor=pointer]:
+              - /url: /post/ios/onboarding/my-fitness-pal/
+              - img [ref=e424]
+            - link "MyFitnessPal" [ref=e426] [cursor=pointer]:
+              - /url: /post/ios/onboarding/my-fitness-pal/
+      - generic [ref=e427]:
+        - button [disabled] [ref=e428]:
+          - img [ref=e429]
+        - generic [ref=e431]: "1"
+        - link "2" [ref=e432] [cursor=pointer]:
+          - /url: "?page=2"
+        - link [ref=e433] [cursor=pointer]:
+          - /url: "?page=2"
+          - img [ref=e434]
+    - contentinfo [ref=e436]:
+      - generic [ref=e437]:
+        - link "Pageflows Logo" [ref=e440] [cursor=pointer]:
+          - /url: /
+          - img "Pageflows Logo" [ref=e441]
+        - list [ref=e443]:
+          - listitem [ref=e444]:
+            - link "User Flows" [ref=e445] [cursor=pointer]:
+              - /url: /user-flow/
+          - listitem [ref=e446]:
+            - link "UI/UX Design" [ref=e447] [cursor=pointer]:
+              - /url: /ui-ux-design/
+          - listitem [ref=e448]:
+            - link "Website Design" [ref=e449] [cursor=pointer]:
+              - /url: /website-design/
+          - listitem [ref=e450]:
+            - link "Landing Page Design" [ref=e451] [cursor=pointer]:
+              - /url: /landing-page-design/
+          - listitem [ref=e452]:
+            - link "Mobile App Design" [ref=e453] [cursor=pointer]:
+              - /url: /mobile-app-design/
+          - listitem [ref=e454]:
+            - link "UI Design" [ref=e455] [cursor=pointer]:
+              - /url: /ui-design/
+          - listitem [ref=e456]:
+            - link "Pricing" [ref=e457] [cursor=pointer]:
+              - /url: /pricing/
+          - listitem [ref=e458]:
+            - link "Blog" [ref=e459] [cursor=pointer]:
+              - /url: https://pageflows.com/resources/
+        - list [ref=e461]:
+          - listitem [ref=e462]:
+            - link [ref=e463] [cursor=pointer]:
+              - /url: https://www.x.com/pageflows
+              - img [ref=e464]
+          - listitem [ref=e467]:
+            - link [ref=e468] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/pageflows/posts/
+              - img [ref=e469]
+          - listitem [ref=e476]:
+            - link [ref=e477] [cursor=pointer]:
+              - /url: https://www.pinterest.com/pageflowsdesign/_created
+              - img [ref=e478]
+          - listitem [ref=e480]:
+            - link [ref=e481] [cursor=pointer]:
+              - /url: https://www.instagram.com/page_flows/
+              - img [ref=e482]
+          - listitem [ref=e487]:
+            - link [ref=e488] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@page.flows
+              - img [ref=e489]
+          - listitem [ref=e491]:
+            - link [ref=e492] [cursor=pointer]:
+              - /url: https://www.facebook.com/profile.php?id=61552806667723
+              - img [ref=e493]
+          - listitem [ref=e496]:
+            - link [ref=e497] [cursor=pointer]:
+              - /url: https://www.youtube.com/@PageFlows
+              - img [ref=e498]
+      - generic [ref=e500]:
+        - text: Page Flows © Copyright 2026. All rights reserved
+        - img [ref=e501]
+        - link "Terms & Privacy" [ref=e503] [cursor=pointer]:
+          - /url: /terms/

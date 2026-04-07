@@ -1,0 +1,344 @@
+- generic [ref=e2]:
+  - region
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=e6]:
+      - heading "Navigation Menu" [level=2] [ref=e7]
+      - generic [ref=e8]:
+        - link "Homepage" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - img [ref=e11]
+        - generic [ref=e13]:
+          - navigation "Global" [ref=e16]:
+            - list [ref=e17]:
+              - listitem [ref=e18]:
+                - button "Platform" [ref=e20] [cursor=pointer]:
+                  - text: Platform
+                  - img [ref=e21]
+              - listitem [ref=e23]:
+                - button "Solutions" [ref=e25] [cursor=pointer]:
+                  - text: Solutions
+                  - img [ref=e26]
+              - listitem [ref=e28]:
+                - button "Resources" [ref=e30] [cursor=pointer]:
+                  - text: Resources
+                  - img [ref=e31]
+              - listitem [ref=e33]:
+                - button "Open Source" [ref=e35] [cursor=pointer]:
+                  - text: Open Source
+                  - img [ref=e36]
+              - listitem [ref=e38]:
+                - button "Enterprise" [ref=e40] [cursor=pointer]:
+                  - text: Enterprise
+                  - img [ref=e41]
+              - listitem [ref=e43]:
+                - link "Pricing" [ref=e44] [cursor=pointer]:
+                  - /url: https://github.com/pricing
+                  - generic [ref=e45]: Pricing
+          - generic [ref=e46]:
+            - button "Search or jump to…" [ref=e49] [cursor=pointer]:
+              - img [ref=e51]
+            - link "Sign in" [ref=e54] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Factions%2Fruns%2F23892018900
+            - link "Sign up" [ref=e55] [cursor=pointer]:
+              - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Factions%2Fworkflow_runs%2Fshow&source=header-repo&source_repo=vercel%2Fnext.js
+            - button "Appearance settings" [ref=e58] [cursor=pointer]:
+              - img
+  - main [ref=e62]:
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e65]:
+          - generic [ref=e67]:
+            - img [ref=e68]
+            - link "vercel" [ref=e71] [cursor=pointer]:
+              - /url: /vercel
+            - generic [ref=e72]: /
+            - strong [ref=e73]:
+              - link "next.js" [ref=e74] [cursor=pointer]:
+                - /url: /vercel/next.js
+            - generic [ref=e75]: Public
+          - generic [ref=e76]:
+            - list:
+              - listitem [ref=e77]:
+                - link "You must be signed in to change notification settings" [ref=e78] [cursor=pointer]:
+                  - /url: /login?return_to=%2Fvercel%2Fnext.js
+                  - img [ref=e79]
+                  - text: Notifications
+              - listitem [ref=e81]:
+                - link "Fork 30.7k" [ref=e82] [cursor=pointer]:
+                  - /url: /login?return_to=%2Fvercel%2Fnext.js
+                  - img [ref=e83]
+                  - text: Fork
+                  - generic "30,748" [ref=e85]: 30.7k
+              - listitem [ref=e86]:
+                - link "You must be signed in to star a repository" [ref=e88] [cursor=pointer]:
+                  - /url: /login?return_to=%2Fvercel%2Fnext.js
+                  - img [ref=e89]
+                  - text: Star
+                  - generic "138572 users starred this repository" [ref=e91]: 139k
+        - navigation "Repository" [ref=e92]:
+          - list [ref=e93]:
+            - listitem [ref=e94]:
+              - link "Code" [ref=e95] [cursor=pointer]:
+                - /url: /vercel/next.js
+                - img [ref=e96]
+                - generic [ref=e98]: Code
+            - listitem [ref=e99]:
+              - link "Issues 2.1k" [ref=e100] [cursor=pointer]:
+                - /url: /vercel/next.js/issues
+                - img [ref=e101]
+                - generic [ref=e104]: Issues
+                - generic "2,097" [ref=e105]: 2.1k
+            - listitem [ref=e106]:
+              - link "Pull requests 1.5k" [ref=e107] [cursor=pointer]:
+                - /url: /vercel/next.js/pulls
+                - img [ref=e108]
+                - generic [ref=e110]: Pull requests
+                - generic "1,546" [ref=e111]: 1.5k
+            - listitem [ref=e112]:
+              - link "Discussions" [ref=e113] [cursor=pointer]:
+                - /url: /vercel/next.js/discussions
+                - img [ref=e114]
+                - generic [ref=e116]: Discussions
+            - listitem [ref=e117]:
+              - link "Actions" [ref=e118] [cursor=pointer]:
+                - /url: /vercel/next.js/actions
+                - img [ref=e119]
+                - generic [ref=e121]: Actions
+            - listitem [ref=e122]:
+              - link "Security and quality 36" [ref=e123] [cursor=pointer]:
+                - /url: /vercel/next.js/security
+                - img [ref=e124]
+                - generic [ref=e126]: Security and quality
+                - generic "36" [ref=e127]
+            - listitem [ref=e128]:
+              - link "Insights" [ref=e129] [cursor=pointer]:
+                - /url: /vercel/next.js/pulse
+                - img [ref=e130]
+                - generic [ref=e132]: Insights
+      - generic [ref=e137]:
+        - generic [ref=e140]:
+          - link "Generate Stats" [ref=e143] [cursor=pointer]:
+            - /url: /vercel/next.js/actions/workflows/pull_request_stats.yml
+            - img [ref=e144]
+            - generic [ref=e146]: Generate Stats
+          - generic [ref=e147]:
+            - generic [ref=e148]:
+              - img "failed:" [ref=e152]
+              - 'heading "fix(turbopack): skip preset-env when browserslist-rs returns no versions #132759" [level=1] [ref=e154]':
+                - generic [ref=e155]: "fix(turbopack): skip preset-env when browserslist-rs returns no versions #132759"
+            - link "Sign in to view logs" [ref=e158] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Factions%2Fruns%2F23892018900
+        - generic [ref=e159]:
+          - navigation "Workflow run" [ref=e165]:
+            - list [ref=e166]:
+              - listitem [ref=e167]:
+                - link "Summary" [ref=e168] [cursor=pointer]:
+                  - /url: /vercel/next.js/actions/runs/23892018900
+                  - generic:
+                    - img
+                  - generic [ref=e170]: Summary
+              - generic [ref=e171]:
+                - heading "All jobs" [level=4] [ref=e172]
+                - button "Filter by job status" [ref=e173] [cursor=pointer]:
+                  - img [ref=e174]
+              - listitem [ref=e176]
+              - listitem [ref=e177]:
+                - list [ref=e178]:
+                  - listitem [ref=e179]:
+                    - button "build" [expanded] [ref=e180] [cursor=pointer]:
+                      - generic:
+                        - img
+                      - generic [ref=e181]:
+                        - generic [ref=e182]: build
+                        - generic:
+                          - img
+                    - list "build" [ref=e183]:
+                      - listitem [ref=e184]:
+                        - link "build" [ref=e185] [cursor=pointer]:
+                          - /url: /vercel/next.js/actions/runs/23892018900/job/69667421621
+                          - generic:
+                            - img
+                          - generic [ref=e187]: build
+                  - listitem [ref=e188]:
+                    - 'link "Stats (${{ matrix.bundler }})" [ref=e189] [cursor=pointer]':
+                      - /url: /vercel/next.js/actions/runs/23892018900/job/69667453544
+                      - generic:
+                        - img
+                      - generic [ref=e191]: "Stats (${{ matrix.bundler }})"
+                  - listitem [ref=e192]:
+                    - link "Aggregate Stats" [ref=e193] [cursor=pointer]:
+                      - /url: /vercel/next.js/actions/runs/23892018900/job/69667453295
+                      - generic:
+                        - img
+                      - generic [ref=e195]: Aggregate Stats
+              - listitem [ref=e196]
+              - listitem [ref=e197]:
+                - heading "Run details" [level=3] [ref=e199]
+                - list "Run details" [ref=e200]:
+                  - listitem [ref=e201]:
+                    - link "Usage" [ref=e202] [cursor=pointer]:
+                      - /url: /vercel/next.js/actions/runs/23892018900/usage
+                      - generic:
+                        - img
+                      - generic [ref=e204]: Usage
+                  - listitem [ref=e205]:
+                    - link "Workflow file" [ref=e206] [cursor=pointer]:
+                      - /url: /vercel/next.js/actions/runs/23892018900/workflow
+                      - generic:
+                        - img
+                      - generic [ref=e208]: Workflow file
+          - generic [ref=e210]:
+            - region "Workflow run summary" [ref=e211]:
+              - generic [ref=e212]:
+                - generic [ref=e213]:
+                  - generic [ref=e214]: Triggered via pull request April 2, 2026 08:4232 minutes ago
+                  - generic [ref=e215]:
+                    - link "@mhdsdt mhdsdt" [ref=e216] [cursor=pointer]:
+                      - /url: /mhdsdt
+                      - img "@mhdsdt" [ref=e217]
+                      - text: mhdsdt
+                    - generic [ref=e218]:
+                      - generic [ref=e219]: synchronize
+                      - link "#92244" [ref=e220] [cursor=pointer]:
+                        - /url: /vercel/next.js/pull/92244
+                    - link "mhdsdt:fix/turbopack-browserslist-unknown-versions" [ref=e221] [cursor=pointer]:
+                      - /url: /mhdsdt/next.js/tree/refs/heads/fix/turbopack-browserslist-unknown-versions
+                - generic [ref=e222]:
+                  - generic [ref=e223]: Status
+                  - text: Failure
+                - generic [ref=e224]:
+                  - generic [ref=e225]: Total duration
+                  - link "40s" [ref=e226] [cursor=pointer]:
+                    - /url: /vercel/next.js/actions/runs/23892018900/usage
+                - generic [ref=e227]:
+                  - generic [ref=e228]: Artifacts
+                  - link "1" [ref=e229] [cursor=pointer]:
+                    - /url: "#artifacts"
+            - region "Workflow run graph" [ref=e230]:
+              - generic [ref=e232]:
+                - generic [ref=e234]:
+                  - heading "pull_request_stats.yml" [level=2] [ref=e235]:
+                    - link "pull_request_stats.yml" [ref=e236] [cursor=pointer]:
+                      - /url: /vercel/next.js/actions/runs/23892018900/workflow
+                  - generic [ref=e237]: "on: pull_request"
+                - generic [ref=e239]:
+                  - generic [ref=e240]:
+                    - img
+                    - img
+                    - 'link "failed: build / build 13s" [ref=e244] [cursor=pointer]':
+                      - /url: /vercel/next.js/actions/runs/23892018900/job/69667421621
+                      - generic [ref=e246]:
+                        - img "failed:" [ref=e248]
+                        - generic [ref=e250]:
+                          - generic [ref=e251]: build
+                          - generic [ref=e252]: /
+                          - generic [ref=e253]: build
+                        - generic [ref=e254]: 13s
+                    - generic [ref=e257]:
+                      - generic [ref=e259]: "Matrix: stats"
+                      - 'button "skipped: 1 job completed Show all jobs" [ref=e261] [cursor=pointer]':
+                        - generic [ref=e262]:
+                          - img "skipped:" [ref=e264]
+                          - generic [ref=e266]: 1 job completed
+                        - generic [ref=e267]: Show all jobs
+                    - 'link "failed: Aggregate Stats 21s" [ref=e273] [cursor=pointer]':
+                      - /url: /vercel/next.js/actions/runs/23892018900/job/69667453295
+                      - generic [ref=e275]:
+                        - img "failed:" [ref=e277]
+                        - generic [ref=e280]: Aggregate Stats
+                        - generic [ref=e281]: 21s
+                  - generic [ref=e283]:
+                    - paragraph [ref=e284]: Oh hello! Nice to see you.
+                    - paragraph [ref=e285]:
+                      - text: Made with ❤️ by
+                      - link [ref=e286] [cursor=pointer]:
+                        - /url: https://actions.github.io/humans.txt
+                        - text: humans.txt
+                - generic [ref=e287]:
+                  - button "Fit to window" [disabled] [ref=e288]:
+                    - img
+                  - generic [ref=e289]:
+                    - button "Zoom out" [disabled] [ref=e291]:
+                      - img
+                    - button "Zoom in" [ref=e293] [cursor=pointer]:
+                      - img
+            - region "Annotations" [ref=e294]:
+              - generic [ref=e295]:
+                - generic [ref=e297]:
+                  - heading "Annotations" [level=2] [ref=e298]
+                  - generic [ref=e299]: 2 errors and 2 warnings
+                - table [ref=e300]:
+                  - rowgroup [ref=e301]:
+                    - row "build / build Process completed with exit code 1." [ref=e302]:
+                      - cell "build / build Process completed with exit code 1." [ref=e303]:
+                        - generic [ref=e304]:
+                          - img [ref=e306]
+                          - generic [ref=e308]:
+                            - link "build / build" [ref=e309] [cursor=pointer]:
+                              - /url: /vercel/next.js/actions/runs/23892018900/job/69667421621#step:2:23
+                              - strong [ref=e310]: build / build
+                            - generic [ref=e313]: Process completed with exit code 1.
+                    - row "Aggregate Stats Process completed with exit code 1." [ref=e314]:
+                      - cell "Aggregate Stats Process completed with exit code 1." [ref=e315]:
+                        - generic [ref=e316]:
+                          - img [ref=e318]
+                          - generic [ref=e320]:
+                            - link "Aggregate Stats" [ref=e321] [cursor=pointer]:
+                              - /url: /vercel/next.js/actions/runs/23892018900/job/69667453295#step:7:28
+                              - strong [ref=e322]: Aggregate Stats
+                            - generic [ref=e325]: Process completed with exit code 1.
+                    - 'row "build / build Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/upload-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/ Show more" [ref=e326]':
+                      - 'cell "build / build Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/upload-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/ Show more" [ref=e327]':
+                        - generic [ref=e328]:
+                          - img [ref=e330]
+                          - generic [ref=e332]:
+                            - link "build / build" [ref=e333] [cursor=pointer]:
+                              - /url: /vercel/next.js/actions/runs/23892018900/job/69667421621#step:42:3
+                              - strong [ref=e334]: build / build
+                            - generic [ref=e335]:
+                              - generic [ref=e337]:
+                                - text: "Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/upload-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see:"
+                                - link "https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/" [ref=e338] [cursor=pointer]:
+                                  - /url: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+                              - button "Show more" [ref=e339] [cursor=pointer]
+                    - 'row "Aggregate Stats Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/download-artifact@v4, actions/setup-node@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/ Show more" [ref=e340]':
+                      - 'cell "Aggregate Stats Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/download-artifact@v4, actions/setup-node@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/ Show more" [ref=e341]':
+                        - generic [ref=e342]:
+                          - img [ref=e344]
+                          - generic [ref=e346]:
+                            - link "Aggregate Stats" [ref=e347] [cursor=pointer]:
+                              - /url: /vercel/next.js/actions/runs/23892018900/job/69667453295#step:15:2
+                              - strong [ref=e348]: Aggregate Stats
+                            - generic [ref=e349]:
+                              - generic [ref=e351]:
+                                - text: "Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/download-artifact@v4, actions/setup-node@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see:"
+                                - link "https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/" [ref=e352] [cursor=pointer]:
+                                  - /url: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+                              - button "Show more" [ref=e353] [cursor=pointer]
+            - region "Artifacts" [ref=e354]:
+              - generic [ref=e355]:
+                - generic [ref=e357]:
+                  - heading "Artifacts" [level=2] [ref=e358]
+                  - generic [ref=e359]: Produced during runtime
+                - table [ref=e360]:
+                  - rowgroup [ref=e361]:
+                    - row "Name Size Digest" [ref=e362]:
+                      - columnheader "Name" [ref=e363]
+                      - columnheader "Size" [ref=e364]
+                      - columnheader "Digest" [ref=e365]
+                      - cell [ref=e366]
+                  - rowgroup [ref=e367]:
+                    - row "turbo-run-summary- 204 KB sha256:dd34debd52972ef78deb3206a6d817f059c3c7041254746e6c5f720f2299d184 Copy artifact digest" [ref=e368]:
+                      - cell "turbo-run-summary-" [ref=e369]:
+                        - generic [ref=e370]:
+                          - img [ref=e372]
+                          - generic [ref=e374]: turbo-run-summary-
+                      - cell "204 KB" [ref=e375]
+                      - cell "sha256:dd34debd52972ef78deb3206a6d817f059c3c7041254746e6c5f720f2299d184 Copy artifact digest" [ref=e376]:
+                        - generic [ref=e377]:
+                          - code [ref=e378]: sha256:dd34debd52972ef78deb3206a6d817f059c3c7041254746e6c5f720f2299d184
+                          - button "Copy artifact digest" [ref=e380] [cursor=pointer]:
+                            - img [ref=e381]
+                      - cell [ref=e385]

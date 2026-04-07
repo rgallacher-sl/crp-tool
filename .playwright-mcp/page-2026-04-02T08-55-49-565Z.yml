@@ -1,0 +1,106 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "Page Flows brand logo icon." [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "Page Flows brand logo icon." [ref=e7]
+        - generic [ref=e8]:
+          - img [ref=e9]
+          - textbox "Search iOS Products, Screens, UI Elements, Flows" [ref=e12]
+      - list [ref=e14]:
+        - listitem [ref=e15]:
+          - link "iOS" [ref=e16] [cursor=pointer]:
+            - /url: /ios/
+        - listitem [ref=e17]:
+          - link "Android" [ref=e18] [cursor=pointer]:
+            - /url: /android/
+        - listitem [ref=e19]:
+          - link "Web" [ref=e20] [cursor=pointer]:
+            - /url: /web/
+        - listitem [ref=e21]:
+          - link "Emails" [ref=e22] [cursor=pointer]:
+            - /url: /emails/
+      - generic [ref=e25]:
+        - button "Login" [ref=e26] [cursor=pointer]:
+          - link "Login" [ref=e27]:
+            - /url: /login/
+        - button "Try It Free" [ref=e29] [cursor=pointer]
+  - generic [ref=e32]:
+    - heading "Looks like this flow hit a dead-end!" [level=1] [ref=e33]
+    - paragraph [ref=e34]: We’re sorry, the page you requested was not found.
+    - img "404 image" [ref=e36]
+    - generic [ref=e37]:
+      - paragraph [ref=e38]:
+        - text: Did you know that 88% of online consumers are less likely to return after a bad UX? Explore our
+        - link "flows" [ref=e39] [cursor=pointer]:
+          - /url: /all-userflows/
+        - text: to make sure your designs are built for success!
+      - link "Go to Page Flows home page" [ref=e40] [cursor=pointer]:
+        - /url: /
+        - text: Go to Page Flows home page
+        - img [ref=e41]
+  - contentinfo [ref=e43]:
+    - generic [ref=e44]:
+      - link "Pageflows Logo" [ref=e47] [cursor=pointer]:
+        - /url: /
+        - img "Pageflows Logo" [ref=e48]
+      - list [ref=e50]:
+        - listitem [ref=e51]:
+          - link "User Flows" [ref=e52] [cursor=pointer]:
+            - /url: /user-flow/
+        - listitem [ref=e53]:
+          - link "UI/UX Design" [ref=e54] [cursor=pointer]:
+            - /url: /ui-ux-design/
+        - listitem [ref=e55]:
+          - link "Website Design" [ref=e56] [cursor=pointer]:
+            - /url: /website-design/
+        - listitem [ref=e57]:
+          - link "Landing Page Design" [ref=e58] [cursor=pointer]:
+            - /url: /landing-page-design/
+        - listitem [ref=e59]:
+          - link "Mobile App Design" [ref=e60] [cursor=pointer]:
+            - /url: /mobile-app-design/
+        - listitem [ref=e61]:
+          - link "UI Design" [ref=e62] [cursor=pointer]:
+            - /url: /ui-design/
+        - listitem [ref=e63]:
+          - link "Pricing" [ref=e64] [cursor=pointer]:
+            - /url: /pricing/
+        - listitem [ref=e65]:
+          - link "Blog" [ref=e66] [cursor=pointer]:
+            - /url: https://pageflows.com/resources/
+      - list [ref=e68]:
+        - listitem [ref=e69]:
+          - link [ref=e70] [cursor=pointer]:
+            - /url: https://www.x.com/pageflows
+            - img [ref=e71]
+        - listitem [ref=e74]:
+          - link [ref=e75] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/pageflows/posts/
+            - img [ref=e76]
+        - listitem [ref=e83]:
+          - link [ref=e84] [cursor=pointer]:
+            - /url: https://www.pinterest.com/pageflowsdesign/_created
+            - img [ref=e85]
+        - listitem [ref=e87]:
+          - link [ref=e88] [cursor=pointer]:
+            - /url: https://www.instagram.com/page_flows/
+            - img [ref=e89]
+        - listitem [ref=e94]:
+          - link [ref=e95] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@page.flows
+            - img [ref=e96]
+        - listitem [ref=e98]:
+          - link [ref=e99] [cursor=pointer]:
+            - /url: https://www.facebook.com/profile.php?id=61552806667723
+            - img [ref=e100]
+        - listitem [ref=e103]:
+          - link [ref=e104] [cursor=pointer]:
+            - /url: https://www.youtube.com/@PageFlows
+            - img [ref=e105]
+    - generic [ref=e107]:
+      - text: Page Flows © Copyright 2024. All rights reserved
+      - img [ref=e108]
+      - link "Terms & Privacy" [ref=e110] [cursor=pointer]:
+        - /url: /terms/

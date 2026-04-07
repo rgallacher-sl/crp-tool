@@ -1,0 +1,1045 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - banner [ref=e4]:
+        - generic [ref=e5]:
+          - generic [ref=e6]:
+            - link "Render" [ref=e7] [cursor=pointer]:
+              - /url: /
+              - img "Render" [ref=e8]
+            - navigation [ref=e16]:
+              - list [ref=e17]:
+                - listitem [ref=e18]:
+                  - link "Docs" [ref=e19] [cursor=pointer]:
+                    - /url: /docs
+                    - generic [ref=e20]: Docs
+                - listitem [ref=e22]:
+                  - link "Changelog" [ref=e23] [cursor=pointer]:
+                    - /url: /changelog
+                    - generic [ref=e24]: Changelog
+          - generic [ref=e26]:
+            - generic [ref=e27]:
+              - generic [ref=e28]: Search
+              - img
+              - textbox "Search" [ref=e29]:
+                - /placeholder: Search the docs
+            - button "Ask AI" [ref=e30] [cursor=pointer]:
+              - img [ref=e31]
+              - text: Ask AI
+          - generic [ref=e36]:
+            - list
+            - link "Sign In" [ref=e37] [cursor=pointer]:
+              - /url: https://dashboard.render.com/
+              - generic [ref=e38]: Sign In
+            - link "Get Started" [ref=e39] [cursor=pointer]:
+              - /url: https://dashboard.render.com/register
+              - text: Get Started
+      - generic [ref=e40]:
+        - main [ref=e41]:
+          - navigation "Side Navigation" [ref=e42]:
+            - navigation [ref=e44]:
+              - button "Start" [expanded] [ref=e45] [cursor=pointer]:
+                - generic [ref=e46]:
+                  - img [ref=e48]
+                  - generic [ref=e51]: Start
+                - img [ref=e52]
+              - list [ref=e59]:
+                - list [ref=e60]:
+                  - listitem [ref=e61]:
+                    - link "Home" [ref=e62] [cursor=pointer]:
+                      - /url: /docs
+                  - listitem [ref=e63]:
+                    - link "Your first deploy" [ref=e64] [cursor=pointer]:
+                      - /url: /docs/your-first-deploy
+                  - listitem [ref=e65]:
+                    - link "Free instances" [ref=e66] [cursor=pointer]:
+                      - /url: /docs/free
+                  - listitem [ref=e67]:
+                    - link "Professional features" [ref=e68] [cursor=pointer]:
+                      - /url: /docs/professional-features
+                  - listitem [ref=e69]:
+                    - link "Use with coding agents New" [ref=e70] [cursor=pointer]:
+                      - /url: /docs/llm-support
+                      - text: Use with coding agents
+                      - generic [ref=e71]: New
+                  - listitem [ref=e72]:
+                    - link "FAQ" [ref=e73] [cursor=pointer]:
+                      - /url: /docs/faq
+                  - list [ref=e74]:
+                    - listitem [ref=e75]: Migrate from…
+                    - list [ref=e76]:
+                      - listitem [ref=e77]:
+                        - link "Heroku" [ref=e78] [cursor=pointer]:
+                          - /url: /docs/migrate-from-heroku
+                      - listitem [ref=e79]:
+                        - link "Railway" [ref=e80] [cursor=pointer]:
+                          - /url: /docs/migrate-from-railway
+              - button "Service Types" [expanded] [ref=e81] [cursor=pointer]:
+                - generic [ref=e82]:
+                  - img [ref=e84]
+                  - generic [ref=e89]: Service Types
+                - img [ref=e90]
+              - list [ref=e97]:
+                - list [ref=e98]:
+                  - listitem [ref=e99]:
+                    - link "Which to use?" [ref=e100] [cursor=pointer]:
+                      - /url: /docs/service-types
+                  - listitem [ref=e101]:
+                    - link "Static sites" [ref=e102] [cursor=pointer]:
+                      - /url: /docs/static-sites
+                  - listitem [ref=e103]:
+                    - link "Web services" [ref=e104] [cursor=pointer]:
+                      - /url: /docs/web-services
+                  - listitem [ref=e105]:
+                    - link "Private services" [ref=e106] [cursor=pointer]:
+                      - /url: /docs/private-services
+                  - listitem [ref=e107]:
+                    - link "Background workers" [ref=e108] [cursor=pointer]:
+                      - /url: /docs/background-workers
+                  - listitem [ref=e109]:
+                    - link "Cron jobs" [ref=e110] [cursor=pointer]:
+                      - /url: /docs/cronjobs
+                  - listitem [ref=e111]:
+                    - link "Workflows Beta" [ref=e112] [cursor=pointer]:
+                      - /url: /docs/workflows-redirect
+                      - text: Workflows
+                      - generic [ref=e113]: Beta
+                  - listitem [ref=e114]:
+                    - link "Multi-service architectures" [ref=e115] [cursor=pointer]:
+                      - /url: /docs/multi-service-architecture
+              - button "Deploys" [expanded] [ref=e116] [cursor=pointer]:
+                - generic [ref=e117]:
+                  - img [ref=e119]
+                  - generic [ref=e122]: Deploys
+                - img [ref=e123]
+              - list [ref=e130]:
+                - list [ref=e131]:
+                  - listitem [ref=e132]:
+                    - link "How deploys work" [ref=e133] [cursor=pointer]:
+                      - /url: /docs/deploys
+                  - listitem [ref=e134]:
+                    - link "Supported languages" [ref=e135] [cursor=pointer]:
+                      - /url: /docs/language-support
+                  - listitem [ref=e136]:
+                    - link "Build pipeline" [ref=e137] [cursor=pointer]:
+                      - /url: /docs/build-pipeline
+                  - listitem [ref=e138]:
+                    - link "Deploy hooks" [ref=e139] [cursor=pointer]:
+                      - /url: /docs/deploy-hooks
+                  - listitem [ref=e140]:
+                    - link "Troubleshooting deploys" [ref=e141] [cursor=pointer]:
+                      - /url: /docs/troubleshooting-deploys
+                  - list [ref=e142]:
+                    - listitem [ref=e143]: Previewing changes
+                    - list [ref=e144]:
+                      - listitem [ref=e145]:
+                        - link "Single-service previews" [ref=e146] [cursor=pointer]:
+                          - /url: /docs/service-previews
+                      - listitem [ref=e147]:
+                        - link "Preview environments (multi-service)" [ref=e148] [cursor=pointer]:
+                          - /url: /docs/preview-environments
+                  - list [ref=e149]:
+                    - listitem [ref=e150]: Docker deploys
+                    - list [ref=e151]:
+                      - listitem [ref=e152]:
+                        - link "Overview" [ref=e153] [cursor=pointer]:
+                          - /url: /docs/docker
+                      - listitem [ref=e154]:
+                        - link "Deploy a registered image" [ref=e155] [cursor=pointer]:
+                          - /url: /docs/deploying-an-image
+                      - listitem [ref=e156]:
+                        - link "Using secrets" [ref=e157] [cursor=pointer]:
+                          - /url: /docs/docker-secrets
+                  - list [ref=e158]:
+                    - listitem [ref=e159]: Git providers
+                    - list [ref=e160]:
+                      - listitem [ref=e161]:
+                        - link "GitHub" [ref=e162] [cursor=pointer]:
+                          - /url: /docs/github
+                      - listitem [ref=e163]:
+                        - link "GitLab" [ref=e164] [cursor=pointer]:
+                          - /url: /docs/gitlab
+                      - listitem [ref=e165]:
+                        - link "Bitbucket" [ref=e166] [cursor=pointer]:
+                          - /url: /docs/bitbucket
+                      - listitem [ref=e167]:
+                        - link "Deploying a specific commit" [ref=e168] [cursor=pointer]:
+                          - /url: /docs/deploying-a-commit
+                      - listitem [ref=e169]:
+                        - link "Monorepo support" [ref=e170] [cursor=pointer]:
+                          - /url: /docs/monorepo-support
+                  - list [ref=e171]:
+                    - listitem [ref=e172]: Runtime
+                    - list [ref=e173]:
+                      - listitem [ref=e174]:
+                        - link "Native runtimes" [ref=e175] [cursor=pointer]:
+                          - /url: /docs/native-runtimes
+                      - listitem [ref=e176]:
+                        - link "Environment variables & secrets" [ref=e177] [cursor=pointer]:
+                          - /url: /docs/configure-environment-variables
+                      - listitem [ref=e178]:
+                        - link "Default environment variables" [ref=e179] [cursor=pointer]:
+                          - /url: /docs/environment-variables
+              - button "Workflows Beta" [expanded] [ref=e180] [cursor=pointer]:
+                - generic [ref=e181]:
+                  - img [ref=e183]
+                  - generic [ref=e188]:
+                    - text: Workflows
+                    - generic [ref=e189]: Beta
+                - img [ref=e190]
+              - list [ref=e197]:
+                - list [ref=e198]:
+                  - listitem [ref=e199]:
+                    - link "Intro to workflows" [ref=e200] [cursor=pointer]:
+                      - /url: /docs/workflows
+                  - listitem [ref=e201]:
+                    - link "Tutorial" [ref=e202] [cursor=pointer]:
+                      - /url: /docs/workflows-tutorial
+                  - listitem [ref=e203]:
+                    - link "Limits & pricing" [ref=e204] [cursor=pointer]:
+                      - /url: /docs/workflows-limits
+                  - list [ref=e205]:
+                    - listitem [ref=e206]: How to…
+                    - list [ref=e207]:
+                      - listitem [ref=e208]:
+                        - link "Define tasks" [ref=e209] [cursor=pointer]:
+                          - /url: /docs/workflows-defining
+                      - listitem [ref=e210]:
+                        - link "Trigger runs" [ref=e211] [cursor=pointer]:
+                          - /url: /docs/workflows-running
+                      - listitem [ref=e212]:
+                        - link "Develop locally" [ref=e213] [cursor=pointer]:
+                          - /url: /docs/workflows-local-development
+                  - list [ref=e214]:
+                    - listitem [ref=e215]: SDK reference
+                    - list [ref=e216]:
+                      - listitem [ref=e217]:
+                        - link "TypeScript SDK" [ref=e218] [cursor=pointer]:
+                          - /url: /docs/workflows-sdk-typescript
+                      - listitem [ref=e219]:
+                        - link "Python SDK" [ref=e220] [cursor=pointer]:
+                          - /url: /docs/workflows-sdk-python
+                  - list [ref=e221]:
+                    - listitem [ref=e222]: Example workflows
+                    - list [ref=e223]:
+                      - listitem [ref=e224]:
+                        - link "TypeScript examples" [ref=e225] [cursor=pointer]:
+                          - /url: https://github.com/render-examples/render-workflows-examples-ts
+                          - text: TypeScript examples
+                          - img [ref=e226]
+                      - listitem [ref=e229]:
+                        - link "Python examples" [ref=e230] [cursor=pointer]:
+                          - /url: https://github.com/render-examples/render-workflows-examples-python
+                          - text: Python examples
+                          - img [ref=e231]
+              - button "Datastores" [expanded] [ref=e234] [cursor=pointer]:
+                - generic [ref=e235]:
+                  - img [ref=e237]
+                  - generic [ref=e239]: Datastores
+                - img [ref=e240]
+              - list [ref=e247]:
+                - list [ref=e248]:
+                  - listitem [ref=e249]:
+                    - link "Persistent disks" [ref=e250] [cursor=pointer]:
+                      - /url: /docs/disks
+                  - list [ref=e251]:
+                    - listitem [ref=e252]: Key Value (Redis®-compatible)
+                    - list [ref=e253]:
+                      - listitem [ref=e254]:
+                        - link "Creating & connecting" [ref=e255] [cursor=pointer]:
+                          - /url: /docs/key-value
+                      - listitem [ref=e256]:
+                        - link "Valkey/Redis FAQ" [ref=e257] [cursor=pointer]:
+                          - /url: /docs/valkey-faq
+                  - list [ref=e258]:
+                    - listitem [ref=e259]: Postgres databases
+                    - list [ref=e260]:
+                      - listitem [ref=e261]:
+                        - link "Overview" [ref=e262] [cursor=pointer]:
+                          - /url: /docs/postgresql
+                      - listitem [ref=e263]:
+                        - link "Creating & connecting" [ref=e264] [cursor=pointer]:
+                          - /url: /docs/postgresql-creating-connecting
+                      - listitem [ref=e265]:
+                        - link "Recovery & backups" [ref=e266] [cursor=pointer]:
+                          - /url: /docs/postgresql-backups
+                      - listitem [ref=e267]:
+                        - link "Database credentials" [ref=e268] [cursor=pointer]:
+                          - /url: /docs/postgresql-credentials
+                      - listitem [ref=e269]:
+                        - link "Read replicas" [ref=e270] [cursor=pointer]:
+                          - /url: /docs/postgresql-read-replicas
+                      - listitem [ref=e271]:
+                        - link "High availability" [ref=e272] [cursor=pointer]:
+                          - /url: /docs/postgresql-high-availability
+                      - listitem [ref=e273]:
+                        - link "Admin apps" [ref=e274] [cursor=pointer]:
+                          - /url: /docs/postgresql-apps
+                      - listitem [ref=e275]:
+                        - link "Extensions" [ref=e276] [cursor=pointer]:
+                          - /url: /docs/postgresql-extensions
+                      - listitem [ref=e277]:
+                        - link "Connection pooling" [ref=e278] [cursor=pointer]:
+                          - /url: /docs/postgresql-connection-pooling
+                      - listitem [ref=e279]:
+                        - link "Version upgrades" [ref=e280] [cursor=pointer]:
+                          - /url: /docs/postgresql-upgrading
+                      - listitem [ref=e281]:
+                        - link "Troubleshooting performance" [ref=e282] [cursor=pointer]:
+                          - /url: /docs/postgresql-performance-troubleshooting
+                      - listitem [ref=e283]:
+                        - link "Flexible plans" [ref=e284] [cursor=pointer]:
+                          - /url: /docs/postgresql-refresh
+                      - listitem [ref=e285]:
+                        - link "Legacy instance types" [ref=e286] [cursor=pointer]:
+                          - /url: /docs/postgresql-legacy-instance-types
+              - button "Networking" [expanded] [ref=e287] [cursor=pointer]:
+                - generic [ref=e288]:
+                  - img [ref=e290]
+                  - generic [ref=e292]: Networking
+                - img [ref=e293]
+              - list [ref=e300]:
+                - list [ref=e301]:
+                  - listitem [ref=e302]:
+                    - link "Regions" [ref=e303] [cursor=pointer]:
+                      - /url: /docs/regions
+                  - listitem [ref=e304]:
+                    - link "Private network" [ref=e305] [cursor=pointer]:
+                      - /url: /docs/private-network
+                  - listitem [ref=e306]:
+                    - link "Private links" [ref=e307] [cursor=pointer]:
+                      - /url: /docs/private-link
+                  - listitem [ref=e308]:
+                    - link "Edge caching" [ref=e309] [cursor=pointer]:
+                      - /url: /docs/web-service-caching
+                  - listitem [ref=e310]:
+                    - link "WebSockets" [ref=e311] [cursor=pointer]:
+                      - /url: /docs/websocket
+                  - listitem [ref=e312]:
+                    - link "Outbound bandwidth" [ref=e313] [cursor=pointer]:
+                      - /url: /docs/outbound-bandwidth
+                  - listitem [ref=e314]:
+                    - link "TLS certificates" [ref=e315] [cursor=pointer]:
+                      - /url: /docs/tls
+                  - list [ref=e316]:
+                    - listitem [ref=e317]: Custom domains
+                    - list [ref=e318]:
+                      - listitem [ref=e319]:
+                        - link "Overview" [ref=e320] [cursor=pointer]:
+                          - /url: /docs/custom-domains
+                      - listitem [ref=e321]:
+                        - link "Cloudflare" [ref=e322] [cursor=pointer]:
+                          - /url: /docs/configure-cloudflare-dns
+                      - listitem [ref=e323]:
+                        - link "Namecheap" [ref=e324] [cursor=pointer]:
+                          - /url: /docs/configure-namecheap-dns
+                      - listitem [ref=e325]:
+                        - link "Other DNS providers" [ref=e326] [cursor=pointer]:
+                          - /url: /docs/configure-other-dns
+                  - list [ref=e327]:
+                    - listitem [ref=e328]: IP addresses
+                    - list [ref=e329]:
+                      - listitem [ref=e330]:
+                        - link "Outbound IPs" [ref=e331] [cursor=pointer]:
+                          - /url: /docs/outbound-ip-addresses
+                      - listitem [ref=e332]:
+                        - link "Inbound IP rules" [ref=e333] [cursor=pointer]:
+                          - /url: /docs/inbound-ip-rules
+                  - list [ref=e334]:
+                    - listitem [ref=e335]: Static sites
+                    - list [ref=e336]:
+                      - listitem [ref=e337]:
+                        - link "Custom response headers" [ref=e338] [cursor=pointer]:
+                          - /url: /docs/static-site-headers
+                      - listitem [ref=e339]:
+                        - link "Redirects & rewrites" [ref=e340] [cursor=pointer]:
+                          - /url: /docs/redirects-rewrites
+              - button "Operational Controls" [expanded] [ref=e341] [cursor=pointer]:
+                - generic [ref=e342]:
+                  - img [ref=e344]
+                  - generic [ref=e348]: Operational Controls
+                - img [ref=e349]
+              - list [ref=e356]:
+                - list [ref=e357]:
+                  - listitem [ref=e358]:
+                    - link "The Render Dashboard" [ref=e359] [cursor=pointer]:
+                      - /url: /docs/render-dashboard
+                  - listitem [ref=e360]:
+                    - link "SSH / Shell access" [ref=e361] [cursor=pointer]:
+                      - /url: /docs/ssh
+                  - listitem [ref=e362]:
+                    - link "Projects & environments" [ref=e363] [cursor=pointer]:
+                      - /url: /docs/projects
+                  - list [ref=e364]:
+                    - listitem [ref=e365]: Service actions
+                    - list [ref=e366]:
+                      - listitem [ref=e367]:
+                        - link "Scaling" [ref=e368] [cursor=pointer]:
+                          - /url: /docs/scaling
+                      - listitem [ref=e369]:
+                        - link "Rollbacks" [ref=e370] [cursor=pointer]:
+                          - /url: /docs/rollbacks
+                      - listitem [ref=e371]:
+                        - link "Maintenance mode" [ref=e372] [cursor=pointer]:
+                          - /url: /docs/maintenance-mode
+                      - listitem [ref=e373]:
+                        - link "One-off jobs" [ref=e374] [cursor=pointer]:
+                          - /url: /docs/one-off-jobs
+                  - list [ref=e375]:
+                    - listitem [ref=e376]: Infrastructure as code
+                    - list [ref=e377]:
+                      - listitem [ref=e378]:
+                        - link "Blueprints overview" [ref=e379] [cursor=pointer]:
+                          - /url: /docs/infrastructure-as-code
+                      - listitem [ref=e380]:
+                        - link "render.yaml reference" [ref=e381] [cursor=pointer]:
+                          - /url: /docs/blueprint-spec
+                      - listitem [ref=e382]:
+                        - link "Terraform provider" [ref=e383] [cursor=pointer]:
+                          - /url: /docs/terraform-provider
+              - button "Observability" [expanded] [ref=e384] [cursor=pointer]:
+                - generic [ref=e385]:
+                  - img [ref=e387]
+                  - generic [ref=e389]: Observability
+                - img [ref=e390]
+              - list [ref=e397]:
+                - list [ref=e398]:
+                  - listitem [ref=e399]:
+                    - link "Health checks" [ref=e400] [cursor=pointer]:
+                      - /url: /docs/health-checks
+                  - listitem [ref=e401]:
+                    - link "Uptime best practices" [ref=e402] [cursor=pointer]:
+                      - /url: /docs/uptime-best-practices
+                  - list [ref=e403]:
+                    - listitem [ref=e404]: Notifications
+                    - list [ref=e405]:
+                      - listitem [ref=e406]:
+                        - link "Webhooks" [ref=e407] [cursor=pointer]:
+                          - /url: /docs/webhooks
+                      - listitem [ref=e408]:
+                        - link "Email / Slack" [ref=e409] [cursor=pointer]:
+                          - /url: /docs/notifications
+                  - list [ref=e410]:
+                    - listitem [ref=e411]: Metrics
+                    - list [ref=e412]:
+                      - listitem [ref=e413]:
+                        - link "In-dashboard metrics" [ref=e414] [cursor=pointer]:
+                          - /url: /docs/service-metrics
+                      - listitem [ref=e415]:
+                        - link "OpenTelemetry streaming" [ref=e416] [cursor=pointer]:
+                          - /url: /docs/metrics-streams
+                  - list [ref=e417]:
+                    - listitem [ref=e418]: Logging
+                    - list [ref=e419]:
+                      - listitem [ref=e420]:
+                        - link "In-dashboard logs" [ref=e421] [cursor=pointer]:
+                          - /url: /docs/logging
+                      - listitem [ref=e422]:
+                        - link "Syslog streaming" [ref=e423] [cursor=pointer]:
+                          - /url: /docs/log-streams
+              - button "Integrations" [expanded] [ref=e424] [cursor=pointer]:
+                - generic [ref=e425]:
+                  - img [ref=e427]
+                  - generic [ref=e431]: Integrations
+                - img [ref=e432]
+              - list [ref=e439]:
+                - list [ref=e440]:
+                  - listitem [ref=e441]:
+                    - link "CLI" [ref=e442] [cursor=pointer]:
+                      - /url: /docs/cli
+                  - listitem [ref=e443]:
+                    - link "MCP Server" [ref=e444] [cursor=pointer]:
+                      - /url: /docs/mcp-server
+                  - list [ref=e445]:
+                    - listitem [ref=e446]: REST API
+                    - list [ref=e447]:
+                      - listitem [ref=e448]:
+                        - link "Overview" [ref=e449] [cursor=pointer]:
+                          - /url: /docs/api
+                      - listitem [ref=e450]:
+                        - link "API reference" [ref=e451] [cursor=pointer]:
+                          - /url: https://api-docs.render.com
+                          - text: API reference
+                          - img [ref=e452]
+                  - list [ref=e455]:
+                    - listitem [ref=e456]: Third-party tools
+                    - list [ref=e457]:
+                      - listitem [ref=e458]:
+                        - link "Datadog" [ref=e459] [cursor=pointer]:
+                          - /url: /docs/datadog
+                      - listitem [ref=e460]:
+                        - link "QuotaGuard Static IP" [ref=e461] [cursor=pointer]:
+                          - /url: /docs/quotaguard
+                      - listitem [ref=e462]:
+                        - link "Formspree" [ref=e463] [cursor=pointer]:
+                          - /url: /docs/formspree
+              - button "User Management" [expanded] [ref=e464] [cursor=pointer]:
+                - generic [ref=e465]:
+                  - img [ref=e467]
+                  - generic [ref=e472]: User Management
+                - img [ref=e473]
+              - list [ref=e480]:
+                - list [ref=e481]:
+                  - listitem [ref=e482]:
+                    - link "Workspaces, members, & roles" [ref=e483] [cursor=pointer]:
+                      - /url: /docs/team-members
+                  - listitem [ref=e484]:
+                    - link "Login settings" [ref=e485] [cursor=pointer]:
+                      - /url: /docs/login-settings
+                  - listitem [ref=e486]:
+                    - link "Audit logs" [ref=e487] [cursor=pointer]:
+                      - /url: /docs/audit-logs
+                  - list [ref=e488]:
+                    - listitem [ref=e489]: Enterprise organizations
+                    - list [ref=e490]:
+                      - listitem [ref=e491]:
+                        - link "Org overview" [ref=e492] [cursor=pointer]:
+                          - /url: /docs/enterprise-orgs
+                      - listitem [ref=e493]:
+                        - link "SAML SSO" [ref=e494] [cursor=pointer]:
+                          - /url: /docs/saml-sso
+              - button "Platform Protections" [expanded] [ref=e495] [cursor=pointer]:
+                - generic [ref=e496]:
+                  - img [ref=e498]
+                  - generic [ref=e501]: Platform Protections
+                - img [ref=e502]
+              - list [ref=e509]:
+                - list [ref=e510]:
+                  - listitem [ref=e511]:
+                    - link "DDoS protection" [ref=e512] [cursor=pointer]:
+                      - /url: /docs/ddos-protection
+                  - listitem [ref=e513]:
+                    - link "Platform maintenance" [ref=e514] [cursor=pointer]:
+                      - /url: /docs/platform-maintenance
+                  - list [ref=e515]:
+                    - listitem [ref=e516]: Compliance
+                    - list [ref=e517]:
+                      - listitem [ref=e518]:
+                        - link "Overview" [ref=e519] [cursor=pointer]:
+                          - /url: /docs/certifications-compliance
+                      - listitem [ref=e520]:
+                        - link "HIPAA (US health data)" [ref=e521] [cursor=pointer]:
+                          - /url: /docs/hipaa-compliance
+                      - listitem [ref=e522]:
+                        - link "HIPAA best practices" [ref=e523] [cursor=pointer]:
+                          - /url: /docs/hipaa-best-practices
+                      - listitem [ref=e524]:
+                        - link "Shared responsibility model" [ref=e525] [cursor=pointer]:
+                          - /url: /docs/shared-responsibility-model
+                      - listitem [ref=e526]:
+                        - link "Pentest policy" [ref=e527] [cursor=pointer]:
+                          - /url: /docs/penetration-testing
+              - button "Compare" [expanded] [ref=e528] [cursor=pointer]:
+                - generic [ref=e529]:
+                  - img [ref=e531]
+                  - generic [ref=e533]: Compare
+                - img [ref=e534]
+              - list [ref=e541]:
+                - list [ref=e542]:
+                  - listitem [ref=e543]:
+                    - link "Heroku vs Render" [ref=e544] [cursor=pointer]:
+                      - /url: /docs/render-vs-heroku-comparison
+                  - listitem [ref=e545]:
+                    - link "Vercel vs Render" [ref=e546] [cursor=pointer]:
+                      - /url: /docs/render-vs-vercel-comparison
+          - generic [ref=e547]:
+            - article [ref=e548]:
+              - generic [ref=e549]:
+                - heading "Troubleshooting Your Deploy" [level=1] [ref=e551]
+                - generic [ref=e552]:
+                  - paragraph [ref=e553]: Sometimes, an app that runs fine locally might fail to deploy to Render at first. When this happens, it's almost always because of differences between your local development environment and the environment that Render uses to build and run your code.
+                  - paragraph [ref=e554]: "These environmental differences might include:"
+                  - list [ref=e555]:
+                    - listitem [ref=e556]:
+                      - text: The
+                      - link "version of your programming language" [ref=e557] [cursor=pointer]:
+                        - /url: /docs/language-support
+                    - listitem [ref=e558]:
+                      - text: The values of important
+                      - button "Show definition for environment variable" [ref=e559]: environment variables
+                    - listitem [ref=e560]:
+                      - text: The availability of particular
+                      - link "tools and utilities" [ref=e561] [cursor=pointer]:
+                        - /url: /docs/native-runtimes#tools-and-utilities
+                    - listitem [ref=e562]: The versions of your project's dependencies
+                  - paragraph [ref=e563]: For recommended steps to resolve issues with your app's Render deploy, see below.
+                  - heading "1. Check the logs" [level=2] [ref=e564]:
+                    - link [ref=e565] [cursor=pointer]:
+                      - /url: "#1-check-the-logs"
+                      - img [ref=e566]
+                    - text: 1. Check the logs
+                  - paragraph [ref=e568]:
+                    - text: Whenever your app misbehaves in any way,
+                    - strong [ref=e569]: always check the logs first.
+                    - text: Logs are available in the
+                    - link "Render Dashboard" [ref=e570] [cursor=pointer]:
+                      - /url: https://dashboard.render.com
+                    - text: ":"
+                  - list [ref=e571]:
+                    - listitem [ref=e572]:
+                      - paragraph [ref=e573]:
+                        - text: If a particular deploy fails, view its logs by clicking the word
+                        - strong [ref=e574]: Deploy
+                        - text: in your app's
+                        - strong [ref=e575]: Events
+                        - text: "feed:"
+                      - paragraph [ref=e577]:
+                        - img "Selecting a deploy to view logs" [ref=e579]
+                    - listitem [ref=e580]:
+                      - paragraph [ref=e581]:
+                        - text: If your running app encounters an error, open its
+                        - strong [ref=e582]: Logs
+                        - text: "page to search and filter runtime logs with the explorer:"
+                      - paragraph [ref=e584]:
+                        - img "Log explorer in the Render Dashboard" [ref=e586]
+                  - paragraph [ref=e587]:
+                    - text: In either case, searching the log explorer for the word
+                    - code [ref=e588]: error
+                    - text: can often direct you to a relevant log line. If the meaning of the full error message is unclear, try searching the web (or an individual site like Stack Overflow or
+                    - link "Discord" [ref=e589] [cursor=pointer]:
+                      - /url: https://discord.gg/kt5namUTqb
+                    - text: ) to help identify a root cause.
+                  - paragraph [ref=e590]:
+                    - link "Learn more about logging." [ref=e591] [cursor=pointer]:
+                      - /url: /docs/logging
+                  - heading "2. Ensure matching versions and configuration" [level=2] [ref=e592]:
+                    - link [ref=e593] [cursor=pointer]:
+                      - /url: "#2-ensure-matching-versions-and-configuration"
+                      - img [ref=e594]
+                    - text: 2. Ensure matching versions and configuration
+                  - paragraph [ref=e596]:
+                    - text: Render's runtime environment might use a different version of your app's programming language, or of an installed dependency. The values of certain
+                    - button "Show definition for environment variable" [ref=e597]: environment variables
+                    - text: might also differ from those on your local machine.
+                  - paragraph [ref=e598]: "Check your app's configuration for the following:"
+                  - paragraph [ref=e599]:
+                    - strong [ref=e600]: Runtime mismatches
+                  - list [ref=e601]:
+                    - listitem [ref=e602]:
+                      - text: While creating a service, you select the
+                      - link "runtime" [ref=e603] [cursor=pointer]:
+                        - /url: /docs/language-support
+                      - text: that corresponds to your language (Node, Python, and so on). There's also a Docker runtime for projects that build from a Dockerfile or pull a prebuilt image.
+                    - listitem [ref=e604]:
+                      - text: If you've selected an incorrect runtime for your app, the fastest fix is usually to create a
+                      - emphasis [ref=e605]: new
+                      - text: service with the correct runtime.
+                      - list [ref=e606]:
+                        - listitem [ref=e607]:
+                          - text: You can also change an existing service's runtime via Render Blueprints or the API.
+                          - link "See details." [ref=e608] [cursor=pointer]:
+                            - /url: /docs/native-runtimes#changing-a-services-runtime
+                  - paragraph [ref=e609]:
+                    - strong [ref=e610]: Version mismatches
+                  - list [ref=e611]:
+                    - listitem [ref=e612]:
+                      - text: Each programming language has a
+                      - emphasis [ref=e613]: default
+                      - text: version on Render, which you can override to match your local machine's version.
+                      - link "See details." [ref=e614] [cursor=pointer]:
+                        - /url: /docs/language-support#set-your-language-version
+                    - listitem [ref=e615]:
+                      - text: Perform a fresh install of your project on your local machine to confirm that you're using exactly the dependency versions specified in your repository (such as in your
+                      - code [ref=e616]: package-lock.json
+                      - text: file).
+                  - paragraph [ref=e617]:
+                    - strong [ref=e618]: Configuration mismatches
+                  - list [ref=e619]:
+                    - listitem [ref=e620]:
+                      - text: Your local machine might set
+                      - button "Show definition for environment variable" [ref=e621]: environment variables
+                      - text: as part of your app's start script, or via a file like
+                      - code [ref=e622]: .env
+                      - text: . Make sure you're
+                      - link "setting necessary environment variables" [ref=e623] [cursor=pointer]:
+                        - /url: /docs/configure-environment-variables
+                      - text: on Render as well.
+                    - listitem [ref=e624]:
+                      - text: When applicable, confirm that you've set necessary configuration to run your app in "production mode" (e.g., by setting
+                      - code [ref=e625]: NODE_ENV
+                      - text: to
+                      - code [ref=e626]: production
+                      - text: ).
+                    - listitem [ref=e627]:
+                      - text: To use any tools or utilities besides those
+                      - link "included by default" [ref=e628] [cursor=pointer]:
+                        - /url: /docs/native-runtimes#tools-and-utilities
+                      - text: in Render's native runtimes, make that sure you install them as part of your app's
+                      - button "Show definition for build command" [ref=e629]: build command
+                      - text: .
+                    - listitem [ref=e630]: Confirm that all of your app's dependencies are compatible with a Linux runtime and file system.
+                    - listitem [ref=e631]:
+                      - link "Check your logs" [ref=e632] [cursor=pointer]:
+                        - /url: "#1-check-the-logs"
+                      - text: "to confirm the following:"
+                      - list [ref=e633]:
+                        - listitem [ref=e634]: Your app's dependencies are all installed as expected.
+                        - listitem [ref=e635]: Your service's start command runs and completes successfully.
+                  - heading "Common errors" [level=2] [ref=e636]:
+                    - link [ref=e637] [cursor=pointer]:
+                      - /url: "#common-errors"
+                      - img [ref=e638]
+                    - text: Common errors
+                  - heading "Build & deploy errors" [level=3] [ref=e640]:
+                    - link [ref=e641] [cursor=pointer]:
+                      - /url: "#build-deploy-errors"
+                      - img [ref=e642]
+                    - text: Build & deploy errors
+                  - paragraph [ref=e644]: "Many first-time build and deploy errors are caused by one of the following issues:"
+                  - heading "Missing or incorrectly referenced resources" [level=4] [ref=e645]:
+                    - link [ref=e646] [cursor=pointer]:
+                      - /url: "#missing-or-incorrectly-referenced-resources"
+                      - img [ref=e647]
+                    - text: Missing or incorrectly referenced resources
+                  - list [ref=e649]:
+                    - listitem [ref=e650]:
+                      - strong [ref=e651]:
+                        - text: Module Not Found /
+                        - code [ref=e652]: ModuleNotFoundError
+                        - text: ":"
+                      - text: "Usually indicates one of the following:"
+                      - list [ref=e653]:
+                        - listitem [ref=e654]:
+                          - text: A referenced dependency was not found (e.g., in your
+                          - code [ref=e655]: package.json
+                          - text: or
+                          - code [ref=e656]: requirements.txt
+                          - text: file).
+                        - listitem [ref=e657]:
+                          - text: A referenced file (such as
+                          - code [ref=e658]: app.js
+                          - text: or
+                          - code [ref=e659]: app.py
+                          - text: ) was not found at a specified location.
+                        - listitem [ref=e660]: If you're developing on Windows or another platform with a case-insensitive filesystem, make sure that all file paths, names, and extensions are cased correctly. You might need to check the contents of your Git repo directly.
+                  - heading "Language / dependency version conflicts" [level=4] [ref=e661]:
+                    - link [ref=e662] [cursor=pointer]:
+                      - /url: "#language-dependency-version-conflicts"
+                      - img [ref=e663]
+                    - text: Language / dependency version conflicts
+                  - list [ref=e665]:
+                    - listitem [ref=e666]:
+                      - strong [ref=e667]:
+                        - code [ref=e668]: "SyntaxError: Unexpected token '??='"
+                        - text: ":"
+                      - text: The app's Node.js version doesn't support the indicated operator or method.
+                    - listitem [ref=e669]:
+                      - strong [ref=e670]:
+                        - code [ref=e671]: The engine "node" is incompatible with this module. Expected version…
+                        - text: ":"
+                      - text: The app's Node.js version doesn't work with the specified module.
+                    - listitem [ref=e672]:
+                      - strong [ref=e673]:
+                        - code [ref=e674]: requires Python >= 3.8
+                        - text: ":"
+                      - text: A dependency is not compatible with the app's Python version.
+                  - heading "Invalid configuration" [level=4] [ref=e675]:
+                    - link [ref=e676] [cursor=pointer]:
+                      - /url: "#invalid-configuration"
+                      - img [ref=e677]
+                    - text: Invalid configuration
+                  - list [ref=e679]:
+                    - listitem [ref=e680]:
+                      - strong [ref=e681]:
+                        - text: Invalid
+                        - button "Show definition for build command" [ref=e682]: build command
+                        - text: ":"
+                      - text: The
+                      - link "command" [ref=e683] [cursor=pointer]:
+                        - /url: /docs/deploys#deploy-steps
+                      - text: that Render runs to install your project's dependencies and/or perform a build is missing or invalid.
+                      - list [ref=e684]:
+                        - listitem [ref=e685]: This usually should match the command you run to build your app locally.
+                        - listitem [ref=e686]:
+                          - text: Common build commands include
+                          - code [ref=e687]: npm install
+                          - text: (Node.js) and
+                          - code [ref=e688]: pip install -r requirements.txt
+                          - text: (Python).
+                    - listitem [ref=e689]:
+                      - strong [ref=e690]:
+                        - text: Invalid
+                        - button "Show definition for start command" [ref=e691]: start command
+                        - text: ":"
+                      - text: The
+                      - link "command" [ref=e692] [cursor=pointer]:
+                        - /url: /docs/deploys#deploy-steps
+                      - text: that Render runs to start your app is missing or invalid.
+                      - list [ref=e693]:
+                        - listitem [ref=e694]: This usually should match the command you run to start your app locally.
+                        - listitem [ref=e695]:
+                          - text: Common start command formats include
+                          - code [ref=e696]: npm start
+                          - text: (Node.js) and
+                          - code [ref=e697]: gunicorn myapp:app
+                          - text: (Python).
+                    - listitem [ref=e698]:
+                      - strong [ref=e699]:
+                        - text: Missing
+                        - button "Show definition for environment variable" [ref=e700]: environment variables
+                        - text: ":"
+                      - text: Some apps require certain environment variables to be set for them to build and start successfully.
+                      - list [ref=e701]:
+                        - listitem [ref=e702]:
+                          - text: Add environment variables to your app in the
+                          - link "Render Dashboard" [ref=e703] [cursor=pointer]:
+                            - /url: https://dashboard.render.com
+                          - text: ", or via a"
+                          - code [ref=e704]: render.yaml
+                          - link "Blueprint file" [ref=e705] [cursor=pointer]:
+                            - /url: /docs/blueprint-spec
+                          - text: .
+                    - listitem [ref=e706]:
+                      - strong [ref=e707]:
+                        - text: Missing
+                        - link "Dockerfile" [ref=e708] [cursor=pointer]:
+                          - /url: /docs/docker
+                        - code [ref=e709]: CMD
+                        - text: or
+                        - code [ref=e710]: ENTRYPOINT
+                        - text: ":"
+                      - text: If you build and run your app from a
+                      - code [ref=e711]: Dockerfile
+                      - text: ", that file must include a"
+                      - code [ref=e712]: CMD
+                      - text: or
+                      - code [ref=e713]: ENTRYPOINT
+                      - text: directive.
+                      - list [ref=e714]:
+                        - listitem [ref=e715]: Render uses one of these directives to run your app after the build completes.
+                        - listitem [ref=e716]:
+                          - text: If you omit
+                          - emphasis [ref=e717]: both
+                          - text: of these directives, your deploy might appear to hang indefinitely in the
+                          - link "Render Dashboard" [ref=e718] [cursor=pointer]:
+                            - /url: https://dashboard.render.com
+                          - text: .
+                    - listitem [ref=e719]:
+                      - strong [ref=e720]:
+                        - text: Misconfigured
+                        - link "health checks" [ref=e721] [cursor=pointer]:
+                          - /url: /docs/health-checks
+                        - text: ":"
+                      - text: If you've added a health check endpoint to your app, Render uses it to verify that your app is responsive before marking it as live.
+                      - list [ref=e722]:
+                        - listitem [ref=e723]: If the health check endpoint responds with an unexpected value (or doesn't respond at all), Render cancels your deploy.
+                  - heading "Runtime errors" [level=3] [ref=e724]:
+                    - link [ref=e725] [cursor=pointer]:
+                      - /url: "#runtime-errors"
+                      - img [ref=e726]
+                    - text: Runtime errors
+                  - paragraph [ref=e728]:
+                    - text: Many common runtime errors surface as
+                    - code [ref=e729]: HTTP
+                    - text: error codes returned to your browser or other client. For errors returned to your browser, the Network panel of your browser's developer tools helps provide more details about the error.
+                  - paragraph [ref=e730]: "Listed below are the most common error codes and some of their most common causes:"
+                  - heading "400 Bad Request" [level=4] [ref=e731]:
+                    - link [ref=e732] [cursor=pointer]:
+                      - /url: "#400-bad-request"
+                      - img [ref=e733]
+                    - text: 400 Bad Request
+                  - list [ref=e735]:
+                    - listitem [ref=e736]:
+                      - text: A Django app doesn't include its associated
+                      - link "custom domain" [ref=e737] [cursor=pointer]:
+                        - /url: /docs/custom-domains
+                      - text: in its
+                      - link "ALLOWED_HOSTS setting" [ref=e738] [cursor=pointer]:
+                        - /url: https://docs.djangoproject.com/en/5.0/ref/settings/#allowed-hosts
+                        - code [ref=e739]: ALLOWED_HOSTS
+                        - text: setting
+                      - text: .
+                  - heading "404 Not Found" [level=4] [ref=e740]:
+                    - link [ref=e741] [cursor=pointer]:
+                      - /url: "#404-not-found"
+                      - img [ref=e742]
+                    - text: 404 Not Found
+                  - list [ref=e744]:
+                    - listitem [ref=e745]:
+                      - text: A static site has misconfigured
+                      - link "redirects and/or rewrites" [ref=e746] [cursor=pointer]:
+                        - /url: /docs/redirects-rewrites
+                      - text: .
+                    - listitem [ref=e747]: A web service or static site has misconfigured its routing.
+                    - listitem [ref=e748]:
+                      - text: "A service is attempting to access a nonexistent file on disk. This might be because:"
+                      - list [ref=e749]:
+                        - listitem [ref=e750]:
+                          - text: The file is no longer available because the service doesn't have a
+                          - link "persistent disk" [ref=e751] [cursor=pointer]:
+                            - /url: /docs/disks
+                          - text: .
+                        - listitem [ref=e752]: The service has provided the wrong path (such as by misspelling or incorrectly capitalizing a path component).
+                    - listitem [ref=e753]:
+                      - text: A Django app is not correctly serving its
+                      - link "static files" [ref=e754] [cursor=pointer]:
+                        - /url: /docs/deploy-django#set-up-static-file-serving
+                      - text: .
+                  - heading "500 Internal Server Error" [level=4] [ref=e755]:
+                    - link [ref=e756] [cursor=pointer]:
+                      - /url: "#500-internal-server-error"
+                      - img [ref=e757]
+                    - text: 500 Internal Server Error
+                  - list [ref=e759]:
+                    - listitem [ref=e760]: A service has thrown an uncaught exception while responding to a request, possibly causing the service to crash or restart.
+                    - listitem [ref=e761]:
+                      - text: A service is experiencing database connection issues, such as
+                      - strong [ref=e762]:
+                        - code [ref=e763]: SSL connection has been closed unexpectedly
+                      - text: .
+                      - list [ref=e764]:
+                        - listitem [ref=e765]:
+                          - text: In this case, setting
+                          - code [ref=e766]: sslmode=require
+                          - text: and/or a setting up a
+                          - link "connection pool" [ref=e767] [cursor=pointer]:
+                            - /url: /docs/postgresql-connection-pooling
+                          - text: can help.
+                    - listitem [ref=e768]:
+                      - text: A service or database is overwhelmed, often by too many concurrent connections or constrained resources (such as CPU or RAM).
+                      - list [ref=e769]:
+                        - listitem [ref=e770]:
+                          - text: In this case, warnings about resource constraints usually appear in the service's
+                          - link "logs" [ref=e771] [cursor=pointer]:
+                            - /url: /docs/logging
+                          - text: and on the service's Events page in the
+                          - link "Render Dashboard" [ref=e772] [cursor=pointer]:
+                            - /url: https://dashboard.render.com
+                          - text: .
+                        - listitem [ref=e773]:
+                          - text: To resolve, consider
+                          - link "scaling" [ref=e774] [cursor=pointer]:
+                            - /url: /docs/scaling
+                          - text: your service to help alleviate load.
+                  - heading "502 Bad Gateway" [level=4] [ref=e775]:
+                    - link [ref=e776] [cursor=pointer]:
+                      - /url: "#502-bad-gateway"
+                      - img [ref=e777]
+                    - text: 502 Bad Gateway
+                  - list [ref=e779]:
+                    - listitem [ref=e780]:
+                      - text: A web service has misconfigured its
+                      - link "host and port" [ref=e781] [cursor=pointer]:
+                        - /url: /docs/web-services#port-binding
+                      - text: .
+                      - list [ref=e782]:
+                        - listitem [ref=e783]:
+                          - text: Bind your host to
+                          - code [ref=e784]: 0.0.0.0
+                          - text: and optionally set the
+                          - code [ref=e785]: PORT
+                          - text: environment variable to use a custom port (the default port is
+                          - code [ref=e786]: "10000"
+                          - text: ).
+                    - listitem [ref=e787]:
+                      - text: A newly added
+                      - link "custom domain" [ref=e788] [cursor=pointer]:
+                        - /url: /docs/custom-domains
+                      - text: is not yet redirecting to its web service.
+                      - list [ref=e789]:
+                        - listitem [ref=e790]: In most cases this resolves within a few minutes, but it might take up to an hour.
+                    - listitem [ref=e791]:
+                      - text: A Node.js web service is experiencing intermittent timeouts or
+                      - code [ref=e792]: Connection reset by peer
+                      - text: errors. Try increasing the values for
+                      - code [ref=e793]: server.keepAliveTimeout
+                      - text: and
+                      - code [ref=e794]: server.headersTimeout
+                      - text: (such as to
+                      - code [ref=e795]: "120000"
+                      - text: for 120 seconds).
+                    - listitem [ref=e796]:
+                      - text: A service is experiencing
+                      - code [ref=e797]: WORKER
+                      - text: ","
+                      - code [ref=e798]: SIGKILL
+                      - text: ", or"
+                      - code [ref=e799]: SIGTERM
+                      - text: warnings (e.g.,
+                      - code [ref=e800]: "[CRITICAL] WORKER TIMEOUT"
+                      - text: ).
+                      - list [ref=e801]:
+                        - listitem [ref=e802]:
+                          - text: Consider increasing your timeout values and worker limits (e.g., via the
+                          - code [ref=e803]: gunicorn
+                          - link "timeout parameter" [ref=e804] [cursor=pointer]:
+                            - /url: https://docs.gunicorn.org/en/stable/settings.html#timeout
+                          - text: ).
+                  - heading "When to contact support" [level=2] [ref=e805]:
+                    - link [ref=e806] [cursor=pointer]:
+                      - /url: "#when-to-contact-support"
+                      - img [ref=e807]
+                    - text: When to contact support
+                  - paragraph [ref=e809]: Render's support team is available and happy to assist with issues that are specific to the capabilities, conventions, and underlying infrastructure of our platform.
+                  - paragraph [ref=e810]:
+                    - strong [ref=e811]:
+                      - text: Our support team
+                      - emphasis [ref=e812]: cannot
+                      - text: "assist with more general development issues like the following:"
+                  - list [ref=e813]:
+                    - listitem [ref=e814]: Debugging of application code
+                    - listitem [ref=e815]: Software design and architecture
+                    - listitem [ref=e816]: Performance optimization
+                    - listitem [ref=e817]: Programming nuances specific to a particular library or framework
+                  - paragraph [ref=e818]: For help with issues like these, please consult sites and services that specialize in these forms of assistance.
+            - generic [ref=e820]:
+              - generic [ref=e821]:
+                - button "Copy page" [ref=e822] [cursor=pointer]:
+                  - img [ref=e823]
+                  - generic [ref=e826]: Copy page
+                - button "Toggle Menu" [ref=e827] [cursor=pointer]:
+                  - img "Toggle Menu" [ref=e828]
+              - generic [ref=e834]:
+                - heading "Troubleshooting Your Deploy" [level=6] [ref=e835]:
+                  - link "Troubleshooting Your Deploy" [ref=e836] [cursor=pointer]:
+                    - /url: /docs/troubleshooting-deploys
+                - list [ref=e837]:
+                  - listitem [ref=e838]:
+                    - link "1. Check the logs" [ref=e839] [cursor=pointer]:
+                      - /url: "#1-check-the-logs"
+                  - listitem [ref=e840]:
+                    - link "2. Ensure matching versions and configuration" [ref=e841] [cursor=pointer]:
+                      - /url: "#2-ensure-matching-versions-and-configuration"
+                  - listitem [ref=e842]:
+                    - link "Common errors" [ref=e843] [cursor=pointer]:
+                      - /url: "#common-errors"
+                    - list [ref=e844]:
+                      - listitem [ref=e845]:
+                        - link "Build & deploy errors" [ref=e846] [cursor=pointer]:
+                          - /url: "#build-deploy-errors"
+                      - listitem [ref=e847]:
+                        - link "Runtime errors" [ref=e848] [cursor=pointer]:
+                          - /url: "#runtime-errors"
+                  - listitem [ref=e849]:
+                    - link "When to contact support" [ref=e850] [cursor=pointer]:
+                      - /url: "#when-to-contact-support"
+                - button "Did this page help?" [ref=e852] [cursor=pointer]
+        - contentinfo [ref=e853]:
+          - generic [ref=e856]:
+            - list [ref=e857]:
+              - listitem [ref=e858]:
+                - link "Pricing" [ref=e859] [cursor=pointer]:
+                  - /url: /pricing
+                  - generic [ref=e860]: Pricing
+              - listitem [ref=e861]:
+                - link "Blog" [ref=e862] [cursor=pointer]:
+                  - /url: /blog
+                  - generic [ref=e863]: Blog
+              - listitem [ref=e864]:
+                - link "Security" [ref=e865] [cursor=pointer]:
+                  - /url: /security
+                  - generic [ref=e866]: Security
+              - listitem [ref=e867]:
+                - link "Customers" [ref=e868] [cursor=pointer]:
+                  - /url: /customers
+                  - generic [ref=e869]: Customers
+              - listitem [ref=e870]:
+                - link "Careers" [ref=e871] [cursor=pointer]:
+                  - /url: /careers
+                  - generic [ref=e872]: Careers
+            - list [ref=e873]:
+              - listitem [ref=e874]: © Render 2026
+    - button "Toggle theme" [ref=e875] [cursor=pointer]:
+      - img [ref=e877]
+      - img [ref=e885]
+  - alert [ref=e887]

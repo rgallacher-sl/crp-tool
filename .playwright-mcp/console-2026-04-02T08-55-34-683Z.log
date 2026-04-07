@@ -1,0 +1,103 @@
+[    1659ms] [ERROR] Error: <svg> attribute width: Unexpected end of attribute. Expected length, "". @ https://pageflows.com/web/screens/error/:6774
+[    1660ms] [ERROR] Error: <svg> attribute height: Unexpected end of attribute. Expected length, "". @ https://pageflows.com/web/screens/error/:6774
+[    1660ms] [ERROR] Error: <svg> attribute width: Unexpected end of attribute. Expected length, "". @ https://pageflows.com/web/screens/error/:6780
+[    1660ms] [ERROR] Error: <svg> attribute height: Unexpected end of attribute. Expected length, "". @ https://pageflows.com/web/screens/error/:6780
+[    1660ms] [ERROR] Error: <svg> attribute width: Unexpected end of attribute. Expected length, "". @ https://pageflows.com/web/screens/error/:6795
+[    1660ms] [ERROR] Error: <svg> attribute height: Unexpected end of attribute. Expected length, "". @ https://pageflows.com/web/screens/error/:6795
+[    1660ms] [ERROR] Error: <svg> attribute width: Unexpected end of attribute. Expected length, "". @ https://pageflows.com/web/screens/error/:6809
+[    1660ms] [ERROR] Error: <svg> attribute height: Unexpected end of attribute. Expected length, "". @ https://pageflows.com/web/screens/error/:6809
+[    1661ms] Unexpected token '%'
+[    1662ms] Unexpected token '%'
+[    1662ms] Unexpected token '{'
+[    1662ms] Unexpected token '%'
+[    1662ms] [LOG] ProfitWell JS run :)  @ https://pageflows.com/web/screens/error/:7450
+[    1698ms] [WARNING] eval usage detected. Consider using JSON.parse or Function constructor instead. @ https://pageflows.com/static/website/js/best-practices-fix.js?v=2.0:88
+[    1721ms] EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-eval' is not an allowed source of script: script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://d2yyd1h5u9mauk.cloudfront.net https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://www.recaptcha.net/recaptcha/".
+
+    at eval (<anonymous>)
+    at window.eval (https://pageflows.com/static/website/js/best-practices-fix.js?v=2.0:244:37)
+    at ./src/index.js (https://pageflows.com/static/website/js/bundle.js?v=2.6&q=52:29:1)
+    at __webpack_require__ (https://pageflows.com/static/website/js/bundle.js?v=2.6&q=52:63:41)
+    at https://pageflows.com/static/website/js/bundle.js?v=2.6&q=52:115:37
+    at https://pageflows.com/static/website/js/bundle.js?v=2.6&q=52:117:12
+[    1721ms] TypeError: Cannot read properties of null (reading 'addEventListener')
+    at https://pageflows.com/static/website/js/inner-pages.js?v=2.7&q=30:443:14
+[    1706ms] [LOG] %c[🚀 INITIAL LOAD] Pre-loading all platform data... color: #4CAF50; font-weight: bold @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2248
+[    1706ms] [LOG] [📊 INITIAL LOAD] This will make 4 API calls (iOS, Android, Web, Emails) @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2249
+[    1706ms] [LOG] [⚠️ LOAD DATA] Search data API removed - using dynamic suggestions instead for ios @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1945
+[    1706ms] [LOG] [⚠️ LOAD DATA] Search data API removed - using dynamic suggestions instead for android @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1945
+[    1706ms] [LOG] [⚠️ LOAD DATA] Search data API removed - using dynamic suggestions instead for web @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1945
+[    1706ms] [LOG] [⚠️ LOAD DATA] Search data API removed - using dynamic suggestions instead for emails @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1945
+[    1706ms] [LOG] [🚀 INITIAL LOAD] Setting initial display platform: Web @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2308
+[    1713ms] [LOG] %c[✅ INITIAL LOAD] All platform data loaded successfully! color: #4CAF50; font-weight: bold @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2259
+[    1713ms] [LOG] [✅ INITIAL LOAD] Status: {ios: ✅ Loaded, android: ✅ Loaded, web: ✅ Loaded, emails: ✅ Loaded} @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2260
+[    1713ms] [LOG] [🎨 INITIAL LOAD] Populating iOS section... @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2269
+[    1713ms] [LOG] [🎨 POPULATE] Populating section for ios (section: ios-data-section, attr: ios) @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1965
+[    1713ms] [LOG] [✅ POPULATE] Container found for ios: {flows: 0, products: 0, screens: 0, elements: 0, emails: 0} @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1983
+[    1713ms] [LOG] [🎨 POPULATE] Removing loading message @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1994
+[    1713ms] [LOG] [✅ POPULATE] Section populated successfully for ios @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2151
+[    1713ms] [LOG] [🎨 INITIAL LOAD] Populating Android section... @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2274
+[    1713ms] [LOG] [🎨 POPULATE] Populating section for android (section: android-data-section, attr: android) @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1965
+[    1713ms] [LOG] [✅ POPULATE] Container found for android: {flows: 0, products: 0, screens: 0, elements: 0, emails: 0} @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1983
+[    1713ms] [LOG] [🎨 POPULATE] Removing loading message @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1994
+[    1713ms] [LOG] [✅ POPULATE] Section populated successfully for android @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2151
+[    1713ms] [LOG] [🎨 INITIAL LOAD] Populating Web section... @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2279
+[    1713ms] [LOG] [🎨 POPULATE] Populating section for web (section: web-data-section, attr: web) @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1965
+[    1713ms] [LOG] [✅ POPULATE] Container found for web: {flows: 0, products: 0, screens: 0, elements: 0, emails: 0} @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1983
+[    1713ms] [LOG] [🎨 POPULATE] Removing loading message @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1994
+[    1713ms] [LOG] [✅ POPULATE] Section populated successfully for web @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2151
+[    1713ms] [LOG] [🎨 INITIAL LOAD] Populating Email section... @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2285
+[    1713ms] [LOG] [🎨 POPULATE] Populating section for emails (section: email-data-section, attr: emails) @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1965
+[    1713ms] [LOG] [✅ POPULATE] Container found for emails: {flows: 0, products: 0, screens: 0, elements: 0, emails: 0} @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1983
+[    1713ms] [LOG] [🎨 POPULATE] Removing loading message @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1994
+[    1713ms] [LOG] [📧 POPULATE] Skipping flows for email tab (emails don't have flows) @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2052
+[    1713ms] [LOG] [📧 POPULATE] Skipping regular products for email tab (will show email products instead) @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2073
+[    1713ms] [LOG] [📧 POPULATE] Skipping screens for email tab (emails don't have screens) @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2093
+[    1713ms] [LOG] [📧 POPULATE] Skipping UI elements for email tab (emails don't have elements) @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2114
+[    1713ms] [LOG] [✅ POPULATE] Section populated successfully for emails @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2151
+[    1713ms] [LOG] %c[🎉 INITIAL LOAD] All platforms ready! Tab switching will be instant (NO API calls). color: #FFD700; font-weight: bold; font-size: 14px @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2289
+[    1713ms] [LOG] %c[📌 INFO] Future tab switches will use cached data - watch for "💾 Using cached data (NO API call)" color: #2196F3 @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2293
+[    1715ms] [LOG] [Autocomplete] Initializing for platform: web @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2432
+[    1715ms] [LOG] [Autocomplete] Initialized successfully @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2507
+[    1717ms] [LOG] [Object, Object, Object, Object] @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2730
+[    1717ms] [LOG] Initial active platform: web @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:3062
+[    1717ms] [LOG] [⚠️ LOAD DATA] Search data API removed - using dynamic suggestions instead for web @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1945
+[    1717ms] [LOG] [🎨 POPULATE] Populating section for web (section: web-data-section, attr: web) @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1965
+[    1717ms] [LOG] [✅ POPULATE] Container found for web: {flows: 0, products: 0, screens: 0, elements: 0, emails: 0} @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:1983
+[    1717ms] [LOG] [✅ POPULATE] Section populated successfully for web @ https://pageflows.com/static/website/js/header.js?v=2.2&q=25:2151
+[    1729ms] [WARNING] jQuery.Deferred exception: Cannot read properties of null (reading 'addEventListener') TypeError: Cannot read properties of null (reading 'addEventListener')
+    at HTMLDocument.<anonymous> (https://pageflows.com/static/website/js/header-pages.js?v=2.3&q=26:159:47)
+    at e (https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js:2:30038)
+    at t (https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js:2:30340) undefined @ https://pageflows.com/static/website/js/best-practices-fix.js?v=2.0:88
+[    1731ms] [WARNING] jQuery.Deferred exception: $(...).masonry is not a function TypeError: $(...).masonry is not a function
+    at HTMLDocument.<anonymous> (https://pageflows.com/static/website/js/homepage.js?v=2.5&q=28:607:34)
+    at e (https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js:2:30038)
+    at t (https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js:2:30340) undefined @ https://pageflows.com/static/website/js/best-practices-fix.js?v=2.0:88
+[    1732ms] [LOG] Storage persistence granted: false @ https://pageflows.com/static/website/js/best-practices-fix.js?v=2.0:15
+[    1732ms] [LOG] Storage estimate: {quota: 296630877388, usage: 0, usageDetails: Object} @ https://pageflows.com/static/website/js/best-practices-fix.js?v=2.0:102
+[    1739ms] Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+    at <anonymous> (https://pageflows.com/static/website/js/header-pages.js?v=2.3&q=26:158:46)
+    at e (https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js:1:30037)
+    at t (https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js:1:30339)
+[    1739ms] Uncaught TypeError: $(...).masonry is not a function
+    at <anonymous> (https://pageflows.com/static/website/js/homepage.js?v=2.5&q=28:606:33)
+    at e (https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js:1:30037)
+    at t (https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js:1:30339)
+[    1748ms] [INFO] fancyBox already initialized @ https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js:10
+[    2003ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://pageflows.com/static/website/js/performance-monitor.js:0
+[    2004ms] [LOG] Safe Performance Optimization - Results: {domContentLoaded: 20.299999997019768, loadComplete: -1968.5, totalTime: -1.0999999940395355, target: 90+ performance score (safe mode)} @ https://pageflows.com/static/website/js/safe-performance-optimizer.js?v=1.0:253
+[    2004ms] [LOG] Best Practices Fix - Applied all optimizations for 90+ score @ https://pageflows.com/static/website/js/best-practices-fix.js?v=2.0:294
+[    2007ms] [ERROR] Connecting to 'https://region1.analytics.google.com/g/collect?v=2&tid=G-HTWBWPWEKF&gtm=45je63v0v9166509200za200zd9166509200&_p=1775120135754&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=156376679.1775120136&ul=en-gb&sr=1512x982&uaa=arm&uab=64&uafvl=Chromium%3B146.0.7680.165%7CNot-A.Brand%3B24.0.0.0%7CGoogle%2520Chrome%3B146.0.7680.165&uamb=0&uam=&uap=macOS&uapv=26.4.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AEAAAGQ&gaf=2&_s=2&tag_exp=0~115616985~115938465~115938468~116991816~117266400~118328143&sid=1775120135&sct=1&seg=0&dl=https%3A%2F%2Fpageflows.com%2Fweb%2Fscreens%2Ferror%2F&dt=Unique%20Website%20Screens%20%26%20UI%20Inspiration%20%E2%80%93%20Page%20Flows&en=scroll&epn.percent_scrolled=90&_et=3&tfd=1972' violates the following Content Security Policy directive: "connect-src 'self' https://web.delighted.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.google.com/recaptcha/". The action has been blocked. @ https://www.googletagmanager.com/gtag/js?id=G-HTWBWPWEKF:285
+[    2007ms] [ERROR] Fetch API cannot load https://region1.analytics.google.com/g/collect?v=2&tid=G-HTWBWPWEKF&gtm=45je63v0v9166509200za200zd9166509200&_p=1775120135754&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=156376679.1775120136&ul=en-gb&sr=1512x982&uaa=arm&uab=64&uafvl=Chromium%3B146.0.7680.165%7CNot-A.Brand%3B24.0.0.0%7CGoogle%2520Chrome%3B146.0.7680.165&uamb=0&uam=&uap=macOS&uapv=26.4.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AEAAAGQ&gaf=2&_s=2&tag_exp=0~115616985~115938465~115938468~116991816~117266400~118328143&sid=1775120135&sct=1&seg=0&dl=https%3A%2F%2Fpageflows.com%2Fweb%2Fscreens%2Ferror%2F&dt=Unique%20Website%20Screens%20%26%20UI%20Inspiration%20%E2%80%93%20Page%20Flows&en=scroll&epn.percent_scrolled=90&_et=3&tfd=1972. Refused to connect because it violates the document's Content Security Policy. @ https://www.googletagmanager.com/gtag/js?id=G-HTWBWPWEKF:285
+[    2203ms] [ERROR] A bad HTTP response code (404) was received when fetching the script. @ :0
+[    2204ms] [LOG] ServiceWorker registration failed: TypeError: Failed to register a ServiceWorker for scope ('https://pageflows.com/') with script ('https://pageflows.com/sw.js'): A bad HTTP response code (404) was received when fetching the script. @ https://pageflows.com/static/website/js/best-practices-fix.js?v=2.0:112
+[    2340ms] [ERROR] A bad HTTP response code (404) was received when fetching the script. @ :0
+[    2341ms] [LOG] SW registration failed:  TypeError: Failed to register a ServiceWorker for scope ('https://pageflows.com/static/website/js/') with script ('https://pageflows.com/static/website/js/sw.js'): A bad HTTP response code (404) was received when fetching the script. @ https://pageflows.com/web/screens/error/:7196
+[    5047ms] [WARNING] The resource https://pageflows.com/static/css/new-style.css?v=2.3&q=10 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://pageflows.com/web/screens/error/:0
+[    5047ms] [WARNING] The resource https://pageflows.com/static/css/new-style.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://pageflows.com/web/screens/error/:0
+[    5047ms] [WARNING] The resource https://pageflows.com/static/website/js/bundle.js?v=2.4&q=52 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://pageflows.com/web/screens/error/:0
+[    5047ms] [WARNING] The resource https://pageflows.com/static/website/images/logo.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://pageflows.com/web/screens/error/:0
+[    5706ms] TypeError: Cannot read properties of null (reading 'style')
+    at https://pageflows.com/web/screens/error/:7446:191
+[    7009ms] [ERROR] Connecting to 'https://region1.analytics.google.com/g/collect?v=2&tid=G-HTWBWPWEKF&gtm=45je63v0v9166509200za200zd9166509200&_p=1775120135754&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=156376679.1775120136&ul=en-gb&sr=1512x982&uaa=arm&uab=64&uafvl=Chromium%3B146.0.7680.165%7CNot-A.Brand%3B24.0.0.0%7CGoogle%2520Chrome%3B146.0.7680.165&uamb=0&uam=&uap=macOS&uapv=26.4.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAGQ&gaf=2&_s=3&tag_exp=0~115616985~115938465~115938468~116991816~117266400~118328143&sid=1775120135&sct=1&seg=0&dl=https%3A%2F%2Fpageflows.com%2Fweb%2Fscreens%2Ferror%2F&dt=Unique%20Website%20Screens%20%26%20UI%20Inspiration%20%E2%80%93%20Page%20Flows&en=best_practices_optimized&_ee=1&ep.event_category=performance&ep.event_label=lighthouse_best_practices&_et=713&tfd=6973' violates the following Content Security Policy directive: "connect-src 'self' https://web.delighted.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.google.com/recaptcha/". The action has been blocked. @ https://www.googletagmanager.com/gtag/js?id=G-HTWBWPWEKF:285
+[    7009ms] [ERROR] Fetch API cannot load https://region1.analytics.google.com/g/collect?v=2&tid=G-HTWBWPWEKF&gtm=45je63v0v9166509200za200zd9166509200&_p=1775120135754&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=156376679.1775120136&ul=en-gb&sr=1512x982&uaa=arm&uab=64&uafvl=Chromium%3B146.0.7680.165%7CNot-A.Brand%3B24.0.0.0%7CGoogle%2520Chrome%3B146.0.7680.165&uamb=0&uam=&uap=macOS&uapv=26.4.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAGQ&gaf=2&_s=3&tag_exp=0~115616985~115938465~115938468~116991816~117266400~118328143&sid=1775120135&sct=1&seg=0&dl=https%3A%2F%2Fpageflows.com%2Fweb%2Fscreens%2Ferror%2F&dt=Unique%20Website%20Screens%20%26%20UI%20Inspiration%20%E2%80%93%20Page%20Flows&en=best_practices_optimized&_ee=1&ep.event_category=performance&ep.event_label=lighthouse_best_practices&_et=713&tfd=6973. Refused to connect because it violates the document's Content Security Policy. @ https://www.googletagmanager.com/gtag/js?id=G-HTWBWPWEKF:285

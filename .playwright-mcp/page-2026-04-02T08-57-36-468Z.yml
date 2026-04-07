@@ -1,0 +1,285 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#_top"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - link "Netlify Docs" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e8]: Netlify Docs
+        - generic [ref=e9]:
+          - button "Search" [ref=e10] [cursor=pointer]:
+            - img [ref=e11]
+          - button "Select theme" [ref=e14] [cursor=pointer]:
+            - img [ref=e15]
+          - button "Menu" [ref=e23] [cursor=pointer]
+          - generic [ref=e28]:
+            - button "Log In" [ref=e29] [cursor=pointer]
+            - link "Sign Up" [ref=e30] [cursor=pointer]:
+              - /url: https://app.netlify.com/signup
+    - navigation "Main":
+      - generic [ref=e33]:
+        - generic [ref=e34]: Troubleshooting
+        - list [ref=e35]:
+          - listitem [ref=e36]:
+            - link "Overview" [ref=e37] [cursor=pointer]:
+              - /url: /resources/troubleshooting/overview/
+          - listitem [ref=e38]:
+            - link "Ask Netlify" [ref=e39] [cursor=pointer]:
+              - /url: /resources/troubleshooting/ask-netlify/
+          - listitem [ref=e40]:
+            - link "Fix a failed deploy" [ref=e41] [cursor=pointer]:
+              - /url: /resources/troubleshooting/fix-a-failed-deploy/
+          - listitem [ref=e42]:
+            - link "Error reference" [ref=e43] [cursor=pointer]:
+              - /url: /resources/troubleshooting/error-reference/
+          - listitem [ref=e44]:
+            - link "Request chain" [ref=e45] [cursor=pointer]:
+              - /url: /resources/troubleshooting/request-chain/
+          - listitem [ref=e46]:
+            - link "Page not found error guide" [ref=e47] [cursor=pointer]:
+              - /url: /resources/troubleshooting/page-not-found-error-guide/
+          - listitem [ref=e48]:
+            - link "Troubleshooting FAQ" [ref=e49] [cursor=pointer]:
+              - /url: /resources/troubleshooting/troubleshooting-faq/
+          - listitem [ref=e50]:
+            - link "Support Guides" [ref=e51] [cursor=pointer]:
+              - /url: https://answers.netlify.com/c/netlify-support/support-guides/52
+          - listitem [ref=e52]:
+            - link "Support scope" [ref=e53] [cursor=pointer]:
+              - /url: https://www.netlify.com/support-scope/
+          - listitem [ref=e54]:
+            - link "Support" [ref=e55] [cursor=pointer]:
+              - /url: https://www.netlify.com/support/
+    - generic [ref=e57]:
+      - complementary [ref=e58]:
+        - navigation "On this page" [ref=e64]:
+          - heading "On this page" [level=2] [ref=e65]
+          - list [ref=e66]:
+            - listitem [ref=e67]:
+              - link "Overview" [ref=e68] [cursor=pointer]:
+                - /url: "#_top"
+              - list [ref=e69]:
+                - listitem [ref=e70]:
+                  - link "How these solution suggestions work" [ref=e71] [cursor=pointer]:
+                    - /url: "#how-these-solution-suggestions-work"
+                - listitem [ref=e72]:
+                  - link "Enable solution suggestions" [ref=e73] [cursor=pointer]:
+                    - /url: "#enable-solution-suggestions"
+                - listitem [ref=e74]:
+                  - link "Disable solution suggestions" [ref=e75] [cursor=pointer]:
+                    - /url: "#disable-solution-suggestions"
+                - listitem [ref=e76]:
+                  - link "More troubleshooting help" [ref=e77] [cursor=pointer]:
+                    - /url: "#more-troubleshooting-help"
+      - main [ref=e79]:
+        - paragraph [ref=e82]:
+          - text: Start your next project with a prompt. →
+          - link "netlify.new" [ref=e83] [cursor=pointer]:
+            - /url: https://app.netlify.com/start
+          - text: 🚀
+        - generic [ref=e85]:
+          - navigation "Breadcrumbs" [ref=e86]:
+            - list [ref=e87]:
+              - listitem [ref=e88]:
+                - generic [ref=e89]: Resources
+                - generic [ref=e90]: /
+              - listitem [ref=e91]:
+                - generic [ref=e92]: Troubleshooting
+                - generic [ref=e93]: /
+          - generic [ref=e94]:
+            - heading "Fix a failed deploy" [level=1] [ref=e96]
+            - button "Copy page" [ref=e99] [cursor=pointer]:
+              - generic [ref=e100]: Copy page
+              - img [ref=e101]
+        - generic [ref=e104]:
+          - generic [ref=e105]:
+            - paragraph [ref=e106]: Netlify’s AI capabilities help diagnose and suggest solutions for deploy failures or build errors so you can get back to shipping code.
+            - paragraph [ref=e107]:
+              - img "A failed deploy with a \"Why did it fail?\" button and a diagnosis and suggested solution above the deploy log details" [ref=e108]
+            - generic [ref=e109]:
+              - heading "How these solution suggestions work" [level=3] [ref=e110]
+              - link "Section titled “How these solution suggestions work”" [ref=e111] [cursor=pointer]:
+                - /url: "#how-these-solution-suggestions-work"
+                - img [ref=e113]
+                - generic [ref=e115]: Section titled “How these solution suggestions work”
+            - paragraph [ref=e116]:
+              - text: When a deployment failure happens, your team will find a
+              - strong [ref=e117]: Why did it fail?
+              - text: button on the failed deploy summary page. This button always appears on failed deploys unless an Owner has disabled the feature for your team.
+            - paragraph [ref=e118]:
+              - text: If this feature is enabled for your team and you select the
+              - strong [ref=e119]: Why did it fail?
+              - text: button, the details about the failure are processed by Netlify’s AI systems to generate guidance for how to resolve the issue.
+            - paragraph [ref=e120]: We’re continuously improving the feature to suggest accurate solutions but your team should review them for accuracy.
+            - generic [ref=e121]:
+              - heading "Security for solution suggestions" [level=4] [ref=e122]
+              - link "Section titled “Security for solution suggestions”" [ref=e123] [cursor=pointer]:
+                - /url: "#security-for-solution-suggestions"
+                - img [ref=e125]
+                - generic [ref=e127]: Section titled “Security for solution suggestions”
+            - paragraph [ref=e128]: This feature does not use the information processed to train models or store data outside of Netlify’s systems.
+            - paragraph [ref=e129]: "The deploy failure details used to generate suggestions includes:"
+            - list [ref=e130]:
+              - listitem [ref=e131]: a subsection of the build log entries in your deploy log at or around the place where the error returns.
+              - listitem [ref=e132]: other metadata, such as the name of your site’s framework to provide more accurate results.
+            - paragraph [ref=e133]:
+              - text: Like all Netlify features, usage of this capability is subject to our service agreements referenced in the
+              - link "Terms of Use" [ref=e134] [cursor=pointer]:
+                - /url: https://www.netlify.com/legal/terms-of-use/
+              - text: .
+            - generic [ref=e135]:
+              - heading "Enable solution suggestions" [level=3] [ref=e136]
+              - link "Section titled “Enable solution suggestions”" [ref=e137] [cursor=pointer]:
+                - /url: "#enable-solution-suggestions"
+                - img [ref=e139]
+                - generic [ref=e141]: Section titled “Enable solution suggestions”
+            - paragraph [ref=e142]: These AI capabilities are only available if they have been enabled for your team. Once enabled, any Developer or Owner on your team can use this AI capability to generate solutions for resolving deploy failures on all sites they have access to in your team.
+            - paragraph [ref=e143]: "Who can turn this feature on or off:"
+            - list [ref=e144]:
+              - listitem [ref=e145]: Owners can enable or disable this feature for their team.
+              - listitem [ref=e146]:
+                - text: Developers can enable this feature for their team unless an Owner has disabled this feature for the team. The
+                - strong [ref=e147]: Why did it fail?
+                - text: button appears to Developers and Owners unless the feature is disabled.
+                - list [ref=e148]:
+                  - listitem [ref=e149]:
+                    - text: If a Developer selects the
+                    - strong [ref=e150]: Why did it fail?
+                    - text: button and the feature is not enabled or disabled for the team, then a prompt appears to enable this feature for the team. Until this feature is enabled on the team, selecting this button will not process the deploy failure details or generate suggestions.
+            - paragraph [ref=e151]: "As an Owner, to enable deploy failure solution suggestions:"
+            - list [ref=e152]:
+              - listitem [ref=e153]:
+                - text: For your team, go to
+                - generic "Navigation path" [ref=e154]:
+                  - strong [ref=e155]: Team settings > General > AI enablement
+              - listitem [ref=e156]:
+                - text: Select
+                - strong [ref=e157]: Configure
+                - text: .
+              - listitem [ref=e158]:
+                - text: Choose
+                - strong [ref=e159]: Enabled
+                - text: .
+            - generic [ref=e160]:
+              - heading "Disable solution suggestions" [level=3] [ref=e161]
+              - link "Section titled “Disable solution suggestions”" [ref=e162] [cursor=pointer]:
+                - /url: "#disable-solution-suggestions"
+                - img [ref=e164]
+                - generic [ref=e166]: Section titled “Disable solution suggestions”
+            - paragraph [ref=e167]:
+              - text: Once disabled, the
+              - strong [ref=e168]: Why did it fail?
+              - text: button will not appear on any of your team’s sites. Only an Owner can enable deploy diagnostics for all sites in your team after the feature is disabled.
+            - paragraph [ref=e169]: "As an Owner, to disable deploy failure solution suggestions:"
+            - list [ref=e170]:
+              - listitem [ref=e171]:
+                - text: For your team, go to
+                - generic "Navigation path" [ref=e172]:
+                  - strong [ref=e173]: Team settings > General > AI enablement
+              - listitem [ref=e174]:
+                - text: Select
+                - strong [ref=e175]: Configure
+                - text: .
+              - listitem [ref=e176]:
+                - text: Choose
+                - strong [ref=e177]: Disabled
+                - text: .
+            - generic [ref=e178]:
+              - heading "More troubleshooting help" [level=3] [ref=e179]
+              - link "Section titled “More troubleshooting help”" [ref=e180] [cursor=pointer]:
+                - /url: "#more-troubleshooting-help"
+                - img [ref=e182]
+                - generic [ref=e184]: Section titled “More troubleshooting help”
+            - list [ref=e185]:
+              - listitem [ref=e186]:
+                - link "Verified Support Guide on using the log to debug your build process" [ref=e187] [cursor=pointer]:
+                  - /url: https://answers.netlify.com/t/support-guide-debugging-failed-builds-101-or-build-failed-with-non-zero-exit-code/118545
+              - listitem [ref=e188]:
+                - link "Build troubleshooting tips" [ref=e189] [cursor=pointer]:
+                  - /url: /build/configure-builds/troubleshooting-tips
+          - generic [ref=e190]:
+            - paragraph [ref=e192]:
+              - text: "Last updated:"
+              - time [ref=e193]: Jul 14, 2025
+            - generic [ref=e194]:
+              - link "Previous Ask Netlify" [ref=e195] [cursor=pointer]:
+                - /url: /resources/troubleshooting/ask-netlify/
+                - generic [ref=e196]:
+                  - img [ref=e197]
+                  - text: Previous
+                - generic [ref=e199]: Ask Netlify
+              - link "Next Error reference" [ref=e200] [cursor=pointer]:
+                - /url: /resources/troubleshooting/error-reference/
+                - generic [ref=e201]:
+                  - text: Next
+                  - img [ref=e202]
+                - generic [ref=e204]: Error reference
+          - generic [ref=e205]:
+            - generic [ref=e206]:
+              - generic [ref=e207]:
+                - heading "Did you find this doc useful?" [level=4] [ref=e208]
+                - paragraph [ref=e209]: Your feedback helps us improve our docs.
+              - generic [ref=e210]:
+                - button "upvote" [ref=e211] [cursor=pointer]:
+                  - img
+                - button "downvote" [ref=e212] [cursor=pointer]:
+                  - img
+            - generic [ref=e214]:
+              - generic [ref=e215]:
+                - text: Do not fill in this field
+                - textbox "Do not fill in this field" [ref=e216]
+              - generic [ref=e218]:
+                - generic: Email (optional)
+                - textbox "Email (optional)" [ref=e219]
+              - generic [ref=e221]:
+                - generic: What else would you like to tell us about this doc?
+                - textbox "What else would you like to tell us about this doc?" [ref=e222]
+              - generic [ref=e224] [cursor=pointer]:
+                - checkbox "I consent to being contacted regarding my feedback" [ref=e225]
+                - generic [ref=e226]: I consent to being contacted regarding my feedback
+              - button "Send" [disabled] [ref=e228]
+          - generic [ref=e229]:
+            - navigation "Footer navigation" [ref=e230]:
+              - list [ref=e231]:
+                - listitem [ref=e232]:
+                  - link "Netlify" [ref=e233] [cursor=pointer]:
+                    - /url: https://netlify.com/
+                - listitem [ref=e234]:
+                  - link "Careers" [ref=e235] [cursor=pointer]:
+                    - /url: https://netlify.com/careers/
+                - listitem [ref=e236]:
+                  - link "Blog" [ref=e237] [cursor=pointer]:
+                    - /url: https://netlify.com/blog/
+                - listitem [ref=e238]:
+                  - link "Terms" [ref=e239] [cursor=pointer]:
+                    - /url: https://www.netlify.com/legal/terms-of-use/
+                - listitem [ref=e240]:
+                  - link "Privacy" [ref=e241] [cursor=pointer]:
+                    - /url: https://www.netlify.com/privacy/
+              - list [ref=e242]:
+                - listitem [ref=e243]:
+                  - link "GitHub" [ref=e244] [cursor=pointer]:
+                    - /url: https://github.com/netlify
+                    - img [ref=e245]
+                - listitem [ref=e247]:
+                  - link "LinkedIn" [ref=e248] [cursor=pointer]:
+                    - /url: https://linkedin.com/company/Netlify
+                    - img [ref=e249]
+                - listitem [ref=e251]:
+                  - link "Bluesky" [ref=e252] [cursor=pointer]:
+                    - /url: https://bsky.app/profile/netlify.com
+                    - img [ref=e253]
+                - listitem [ref=e255]:
+                  - link "X" [ref=e256] [cursor=pointer]:
+                    - /url: https://x.com/Netlify
+                    - img [ref=e257]
+                - listitem [ref=e259]:
+                  - link "YouTube" [ref=e260] [cursor=pointer]:
+                    - /url: https://www.youtube.com/@NetlifyApp
+                    - img [ref=e261]
+                - listitem [ref=e263]:
+                  - link "Forums" [ref=e264] [cursor=pointer]:
+                    - /url: https://answers.netlify.com/
+                    - img [ref=e265]
+            - paragraph [ref=e267]: © 2026 Netlify

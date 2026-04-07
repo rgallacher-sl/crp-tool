@@ -1,0 +1,415 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation "global" [ref=e3]:
+      - generic [ref=e4]:
+        - button "Close desktop version of navigation" [ref=e6] [cursor=pointer]:
+          - generic [ref=e7]:
+            - img
+        - link "Cloudscape Design System" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e12]: Cloudscape Design System
+      - generic [ref=e13]:
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - link "Get started" [ref=e16] [cursor=pointer]:
+              - /url: /get-started/
+          - listitem [ref=e17]:
+            - link "Foundation" [ref=e18] [cursor=pointer]:
+              - /url: /foundation/
+          - listitem [ref=e19]:
+            - link "Components" [ref=e20] [cursor=pointer]:
+              - /url: /components/
+          - listitem [ref=e21]:
+            - link "Patterns" [ref=e22] [cursor=pointer]:
+              - /url: /patterns/
+          - listitem [ref=e23]:
+            - link "Demos" [ref=e24] [cursor=pointer]:
+              - /url: /demos/
+          - listitem [ref=e25]:
+            - link "GitHub (opens new tab)" [ref=e26] [cursor=pointer]:
+              - /url: https://github.com/cloudscape-design/components
+              - text: GitHub
+              - img "(opens new tab)" [ref=e27]:
+                - generic [ref=e28]:
+                  - img
+        - button "Open search input" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - img
+      - button "Mode toggle" [ref=e35] [cursor=pointer]:
+        - generic [ref=e36]:
+          - img
+    - generic [ref=e37]:
+      - button "Mode toggle" [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - img
+      - generic [ref=e44]:
+        - navigation "Side navigation" [ref=e47]:
+          - button "Close side navigation" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]:
+              - img
+          - generic [ref=e52]:
+            - heading "Components" [level=2] [ref=e53]:
+              - link "Components" [ref=e54] [cursor=pointer]:
+                - /url: /components/
+                - generic [ref=e55]: Components
+            - list [ref=e57]:
+              - listitem [ref=e58]:
+                - link "Alert" [ref=e59] [cursor=pointer]:
+                  - /url: /components/alert/
+              - listitem [ref=e60]:
+                - link "Anchor navigation" [ref=e61] [cursor=pointer]:
+                  - /url: /components/anchor-navigation/
+              - listitem [ref=e62]:
+                - link "App layout" [ref=e63] [cursor=pointer]:
+                  - /url: /components/app-layout/
+              - listitem [ref=e64]:
+                - link "App layout toolbar" [ref=e65] [cursor=pointer]:
+                  - /url: /components/app-layout-toolbar/
+              - listitem [ref=e66]:
+                - link "Attribute editor" [ref=e67] [cursor=pointer]:
+                  - /url: /components/attribute-editor/
+              - listitem [ref=e68]:
+                - link "Autosuggest" [ref=e69] [cursor=pointer]:
+                  - /url: /components/autosuggest/
+              - listitem [ref=e70]:
+                - link "Badge" [ref=e71] [cursor=pointer]:
+                  - /url: /components/badge/
+              - listitem [ref=e72]:
+                - generic [ref=e74] [cursor=pointer]:
+                  - button "Board components" [ref=e75]:
+                    - generic [ref=e76]:
+                      - img
+                  - link "Board components" [ref=e77]:
+                    - /url: /components/board-components/
+              - listitem [ref=e78]:
+                - link "Box" [ref=e79] [cursor=pointer]:
+                  - /url: /components/box/
+              - listitem [ref=e80]:
+                - link "Breadcrumb group" [ref=e81] [cursor=pointer]:
+                  - /url: /components/breadcrumb-group/
+              - listitem [ref=e82]:
+                - link "Button" [ref=e83] [cursor=pointer]:
+                  - /url: /components/button/
+              - listitem [ref=e84]:
+                - link "Button dropdown" [ref=e85] [cursor=pointer]:
+                  - /url: /components/button-dropdown/
+              - listitem [ref=e86]:
+                - link "Button group" [ref=e87] [cursor=pointer]:
+                  - /url: /components/button-group/
+              - listitem [ref=e88]:
+                - link "Calendar" [ref=e89] [cursor=pointer]:
+                  - /url: /components/calendar/
+              - listitem [ref=e90]:
+                - link "Cards" [ref=e91] [cursor=pointer]:
+                  - /url: /components/cards/
+              - listitem [ref=e92]:
+                - generic [ref=e94] [cursor=pointer]:
+                  - button "Charts" [ref=e95]:
+                    - generic [ref=e96]:
+                      - img
+                  - link "Charts" [ref=e97]:
+                    - /url: /components/charts/
+              - listitem [ref=e98]:
+                - generic [ref=e100] [cursor=pointer]:
+                  - button "Charts (Legacy)" [ref=e101]:
+                    - generic [ref=e102]:
+                      - img
+                  - link "Charts (Legacy)" [ref=e103]:
+                    - /url: /components/charts-legacy/
+              - listitem [ref=e104]:
+                - link "Checkbox" [ref=e105] [cursor=pointer]:
+                  - /url: /components/checkbox/
+              - listitem [ref=e106]:
+                - link "Code editor" [ref=e107] [cursor=pointer]:
+                  - /url: /components/code-editor/
+              - listitem [ref=e108]:
+                - link "Code view" [ref=e109] [cursor=pointer]:
+                  - /url: /components/code-view/
+              - listitem [ref=e110]:
+                - link "Collection preferences" [ref=e111] [cursor=pointer]:
+                  - /url: /components/collection-preferences/
+              - listitem [ref=e112]:
+                - link "Collection select filter" [ref=e113] [cursor=pointer]:
+                  - /url: /components/collection-select-filter/
+              - listitem [ref=e114]:
+                - link "Column layout" [ref=e115] [cursor=pointer]:
+                  - /url: /components/column-layout/
+              - listitem [ref=e116]:
+                - link "Container" [ref=e117] [cursor=pointer]:
+                  - /url: /components/container/
+              - listitem [ref=e118]:
+                - link "Content layout" [ref=e119] [cursor=pointer]:
+                  - /url: /components/content-layout/
+              - listitem [ref=e120]:
+                - link "Copy to clipboard" [ref=e121] [cursor=pointer]:
+                  - /url: /components/copy-to-clipboard/
+              - listitem [ref=e122]:
+                - link "Date input" [ref=e123] [cursor=pointer]:
+                  - /url: /components/date-input/
+              - listitem [ref=e124]:
+                - link "Date picker" [ref=e125] [cursor=pointer]:
+                  - /url: /components/date-picker/
+              - listitem [ref=e126]:
+                - link "Date range picker" [ref=e127] [cursor=pointer]:
+                  - /url: /components/date-range-picker/
+              - listitem [ref=e128]:
+                - link "Drawer" [ref=e129] [cursor=pointer]:
+                  - /url: /components/drawer/
+              - listitem [ref=e130]:
+                - link "Error boundary" [ref=e131] [cursor=pointer]:
+                  - /url: /components/error-boundary/
+              - listitem [ref=e132]:
+                - link "Expandable section" [ref=e133] [cursor=pointer]:
+                  - /url: /components/expandable-section/
+              - listitem [ref=e134]:
+                - generic [ref=e136] [cursor=pointer]:
+                  - button "File uploading components" [ref=e137]:
+                    - generic [ref=e138]:
+                      - img
+                  - link "File uploading components" [ref=e139]:
+                    - /url: /components/file-uploading-components/
+              - listitem [ref=e140]:
+                - link "Flashbar" [ref=e141] [cursor=pointer]:
+                  - /url: /components/flashbar/
+              - listitem [ref=e142]:
+                - link "Form" [ref=e143] [cursor=pointer]:
+                  - /url: /components/form/
+              - listitem [ref=e144]:
+                - link "Form field" [ref=e145] [cursor=pointer]:
+                  - /url: /components/form-field/
+              - listitem [ref=e146]:
+                - generic [ref=e148] [cursor=pointer]:
+                  - button "Generative AI components" [ref=e149]:
+                    - generic [ref=e150]:
+                      - img
+                  - link "Generative AI components" [ref=e151]:
+                    - /url: /components/genai-components/
+              - listitem [ref=e152]:
+                - link "Grid" [ref=e153] [cursor=pointer]:
+                  - /url: /components/grid/
+              - listitem [ref=e154]:
+                - link "Header" [ref=e155] [cursor=pointer]:
+                  - /url: /components/header/
+              - listitem [ref=e156]:
+                - link "Help panel" [ref=e157] [cursor=pointer]:
+                  - /url: /components/help-panel/
+              - listitem [ref=e158]:
+                - link "Icon" [ref=e159] [cursor=pointer]:
+                  - /url: /components/icon/
+              - listitem [ref=e160]:
+                - link "Input" [ref=e161] [cursor=pointer]:
+                  - /url: /components/input/
+              - listitem [ref=e162]:
+                - link "Item card" [ref=e163] [cursor=pointer]:
+                  - /url: /components/item-card/
+              - listitem [ref=e164]:
+                - link "Key-value pairs" [ref=e165] [cursor=pointer]:
+                  - /url: /components/key-value-pairs/
+              - listitem [ref=e166]:
+                - link "Link" [ref=e167] [cursor=pointer]:
+                  - /url: /components/link/
+              - listitem [ref=e168]:
+                - link "List" [ref=e169] [cursor=pointer]:
+                  - /url: /components/list/
+              - listitem [ref=e170]:
+                - link "Live region" [ref=e171] [cursor=pointer]:
+                  - /url: /components/live-region/
+              - listitem [ref=e172]:
+                - link "Modal" [ref=e173] [cursor=pointer]:
+                  - /url: /components/modal/
+              - listitem [ref=e174]:
+                - link "Multiselect" [ref=e175] [cursor=pointer]:
+                  - /url: /components/multiselect/
+              - listitem [ref=e176]:
+                - link "Pagination" [ref=e177] [cursor=pointer]:
+                  - /url: /components/pagination/
+              - listitem [ref=e178]:
+                - link "Panel layout" [ref=e179] [cursor=pointer]:
+                  - /url: /components/panel-layout/
+              - listitem [ref=e180]:
+                - link "Popover" [ref=e181] [cursor=pointer]:
+                  - /url: /components/popover/
+              - listitem [ref=e182]:
+                - link "Progress bar" [ref=e183] [cursor=pointer]:
+                  - /url: /components/progress-bar/
+              - listitem [ref=e184]:
+                - link "Property filter" [ref=e185] [cursor=pointer]:
+                  - /url: /components/property-filter/
+              - listitem [ref=e186]:
+                - link "Radio group" [ref=e187] [cursor=pointer]:
+                  - /url: /components/radio-group/
+              - listitem [ref=e188]:
+                - link "S3 resource selector" [ref=e189] [cursor=pointer]:
+                  - /url: /components/s3-resource-selector/
+              - listitem [ref=e190]:
+                - link "Segmented control" [ref=e191] [cursor=pointer]:
+                  - /url: /components/segmented-control/
+              - listitem [ref=e192]:
+                - link "Select" [ref=e193] [cursor=pointer]:
+                  - /url: /components/select/
+              - listitem [ref=e194]:
+                - link "Side navigation" [ref=e195] [cursor=pointer]:
+                  - /url: /components/side-navigation/
+              - listitem [ref=e196]:
+                - link "Slider" [ref=e197] [cursor=pointer]:
+                  - /url: /components/slider/
+              - listitem [ref=e198]:
+                - link "Space between" [ref=e199] [cursor=pointer]:
+                  - /url: /components/space-between/
+              - listitem [ref=e200]:
+                - link "Spinner" [ref=e201] [cursor=pointer]:
+                  - /url: /components/spinner/
+              - listitem [ref=e202]:
+                - link "Split panel" [ref=e203] [cursor=pointer]:
+                  - /url: /components/split-panel/
+              - listitem [ref=e204]:
+                - link "Status indicator" [ref=e205] [cursor=pointer]:
+                  - /url: /components/status-indicator/
+              - listitem [ref=e206]:
+                - link "Steps" [ref=e207] [cursor=pointer]:
+                  - /url: /components/steps/
+              - listitem [ref=e208]:
+                - link "Table" [ref=e209] [cursor=pointer]:
+                  - /url: /components/table/
+              - listitem [ref=e210]:
+                - link "Tabs" [ref=e211] [cursor=pointer]:
+                  - /url: /components/tabs/
+              - listitem [ref=e212]:
+                - link "Tag editor" [ref=e213] [cursor=pointer]:
+                  - /url: /components/tag-editor/
+              - listitem [ref=e214]:
+                - link "Text content" [ref=e215] [cursor=pointer]:
+                  - /url: /components/text-content/
+              - listitem [ref=e216]:
+                - link "Text filter" [ref=e217] [cursor=pointer]:
+                  - /url: /components/text-filter/
+              - listitem [ref=e218]:
+                - link "Text area" [ref=e219] [cursor=pointer]:
+                  - /url: /components/textarea/
+              - listitem [ref=e220]:
+                - link "Tiles" [ref=e221] [cursor=pointer]:
+                  - /url: /components/tiles/
+              - listitem [ref=e222]:
+                - link "Time input" [ref=e223] [cursor=pointer]:
+                  - /url: /components/time-input/
+              - listitem [ref=e224]:
+                - link "Toggle" [ref=e225] [cursor=pointer]:
+                  - /url: /components/toggle/
+              - listitem [ref=e226]:
+                - link "Toggle button" [ref=e227] [cursor=pointer]:
+                  - /url: /components/toggle-button/
+              - listitem [ref=e228]:
+                - link "Token" [ref=e229] [cursor=pointer]:
+                  - /url: /components/token/
+              - listitem [ref=e230]:
+                - link "Token group" [ref=e231] [cursor=pointer]:
+                  - /url: /components/token-group/
+              - listitem [ref=e232]:
+                - link "Top navigation" [ref=e233] [cursor=pointer]:
+                  - /url: /components/top-navigation/
+              - listitem [ref=e234]:
+                - link "Tree view" [ref=e235] [cursor=pointer]:
+                  - /url: /components/tree-view/
+              - listitem [ref=e236]:
+                - generic [ref=e238] [cursor=pointer]:
+                  - button "Tutorial components" [ref=e239]:
+                    - generic [ref=e240]:
+                      - img
+                  - link "Tutorial components" [ref=e241]:
+                    - /url: /components/hands-on-tutorials/
+              - listitem [ref=e242]:
+                - link "Wizard" [ref=e243] [cursor=pointer]:
+                  - /url: /components/wizard/
+        - main [ref=e244]:
+          - generic [ref=e247]:
+            - generic [ref=e249]:
+              - navigation "Breadcrumbs" [ref=e254]:
+                - list [ref=e255]:
+                  - listitem [ref=e256]:
+                    - generic [ref=e257]:
+                      - link "Cloudscape Design System" [ref=e258] [cursor=pointer]:
+                        - /url: /
+                        - generic [ref=e259]: Cloudscape Design System
+                      - generic [ref=e261]:
+                        - img
+                  - listitem [ref=e262]:
+                    - generic [ref=e263]:
+                      - link "Components" [ref=e264] [cursor=pointer]:
+                        - /url: /components/
+                        - generic [ref=e265]: Components
+                      - generic [ref=e267]:
+                        - img
+                  - listitem [ref=e268]:
+                    - link "Flashbar" [disabled] [ref=e270]:
+                      - generic [ref=e271]: Flashbar
+                - list [ref=e272]:
+                  - listitem [ref=e273]:
+                    - generic [ref=e274]:
+                      - link [ref=e275] [cursor=pointer]:
+                        - /url: /
+                        - generic [ref=e276]: Cloudscape Design System
+                      - generic [ref=e278]:
+                        - img
+                  - listitem [ref=e279]:
+                    - generic [ref=e280]:
+                      - link [ref=e281] [cursor=pointer]:
+                        - /url: /components/
+                        - generic [ref=e282]: Components
+                      - generic [ref=e284]:
+                        - img
+                  - listitem [ref=e285]:
+                    - generic [ref=e288]: Flashbar
+              - generic [ref=e293]:
+                - generic [ref=e297]:
+                  - heading "Flashbar" [level=1] [ref=e300]
+                  - paragraph [ref=e301]:
+                    - generic [ref=e302]: Displays one or more status notifications that communicate critical task operation status, including errors, success, in-progress, and info. Flashbars are exclusively used for status notifications.
+                - generic [ref=e304]:
+                  - link "Get design library" [ref=e306] [cursor=pointer]:
+                    - /url: /get-started/for-designers/design-resources
+                    - generic [ref=e307]: Get design library
+                  - link "Browse code (opens new tab)" [ref=e309] [cursor=pointer]:
+                    - /url: https://github.com/cloudscape-design/components/tree/main/src/flashbar
+                    - generic [ref=e310]: Browse code
+                    - generic [ref=e311]:
+                      - img
+              - generic [ref=e316]:
+                - tablist [ref=e319]:
+                  - tab "Playground" [selected] [ref=e321] [cursor=pointer]:
+                    - generic [ref=e323]: Playground
+                  - tab "API" [ref=e325] [cursor=pointer]:
+                    - generic [ref=e327]: API
+                  - tab "Testing" [ref=e329] [cursor=pointer]:
+                    - generic [ref=e331]: Testing
+                  - tab "Usage" [ref=e333] [cursor=pointer]:
+                    - generic [ref=e335]: Usage
+                - tabpanel "Playground" [ref=e337]
+            - navigation "footer" [ref=e343]:
+              - generic [ref=e346]:
+                - list [ref=e347]:
+                  - listitem [ref=e348]:
+                    - link "About" [ref=e350]:
+                      - /url: /about/
+                  - listitem [ref=e351]:
+                    - link "Connect" [ref=e353]:
+                      - /url: /about/connect/
+                  - listitem [ref=e354]:
+                    - link "Privacy (opens new tab)" [ref=e356]:
+                      - /url: https://aws.amazon.com/privacy/
+                      - text: Privacy
+                      - img "(opens new tab)" [ref=e358]:
+                        - generic [ref=e359]:
+                          - img
+                  - listitem [ref=e360]:
+                    - link "Site terms (opens new tab)" [ref=e362]:
+                      - /url: https://aws.amazon.com/terms/
+                      - text: Site terms
+                      - img "(opens new tab)" [ref=e364]:
+                        - generic [ref=e365]:
+                          - img
+                  - listitem [ref=e366]:
+                    - button "Cookie preferences" [ref=e368] [cursor=pointer]
+                  - listitem [ref=e369]:
+                    - generic [ref=e370]: © 2026, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+                - generic [ref=e371]: Made with ❤️ at AWS
+  - alert [ref=e372]

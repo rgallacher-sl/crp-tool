@@ -1,0 +1,60 @@
+[     150ms] [WARNING] The resource https://pageflows.com/static/css/new-style.css?v=2.3&q=10 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://pageflows.com/ios/elements/error-state/:0
+[     150ms] [WARNING] The resource https://pageflows.com/static/css/new-style.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://pageflows.com/ios/elements/error-state/:0
+[     150ms] [WARNING] The resource https://pageflows.com/static/website/js/bundle.js?v=2.4&q=52 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://pageflows.com/ios/elements/error-state/:0
+[     150ms] [WARNING] The resource https://pageflows.com/static/website/images/logo.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://pageflows.com/ios/elements/error-state/:0
+[     291ms] [ERROR] Connecting to 'https://region1.analytics.google.com/g/collect?v=2&tid=G-HTWBWPWEKF&gtm=45je63v0v9166509200za200zd9166509200&_p=1775120145608&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=156376679.1775120136&ul=en-gb&sr=1512x982&uaa=arm&uab=64&uafvl=Chromium%3B146.0.7680.165%7CNot-A.Brand%3B24.0.0.0%7CGoogle%2520Chrome%3B146.0.7680.165&uamb=0&uam=&uap=macOS&uapv=26.4.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAGQ&tag_exp=0~115938466~115938468~116991816~117266401~117884344&sid=1775120135&sct=1&seg=1&dl=https%3A%2F%2Fpageflows.com%2Fios%2Felements%2Ferror-state%2F&dt=iOS%20Error%20State%20UX%20Patterns%20%E2%80%93%20Interface%20Ideas%20%7C%20Page%20Flows&_s=3&tfd=5148' violates the following Content Security Policy directive: "connect-src 'self' https://web.delighted.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.google.com/recaptcha/". The action has been blocked. @ https://www.googletagmanager.com/gtag/js?id=G-HTWBWPWEKF:285
+[     291ms] [ERROR] Fetch API cannot load https://region1.analytics.google.com/g/collect?v=2&tid=G-HTWBWPWEKF&gtm=45je63v0v9166509200za200zd9166509200&_p=1775120145608&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=156376679.1775120136&ul=en-gb&sr=1512x982&uaa=arm&uab=64&uafvl=Chromium%3B146.0.7680.165%7CNot-A.Brand%3B24.0.0.0%7CGoogle%2520Chrome%3B146.0.7680.165&uamb=0&uam=&uap=macOS&uapv=26.4.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAGQ&tag_exp=0~115938466~115938468~116991816~117266401~117884344&sid=1775120135&sct=1&seg=1&dl=https%3A%2F%2Fpageflows.com%2Fios%2Felements%2Ferror-state%2F&dt=iOS%20Error%20State%20UX%20Patterns%20%E2%80%93%20Interface%20Ideas%20%7C%20Page%20Flows&_s=3&tfd=5148. Refused to connect because it violates the document's Content Security Policy. @ https://www.googletagmanager.com/gtag/js?id=G-HTWBWPWEKF:285
+[     292ms] [ERROR] Connecting to 'https://plausible.io/api/event' violates the following Content Security Policy directive: "connect-src 'self' https://web.delighted.com https://www.google-analytics.com https://stats.g.doubleclick.net https://www.google.com/recaptcha/". The action has been blocked. @ https://plausible.io/js/script.js:0
+[     292ms] [ERROR] Fetch API cannot load https://plausible.io/api/event. Refused to connect because it violates the document's Content Security Policy. @ https://plausible.io/js/script.js:0
+[     295ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://pageflows.com/screens/desktop/developer-tools/element/error-state/:0
+[     304ms] [ERROR] Error: <path> attribute d: Expected number, "… 11.7331C2.39648f 7.55736 2.3964…". @ https://pageflows.com/screens/desktop/developer-tools/element/error-state/:71
+[     367ms] [LOG] ProfitWell JS run :)  @ https://pageflows.com/screens/desktop/developer-tools/element/error-state/:300
+[     470ms] [LOG] %c[🚀 INITIAL LOAD] Pre-loading all platform data... color: #4CAF50; font-weight: bold @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2248
+[     470ms] [LOG] [📊 INITIAL LOAD] This will make 4 API calls (iOS, Android, Web, Emails) @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2249
+[     470ms] [LOG] [⚠️ LOAD DATA] Search data API removed - using dynamic suggestions instead for ios @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1945
+[     470ms] [LOG] [⚠️ LOAD DATA] Search data API removed - using dynamic suggestions instead for android @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1945
+[     470ms] [LOG] [⚠️ LOAD DATA] Search data API removed - using dynamic suggestions instead for web @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1945
+[     470ms] [LOG] [⚠️ LOAD DATA] Search data API removed - using dynamic suggestions instead for emails @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1945
+[     470ms] [LOG] [🚀 INITIAL LOAD] Setting initial display platform: iOS @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2308
+[     471ms] [LOG] %c[✅ INITIAL LOAD] All platform data loaded successfully! color: #4CAF50; font-weight: bold @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2259
+[     471ms] [LOG] [✅ INITIAL LOAD] Status: {ios: ✅ Loaded, android: ✅ Loaded, web: ✅ Loaded, emails: ✅ Loaded} @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2260
+[     471ms] [LOG] [🎨 INITIAL LOAD] Populating iOS section... @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2269
+[     471ms] [LOG] [🎨 POPULATE] Populating section for ios (section: ios-data-section, attr: ios) @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1965
+[     471ms] [LOG] [✅ POPULATE] Container found for ios: {flows: 0, products: 0, screens: 0, elements: 0, emails: 0} @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1983
+[     471ms] [LOG] [🎨 POPULATE] Removing loading message @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1994
+[     471ms] [LOG] [✅ POPULATE] Section populated successfully for ios @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2151
+[     471ms] [LOG] [🎨 INITIAL LOAD] Populating Android section... @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2274
+[     471ms] [LOG] [🎨 POPULATE] Populating section for android (section: android-data-section, attr: android) @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1965
+[     471ms] [LOG] [✅ POPULATE] Container found for android: {flows: 0, products: 0, screens: 0, elements: 0, emails: 0} @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1983
+[     471ms] [LOG] [🎨 POPULATE] Removing loading message @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1994
+[     471ms] [LOG] [✅ POPULATE] Section populated successfully for android @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2151
+[     471ms] [LOG] [🎨 INITIAL LOAD] Populating Web section... @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2279
+[     472ms] [LOG] [🎨 POPULATE] Populating section for web (section: web-data-section, attr: web) @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1965
+[     472ms] [LOG] [✅ POPULATE] Container found for web: {flows: 0, products: 0, screens: 0, elements: 0, emails: 0} @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1983
+[     472ms] [LOG] [🎨 POPULATE] Removing loading message @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1994
+[     472ms] [LOG] [✅ POPULATE] Section populated successfully for web @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2151
+[     472ms] [LOG] [🎨 INITIAL LOAD] Populating Email section... @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2285
+[     472ms] [LOG] [🎨 POPULATE] Populating section for emails (section: email-data-section, attr: emails) @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1965
+[     472ms] [LOG] [✅ POPULATE] Container found for emails: {flows: 0, products: 0, screens: 0, elements: 0, emails: 0} @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1983
+[     472ms] [LOG] [🎨 POPULATE] Removing loading message @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1994
+[     472ms] [LOG] [📧 POPULATE] Skipping flows for email tab (emails don't have flows) @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2052
+[     472ms] [LOG] [📧 POPULATE] Skipping regular products for email tab (will show email products instead) @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2073
+[     472ms] [LOG] [📧 POPULATE] Skipping screens for email tab (emails don't have screens) @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2093
+[     472ms] [LOG] [📧 POPULATE] Skipping UI elements for email tab (emails don't have elements) @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2114
+[     472ms] [LOG] [✅ POPULATE] Section populated successfully for emails @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2151
+[     472ms] [LOG] %c[🎉 INITIAL LOAD] All platforms ready! Tab switching will be instant (NO API calls). color: #FFD700; font-weight: bold; font-size: 14px @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2289
+[     472ms] [LOG] %c[📌 INFO] Future tab switches will use cached data - watch for "💾 Using cached data (NO API call)" color: #2196F3 @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2293
+[     473ms] [LOG] [Object, Object, Object, Object] @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2730
+[     473ms] [LOG] Initial active platform: ios @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:3062
+[     473ms] [LOG] [⚠️ LOAD DATA] Search data API removed - using dynamic suggestions instead for ios @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1945
+[     473ms] [LOG] [🎨 POPULATE] Populating section for ios (section: ios-data-section, attr: ios) @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1965
+[     473ms] [LOG] [✅ POPULATE] Container found for ios: {flows: 0, products: 0, screens: 0, elements: 0, emails: 0} @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:1983
+[     473ms] [LOG] [✅ POPULATE] Section populated successfully for ios @ https://pageflows.com/static/website/js/header.js?v=2.3&q=26:2151
+[     476ms] [WARNING] jQuery.Deferred exception: Cannot read properties of null (reading 'addEventListener') TypeError: Cannot read properties of null (reading 'addEventListener')
+    at HTMLDocument.<anonymous> (https://pageflows.com/static/website/js/header-pages.js?v=2.4&q=27:159:47)
+    at e (https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js:2:30038)
+    at t (https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js:2:30340) undefined @ https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js:1
+[     479ms] Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+    at <anonymous> (https://pageflows.com/static/website/js/header-pages.js?v=2.4&q=27:158:46)
+    at e (https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js:1:30037)
+    at t (https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js:1:30339)

@@ -1,0 +1,8 @@
+[     364ms] NotSupportedError: Failed to execute 'define' on 'CustomElementRegistry': the name "starlight-toc" has already been used with this registry
+    at https://docs.netlify.com/_astro/TableOfContents.astro_astro_type_script_index_0_lang.FuRcXuRY.js?dpl=69cd6726d8c9800008352556:1:2016
+[     378ms] Error: No google tag manager containerId defined
+    at Object.initialize (https://docs.netlify.com/_astro/Analytics.astro_astro_type_script_index_0_lang.CBfKtd7k.js?dpl=69cd6726d8c9800008352556:2:21731)
+    at https://docs.netlify.com/_astro/Analytics.astro_astro_type_script_index_0_lang.CBfKtd7k.js?dpl=69cd6726d8c9800008352556:2:996
+[     585ms] [WARNING] Merging a Pagefind index from a different version than the main Pagefind instance.
+Main Pagefind JS: 1.3.0. Merged index (https://www.netlify.com/pagefind/): 1.4.0
+If you encounter any search errors, make sure that both sites are running the same version of Pagefind. @ https://docs.netlify.com/pagefind/pagefind.js:0

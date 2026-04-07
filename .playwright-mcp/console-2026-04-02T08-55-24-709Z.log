@@ -1,0 +1,13 @@
+[    1685ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://t.forwardslabs.com/api/track:0
+[    1752ms] [LOG] [Analytics] Initializing providers... @ https://nicelydone.club/_nuxt/BsCsBL90.js:8
+[    1752ms] [LOG] [Analytics] PostHog provider added @ https://nicelydone.club/_nuxt/BsCsBL90.js:8
+[    1752ms] [LOG] [Analytics] Plausible provider added @ https://nicelydone.club/_nuxt/BsCsBL90.js:8
+[    1753ms] [LOG] [Analytics] OpenPanel provider added (official SDK) @ https://nicelydone.club/_nuxt/BsCsBL90.js:8
+[    1753ms] [LOG] [Analytics] Initialized 3 provider(s) @ https://nicelydone.club/_nuxt/BsCsBL90.js:8
+[    2317ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://t.forwardslabs.com/api/track:0
+[    3421ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://t.forwardslabs.com/api/track:0
+[    3524ms] [ERROR] Failed to load resource: the server responded with a status of 429 () @ https://o4507458285666304.ingest.de.sentry.io/api/4507458291171408/envelope/?sentry_version=7&sentry_key=10bde61405d2e30157df2419c8132018&sentry_client=sentry.javascript.nuxt%2F10.46.0:0
+[    5525ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://t.forwardslabs.com/api/track:0
+[    5525ms] [ERROR] Max retries reached: TypeError: Failed to fetch (t.forwardslabs.com)
+    at https://nicelydone.club/_nuxt/C6zOF3lN.js:50:24163
+    at ON.post (https://nicelydone.club/_nuxt/C6zOF3lN.js:7:88075) @ https://nicelydone.club/_nuxt/BsCsBL90.js:8

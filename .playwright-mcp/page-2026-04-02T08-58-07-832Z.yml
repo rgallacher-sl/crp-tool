@@ -1,0 +1,522 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation "global" [ref=e3]:
+      - generic [ref=e4]:
+        - button "Close desktop version of navigation" [ref=e6] [cursor=pointer]:
+          - generic [ref=e7]:
+            - img
+        - link "Cloudscape Design System" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e12]: Cloudscape Design System
+      - generic [ref=e13]:
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - link "Get started" [ref=e16] [cursor=pointer]:
+              - /url: /get-started/
+          - listitem [ref=e17]:
+            - link "Foundation" [ref=e18] [cursor=pointer]:
+              - /url: /foundation/
+          - listitem [ref=e19]:
+            - link "Components" [ref=e20] [cursor=pointer]:
+              - /url: /components/
+          - listitem [ref=e21]:
+            - link "Patterns" [ref=e22] [cursor=pointer]:
+              - /url: /patterns/
+          - listitem [ref=e23]:
+            - link "Demos" [ref=e24] [cursor=pointer]:
+              - /url: /demos/
+          - listitem [ref=e25]:
+            - link "GitHub (opens new tab)" [ref=e26] [cursor=pointer]:
+              - /url: https://github.com/cloudscape-design/components
+              - text: GitHub
+              - img "(opens new tab)" [ref=e27]:
+                - generic [ref=e28]:
+                  - img
+        - button "Open search input" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - img
+      - button "Mode toggle" [ref=e35] [cursor=pointer]:
+        - generic [ref=e36]:
+          - img
+    - generic [ref=e37]:
+      - button "Mode toggle" [ref=e38] [cursor=pointer]:
+        - generic [ref=e39]:
+          - img
+      - generic [ref=e44]:
+        - navigation "Side navigation" [ref=e47]:
+          - button "Close side navigation" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]:
+              - img
+          - generic [ref=e52]:
+            - heading "Patterns" [level=2] [ref=e53]:
+              - link "Patterns" [ref=e54] [cursor=pointer]:
+                - /url: /patterns/
+                - generic [ref=e55]: Patterns
+            - generic [ref=e56]:
+              - list [ref=e57]:
+                - listitem [ref=e58]:
+                  - generic [ref=e59]:
+                    - heading "General" [level=3] [ref=e60]
+                    - list [ref=e61]:
+                      - listitem [ref=e62]:
+                        - generic [ref=e64] [cursor=pointer]:
+                          - button "Actions" [ref=e65]:
+                            - generic [ref=e66]:
+                              - img
+                          - link "Actions" [ref=e67]:
+                            - /url: /patterns/general/actions/
+                      - listitem [ref=e68]:
+                        - link "Announcing new features" [ref=e69] [cursor=pointer]:
+                          - /url: /patterns/general/announcing-new-features/
+                      - listitem [ref=e70]:
+                        - link "Announcing beta and preview features" [ref=e71] [cursor=pointer]:
+                          - /url: /patterns/general/announcing-beta-preview-features/
+                      - listitem [ref=e72]:
+                        - link "Communicating unsaved changes" [ref=e73] [cursor=pointer]:
+                          - /url: /patterns/general/unsaved-changes/
+                      - listitem [ref=e74]:
+                        - generic [ref=e76] [cursor=pointer]:
+                          - button "Data visualization" [ref=e77]:
+                            - generic [ref=e78]:
+                              - img
+                          - link "Data visualization" [ref=e79]:
+                            - /url: /patterns/general/data-vis/
+                      - listitem [ref=e80]:
+                        - link "Density settings" [ref=e81] [cursor=pointer]:
+                          - /url: /patterns/general/density-settings/
+                      - listitem [ref=e82]:
+                        - link "Disabled and read-only states" [ref=e83] [cursor=pointer]:
+                          - /url: /patterns/general/disabled-and-read-only-states/
+                      - listitem [ref=e84]:
+                        - link "Drag-and-drop" [ref=e85] [cursor=pointer]:
+                          - /url: /patterns/general/drag-and-drop/
+                      - listitem [ref=e86]:
+                        - generic [ref=e87]:
+                          - generic [ref=e88] [cursor=pointer]:
+                            - button "Errors" [expanded] [ref=e89]:
+                              - generic [ref=e90]:
+                                - img
+                            - link "Errors" [expanded] [ref=e91]:
+                              - /url: /patterns/general/errors/
+                          - group "Errors" [ref=e92]:
+                            - list [ref=e93]:
+                              - listitem [ref=e94]:
+                                - link "Error messages" [ref=e95] [cursor=pointer]:
+                                  - /url: /patterns/general/errors/error-messages/
+                              - listitem [ref=e96]:
+                                - link "Validation" [ref=e97] [cursor=pointer]:
+                                  - /url: /patterns/general/errors/validation/
+                      - listitem [ref=e98]:
+                        - link "Empty states" [ref=e99] [cursor=pointer]:
+                          - /url: /patterns/general/empty-states/
+                      - listitem [ref=e100]:
+                        - link "Feedback mechanisms" [ref=e101] [cursor=pointer]:
+                          - /url: /patterns/general/user-feedback/
+                      - listitem [ref=e102]:
+                        - generic [ref=e104] [cursor=pointer]:
+                          - button "Filtering patterns" [ref=e105]:
+                            - generic [ref=e106]:
+                              - img
+                          - link "Filtering patterns" [ref=e107]:
+                            - /url: /patterns/general/filter-patterns/
+                      - listitem [ref=e108]:
+                        - link "Hero header" [ref=e109] [cursor=pointer]:
+                          - /url: /patterns/general/hero-header/
+                      - listitem [ref=e110]:
+                        - link "Help system" [ref=e111] [cursor=pointer]:
+                          - /url: /patterns/general/help-system/
+                      - listitem [ref=e112]:
+                        - link "Image magnifier" [ref=e113] [cursor=pointer]:
+                          - /url: /patterns/general/image-magnifier/
+                      - listitem [ref=e114]:
+                        - link "Loading and refreshing" [ref=e115] [cursor=pointer]:
+                          - /url: /patterns/general/loading-and-refreshing/
+                      - listitem [ref=e116]:
+                        - generic [ref=e118] [cursor=pointer]:
+                          - button "Onboarding" [ref=e119]:
+                            - generic [ref=e120]:
+                              - img
+                          - link "Onboarding" [ref=e121]:
+                            - /url: /patterns/general/onboarding/
+                      - listitem [ref=e122]:
+                        - link "Selection in forms" [ref=e123] [cursor=pointer]:
+                          - /url: /patterns/general/selection/
+                      - listitem [ref=e124]:
+                        - generic [ref=e126] [cursor=pointer]:
+                          - button "Service navigation" [ref=e127]:
+                            - generic [ref=e128]:
+                              - img
+                          - link "Service navigation" [ref=e129]:
+                            - /url: /patterns/general/service-navigation/
+                      - listitem [ref=e130]:
+                        - generic [ref=e132] [cursor=pointer]:
+                          - button "Service Dashboard" [ref=e133]:
+                            - generic [ref=e134]:
+                              - img
+                          - link "Service Dashboard" [ref=e135]:
+                            - /url: /patterns/general/service-dashboard/
+                      - listitem [ref=e136]:
+                        - link "Secondary panels" [ref=e137] [cursor=pointer]:
+                          - /url: /patterns/general/secondary-panels/
+                      - listitem [ref=e138]:
+                        - link "Timestamps" [ref=e139] [cursor=pointer]:
+                          - /url: /patterns/general/timestamps/
+                      - listitem [ref=e140]:
+                        - link "User feedback" [ref=e141] [cursor=pointer]:
+                          - /url: /patterns/general/collect-user-feedback/
+              - separator [ref=e144]
+              - list [ref=e145]:
+                - listitem [ref=e146]:
+                  - generic [ref=e147]:
+                    - heading "Generative AI patterns" [level=3] [ref=e148]
+                    - list [ref=e149]:
+                      - listitem [ref=e150]:
+                        - link "Pattern abstraction" [ref=e151] [cursor=pointer]:
+                          - /url: /patterns/genai/genai-patterns/
+                      - listitem [ref=e152]:
+                        - link "Generative AI chat" [ref=e153] [cursor=pointer]:
+                          - /url: /patterns/genai/generative-AI-chat/
+                      - listitem [ref=e154]:
+                        - link "Ingress" [ref=e155] [cursor=pointer]:
+                          - /url: /patterns/genai/ingress/
+                      - listitem [ref=e156]:
+                        - link "Generative AI output label" [ref=e157] [cursor=pointer]:
+                          - /url: /patterns/genai/output-label/
+                      - listitem [ref=e158]:
+                        - link "Generative AI loading states" [ref=e159] [cursor=pointer]:
+                          - /url: /patterns/genai/genai-loading-states/
+                      - listitem [ref=e160]:
+                        - link "Progressive steps" [ref=e161] [cursor=pointer]:
+                          - /url: /patterns/genai/progressive-steps/
+                      - listitem [ref=e162]:
+                        - link "Follow-up questions" [ref=e163] [cursor=pointer]:
+                          - /url: /patterns/genai/follow-up-questions/
+                      - listitem [ref=e164]:
+                        - link "User authorized actions" [ref=e165] [cursor=pointer]:
+                          - /url: /patterns/genai/user-authorized-actions/
+                      - listitem [ref=e166]:
+                        - link "Variables" [ref=e167] [cursor=pointer]:
+                          - /url: /patterns/genai/variables/
+                      - listitem [ref=e168]:
+                        - link "Shortcut menus" [ref=e169] [cursor=pointer]:
+                          - /url: /patterns/genai/shortctut-menus/
+                      - listitem [ref=e170]:
+                        - link "Response regeneration" [ref=e171] [cursor=pointer]:
+                          - /url: /patterns/genai/response-regeneration/
+                      - listitem [ref=e172]:
+                        - link "Artifact previews" [ref=e173] [cursor=pointer]:
+                          - /url: /patterns/genai/artifact-previews/
+                      - listitem [ref=e174]:
+                        - link "Conversational history" [ref=e175] [cursor=pointer]:
+                          - /url: /patterns/genai/history/
+                      - listitem [ref=e176]:
+                        - link "Support prompts" [ref=e177] [cursor=pointer]:
+                          - /url: /patterns/genai/support-prompts/
+              - separator [ref=e180]
+              - list [ref=e181]:
+                - listitem [ref=e182]:
+                  - generic [ref=e183]:
+                    - heading "Resource management" [level=3] [ref=e184]
+                    - list [ref=e185]:
+                      - listitem [ref=e186]:
+                        - generic [ref=e188] [cursor=pointer]:
+                          - button "Create resource" [ref=e189]:
+                            - generic [ref=e190]:
+                              - img
+                          - link "Create resource" [ref=e191]:
+                            - /url: /patterns/resource-management/create/
+                      - listitem [ref=e192]:
+                        - generic [ref=e194] [cursor=pointer]:
+                          - button "Delete patterns" [ref=e195]:
+                            - generic [ref=e196]:
+                              - img
+                          - link "Delete patterns" [ref=e197]:
+                            - /url: /patterns/resource-management/delete/
+                      - listitem [ref=e198]:
+                        - generic [ref=e200] [cursor=pointer]:
+                          - button "Edit resource" [ref=e201]:
+                            - generic [ref=e202]:
+                              - img
+                          - link "Edit resource" [ref=e203]:
+                            - /url: /patterns/resource-management/edit/
+                      - listitem [ref=e204]:
+                        - generic [ref=e206] [cursor=pointer]:
+                          - button "View resources" [ref=e207]:
+                            - generic [ref=e208]:
+                              - img
+                          - link "View resources" [ref=e209]:
+                            - /url: /patterns/resource-management/view/
+                      - listitem [ref=e210]:
+                        - generic [ref=e212] [cursor=pointer]:
+                          - button "Resource details" [ref=e213]:
+                            - generic [ref=e214]:
+                              - img
+                          - link "Resource details" [ref=e215]:
+                            - /url: /patterns/resource-management/details/
+        - main [ref=e216]:
+          - generic [ref=e219]:
+            - generic [ref=e221]:
+              - navigation "Breadcrumbs" [ref=e226]:
+                - list [ref=e227]:
+                  - listitem [ref=e228]:
+                    - generic [ref=e229]:
+                      - link "Cloudscape Design System" [ref=e230] [cursor=pointer]:
+                        - /url: /
+                        - generic [ref=e231]: Cloudscape Design System
+                      - generic [ref=e233]:
+                        - img
+                  - listitem [ref=e234]:
+                    - generic [ref=e235]:
+                      - link "Patterns" [ref=e236] [cursor=pointer]:
+                        - /url: /patterns/
+                        - generic [ref=e237]: Patterns
+                      - generic [ref=e239]:
+                        - img
+                  - listitem [ref=e240]:
+                    - 'link "General: Errors" [disabled] [ref=e242]':
+                      - generic [ref=e243]: "General: Errors"
+                - list [ref=e244]:
+                  - listitem [ref=e245]:
+                    - generic [ref=e246]:
+                      - link [ref=e247] [cursor=pointer]:
+                        - /url: /
+                        - generic [ref=e248]: Cloudscape Design System
+                      - generic [ref=e250]:
+                        - img
+                  - listitem [ref=e251]:
+                    - generic [ref=e252]:
+                      - link [ref=e253] [cursor=pointer]:
+                        - /url: /patterns/
+                        - generic [ref=e254]: Patterns
+                      - generic [ref=e256]:
+                        - img
+                  - listitem [ref=e257]:
+                    - generic [ref=e260]: "General: Errors"
+              - generic [ref=e269]:
+                - heading "Errors" [level=1] [ref=e272]
+                - paragraph [ref=e273]:
+                  - generic [ref=e274]: Errors inform users of an inaccuracy, malfunction, unsuccessful action, or critical issue.
+              - generic [ref=e279]:
+                - generic [ref=e280]:
+                  - generic [ref=e282]:
+                    - heading "On this page" [level=2] [ref=e283]
+                    - navigation "On this page" [ref=e284]:
+                      - list [ref=e285]:
+                        - listitem [ref=e286]:
+                          - link "Common error types" [ref=e287] [cursor=pointer]:
+                            - /url: "#common-error-types"
+                            - generic [ref=e288]: Common error types
+                        - listitem [ref=e289]:
+                          - link "Key UX concepts" [ref=e290] [cursor=pointer]:
+                            - /url: "#key-ux-concepts"
+                            - generic [ref=e291]: Key UX concepts
+                        - listitem [ref=e292]:
+                          - link "General guidelines" [ref=e293] [cursor=pointer]:
+                            - /url: "#general-guidelines"
+                            - generic [ref=e294]: General guidelines
+                        - listitem [ref=e295]:
+                          - link "Accessibility guidelines" [ref=e296] [cursor=pointer]:
+                            - /url: "#accessibility-guidelines"
+                            - generic [ref=e297]: Accessibility guidelines
+                        - listitem [ref=e298]:
+                          - link "Related patterns" [ref=e299] [cursor=pointer]:
+                            - /url: "#related-patterns"
+                            - generic [ref=e300]: Related patterns
+                  - generic [ref=e301]:
+                    - heading "About this page" [level=2] [ref=e303]
+                    - generic [ref=e304]: "Published: April 24, 2024"
+                  - group "Website feedback form" [ref=e307]:
+                    - generic [ref=e308]:
+                      - generic [ref=e310]:
+                        - heading "Did this page help you?" [level=2] [ref=e311]
+                        - generic [ref=e312]: Your feedback helps us improve our documentation.
+                      - generic [ref=e314]:
+                        - button "Mark page as helpful" [ref=e316] [cursor=pointer]:
+                          - generic [ref=e317]:
+                            - img
+                          - text: "Yes"
+                        - button "Mark page as not helpful" [ref=e319] [cursor=pointer]:
+                          - generic [ref=e320]:
+                            - img
+                          - text: "No"
+                      - link "Provide additional feedback" [ref=e323]:
+                        - /url: https://github.com/cloudscape-design/components/issues/new?template=3_documentation.yaml
+                - generic [ref=e324]:
+                  - generic [ref=e326]:
+                    - generic [ref=e327]:
+                      - button "Copy link to Common error types section" [ref=e332] [cursor=pointer]:
+                        - generic [ref=e333]:
+                          - img
+                      - heading "Common error types" [level=2] [ref=e334]
+                    - generic [ref=e335]:
+                      - button "Copy link to Form or field validation section" [ref=e340] [cursor=pointer]:
+                        - generic [ref=e341]:
+                          - img
+                      - heading "Form or field validation" [level=3] [ref=e342]
+                    - paragraph [ref=e343]:
+                      - text: Client or server side errors that occur as a result of validation on a form, field, or flow. They usually require a user to perform an action on that field, form, or another page to remediate the error. Refer to the
+                      - link "validation" [ref=e344]:
+                        - /url: /patterns/general/errors/validation/
+                      - text: pattern for details on scenarios and guidelines on addressing them.
+                    - generic [ref=e345]:
+                      - button "Copy link to Component specific functional errors section" [ref=e350] [cursor=pointer]:
+                        - generic [ref=e351]:
+                          - img
+                      - heading "Component specific functional errors" [level=3] [ref=e352]
+                    - paragraph [ref=e353]: "Errors that occur in a component due to fetching or loading issues. For example:"
+                    - list [ref=e354]:
+                      - listitem [ref=e355]:
+                        - paragraph [ref=e356]:
+                          - text: The
+                          - link "autosuggest" [ref=e357]:
+                            - /url: /components/autosuggest/
+                          - text: has a built-in error state that is displayed when an error occurs while getting suggestions based on the user's entered query.
+                      - listitem [ref=e358]:
+                        - paragraph [ref=e359]:
+                          - text: The
+                          - link "multiselect" [ref=e360]:
+                            - /url: /components/multiselect/
+                          - text: component error state occurs when it fails at fetching options (for example, if the API fails to load the next set of options in the list).
+                      - listitem [ref=e361]:
+                        - paragraph [ref=e362]:
+                          - text: The
+                          - link "code editor" [ref=e363]:
+                            - /url: /components/code-editor/
+                          - text: error state is displayed when the component fails to load.
+                      - listitem [ref=e364]:
+                        - paragraph [ref=e365]:
+                          - text: The individual
+                          - link "charts" [ref=e366]:
+                            - /url: /components/bar-chart/?tabId=playground&example=error
+                          - text: components have an error state that is displayed when they fail to fetch data.
+                    - generic [ref=e367]:
+                      - button "Copy link to Unexpected client-side errors section" [ref=e372] [cursor=pointer]:
+                        - generic [ref=e373]:
+                          - img
+                      - heading "Unexpected client-side errors" [level=3] [ref=e374]
+                    - paragraph [ref=e375]: Errors that occur due to a technical malfunction. For example, when a component fails to render. The cause of these errors is usually unknown, and there might not be a clear action to fix it. Instead, users can report the problem, and then reload the page or retry the operation again later.
+                  - generic [ref=e377]:
+                    - generic [ref=e378]:
+                      - button "Copy link to Key UX concepts section" [ref=e383] [cursor=pointer]:
+                        - generic [ref=e384]:
+                          - img
+                      - heading "Key UX concepts" [level=2] [ref=e385]
+                    - generic [ref=e386]:
+                      - button "Copy link to Contextualize errors section" [ref=e391] [cursor=pointer]:
+                        - generic [ref=e392]:
+                          - img
+                      - heading "Contextualize errors" [level=3] [ref=e393]
+                    - paragraph [ref=e394]: "Error messages can be standalone field errors resulting from validation or be more complex requiring users take action on multiple elements across pages. In either case, provide error messages to users in the context of where the error occurred when possible, accounting for the scale and criticality of these errors. For example:"
+                    - list [ref=e395]:
+                      - listitem [ref=e396]:
+                        - paragraph [ref=e397]: Show inline field error message for standalone field errors resulting from client side validation.
+                      - listitem [ref=e398]:
+                        - paragraph [ref=e399]: Show a page level error alert above the submit button for an error resulting from server side validation.
+                      - listitem [ref=e400]:
+                        - paragraph [ref=e401]: Show a page level flashbar for an error returned due to failure in deleting a resource.
+                      - listitem [ref=e402]:
+                        - paragraph [ref=e403]: Show an error alert where a component failed to render.
+                  - generic [ref=e405]:
+                    - generic [ref=e406]:
+                      - button "Copy link to General guidelines section" [ref=e411] [cursor=pointer]:
+                        - generic [ref=e412]:
+                          - img
+                      - heading "General guidelines" [level=2] [ref=e413]
+                    - generic [ref=e414]:
+                      - generic [ref=e416]:
+                        - generic [ref=e418]:
+                          - button "Copy link to Do section" [ref=e423] [cursor=pointer]:
+                            - generic [ref=e424]:
+                              - img
+                          - heading "Do" [level=3] [ref=e425]
+                        - list "Do" [ref=e426]:
+                          - listitem [ref=e427]: Use the built-in component error states for component specific functional errors whenever applicable, instead of creating new ones.
+                          - listitem [ref=e428]:
+                            - text: For form or field validation, follow the pattern recommendations outlines in
+                            - link "validation" [ref=e429]:
+                              - /url: /patterns/general/errors/validation/
+                            - text: .
+                          - listitem [ref=e430]:
+                            - text: For table errors, follow the guidelines for
+                            - link "table view" [ref=e431]:
+                              - /url: /patterns/resource-management/view/table-view/
+                            - text: .
+                          - listitem [ref=e432]:
+                            - text: For errors when loading and refreshing, follow the guidelines for
+                            - link "loading and refreshing" [ref=e433]:
+                              - /url: /patterns/general/loading-and-refreshing/
+                            - text: .
+                      - generic [ref=e435]:
+                        - generic [ref=e437]:
+                          - button "Copy link to Don't section" [ref=e442] [cursor=pointer]:
+                            - generic [ref=e443]:
+                              - img
+                          - heading "Don't" [level=3] [ref=e444]
+                        - list "Don't" [ref=e445]:
+                          - listitem [ref=e446]: Don’t use error messages to display warnings. Error messages imply critical failure which needs immediate user attention and often requires rapid user action to continue with the flow. Warnings on the other hand are advisory.
+                  - generic [ref=e448]:
+                    - generic [ref=e449]:
+                      - button "Copy link to Accessibility guidelines section" [ref=e454] [cursor=pointer]:
+                        - generic [ref=e455]:
+                          - img
+                      - heading "Accessibility guidelines" [level=2] [ref=e456]
+                    - generic [ref=e457]:
+                      - button "Copy link to General accessibility guidelines section" [ref=e462] [cursor=pointer]:
+                        - generic [ref=e463]:
+                          - img
+                      - heading "General accessibility guidelines" [level=3] [ref=e464]
+                    - list [ref=e465]:
+                      - listitem [ref=e466]:
+                        - paragraph [ref=e467]: Follow the guidelines on alternative text and Accessible Rich Internet Applications (ARIA) regions for each component.
+                      - listitem [ref=e468]:
+                        - paragraph [ref=e469]: Make sure to define ARIA labels aligned with the language context of your application.
+                      - listitem [ref=e470]:
+                        - paragraph [ref=e471]: Don't add unnecessary markup for roles and landmarks. Follow the guidelines for each component.
+                      - listitem [ref=e472]:
+                        - paragraph [ref=e473]: Provide keyboard functionality to all available content in a logical and predictable order. The flow of information should make sense.
+                  - generic [ref=e475]:
+                    - generic [ref=e476]:
+                      - button "Copy link to Related patterns section" [ref=e481] [cursor=pointer]:
+                        - generic [ref=e482]:
+                          - img
+                      - heading "Related patterns" [level=2] [ref=e483]
+                    - generic [ref=e485]:
+                      - generic [ref=e491]:
+                        - heading "Validation" [level=3] [ref=e492]:
+                          - link "Validation" [ref=e493]:
+                            - /url: /patterns/general/errors/validation/
+                        - generic [ref=e494]: Help users with error recovery by accurately identifying issues and providing easy identification of incorrect fields for correction.
+                      - generic [ref=e500]:
+                        - heading "Error messages" [level=3] [ref=e501]:
+                          - link "Error messages" [ref=e502]:
+                            - /url: /patterns/general/errors/error-messages/
+                        - generic [ref=e503]: Error messages give users context about an inaccuracy, malfunction, unsuccessful action, or critical issue.
+            - navigation "footer" [ref=e505]:
+              - generic [ref=e508]:
+                - list [ref=e509]:
+                  - listitem [ref=e510]:
+                    - link "About" [ref=e512]:
+                      - /url: /about/
+                  - listitem [ref=e513]:
+                    - link "Connect" [ref=e515]:
+                      - /url: /about/connect/
+                  - listitem [ref=e516]:
+                    - link "Privacy (opens new tab)" [ref=e518]:
+                      - /url: https://aws.amazon.com/privacy/
+                      - text: Privacy
+                      - img "(opens new tab)" [ref=e520]:
+                        - generic [ref=e521]:
+                          - img
+                  - listitem [ref=e522]:
+                    - link "Site terms (opens new tab)" [ref=e524]:
+                      - /url: https://aws.amazon.com/terms/
+                      - text: Site terms
+                      - img "(opens new tab)" [ref=e526]:
+                        - generic [ref=e527]:
+                          - img
+                  - listitem [ref=e528]:
+                    - button "Cookie preferences" [ref=e530] [cursor=pointer]
+                  - listitem [ref=e531]:
+                    - generic [ref=e532]: © 2026, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+                - generic [ref=e533]: Made with ❤️ at AWS
+  - alert [ref=e534]
