@@ -70,7 +70,10 @@
       "WebFetch(domain:www.tpgi.com)",
       "WebFetch(domain:medium.com)",
       "WebFetch(domain:fonts.google.com)",
-      "WebFetch(domain:materialui.co)"
+      "WebFetch(domain:materialui.co)",
+      "Bash(./sync.sh crp-tool-postmvp:*)",
+      "Bash(./sync.sh /c/Users/Ryan/Documents/GitHub/crp-tool-postmvp)",
+      "Bash(./sync.sh --apply /c/Users/Ryan/Documents/GitHub/crp-tool-postmvp)"
     ]
   }
 }

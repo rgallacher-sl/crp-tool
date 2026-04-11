@@ -7,8 +7,6 @@ description: Audit and verify web accessibility following WCAG 2.2 AA. Load afte
 
 Audit and verify accessibility of implemented components against WCAG 2.2 AA. Load this after building — use [component-states](../component-states/SKILL.md) before building to define what states are needed.
 
-This project also uses GOV.UK Design System and IBM Carbon as behaviour references — their accessibility patterns take precedence over generic guidance where they conflict.
-
 ## WCAG Principles: POUR
 
 | Principle | Description |

@@ -15,19 +15,15 @@ Curated sources exist to surface trusted material that training knowledge might 
 ## What to check in this repo
 
 1. **Skills and references** — load on trigger per the AGENTS.md tables before stating a view in that domain
-2. **External design system authorities** — for any design decision, consult these systems before drawing on training knowledge; always state which source informed a decision:
-   - GOV.UK Design System — public sector, accessible government services
-   - IBM Carbon — enterprise product, data-dense UI
-   - SAP Fiori — enterprise workflow, form-heavy applications
-   - Material Design — consumer product, mobile-first patterns
-   - W3C ARIA Authoring Practices Guide — keyboard patterns and ARIA roles when design systems don't cover it
-3. **Training knowledge** — always in scope; fills gaps, extends reasoning, enables cross-domain connections; never blocked by the layers above
+2. **knowledge/** — if this repo has a knowledge corpus, search it before forming any opinion (see AGENTS.md for how)
+3. **External named authorities** — if AGENTS.md designates specific external sources (design systems, standards bodies), consult them for decisions in that domain before drawing on training knowledge
+4. **Training knowledge** — always in scope; fills gaps, extends reasoning, enables cross-domain connections; never blocked by the layers above
 
 ---
 
 ## Honesty and citations
 
-- If you've read a source in this session, cite it specifically — named component, pattern, or WCAG criterion
+- If you've read a source in this session, cite it specifically — file, section, or named pattern
 - If you're confident where training knowledge comes from (e.g. a named framework or author), say so
 - If you're vague on the source, flag it: "I believe this comes from X but haven't verified"
 - If you have no idea, don't guess — label it as training knowledge and leave it uncited
