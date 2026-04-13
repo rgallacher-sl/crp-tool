@@ -80,7 +80,6 @@ Load this before designing or implementing any UI component. Use it to produce a
 - Too short/long: "[Thing] must be [n] characters or more/less"
 - Error summary: list all errors at the top of the page with anchor links to each field — critical for screen reader users
 
-
 ---
 
 ## Output format

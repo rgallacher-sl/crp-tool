@@ -105,7 +105,7 @@ Subagents are separate agents with their own context window, spawned via the Age
 
 Do not spawn a subagent for simple sequential tasks. A subagent returns one message — there is no back-and-forth. If the task needs iteration, keep it in the main context.
 
-**Sub-agent summary size:** When a sub-agent reports back to the lead agent, condense its findings to signal only — conclusions, key decisions, and blockers. Discard intermediate reasoning, redundant tool outputs, and full file contents. A simple lookup needs a sentence; a deep architectural investigation might need several paragraphs — calibrate to what the lead agent actually needs to proceed.
+**Sub-agent summary size:** When a sub-agent reports back to the lead agent, condense its findings to signal only — conclusions, key decisions, and blockers. Discard intermediate reasoning, redundant tool outputs, and full file contents. The lead agent should receive a summary, not a transcript. A simple lookup needs a sentence; a deep architectural investigation might need several paragraphs — calibrate to what the lead agent actually needs to proceed, not to a fixed token count.
 
 **Subagent types available**
 - `Explore` — fast codebase search and exploration
@@ -145,6 +145,9 @@ When new information, documentation, or research arrives — use this table to d
 
 ## Principles
 
+- **Source hierarchy:** Curated sources surface trusted material the model might otherwise miss — check them first so the right material is in play, then use whichever combination of curated and training knowledge gives the best answer. Be honest about citations. See [source-weighting](references/source-weighting.md).
+- **Citations:** Cite sources read in this session specifically. If training knowledge comes from a named source you're confident about, name it. If vague, flag it ("I believe this comes from X but haven't verified"). If unknown, label it as training knowledge without citing. A wrong citation is worse than none.
+- **Unanchored opinions:** If a question asks for an opinion or recommendation and no skill directly applies, scan the skills and references tables for adjacent guidance before answering from training knowledge alone. Open-ended or conversational framing doesn't exempt an opinion from this check.
 - **Security by default:** When writing code that handles user input, authentication, authorization, APIs, or data storage, apply OWASP Top 10 considerations proactively — don't wait to be asked.
 - **Evaluate before creating context:** Before writing any new knowledge file, skill, or reference, run the [context-eval](skills/context-eval/SKILL.md) skill and state the verdict. Do not create the file until the verdict is WRITE.
 

@@ -74,7 +74,10 @@
       "WebFetch(domain:docs.github.com)",
       "WebFetch(domain:www.pencilandpaper.io)",
       "WebFetch(domain:cloudscape.design)",
-      "WebFetch(domain:smart-interface-design-patterns.com)"
+      "WebFetch(domain:smart-interface-design-patterns.com)",
+      "Bash(./sync.sh crp-tool-postmvp:*)",
+      "Bash(./sync.sh /c/Users/Ryan/Documents/GitHub/crp-tool-postmvp)",
+      "Bash(./sync.sh --apply /c/Users/Ryan/Documents/GitHub/crp-tool-postmvp)"
     ]
   }
 }
