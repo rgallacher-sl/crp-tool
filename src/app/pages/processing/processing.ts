@@ -257,11 +257,11 @@ export class ProcessingComponent implements OnInit, OnDestroy {
 
   private buildPlan(assessment: Assessment): Array<{ status: Assessment['status']; durationMs: number }> {
     const durations = {
-      fetchOrUpload: this.randomBetween(3000, 5000),
-      extraction: this.randomBetween(15000, 20000),
-      semantic: this.randomBetween(20000, 25000),
-      validation: this.randomBetween(10000, 12000),
-      finalize: this.randomBetween(2000, 3000),
+      fetchOrUpload: this.randomBetween(1000, 2000),
+      extraction: this.randomBetween(2000, 3000),
+      semantic: this.randomBetween(3000, 4000),
+      validation: this.randomBetween(1500, 2000),
+      finalize: this.randomBetween(500, 1000),
     };
 
     const firstStep: Assessment['status'] = assessment.documentSource === 'link' ? 'fetching' : 'uploading';

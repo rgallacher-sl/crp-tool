@@ -20,8 +20,6 @@ export class AssessmentWorkspaceComponent implements OnInit {
   notes = '';
   error = '';
   supplierName = '';
-  pendingOverrideConfirmation = false;
-  overrideConfirmed = false;
   showCancelConfirm = false;
   showOverrideForm = false;
   overrideOutcome: AssessmentOutcome | null = null;
@@ -142,8 +140,6 @@ export class AssessmentWorkspaceComponent implements OnInit {
   selectOutcome(outcome: AssessmentOutcome): void {
     this.selectedOutcome = outcome;
     this.error = '';
-    this.pendingOverrideConfirmation = false;
-    this.overrideConfirmed = false;
   }
 
   recordDecision(): void {
@@ -161,20 +157,8 @@ export class AssessmentWorkspaceComponent implements OnInit {
     }
 
     if (this.isOutcomeDisagreement()) {
-      if (!this.pendingOverrideConfirmation) {
-        this.pendingOverrideConfirmation = true;
-        this.overrideConfirmed = false;
-        this.error = '';
-        return;
-      }
-
-      if (!this.overrideConfirmed) {
-        this.error = 'Please confirm that you want to override the AI result.';
-        return;
-      }
-
       if (this.notes.trim().length < 20) {
-        this.error = 'Please add at least 20 characters of notes to explain the override.';
+        this.error = 'Enter a reason for disagreeing with the AI result (at least 20 characters).';
         return;
       }
     }
@@ -220,11 +204,7 @@ export class AssessmentWorkspaceComponent implements OnInit {
     return 'meets';
   }
 
-  get showOverridePanel(): boolean {
-    return this.pendingOverrideConfirmation && this.isOutcomeDisagreement();
-  }
-
-  get aiOutcomeLabel(): string {
+get aiOutcomeLabel(): string {
     if (this.aiOutcome === 'meets') return 'Meets requirements';
     if (this.aiOutcome === 'does_not_meet') return 'Does not meet requirements';
     return 'Unclear';
@@ -247,7 +227,7 @@ export class AssessmentWorkspaceComponent implements OnInit {
     return [];
   }
 
-  private isOutcomeDisagreement(): boolean {
+  isOutcomeDisagreement(): boolean {
     return this.selectedOutcome !== null && this.selectedOutcome !== this.aiOutcome;
   }
 

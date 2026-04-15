@@ -342,53 +342,6 @@
   }
 }
 
-/* ── Override guardrail ───────────────────────────────── */
-
-.override-guardrail {
-  border: 1px solid var(--color-warning-border);
-  background: var(--color-warning-subtle);
-  border-radius: var(--radius-sm);
-  padding: var(--space-3);
-  margin-bottom: var(--space-3);
-}
-
-.override-title {
-  font-weight: var(--font-weight-semibold);
-  margin: 0 0 var(--space-2);
-  font-size: var(--font-size-sm);
-  color: var(--color-text-primary);
-}
-
-.override-summary {
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
-  margin: 0 0 var(--space-2);
-}
-
-.override-copy {
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
-  margin: 0 0 var(--space-2);
-}
-
-.override-findings {
-  margin: 0 0 var(--space-3);
-  padding-left: var(--space-4);
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
-}
-
-.override-confirm {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-2);
-  font-size: var(--font-size-sm);
-  color: var(--color-text-primary);
-
-  input[type='checkbox'] {
-    margin-top: 0;
-  }
-}
 
 /* ── Decision actions ─────────────────────────────────── */
 
