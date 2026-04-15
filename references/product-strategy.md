@@ -29,11 +29,11 @@ Assumed facts are not treated as known until validated with real users or buyers
 
 **Assumed — requires validation through user research.**
 
-Procurement teams cannot reliably verify CRP compliance at scale. The manual process requires reading unstructured documents against 11+ criteria, cross-referencing self-reported claims with external registers, and recording determinations in a way that can withstand challenge — all without tooling designed for this purpose. The result is slow, inconsistent, and difficult to audit.
+Procurement teams cannot reliably verify CRP compliance at scale. Suppliers self-certify compliance in their Procurement Specific Questionnaire (PSQ) submission; officers must verify that self-certification is accurate by reading the actual CRP document. The check is always a batch job — every bidder on an in-scope tender must be checked at selection stage before any can be invited to submit. Without tooling, this means reading an unstructured document per supplier, for every supplier, against the same criteria list, recorded manually, for every in-scope procurement.
 
 Three specific failure modes drive this:
-1. Documents vary wildly in structure and location — no standard format exists
-2. Criteria require interpretation — the same document can produce different determinations from different officers
+1. Documents vary wildly in structure — no standard format exists; a CRP may be a standalone PDF, a section of an annual report, or a webpage
+2. Criteria are binary checks (data present or absent), but locating the relevant content in an unstructured document without tooling is slow — Cabinet Office has published a compliance checklist, but applying it manually to each document is the bottleneck
 3. Self-reported certifications and emissions figures cannot be practically cross-referenced at the volume and speed procurement requires
 
 **If this diagnosis is wrong** — if the manual process is already fast and consistent, or if officers don't feel the pain — the product has no value proposition. Validating the diagnosis is the first job.
@@ -60,11 +60,11 @@ Scored using Torres' opportunity framing: **importance** (if true, how much does
 
 | Priority | Hypothesis | Importance | Unmet today | Why this order |
 |---|---|---|---|---|
-| 1 | **H2 — Reading and interpreting criteria is slow and inconsistent** | High — this is the core manual work | High — no tooling exists for this | If wrong, there is no product. Validate first. |
+| 1 | **H2 — Reading criteria against unstructured documents is slow** | High — this is the core manual work | High — no tooling exists for this | If wrong, there is no product. Validate first. |
 | 2 | **H7 — The sign-off criterion is being missed** | High — a known PPN 006 requirement | Unknown — likely inconsistent | Specific, checkable, high-stakes. Good prototype test. |
 | 3 | **H6 — The audit trail is inadequate** | High for buyers; medium for officers | High — no standard exists | Directly addresses accountability risk; the buyer case |
 | 4 | **H3 — Supplier claims cannot be practically verified** | Medium-high | High — cross-referencing is not feasible manually | Strong demo moment; partially addressable without live APIs |
-| 5 | **H1 — Finding the document is a significant time cost** | Medium | Medium — some documents arrive via tender platform | Real friction, but not the core value. Partially solvable with URL input. |
+| 5 | **H1 — Finding the document is a significant time cost** | Low — document arrives with the PSQ submission via the e-tendering portal | Low — supplier provides URL or PDF as part of their tender response | Discovery is not the bottleneck. Prototype input (URL or PDF) matches how the document actually arrives. |
 | 6 | **H5 — Tool-switch friction** | Medium | Unknown | Only relevant after the core tool proves its value |
 | 7 | **H4 — Compliance treated as one-time event** | Low-medium | Unknown | Most speculative; depends on longitudinal behaviour not yet observed |
 
@@ -90,7 +90,7 @@ Everything in the prototype is in service of this question. Secondary questions 
 | Hypothesis | Bet | What reaction it's trying to provoke |
 |---|---|---|
 | H2 — criteria reading | Evidence-first: AI finding + extracted source text shown together | "Is seeing the source text enough, or do you still need to read the whole thing?" |
-| H7 — sign-off criterion | Distinct check, separate from substantive criteria | "Do you currently check this separately, or is it just part of the read?" |
+| H7 — sign-off criterion | Signature presence surfaced as a distinct named check, separate from substantive criteria | "Do you currently check this separately, or is it just part of the read?" |
 | H6 — audit trail | Per-criterion log: extracted text, AI determination, officer response | "Is this more or less detail than you'd need to defend a decision?" |
 | H3 — claim verification | Flag as "stated, not verified" with link to register | "Would auto-verification change anything for you, or is the flag enough?" |
 | H1 — document discovery | User provides URL or PDF | "Would you actually do it this way, or does the document come to you differently?" |
@@ -110,7 +110,7 @@ These are not a script. They are the questions the demo should answer. Listen fo
 | Question | Hypothesis it tests | What a useful answer looks like |
 |---|---|---|
 | "Is seeing the source text enough, or would you still want to read the whole document?" | H2 — trust model | A specific reason why, not just yes/no |
-| "How does the CRP usually reach you — do you find it, or does it come to you?" | H1 — document discovery | Specific workflow detail: platform, email, attachment, link |
+| "When you're checking CRPs, how many suppliers are you typically checking at once — is it one at a time or a list?" | Tender workflow (C) | Confirms the batch job framing; surfaces how many checks per procurement |
 | "Who in your organisation would need to see the outcome of this check?" | H6 — audit trail / persona | Names a role — procurement lead, audit team, legal — that isn't the officer |
 | "Would you feel comfortable acting on this without reading the document yourself?" | H2 — core trust question | Hesitation is as useful as yes |
 | "Does the sign-off check feel like a separate step, or is it just part of the read?" | H7 — sign-off criterion | Whether they treat it as distinct in their current process |
@@ -296,13 +296,17 @@ These are not assumptions. They come from PPN 006 policy text and the product br
 - The manual process involves: locating the CRP, reading it against a criteria list, and making a pass/fail determination
 - There is no standard format for CRPs — they vary in structure, format (PDF, web page, embedded in annual reports), and location
 - Claimed certifications (SBTi, ISO 14001) and emissions figures are self-reported with no mandatory cross-referencing
+- CRP checking is always a batch job at selection stage — every bidder on an in-scope tender must be checked before any proceed; it is not a one-at-a-time task
+- CRPs arrive through e-tendering platforms (Jaggaer, Proactis, Bravo) as part of the supplier's PSQ submission — as a URL to the published CRP or a PDF upload; the officer does not need to independently locate the document
+- Suppliers self-certify CRP compliance in the PSQ; the officer's job is to verify that self-certification against the actual document, not to make a first-order determination
+- Cabinet Office has published a CRP compliance checklist for contracting authorities — the criteria to check are defined; the bottleneck is applying them to unstructured documents at scale
 
 ### What Is Assumed
 
 | Assumption | Basis | Risk if wrong |
 |---|---|---|
 | The manual process takes significantly longer than the tool would | Complexity of matching 11+ criteria across unstructured documents | If the manual process is already fast enough, the time-saving case collapses |
-| Inconsistency between officers is a real problem | Interpretation of ambiguous language is inherently subjective | If officers are already highly consistent, uniformity is not a differentiator |
+| The bottleneck is locating relevant content, not interpreting it | Criteria are binary; documents are unstructured — finding the data is the slow part | If officers have a fast way to locate relevant content already, the extraction value collapses |
 | The primary user is the person evaluating tender submissions | Most likely to be doing this work; role title varies by organisation | Wrong persona = wrong product |
 | Officers currently locate CRPs themselves from supplier websites | PPN 006 requires public publication; no indication of systematic delivery mechanism | If CRPs routinely arrive via tender platforms, discovery is already handled |
 | A false positive (approving non-compliant) is more harmful than a false negative (rejecting compliant) | Non-compliance is a regulatory risk; a rejected compliant supplier can appeal | If appeals are costly to manage, false negatives may be equally bad |
@@ -315,7 +319,7 @@ These are not assumptions. They come from PPN 006 policy text and the product br
 | Unknown | Why it matters |
 |---|---|
 | What triggers a CRP check in practice | Determines the entry point — reactive tool vs proactive, standalone vs integrated |
-| Where the document currently arrives (platform, email, officer-finds-it) | Determines whether to build discovery, intake, or integration |
+| ~~Where the document currently arrives~~ | **Resolved:** arrives via e-tendering portal (Jaggaer/Proactis) as part of PSQ submission — URL or PDF. Discovery is not the problem. |
 | Which role actually does CRP checking | The persona may not be "procurement officer" — could be a sustainability lead, commercial lead, or admin |
 | What the manual process looks like in detail | Required to establish a baseline and validate that the tool improves on it |
 | Whether officers want to confirm AI findings or only exceptions | Determines the trust model and the review UX |
@@ -331,29 +335,30 @@ These are not assumptions. They come from PPN 006 policy text and the product br
 
 **Hypothesis:** Officers spend meaningful time locating CRPs, because suppliers bury them inconsistently.
 
-**Why plausible:** Known — suppliers are required to publish CRPs but no format or location is mandated.
+**Why less plausible than assumed:** CRPs arrive through the e-tendering platform (Jaggaer, Proactis, etc.) as part of the supplier's PSQ submission. Suppliers either provide a URL to their published CRP or upload a PDF directly to the portal. The document is already attached to the supplier's tender response — the officer does not need to discover it independently.
 
-**Options if true:**
-- Given a company name, the tool discovers and fetches the CRP automatically
-- Accept user-provided input (URL or PDF) — reduce discovery work without automating it
-- Receive the CRP from the tender platform as part of the submission flow
+Document format and structure remain variable (PDF, webpage, annual report section), but location is not the bottleneck. The officer still needs to open and read the document; they just know where it is.
 
-**What would invalidate this:** CRPs routinely arrive attached to tender submissions — officer never needs to find them.
+**Revised options:**
+- Accept URL or PDF from the portal submission — the officer pastes or uploads what the supplier provided
+- Receive the CRP via integration with the e-tendering platform directly
+
+**What would invalidate this entirely:** Some officers do check CRPs outside of a formal tender submission (e.g. spot checks, pre-qualification outreach). For those cases, discovery friction may still apply.
 
 ---
 
-### H2: Reading and interpreting criteria is slow and inconsistent
+### H2: Reading criteria against unstructured documents is slow
 
-**Hypothesis:** Officers spend significant time reading full documents and matching content to 11+ criteria, and different officers reach different conclusions from the same document.
+**Hypothesis:** Officers spend significant time reading full documents and matching content to 11+ criteria. The criteria are binary checks, but the documents are unstructured — finding the relevant content is the bottleneck, not interpreting it.
 
-**Why plausible:** Criteria involve subjective interpretation (e.g. distinguishing genuine net zero commitments from aspirational language). Known from the brief.
+**Why plausible:** No standard format exists for CRPs; officers must locate relevant content for each criterion manually across documents that vary in structure, length, and format. Known from the brief. Cabinet Office has published a CRP compliance checklist — officers who use it know what to look for, but applying it manually to each unstructured document for each bidder on a tender is still the bottleneck. The tool does not need to define what to check; it needs to automate locating evidence for a known checklist.
 
 **Options if true:**
 - AI produces findings; officer confirms each one
 - Exception-only: auto-accept high confidence, surface only ambiguous and failures
 - Evidence-first: show extracted document text per criterion alongside the determination
 
-**What would invalidate this:** Officers work from a structured template that makes the process fast and consistent already.
+**What would invalidate this:** Officers work from a structured template that makes the process fast already.
 
 ---
 
@@ -416,9 +421,9 @@ These are not assumptions. They come from PPN 006 policy text and the product br
 
 ### H7: The sign-off criterion is being missed
 
-**Hypothesis:** The requirement for CRPs to be signed by a board-level director is currently checked inconsistently — or not at all — because it requires judgement about whether the signatory qualifies.
+**Hypothesis:** Officers do not consistently check that a signature is present as a named, explicit step — it gets absorbed into the general document read and overlooked.
 
-**Why this matters:** Known — PPN 006 explicitly requires director-level sign-off. A CRP that meets all substantive criteria but lacks a qualifying signatory is non-compliant. This is a distinct problem from document content extraction and may require a different approach.
+**Why this matters:** Known — PPN 006 explicitly requires a signature. A CRP that meets all substantive criteria but has no signature is non-compliant. The check itself is binary (signature present or absent) and trivial for AI to extract — the problem is that it is not surfaced as a distinct step.
 
 ---
 
@@ -541,6 +546,12 @@ Completed a four-framework prioritisation exercise (Torres, Cutler, Rumelt, Caga
 - Real AI extraction is already being built by the dev team and will exist before the post-MVP phase
 - This prototype is for exploring possibilities, not production deployment — commercial viability frameworks (Moore/beachhead) do not apply at this stage
 
+**Context corrections established 2026-04-15 (user flow research):**
+- CRP checking is a **batch job** — all bidders on a tender are checked at selection stage; single-supplier framing understates the real task
+- The document **arrives through the e-tendering platform** (Jaggaer/Proactis) with the PSQ submission — document discovery (H1) is not a meaningful friction point
+- Officers are **verifying a self-certification**, not making a first-order determination — suppliers have already declared compliance in the PSQ; the officer confirms the document backs that claim. This lowers the trust threshold for AI assistance.
+- A **Cabinet Office CRP compliance checklist** exists — the criteria are defined; the tool's job is to automate applying them to unstructured documents, not to define what to check
+
 ---
 
 ### Priority stack
@@ -582,7 +593,11 @@ Cross-referencing self-reported certifications (SBTi, UKAS) against public regis
 
 **C — Tender workflow**
 
-Unknown how officers actually work — one supplier at a time, or a full list per tender. PPN 006 applies to all suppliers above £5m on a tender, so batch checking is plausible and potentially high-value. Treat as a research question; scope the vision once the workflow is understood.
+The actual job is always a batch: every bidder on an in-scope tender must have their CRP checked at selection stage before any proceed. Officers are not checking one supplier at a time — they are clearing a list. This is no longer a research question; it is a known workflow characteristic.
+
+The single-supplier framing in the prototype is useful for demonstrating the concept, but the product must eventually be framed around a tender (N suppliers to check) rather than an individual check. The value proposition sharpens significantly in the batch context: not "check this supplier's CRP" but "clear the CRP condition of participation for all bidders on this tender in one pass."
+
+This should be treated as a near-term scope question, not a post-MVP nice-to-have.
 
 **E — Longitudinal monitoring**
 
