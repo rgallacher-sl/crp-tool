@@ -1,0 +1,65 @@
+.site-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 var(--sx-6);
+  background: var(--color-bg-canvas);
+  border-bottom: 1px solid var(--color-neutral-300);
+  height: 48px;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: var(--sx-4);
+    height: 100%;
+  }
+
+  &__app-name {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-brand-primary);
+    white-space: nowrap;
+    padding: 0 var(--sx-3);
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__tab {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 var(--sx-3);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-default);
+    text-decoration: none;
+    background: none;
+    border: none;
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+    font-family: var(--font-family-ui);
+    white-space: nowrap;
+    transition: border-color var(--duration-fast) var(--easing-standard),
+      background var(--duration-fast) var(--easing-standard);
+
+    &:hover {
+      background: var(--color-bg-hover);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-focus);
+      outline-offset: -2px;
+    }
+
+    &--active {
+      background: var(--color-brand-light);
+      border-bottom-color: var(--color-brand-primary);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}

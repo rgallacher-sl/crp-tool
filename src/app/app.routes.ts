@@ -14,12 +14,14 @@ import { SupplierDetailComponent } from './pages/supplier-detail/supplier-detail
 import { BatchProcessingComponent } from './pages/batch-processing/batch-processing';
 import { BatchReviewComponent } from './pages/batch-review/batch-review';
 import { BatchHistoryComponent } from './pages/batch-history/batch-history';
+import { DevComponentsComponent } from './pages/dev-components/dev-components';
 
 export const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'dev/processing', component: DevProcessingComponent },
   { path: 'dev/seed-override', component: DevSeedOverrideComponent },
+  { path: 'dev/components', component: DevComponentsComponent },
   { path: '', redirectTo: 'suppliers', pathMatch: 'full' },
   { path: 'suppliers', component: SuppliersComponent, canActivate: [authGuard] },
   { path: 'suppliers/:id', component: SupplierDetailComponent, canActivate: [authGuard] },

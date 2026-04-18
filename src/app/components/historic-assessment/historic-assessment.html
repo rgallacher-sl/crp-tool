@@ -1,0 +1,27 @@
+<div class="historic-assessment">
+  <div class="historic-assessment__header">
+    <div class="historic-assessment__header-left">
+      <span class="historic-assessment__date">{{ date }}</span>
+      <app-status-tag [variant]="status" />
+    </div>
+    @if (detailsHref) {
+      <a [href]="detailsHref" class="historic-assessment__details-link">View details</a>
+    }
+  </div>
+  <div class="historic-assessment__body">
+    <div class="historic-assessment__row">
+      <span class="historic-assessment__key">Evidence</span>
+      <span class="historic-assessment__value">{{ evidence }}</span>
+    </div>
+    <div class="historic-assessment__row">
+      <span class="historic-assessment__key">Actioned by</span>
+      <span class="historic-assessment__value">{{ actionedBy }}</span>
+    </div>
+    @if (rationale) {
+      <div class="historic-assessment__row">
+        <span class="historic-assessment__key">Rationale</span>
+        <span class="historic-assessment__value">{{ rationale }}</span>
+      </div>
+    }
+  </div>
+</div>

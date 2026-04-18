@@ -1,0 +1,17 @@
+<header class="site-header">
+  <nav class="site-header__nav" aria-label="Main navigation">
+    <span class="site-header__app-name">{{ appName }}</span>
+    @for (tab of navTabs; track tab.href) {
+      <a
+        [routerLink]="tab.href"
+        routerLinkActive="site-header__tab--active"
+        class="site-header__tab"
+      >{{ tab.label }}</a>
+    }
+  </nav>
+  @if (showSignOut) {
+    <div class="site-header__actions">
+      <button type="button" class="site-header__tab" (click)="signOut.emit()">Sign out</button>
+    </div>
+  }
+</header>

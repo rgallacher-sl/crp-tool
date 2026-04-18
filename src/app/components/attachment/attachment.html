@@ -1,0 +1,10 @@
+<span class="attachment">
+  <app-icon [name]="type === 'file' ? 'file' : 'link'" [size]="16" />
+  <span class="attachment__name">
+    @if (href) {
+      <a [href]="href" class="attachment__link">{{ name }}</a>
+    } @else {
+      {{ name }}
+    }
+  </span>
+</span>

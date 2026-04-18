@@ -1,0 +1,9 @@
+<button
+  type="button"
+  class="expand-collapse"
+  [attr.aria-expanded]="expanded"
+  (click)="onToggle()"
+>
+  <app-icon [name]="expanded ? 'chevron-down' : 'chevron-right'" [size]="24" />
+  <span>{{ expanded ? 'Collapse all' : 'Expand all' }}</span>
+</button>

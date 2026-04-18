@@ -1,0 +1,17 @@
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--sx-3);
+
+  &__line {
+    flex: 1;
+    height: 1px;
+    background: var(--color-neutral-400);
+  }
+
+  &__label {
+    font-size: var(--font-size-md);
+    color: var(--color-text-default);
+    white-space: nowrap;
+  }
+}

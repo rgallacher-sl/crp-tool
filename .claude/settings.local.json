@@ -80,7 +80,9 @@
       "Bash(./sync.sh --apply /c/Users/Ryan/Documents/GitHub/crp-tool-postmvp)",
       "mcp__figma__get_design_context",
       "mcp__figma__get_metadata",
-      "mcp__figma__whoami"
+      "mcp__figma__whoami",
+      "Bash(ng serve:*)",
+      "Bash(break)"
     ]
   }
 }

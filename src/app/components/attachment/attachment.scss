@@ -1,0 +1,27 @@
+.attachment {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sx-1);
+  padding: var(--sx-2);
+  background: var(--color-bg-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+
+  &__name {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 40ch;
+  }
+
+  &__link {
+    color: var(--color-link);
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--color-text-primary);
+    }
+  }
+}

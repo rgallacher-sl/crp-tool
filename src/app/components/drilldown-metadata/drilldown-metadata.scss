@@ -1,0 +1,39 @@
+.drilldown-metadata {
+  display: flex;
+  align-items: center;
+  gap: var(--sx-3);
+  flex-wrap: wrap;
+
+  &__meta {
+    font-size: var(--font-size-md);
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sx-1);
+    font-size: var(--font-size-md);
+    color: var(--color-link);
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-focus);
+      outline-offset: 2px;
+      border-radius: var(--radius-xs);
+    }
+  }
+
+  &__divider {
+    width: 1px;
+    height: 24px;
+    background: var(--color-neutral-400);
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,23 @@
+.expand-collapse {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sx-1);
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: var(--font-size-md);
+  font-family: var(--font-family-ui);
+  color: var(--color-text-default);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-text-primary);
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+  }
+}

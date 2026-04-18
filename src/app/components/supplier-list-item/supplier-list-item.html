@@ -1,0 +1,9 @@
+<div class="supplier-list-item" [class.supplier-list-item--last]="last" role="row">
+  <div class="supplier-list-item__edge" aria-hidden="true"></div>
+  <div class="supplier-list-item__name" role="cell">{{ supplierName }}</div>
+  <div class="supplier-list-item__status" role="cell">
+    <app-status-tag [variant]="status" />
+  </div>
+  <div class="supplier-list-item__date" role="cell">{{ lastAssessmentDate }}</div>
+  <div class="supplier-list-item__actioned" role="cell">{{ lastActionedBy }}</div>
+</div>

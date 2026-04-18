@@ -1,0 +1,227 @@
+<div class="showcase">
+  <h1 class="showcase__page-title">Component Showcase</h1>
+
+  <!-- ICONS -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Icons</h2>
+    <div class="showcase__row showcase__row--wrap">
+      @for (name of iconNames; track name) {
+        <div class="showcase__icon-cell">
+          <app-icon [name]="name" [size]="24" />
+          <span class="showcase__icon-label">{{ name }}</span>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- STATUS TAG -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Status Tag</h2>
+    <div class="showcase__row">
+      <app-status-tag variant="compliant" />
+      <app-status-tag variant="not-compliant" />
+      <app-status-tag variant="pass" />
+      <app-status-tag variant="fail" />
+      <app-status-tag variant="compliant" label="Custom label" />
+    </div>
+  </section>
+
+  <!-- NOTIFICATION BANNER -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Notification Banner</h2>
+    <div class="showcase__stack">
+      <app-notification-banner variant="success" title="Assessment submitted" message="Your compliance assessment has been saved." />
+      <app-notification-banner variant="error" title="Something went wrong" message="Unable to submit. Please try again." />
+      <app-notification-banner variant="warning" title="Action required" message="This supplier's assessment is overdue." />
+      <app-notification-banner variant="info" title="Processing" message="Your file is being analysed." />
+      <app-notification-banner variant="loading" title="Uploading…" />
+      <app-notification-banner variant="offline" title="You appear to be offline" message="Check your connection and try again." />
+      <app-notification-banner
+        variant="success"
+        title="Submitted"
+        message="The assessment was recorded."
+        [dismissible]="true"
+        actionLabel="View details"
+      />
+      <app-notification-banner variant="inline-error" message="Enter a valid email address." />
+    </div>
+  </section>
+
+  <!-- BREADCRUMB -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Breadcrumb</h2>
+    <app-breadcrumb [items]="breadcrumbItems" />
+  </section>
+
+  <!-- DIVIDER -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Divider</h2>
+    <app-divider label="or" />
+  </section>
+
+  <!-- ATTACHMENT -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Attachment</h2>
+    <div class="showcase__stack">
+      <app-attachment type="file" name="compliance-report.pdf" href="/files/report.pdf" />
+      <app-attachment type="link" name="Companies House profile" href="https://companieshouse.gov.uk" />
+    </div>
+  </section>
+
+  <!-- DRILLDOWN METADATA -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Drilldown Metadata</h2>
+    <app-drilldown-metadata meta="Last assessed 12 Apr 2026" [links]="drilldownLinks" />
+  </section>
+
+  <!-- EXPAND COLLAPSE -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Expand / Collapse</h2>
+    <app-expand-collapse [expanded]="expanded" (toggle)="expanded = !expanded" />
+  </section>
+
+  <!-- SUPPLIER LIST HEADER -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Supplier List Header</h2>
+    <app-supplier-list-header [columns]="['Supplier name', 'Status', 'Last assessed', 'Actioned by']" />
+  </section>
+
+  <!-- SUPPLIER LIST ITEM -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Supplier List Item</h2>
+    <div>
+      <app-supplier-list-item
+        supplierName="Acme Ltd"
+        status="compliant"
+        lastAssessmentDate="12 Apr 2026"
+        lastActionedBy="J. Smith"
+        [last]="false"
+      />
+      <app-supplier-list-item
+        supplierName="Beta Technologies PLC"
+        status="not-compliant"
+        lastAssessmentDate="03 Feb 2026"
+        lastActionedBy="A. Jones"
+        [last]="true"
+      />
+    </div>
+  </section>
+
+  <!-- ASSESSMENT ROW -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Assessment Row</h2>
+    <div>
+      <app-assessment-row
+        [criteriaNumber]="1"
+        criteriaText="The supplier has a published Modern Slavery Statement."
+        status="pass"
+        [last]="false"
+      />
+      <app-assessment-row
+        [criteriaNumber]="2"
+        criteriaText="The statement covers all required areas per the Modern Slavery Act 2015."
+        status="fail"
+        [last]="true"
+      />
+    </div>
+  </section>
+
+  <!-- SUMMARY LIST -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Summary List</h2>
+    <app-summary-list complianceStatus="compliant" [rows]="summaryRows" />
+  </section>
+
+  <!-- HISTORIC ASSESSMENT -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Historic Assessment</h2>
+    <app-historic-assessment
+      date="12 April 2026"
+      status="compliant"
+      evidence="Modern Slavery Statement 2025.pdf"
+      actionedBy="J. Smith"
+      rationale="Statement meets all required criteria."
+      detailsHref="/assessments/42"
+    />
+  </section>
+
+  <!-- PAGINATION -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Pagination</h2>
+    <app-pagination [currentPage]="currentPage" [totalPages]="10" [maxVisible]="5" (pageChange)="onPageChange($event)" />
+    <p class="showcase__note">Current page: {{ currentPage }}</p>
+  </section>
+
+  <!-- FORM COMPONENTS -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Radio Button</h2>
+    <div class="showcase__stack">
+      <app-radio-button label="Option A" value="option-a" name="demo-radio" [checked]="radioValue === 'option-a'" />
+      <app-radio-button label="Option B" value="option-b" name="demo-radio" [checked]="radioValue === 'option-b'" />
+      <app-radio-button label="Disabled option" value="option-c" name="demo-radio" [checked]="false" [disabled]="true" />
+    </div>
+  </section>
+
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Checkbox</h2>
+    <div class="showcase__stack">
+      <app-checkbox label="I agree to the terms" [checked]="checkboxChecked" />
+      <app-checkbox label="Small variant" [checked]="false" size="sm" />
+      <app-checkbox label="Disabled" [checked]="false" [disabled]="true" />
+    </div>
+  </section>
+
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Dropdown</h2>
+    <app-dropdown
+      label="Select supplier"
+      hint="Choose from the list below"
+      placeholder="Select…"
+      [options]="dropdownOptions"
+      [(ngModel)]="dropdownValue"
+    />
+    <app-dropdown
+      label="With error"
+      [options]="dropdownOptions"
+      errorMessage="Select a supplier to continue."
+    />
+  </section>
+
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Free Text Box</h2>
+    <app-free-text-box
+      label="Assessment rationale"
+      placeholder="Describe the outcome of the assessment…"
+      [rows]="4"
+      [(ngModel)]="freeTextValue"
+    />
+    <app-free-text-box
+      label="With error"
+      placeholder="Enter rationale…"
+      errorMessage="Rationale is required."
+    />
+  </section>
+
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Email Field</h2>
+    <app-email-field label="Email address" [(ngModel)]="emailValue" />
+    <app-email-field label="With error" errorMessage="Enter a valid email address." />
+  </section>
+
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Password Field</h2>
+    <app-password-field label="Password" [(ngModel)]="passwordValue" />
+    <app-password-field label="With error" errorMessage="Enter your password." forgotPasswordHref="/forgot-password" />
+  </section>
+
+  <!-- FILE UPLOAD -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">File Upload</h2>
+    <div class="showcase__stack">
+      <app-file-upload state="idle" hint="PDF, Word or Excel up to 10MB" accept=".pdf,.docx,.xlsx" />
+      <app-file-upload state="uploading" />
+      <app-file-upload state="uploaded" fileName="modern-slavery-statement.pdf" />
+      <app-file-upload state="error" />
+    </div>
+  </section>
+</div>

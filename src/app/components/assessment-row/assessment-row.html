@@ -1,0 +1,8 @@
+<div class="assessment-row" [class.assessment-row--last]="last" role="row">
+  <div class="assessment-row__edge" aria-hidden="true"></div>
+  <div class="assessment-row__number" role="cell">{{ criteriaNumber }}</div>
+  <div class="assessment-row__text" role="cell">{{ criteriaText }}</div>
+  <div class="assessment-row__status" role="cell">
+    <app-status-tag [variant]="status" />
+  </div>
+</div>

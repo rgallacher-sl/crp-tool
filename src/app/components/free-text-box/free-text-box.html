@@ -1,0 +1,18 @@
+<div class="free-text-box" [class.free-text-box--error]="errorMessage">
+  @if (label) {
+    <label class="free-text-box__label" [for]="'ftb-' + label">{{ label }}</label>
+  }
+  <textarea
+    class="free-text-box__field"
+    [id]="'ftb-' + label"
+    [rows]="rows"
+    [placeholder]="placeholder"
+    [disabled]="disabled"
+    [value]="value"
+    (input)="onInput($event)"
+    (blur)="onTouched()"
+  ></textarea>
+  @if (errorMessage) {
+    <span class="free-text-box__error" role="alert">{{ errorMessage }}</span>
+  }
+</div>

@@ -1,0 +1,22 @@
+<div class="drilldown-metadata">
+  @if (meta) {
+    <span class="drilldown-metadata__meta">{{ meta }}</span>
+    <span class="drilldown-metadata__divider" aria-hidden="true"></span>
+  }
+  @for (link of links; track link.label; let last = $last) {
+    <a
+      [href]="link.href"
+      [attr.target]="link.external ? '_blank' : null"
+      [attr.rel]="link.external ? 'noopener noreferrer' : null"
+      class="drilldown-metadata__link"
+    >
+      {{ link.label }}
+      @if (link.external) {
+        <app-icon name="open-in-new" [size]="16" />
+      }
+    </a>
+    @if (!last) {
+      <span class="drilldown-metadata__divider" aria-hidden="true"></span>
+    }
+  }
+</div>

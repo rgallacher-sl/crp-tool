@@ -1,0 +1,15 @@
+<label class="checkbox" [class.checkbox--sm]="size === 'sm'" [class.checkbox--disabled]="disabled">
+  <input
+    type="checkbox"
+    class="checkbox__input"
+    [checked]="checked"
+    [disabled]="disabled"
+    (change)="onToggle()"
+  />
+  <span class="checkbox__control" [class.checkbox__control--checked]="checked">
+    @if (checked) {
+      <app-icon name="tick" [size]="size === 'sm' ? 16 : 16" />
+    }
+  </span>
+  <span class="checkbox__label">{{ label }}</span>
+</label>

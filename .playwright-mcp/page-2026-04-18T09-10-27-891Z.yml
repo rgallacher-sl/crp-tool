@@ -1,0 +1,399 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - link "CRP Assessment Tool" [ref=e5] [cursor=pointer]:
+        - /url: /suppliers
+      - link "Suppliers" [ref=e6] [cursor=pointer]:
+        - /url: /suppliers
+      - link "Upload history" [ref=e7] [cursor=pointer]:
+        - /url: /batches
+  - main [ref=e8]:
+    - generic [ref=e10]:
+      - heading "Component Showcase" [level=1] [ref=e11]
+      - generic [ref=e12]:
+        - heading "Icons" [level=2] [ref=e13]
+        - generic [ref=e14]:
+          - generic [ref=e15]:
+            - img [ref=e17]
+            - generic [ref=e19]: retry
+          - generic [ref=e20]:
+            - img [ref=e22]
+            - generic [ref=e24]: back-arrow
+          - generic [ref=e25]:
+            - img [ref=e27]
+            - generic [ref=e29]: fail
+          - generic [ref=e30]:
+            - img [ref=e32]
+            - generic [ref=e34]: tick
+          - generic [ref=e35]:
+            - img [ref=e37]
+            - generic [ref=e39]: error
+          - generic [ref=e40]:
+            - img [ref=e42]
+            - generic [ref=e44]: check-circle
+          - generic [ref=e45]:
+            - img [ref=e47]
+            - generic [ref=e49]: chevron-down
+          - generic [ref=e50]:
+            - img [ref=e52]
+            - generic [ref=e54]: chevron-right
+          - generic [ref=e55]:
+            - img [ref=e57]
+            - generic [ref=e59]: upload
+          - generic [ref=e60]:
+            - img [ref=e62]
+            - generic [ref=e64]: download
+          - generic [ref=e65]:
+            - img [ref=e67]
+            - generic [ref=e69]: file
+          - generic [ref=e70]:
+            - img [ref=e72]
+            - generic [ref=e74]: link
+          - generic [ref=e75]:
+            - img [ref=e77]
+            - generic [ref=e79]: open-in-new
+          - generic [ref=e80]:
+            - img [ref=e82]
+            - generic [ref=e84]: close
+          - generic [ref=e85]:
+            - img [ref=e87]
+            - generic [ref=e89]: wifi-off
+          - generic [ref=e90]:
+            - img [ref=e92]
+            - generic [ref=e94]: progress
+      - generic [ref=e95]:
+        - heading "Status Tag" [level=2] [ref=e96]
+        - generic [ref=e97]:
+          - generic [ref=e99]:
+            - img [ref=e101]
+            - text: Compliant
+          - generic [ref=e104]:
+            - img [ref=e106]
+            - text: Not compliant
+          - generic [ref=e109]:
+            - img [ref=e111]
+            - text: Pass
+          - generic [ref=e114]:
+            - img [ref=e116]
+            - text: Fail
+          - generic [ref=e119]:
+            - img [ref=e121]
+            - text: Custom label
+      - generic [ref=e123]:
+        - heading "Notification Banner" [level=2] [ref=e124]
+        - generic [ref=e125]:
+          - generic "Assessment submitted" [ref=e126]:
+            - status [ref=e127]:
+              - generic [ref=e128]:
+                - generic [ref=e130]:
+                  - img [ref=e132]
+                  - generic [ref=e134]: Assessment submitted
+                - paragraph [ref=e135]: Your compliance assessment has been saved.
+          - generic "Something went wrong" [ref=e136]:
+            - status [ref=e137]:
+              - generic [ref=e138]:
+                - generic [ref=e140]:
+                  - img [ref=e142]
+                  - generic [ref=e144]: Something went wrong
+                - paragraph [ref=e145]: Unable to submit. Please try again.
+          - generic "Action required" [ref=e146]:
+            - status [ref=e147]:
+              - generic [ref=e148]:
+                - generic [ref=e150]:
+                  - img [ref=e152]
+                  - generic [ref=e154]: Action required
+                - paragraph [ref=e155]: This supplier's assessment is overdue.
+          - generic "Processing" [ref=e156]:
+            - status [ref=e157]:
+              - generic [ref=e158]:
+                - generic [ref=e160]:
+                  - img [ref=e162]
+                  - generic [ref=e164]: Processing
+                - paragraph [ref=e165]: Your file is being analysed.
+          - generic "Uploading…" [ref=e166]:
+            - status [ref=e167]:
+              - generic [ref=e170]:
+                - status "Loading" [ref=e171]
+                - generic [ref=e172]: Uploading…
+          - generic "You appear to be offline" [ref=e173]:
+            - status [ref=e174]:
+              - generic [ref=e175]:
+                - generic [ref=e177]:
+                  - img [ref=e179]
+                  - generic [ref=e181]: You appear to be offline
+                - paragraph [ref=e182]: Check your connection and try again.
+          - generic "Submitted" [ref=e183]:
+            - status [ref=e184]:
+              - generic [ref=e185]:
+                - generic [ref=e186]:
+                  - generic [ref=e187]:
+                    - img [ref=e189]
+                    - generic [ref=e191]: Submitted
+                  - button "Dismiss notification" [ref=e192] [cursor=pointer]:
+                    - img [ref=e194]
+                - paragraph [ref=e196]: The assessment was recorded.
+                - button "View details" [ref=e198] [cursor=pointer]
+          - status [ref=e200]:
+            - generic [ref=e201]:
+              - img [ref=e205]
+              - paragraph [ref=e207]: Enter a valid email address.
+      - generic [ref=e208]:
+        - heading "Breadcrumb" [level=2] [ref=e209]
+        - navigation "Breadcrumb" [ref=e211]:
+          - list [ref=e212]:
+            - listitem [ref=e213]:
+              - link "Suppliers" [ref=e214] [cursor=pointer]:
+                - /url: /suppliers
+              - generic [ref=e215]: /
+            - listitem [ref=e216]:
+              - link "Acme Ltd" [ref=e217] [cursor=pointer]:
+                - /url: /suppliers/1
+              - generic [ref=e218]: /
+            - listitem [ref=e219]:
+              - generic [ref=e220]: Assessment
+      - generic [ref=e221]:
+        - heading "Divider" [level=2] [ref=e222]
+        - separator [ref=e224]:
+          - generic [ref=e226]: or
+      - generic [ref=e228]:
+        - heading "Attachment" [level=2] [ref=e229]
+        - generic [ref=e230]:
+          - generic [ref=e232]:
+            - img [ref=e234]
+            - link "compliance-report.pdf" [ref=e237] [cursor=pointer]:
+              - /url: /files/report.pdf
+          - generic [ref=e239]:
+            - img [ref=e241]
+            - link "Companies House profile" [ref=e244] [cursor=pointer]:
+              - /url: https://companieshouse.gov.uk
+      - generic [ref=e245]:
+        - heading "Drilldown Metadata" [level=2] [ref=e246]
+        - generic [ref=e248]:
+          - generic [ref=e249]: Last assessed 12 Apr 2026
+          - link "View assessment" [ref=e251] [cursor=pointer]:
+            - /url: /assessments/1
+          - link "Company website" [ref=e253] [cursor=pointer]:
+            - /url: https://example.com
+            - text: Company website
+            - img [ref=e255]
+      - generic [ref=e257]:
+        - heading "Expand / Collapse" [level=2] [ref=e258]
+        - button "Expand all" [ref=e260] [cursor=pointer]:
+          - img [ref=e262]
+          - generic [ref=e264]: Expand all
+      - generic [ref=e265]:
+        - heading "Supplier List Header" [level=2] [ref=e266]
+        - row "Supplier name Status Last assessed Actioned by" [ref=e268]:
+          - columnheader "Supplier name" [ref=e269]
+          - columnheader "Status" [ref=e270]
+          - columnheader "Last assessed" [ref=e271]
+          - columnheader "Actioned by" [ref=e272]
+      - generic [ref=e273]:
+        - heading "Supplier List Item" [level=2] [ref=e274]
+        - generic [ref=e275]:
+          - row "Acme Ltd Compliant 12 Apr 2026 J. Smith" [ref=e277]:
+            - cell "Acme Ltd" [ref=e279]
+            - cell "Compliant" [ref=e280]:
+              - generic [ref=e282]:
+                - img [ref=e284]
+                - text: Compliant
+            - cell "12 Apr 2026" [ref=e286]
+            - cell "J. Smith" [ref=e287]
+          - row "Beta Technologies PLC Not compliant 03 Feb 2026 A. Jones" [ref=e289]:
+            - cell "Beta Technologies PLC" [ref=e291]
+            - cell "Not compliant" [ref=e292]:
+              - generic [ref=e294]:
+                - img [ref=e296]
+                - text: Not compliant
+            - cell "03 Feb 2026" [ref=e298]
+            - cell "A. Jones" [ref=e299]
+      - generic [ref=e300]:
+        - heading "Assessment Row" [level=2] [ref=e301]
+        - generic [ref=e302]:
+          - row "1 The supplier has a published Modern Slavery Statement. Pass" [ref=e304]:
+            - cell "1" [ref=e306]
+            - cell "The supplier has a published Modern Slavery Statement." [ref=e307]
+            - cell "Pass" [ref=e308]:
+              - generic [ref=e310]:
+                - img [ref=e312]
+                - text: Pass
+          - row "2 The statement covers all required areas per the Modern Slavery Act 2015. Fail" [ref=e315]:
+            - cell "2" [ref=e317]
+            - cell "The statement covers all required areas per the Modern Slavery Act 2015." [ref=e318]
+            - cell "Fail" [ref=e319]:
+              - generic [ref=e321]:
+                - img [ref=e323]
+                - text: Fail
+      - generic [ref=e325]:
+        - heading "Summary List" [level=2] [ref=e326]
+        - generic [ref=e328]:
+          - generic [ref=e329]:
+            - term [ref=e330]: Compliance status
+            - definition [ref=e331]:
+              - generic [ref=e333]:
+                - img [ref=e335]
+                - text: Compliant
+          - generic [ref=e337]:
+            - term [ref=e338]: Company name
+            - definition [ref=e339]: Acme Ltd
+          - generic [ref=e340]:
+            - term [ref=e341]: Companies House No.
+            - definition [ref=e342]: "01234567"
+          - generic [ref=e343]:
+            - term [ref=e344]: Assessment date
+            - definition [ref=e345]:
+              - text: 12 April 2026
+              - link "Download" [ref=e346] [cursor=pointer]:
+                - /url: /download/report.pdf
+                - img [ref=e348]
+                - text: Download
+      - generic [ref=e350]:
+        - heading "Historic Assessment" [level=2] [ref=e351]
+        - generic [ref=e353]:
+          - generic [ref=e354]:
+            - generic [ref=e355]:
+              - generic [ref=e356]: 12 April 2026
+              - generic [ref=e358]:
+                - img [ref=e360]
+                - text: Compliant
+            - link "View details" [ref=e362] [cursor=pointer]:
+              - /url: /assessments/42
+          - generic [ref=e363]:
+            - generic [ref=e364]:
+              - generic [ref=e365]: Evidence
+              - generic [ref=e366]: Modern Slavery Statement 2025.pdf
+            - generic [ref=e367]:
+              - generic [ref=e368]: Actioned by
+              - generic [ref=e369]: J. Smith
+            - generic [ref=e370]:
+              - generic [ref=e371]: Rationale
+              - generic [ref=e372]: Statement meets all required criteria.
+      - generic [ref=e373]:
+        - heading "Pagination" [level=2] [ref=e374]
+        - navigation "Pagination" [ref=e376]:
+          - button "Previous page" [disabled] [ref=e377]:
+            - img [ref=e379]
+          - button "Page 1" [ref=e381] [cursor=pointer]: "1"
+          - button "Page 2" [ref=e382] [cursor=pointer]: "2"
+          - button "Page 3" [ref=e383] [cursor=pointer]: "3"
+          - button "Page 4" [ref=e384] [cursor=pointer]: "4"
+          - button "Page 5" [ref=e385] [cursor=pointer]: "5"
+          - generic [ref=e386]: ...
+          - button "Page 10" [ref=e387] [cursor=pointer]: "10"
+          - button "Next page" [ref=e388] [cursor=pointer]:
+            - img [ref=e390]
+        - paragraph [ref=e392]: "Current page: 1"
+      - generic [ref=e393]:
+        - heading "Radio Button" [level=2] [ref=e394]
+        - generic [ref=e395]:
+          - generic [ref=e397] [cursor=pointer]:
+            - radio "Option A" [checked]
+            - generic [ref=e399]: Option A
+          - generic [ref=e401] [cursor=pointer]:
+            - radio "Option B"
+            - generic [ref=e403]: Option B
+          - generic [ref=e405]:
+            - radio "Disabled option" [disabled]
+            - generic [ref=e407]: Disabled option
+      - generic [ref=e408]:
+        - heading "Checkbox" [level=2] [ref=e409]
+        - generic [ref=e410]:
+          - generic [ref=e412] [cursor=pointer]:
+            - checkbox "I agree to the terms" [checked]
+            - img [ref=e415]
+            - generic [ref=e417]: I agree to the terms
+          - generic [ref=e419] [cursor=pointer]:
+            - checkbox "Small variant"
+            - generic [ref=e421]: Small variant
+          - generic [ref=e423]:
+            - checkbox "Disabled" [disabled]
+            - generic [ref=e425]: Disabled
+      - generic [ref=e426]:
+        - heading "Dropdown" [level=2] [ref=e427]
+        - generic [ref=e429]:
+          - generic [ref=e430]: Select supplier
+          - generic [ref=e431]: Choose from the list below
+          - generic [ref=e432]:
+            - combobox "Select supplier" [ref=e433] [cursor=pointer]:
+              - option "Select…" [disabled] [selected]
+              - option "Alpha Corp"
+              - option "Beta Ltd"
+              - option "Gamma PLC"
+            - generic:
+              - generic:
+                - img
+        - generic [ref=e435]:
+          - generic [ref=e436]: With error
+          - generic [ref=e437]:
+            - combobox "With error" [ref=e438] [cursor=pointer]:
+              - option "Select an option" [disabled] [selected]
+              - option "Alpha Corp"
+              - option "Beta Ltd"
+              - option "Gamma PLC"
+            - generic:
+              - generic:
+                - img
+          - alert [ref=e439]: Select a supplier to continue.
+      - generic [ref=e440]:
+        - heading "Free Text Box" [level=2] [ref=e441]
+        - generic [ref=e443]:
+          - generic [ref=e444]: Assessment rationale
+          - textbox "Assessment rationale" [ref=e445]:
+            - /placeholder: Describe the outcome of the assessment…
+        - generic [ref=e447]:
+          - generic [ref=e448]: With error
+          - textbox "With error" [ref=e449]:
+            - /placeholder: Enter rationale…
+          - alert [ref=e450]: Rationale is required.
+      - generic [ref=e451]:
+        - heading "Email Field" [level=2] [ref=e452]
+        - generic [ref=e454]:
+          - generic [ref=e455]: Email address
+          - textbox "Email address" [ref=e456]
+        - generic [ref=e458]:
+          - generic [ref=e459]: With error
+          - alert [ref=e460]:
+            - img [ref=e462]
+            - generic [ref=e464]: Enter a valid email address.
+          - textbox "With error" [ref=e465]
+      - generic [ref=e466]:
+        - heading "Password Field" [level=2] [ref=e467]
+        - generic [ref=e469]:
+          - generic [ref=e470]: Password
+          - generic [ref=e471]:
+            - textbox "Password" [ref=e472]
+            - button "Show password" [ref=e473] [cursor=pointer]: Show
+        - generic [ref=e475]:
+          - generic [ref=e476]: With error
+          - alert [ref=e477]:
+            - img [ref=e479]
+            - generic [ref=e481]: Enter your password.
+          - generic [ref=e482]:
+            - textbox "With error" [ref=e483]
+            - button "Show password" [ref=e484] [cursor=pointer]: Show
+          - link "I've forgotten my password" [ref=e485] [cursor=pointer]:
+            - /url: /forgot-password
+      - generic [ref=e486]:
+        - heading "File Upload" [level=2] [ref=e487]
+        - generic [ref=e488]:
+          - generic [ref=e491]:
+            - generic [ref=e493] [cursor=pointer]:
+              - img [ref=e495]
+              - generic [ref=e497]: Upload file
+              - button "Upload file" [ref=e498]
+            - generic [ref=e499]: PDF, Word or Excel up to 10MB
+          - generic [ref=e504]:
+            - status "Uploading" [ref=e505]
+            - text: Uploading...
+          - generic [ref=e508]:
+            - generic [ref=e509]:
+              - generic [ref=e510]:
+                - img [ref=e512]
+                - text: Uploaded
+              - button "Remove" [ref=e514] [cursor=pointer]
+            - generic [ref=e515]: modern-slavery-statement.pdf
+          - generic [ref=e519]:
+            - generic [ref=e520]:
+              - img [ref=e522]
+              - text: Incorrect file type
+            - button "Remove" [ref=e524] [cursor=pointer]

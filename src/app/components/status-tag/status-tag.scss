@@ -1,0 +1,23 @@
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px var(--sx-1);
+  border-radius: var(--radius-xs);
+  border: 1px solid;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  white-space: nowrap;
+
+  &--positive {
+    color: var(--color-success);
+    background: var(--color-outcome-meets-bg);
+    border-color: var(--color-success);
+  }
+
+  &--negative {
+    color: var(--color-danger);
+    background: var(--color-outcome-fail-bg);
+    border-color: var(--color-danger);
+  }
+}

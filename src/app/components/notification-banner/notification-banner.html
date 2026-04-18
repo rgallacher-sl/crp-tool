@@ -1,0 +1,41 @@
+<div
+  class="notification-banner"
+  [class]="'notification-banner--' + variant"
+  role="status"
+  [attr.aria-live]="variant === 'error' || variant === 'inline-error' ? 'assertive' : 'polite'"
+>
+  <div class="notification-banner__content">
+    <div class="notification-banner__header">
+      <span class="notification-banner__icon-title">
+        @if (variant === 'loading') {
+          <span class="step-spinner" role="status" aria-label="Loading"></span>
+        } @else {
+          <app-icon [name]="icon" [size]="24" />
+        }
+        @if (title) {
+          <span class="notification-banner__title">{{ title }}</span>
+        }
+      </span>
+      @if (dismissible) {
+        <button
+          type="button"
+          class="notification-banner__dismiss btn-ghost"
+          aria-label="Dismiss notification"
+          (click)="dismissed.emit()"
+        >
+          <app-icon name="close" [size]="24" />
+        </button>
+      }
+    </div>
+    @if (message) {
+      <p class="notification-banner__message">{{ message }}</p>
+    }
+    @if (actionLabel) {
+      <div class="notification-banner__action">
+        <button type="button" class="btn-secondary" (click)="actionClicked.emit()">
+          {{ actionLabel }}
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="file-upload" [class]="'file-upload--' + state">
+  <div class="file-upload__zone">
+    <div class="file-upload__top">
+      @if (state === 'idle') {
+        <label class="file-upload__trigger">
+          <app-icon name="upload" [size]="24" />
+          <span class="file-upload__trigger-text">Upload file</span>
+          <input
+            type="file"
+            class="sr-only"
+            [accept]="accept"
+            (change)="onFileChange($event)"
+          />
+        </label>
+      }
+      @if (state === 'uploading') {
+        <span class="file-upload__status file-upload__status--uploading">
+          <span class="step-spinner" role="status" aria-label="Uploading"></span>
+          Uploading...
+        </span>
+      }
+      @if (state === 'uploaded') {
+        <span class="file-upload__status file-upload__status--success">
+          <app-icon name="check-circle" [size]="24" />
+          Uploaded
+        </span>
+        <button type="button" class="file-upload__remove btn-ghost" (click)="remove()">Remove</button>
+      }
+      @if (state === 'error') {
+        <span class="file-upload__status file-upload__status--error">
+          <app-icon name="fail" [size]="24" />
+          Incorrect file type
+        </span>
+        <button type="button" class="file-upload__remove btn-ghost" (click)="remove()">Remove</button>
+      }
+    </div>
+    <div class="file-upload__meta">
+      <span class="file-upload__filename">{{ fileName || hint }}</span>
+    </div>
+  </div>
+</div>
