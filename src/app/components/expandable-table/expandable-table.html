@@ -1,0 +1,184 @@
+<div class="exp-table-wrapper">
+  <table class="exp-table">
+    <thead>
+      <tr class="exp-table__header-row">
+        <th class="exp-table__th exp-table__th--chevron" scope="col" aria-label="Expand"></th>
+        @for (col of columns; track $index) {
+          <th
+            class="exp-table__th"
+            [class.exp-table__th--right]="col.align === 'right'"
+            [class.exp-table__th--bar]="col.type === 'bar'"
+            scope="col"
+          >
+            {{ col.label }}
+          </th>
+        }
+      </tr>
+    </thead>
+    <tbody>
+      @for (row of rows; track row.id; let i = $index) {
+        <tr
+          class="exp-table__row"
+          [class.exp-table__row--total]="row.isTotal"
+          [class.exp-table__row--even]="i % 2 === 0 && !row.isTotal"
+          [class.exp-table__row--expandable]="!!row.children?.length"
+        >
+          <td class="exp-table__td exp-table__td--chevron">
+            @if (row.children?.length) {
+              <button
+                class="exp-table__toggle"
+                type="button"
+                [attr.aria-expanded]="isExpanded(row.id)"
+                [attr.aria-label]="(isExpanded(row.id) ? 'Collapse ' : 'Expand ') + row.cells[columns[0]?.key ?? '']"
+                (click)="toggle(row.id)"
+              >
+                <app-icon
+                  [name]="isExpanded(row.id) ? 'chevron-down' : 'chevron-right'"
+                  [size]="16"
+                />
+              </button>
+            }
+          </td>
+          @for (col of columns; track $index) {
+            @if (col.type === 'bar') {
+              <td class="exp-table__td exp-table__td--bar">
+                <div class="exp-table__bar-track">
+                  @if (row.barSegments?.length) {
+                    @for (seg of row.barSegments; track seg.color) {
+                      <div
+                        class="exp-table__bar-fill"
+                        [style.flex]="seg.pct"
+                        [style.background]="seg.color"
+                      ></div>
+                    }
+                  } @else {
+                    <div
+                      class="exp-table__bar-fill"
+                      [style.width.%]="toNumber(row.cells[col.key])"
+                      [style.background]="row.barColor"
+                    ></div>
+                  }
+                </div>
+              </td>
+            } @else {
+              <td
+                class="exp-table__td"
+                [class.exp-table__td--right]="col.align === 'right'"
+                [class.exp-table__td--numeric]="col.numeric"
+              >
+                {{ row.cells[col.key] }}
+              </td>
+            }
+          }
+        </tr>
+        @if (row.children?.length && isExpanded(row.id)) {
+          @for (child of row.children; track child.id) {
+            <tr class="exp-table__row exp-table__row--child">
+              <td class="exp-table__td exp-table__td--chevron"></td>
+              @for (col of columns; track $index) {
+                @if (col.type === 'bar') {
+                  <td class="exp-table__td exp-table__td--bar exp-table__td--child">
+                    <div class="exp-table__bar-track">
+                      <div
+                        class="exp-table__bar-fill"
+                        [style.width.%]="toNumber(child.cells[col.key])"
+                        [style.background]="child.barColor"
+                      ></div>
+                    </div>
+                  </td>
+                } @else {
+                  <td
+                    class="exp-table__td exp-table__td--child"
+                    [class.exp-table__td--right]="col.align === 'right'"
+                    [class.exp-table__td--numeric]="col.numeric"
+                  >
+                    {{ child.cells[col.key] }}
+                  </td>
+                }
+              }
+            </tr>
+          }
+        }
+      }
+    </tbody>
+  </table>
+</div>
+
+<ul class="exp-cards">
+  @for (row of rows; track row.id) {
+    <li
+      class="exp-card"
+      [class.exp-card--total]="row.isTotal"
+      [class.exp-card--expandable]="!!row.children?.length"
+    >
+      <div class="exp-card__header" (click)="toggleCard(row)">
+        <div class="exp-card__chevron">
+          @if (row.children?.length) {
+            <button
+              class="exp-table__toggle"
+              type="button"
+              [attr.aria-expanded]="isExpanded(row.id)"
+              [attr.aria-label]="(isExpanded(row.id) ? 'Collapse ' : 'Expand ') + row.cells[cardLabelCol?.key ?? '']"
+            >
+              <app-icon
+                [name]="isExpanded(row.id) ? 'chevron-down' : 'chevron-right'"
+                [size]="16"
+              />
+            </button>
+          }
+        </div>
+        <span class="exp-card__label">{{ row.cells[cardLabelCol?.key ?? ''] }}</span>
+        @if (cardValueCol) {
+          <span class="exp-card__value">{{ row.cells[cardValueCol.key] }}</span>
+        }
+      </div>
+      @for (col of cardBarCols; track $index) {
+        <div class="exp-card__bar-row">
+          <div class="exp-table__bar-track">
+            @if (row.barSegments?.length) {
+              @for (seg of row.barSegments; track seg.color) {
+                <div
+                  class="exp-table__bar-fill"
+                  [style.flex]="seg.pct"
+                  [style.background]="seg.color"
+                ></div>
+              }
+            } @else {
+              <div
+                class="exp-table__bar-fill"
+                [style.width.%]="toNumber(row.cells[col.key])"
+                [style.background]="row.barColor"
+              ></div>
+            }
+          </div>
+          <span class="exp-card__pct">{{ row.cells[col.key] }}</span>
+        </div>
+      }
+      @if (row.children?.length && isExpanded(row.id)) {
+        @for (child of row.children; track child.id) {
+          <div class="exp-card__child">
+            <div class="exp-card__header exp-card__header--child">
+              <div class="exp-card__chevron"></div>
+              <span class="exp-card__label exp-card__label--child">{{ child.cells[cardLabelCol?.key ?? ''] }}</span>
+              @if (cardValueCol) {
+                <span class="exp-card__value">{{ child.cells[cardValueCol.key] }}</span>
+              }
+            </div>
+            @for (col of cardBarCols; track $index) {
+              <div class="exp-card__bar-row exp-card__bar-row--child">
+                <div class="exp-table__bar-track">
+                  <div
+                    class="exp-table__bar-fill"
+                    [style.width.%]="toNumber(child.cells[col.key])"
+                    [style.background]="child.barColor"
+                  ></div>
+                </div>
+                <span class="exp-card__pct">{{ child.cells[col.key] }}</span>
+              </div>
+            }
+          </div>
+        }
+      }
+    </li>
+  }
+</ul>

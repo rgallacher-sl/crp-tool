@@ -1,0 +1,17 @@
+<div class="metric-headline">
+  <p class="metric-headline__label">{{ label }}</p>
+  <div class="metric-headline__row">
+    <span class="metric-headline__value">{{ value }}</span>
+    @if (unit) {
+      <span class="metric-headline__unit">{{ unit }}</span>
+    }
+    @if (trend != null) {
+      <span
+        class="metric-headline__trend"
+        [class.metric-headline__trend--success]="trendVariant === 'success'"
+        [class.metric-headline__trend--warning]="trendVariant === 'warning'"
+        [attr.aria-label]="trendArrow + ' ' + trendAbs + '% change'"
+      >{{ trendArrow }} {{ trendAbs }}%</span>
+    }
+  </div>
+</div>

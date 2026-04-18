@@ -1,0 +1,116 @@
+.split-slider {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sx-2);
+
+  &__label {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-default);
+    margin: 0;
+  }
+
+  &__labels-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__side-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+
+    &--right {
+      text-align: right;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: var(--sx-3);
+  }
+
+  &__track-wrap {
+    flex: 1;
+  }
+
+  &__range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: var(--radius-pill);
+    background: linear-gradient(
+      to right,
+      var(--color-brand-primary) var(--fill, 50%),
+      var(--color-neutral-300) var(--fill, 50%)
+    );
+    cursor: pointer;
+    outline: none;
+
+    &:focus-visible {
+      box-shadow: 0 0 0 3px var(--color-focus-ring);
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--color-brand-primary);
+      border: 2px solid var(--color-bg-canvas);
+      box-shadow: 0 0 0 1px var(--color-brand-primary);
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--color-brand-primary);
+      border: 2px solid var(--color-bg-canvas);
+      box-shadow: 0 0 0 1px var(--color-brand-primary);
+      cursor: pointer;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+
+  &__input-group {
+    display: flex;
+    align-items: center;
+    gap: var(--sx-1);
+    flex-shrink: 0;
+  }
+
+  &__number {
+    width: 4rem;
+    padding: var(--sx-2) var(--sx-2);
+    font-size: var(--font-size-md);
+    font-family: var(--font-family-base);
+    color: var(--color-text-default);
+    background: var(--color-bg-canvas);
+    border: 1.5px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    text-align: center;
+    outline: none;
+
+    &:focus-visible {
+      border-color: var(--color-brand-primary);
+      box-shadow: 0 0 0 3px var(--color-focus-ring);
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+
+  &__unit {
+    font-size: var(--font-size-md);
+    color: var(--color-text-secondary);
+  }
+}

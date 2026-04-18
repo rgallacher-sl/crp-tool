@@ -1,0 +1,28 @@
+<div class="slider">
+  @if (label) {
+    <label class="slider__label">{{ label }}</label>
+  }
+  <div class="slider__track-row">
+    @if (minLabel) {
+      <span class="slider__range-label">{{ minLabel }}</span>
+    }
+    <div class="slider__track-wrap">
+      <input
+        class="slider__input"
+        type="range"
+        [min]="min"
+        [max]="max"
+        [step]="step"
+        [value]="value"
+        [disabled]="disabled"
+        [style.--fill]="fillPercent + '%'"
+        (input)="onSliderInput($event)"
+        (blur)="markTouched()"
+      />
+    </div>
+    @if (maxLabel) {
+      <span class="slider__range-label">{{ maxLabel }}</span>
+    }
+  </div>
+  <div class="slider__value">{{ value }}</div>
+</div>

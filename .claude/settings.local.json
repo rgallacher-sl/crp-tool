@@ -82,7 +82,11 @@
       "mcp__figma__get_metadata",
       "mcp__figma__whoami",
       "Bash(ng serve:*)",
-      "Bash(break)"
+      "Bash(break)",
+      "Bash(python3 -c ':*)",
+      "Bash(python3)",
+      "Bash(echo \"Started in background with PID $!\")",
+      "mcp__figma__get_screenshot"
     ]
   }
 }

@@ -1,0 +1,557 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - link "CRP Assessment Tool" [ref=e5] [cursor=pointer]:
+        - /url: /suppliers
+      - link "Suppliers" [ref=e6] [cursor=pointer]:
+        - /url: /suppliers
+      - link "Upload history" [ref=e7] [cursor=pointer]:
+        - /url: /batches
+      - button "Sign out" [ref=e8] [cursor=pointer]
+  - main [ref=e9]:
+    - generic [ref=e11]:
+      - heading "Component Showcase" [level=1] [ref=e12]
+      - generic [ref=e13]:
+        - heading "Icons" [level=2] [ref=e14]
+        - generic [ref=e15]:
+          - generic [ref=e16]:
+            - img [ref=e18]
+            - generic [ref=e20]: retry
+          - generic [ref=e21]:
+            - img [ref=e23]
+            - generic [ref=e25]: back-arrow
+          - generic [ref=e26]:
+            - img [ref=e28]
+            - generic [ref=e30]: fail
+          - generic [ref=e31]:
+            - img [ref=e33]
+            - generic [ref=e35]: tick
+          - generic [ref=e36]:
+            - img [ref=e38]
+            - generic [ref=e40]: error
+          - generic [ref=e41]:
+            - img [ref=e43]
+            - generic [ref=e45]: check-circle
+          - generic [ref=e46]:
+            - img [ref=e48]
+            - generic [ref=e50]: chevron-down
+          - generic [ref=e51]:
+            - img [ref=e53]
+            - generic [ref=e55]: chevron-right
+          - generic [ref=e56]:
+            - img [ref=e58]
+            - generic [ref=e60]: upload
+          - generic [ref=e61]:
+            - img [ref=e63]
+            - generic [ref=e65]: download
+          - generic [ref=e66]:
+            - img [ref=e68]
+            - generic [ref=e70]: file
+          - generic [ref=e71]:
+            - img [ref=e73]
+            - generic [ref=e75]: link
+          - generic [ref=e76]:
+            - img [ref=e78]
+            - generic [ref=e80]: open-in-new
+          - generic [ref=e81]:
+            - img [ref=e83]
+            - generic [ref=e85]: close
+          - generic [ref=e86]:
+            - img [ref=e88]
+            - generic [ref=e90]: wifi-off
+          - generic [ref=e91]:
+            - img [ref=e93]
+            - generic [ref=e95]: progress
+      - generic [ref=e96]:
+        - heading "Status Tag" [level=2] [ref=e97]
+        - generic [ref=e98]:
+          - generic [ref=e100]:
+            - img [ref=e102]
+            - text: Compliant
+          - generic [ref=e105]:
+            - img [ref=e107]
+            - text: Not compliant
+          - generic [ref=e110]:
+            - img [ref=e112]
+            - text: Pass
+          - generic [ref=e115]:
+            - img [ref=e117]
+            - text: Fail
+          - generic [ref=e120]:
+            - img [ref=e122]
+            - text: Custom label
+      - generic [ref=e124]:
+        - heading "Notification Banner" [level=2] [ref=e125]
+        - generic [ref=e126]:
+          - generic "Assessment submitted" [ref=e127]:
+            - status [ref=e128]:
+              - generic [ref=e129]:
+                - generic [ref=e131]:
+                  - img [ref=e133]
+                  - generic [ref=e135]: Assessment submitted
+                - paragraph [ref=e136]: Your compliance assessment has been saved.
+          - generic "Something went wrong" [ref=e137]:
+            - status [ref=e138]:
+              - generic [ref=e139]:
+                - generic [ref=e141]:
+                  - img [ref=e143]
+                  - generic [ref=e145]: Something went wrong
+                - paragraph [ref=e146]: Unable to submit. Please try again.
+          - generic "Action required" [ref=e147]:
+            - status [ref=e148]:
+              - generic [ref=e149]:
+                - generic [ref=e151]:
+                  - img [ref=e153]
+                  - generic [ref=e155]: Action required
+                - paragraph [ref=e156]: This supplier's assessment is overdue.
+          - generic "Processing" [ref=e157]:
+            - status [ref=e158]:
+              - generic [ref=e159]:
+                - generic [ref=e161]:
+                  - img [ref=e163]
+                  - generic [ref=e165]: Processing
+                - paragraph [ref=e166]: Your file is being analysed.
+          - generic "Uploading…" [ref=e167]:
+            - status [ref=e168]:
+              - generic [ref=e171]:
+                - status "Loading" [ref=e172]
+                - generic [ref=e173]: Uploading…
+          - generic "You appear to be offline" [ref=e174]:
+            - status [ref=e175]:
+              - generic [ref=e176]:
+                - generic [ref=e178]:
+                  - img [ref=e180]
+                  - generic [ref=e182]: You appear to be offline
+                - paragraph [ref=e183]: Check your connection and try again.
+          - generic "Submitted" [ref=e184]:
+            - status [ref=e185]:
+              - generic [ref=e186]:
+                - generic [ref=e187]:
+                  - generic [ref=e188]:
+                    - img [ref=e190]
+                    - generic [ref=e192]: Submitted
+                  - button "Dismiss notification" [ref=e193] [cursor=pointer]:
+                    - img [ref=e195]
+                - paragraph [ref=e197]: The assessment was recorded.
+                - button "View details" [ref=e199] [cursor=pointer]
+          - status [ref=e201]:
+            - generic [ref=e202]:
+              - img [ref=e206]
+              - paragraph [ref=e208]: Enter a valid email address.
+      - generic [ref=e209]:
+        - heading "Breadcrumb" [level=2] [ref=e210]
+        - navigation "Breadcrumb" [ref=e212]:
+          - list [ref=e213]:
+            - listitem [ref=e214]:
+              - link "Suppliers" [ref=e215] [cursor=pointer]:
+                - /url: /suppliers
+              - generic [ref=e216]: /
+            - listitem [ref=e217]:
+              - link "Acme Ltd" [ref=e218] [cursor=pointer]:
+                - /url: /suppliers/1
+              - generic [ref=e219]: /
+            - listitem [ref=e220]:
+              - generic [ref=e221]: Assessment
+      - generic [ref=e222]:
+        - heading "Divider" [level=2] [ref=e223]
+        - separator [ref=e225]:
+          - generic [ref=e227]: or
+      - generic [ref=e229]:
+        - heading "Attachment" [level=2] [ref=e230]
+        - generic [ref=e231]:
+          - generic [ref=e233]:
+            - img [ref=e235]
+            - link "compliance-report.pdf" [ref=e238] [cursor=pointer]:
+              - /url: /files/report.pdf
+          - generic [ref=e240]:
+            - img [ref=e242]
+            - link "Companies House profile" [ref=e245] [cursor=pointer]:
+              - /url: https://companieshouse.gov.uk
+      - generic [ref=e246]:
+        - heading "Drilldown Metadata" [level=2] [ref=e247]
+        - generic [ref=e249]:
+          - generic [ref=e250]: Last assessed 12 Apr 2026
+          - link "View assessment" [ref=e252] [cursor=pointer]:
+            - /url: /assessments/1
+          - link "Company website" [ref=e254] [cursor=pointer]:
+            - /url: https://example.com
+            - text: Company website
+            - img [ref=e256]
+      - generic [ref=e258]:
+        - heading "Expand / Collapse" [level=2] [ref=e259]
+        - button "Expand all" [ref=e261] [cursor=pointer]:
+          - img [ref=e263]
+          - generic [ref=e265]: Expand all
+      - generic [ref=e266]:
+        - heading "Supplier List Header" [level=2] [ref=e267]
+        - row "Supplier name Status Last assessed Actioned by" [ref=e269]:
+          - columnheader "Supplier name" [ref=e270]
+          - columnheader "Status" [ref=e271]
+          - columnheader "Last assessed" [ref=e272]
+          - columnheader "Actioned by" [ref=e273]
+      - generic [ref=e274]:
+        - heading "Supplier List Item" [level=2] [ref=e275]
+        - generic [ref=e276]:
+          - row "Acme Ltd Compliant 12 Apr 2026 J. Smith" [ref=e278]:
+            - cell "Acme Ltd" [ref=e280]
+            - cell "Compliant" [ref=e281]:
+              - generic [ref=e283]:
+                - img [ref=e285]
+                - text: Compliant
+            - cell "12 Apr 2026" [ref=e287]
+            - cell "J. Smith" [ref=e288]
+          - row "Beta Technologies PLC Not compliant 03 Feb 2026 A. Jones" [ref=e290]:
+            - cell "Beta Technologies PLC" [ref=e292]
+            - cell "Not compliant" [ref=e293]:
+              - generic [ref=e295]:
+                - img [ref=e297]
+                - text: Not compliant
+            - cell "03 Feb 2026" [ref=e299]
+            - cell "A. Jones" [ref=e300]
+      - generic [ref=e301]:
+        - heading "Assessment Row" [level=2] [ref=e302]
+        - generic [ref=e303]:
+          - row "1 The supplier has a published Modern Slavery Statement. Pass" [ref=e305]:
+            - cell "1" [ref=e307]
+            - cell "The supplier has a published Modern Slavery Statement." [ref=e308]
+            - cell "Pass" [ref=e309]:
+              - generic [ref=e311]:
+                - img [ref=e313]
+                - text: Pass
+          - row "2 The statement covers all required areas per the Modern Slavery Act 2015. Fail" [ref=e316]:
+            - cell "2" [ref=e318]
+            - cell "The statement covers all required areas per the Modern Slavery Act 2015." [ref=e319]
+            - cell "Fail" [ref=e320]:
+              - generic [ref=e322]:
+                - img [ref=e324]
+                - text: Fail
+      - generic [ref=e326]:
+        - heading "Summary List" [level=2] [ref=e327]
+        - generic [ref=e329]:
+          - generic [ref=e330]:
+            - term [ref=e331]: Compliance status
+            - definition [ref=e332]:
+              - generic [ref=e334]:
+                - img [ref=e336]
+                - text: Compliant
+          - generic [ref=e338]:
+            - term [ref=e339]: Company name
+            - definition [ref=e340]: Acme Ltd
+          - generic [ref=e341]:
+            - term [ref=e342]: Companies House No.
+            - definition [ref=e343]: "01234567"
+          - generic [ref=e344]:
+            - term [ref=e345]: Assessment date
+            - definition [ref=e346]:
+              - text: 12 April 2026
+              - link "Download" [ref=e347] [cursor=pointer]:
+                - /url: /download/report.pdf
+                - img [ref=e349]
+                - text: Download
+      - generic [ref=e351]:
+        - heading "Historic Assessment" [level=2] [ref=e352]
+        - generic [ref=e354]:
+          - generic [ref=e355]:
+            - generic [ref=e356]:
+              - generic [ref=e357]: 12 April 2026
+              - generic [ref=e359]:
+                - img [ref=e361]
+                - text: Compliant
+            - link "View details" [ref=e363] [cursor=pointer]:
+              - /url: /assessments/42
+          - generic [ref=e364]:
+            - generic [ref=e365]:
+              - generic [ref=e366]: Evidence
+              - generic [ref=e367]: Modern Slavery Statement 2025.pdf
+            - generic [ref=e368]:
+              - generic [ref=e369]: Actioned by
+              - generic [ref=e370]: J. Smith
+            - generic [ref=e371]:
+              - generic [ref=e372]: Rationale
+              - generic [ref=e373]: Statement meets all required criteria.
+      - generic [ref=e374]:
+        - heading "Pagination" [level=2] [ref=e375]
+        - navigation "Pagination" [ref=e377]:
+          - button "Previous page" [disabled] [ref=e378]:
+            - img [ref=e380]
+          - button "Page 1" [ref=e382] [cursor=pointer]: "1"
+          - button "Page 2" [ref=e383] [cursor=pointer]: "2"
+          - button "Page 3" [ref=e384] [cursor=pointer]: "3"
+          - button "Page 4" [ref=e385] [cursor=pointer]: "4"
+          - button "Page 5" [ref=e386] [cursor=pointer]: "5"
+          - generic [ref=e387]: ...
+          - button "Page 10" [ref=e388] [cursor=pointer]: "10"
+          - button "Next page" [ref=e389] [cursor=pointer]:
+            - img [ref=e391]
+        - paragraph [ref=e393]: "Current page: 1"
+      - generic [ref=e394]:
+        - heading "Radio Button" [level=2] [ref=e395]
+        - generic [ref=e396]:
+          - generic [ref=e398] [cursor=pointer]:
+            - radio "Option A" [checked]
+            - generic [ref=e400]: Option A
+          - generic [ref=e402] [cursor=pointer]:
+            - radio "Option B"
+            - generic [ref=e404]: Option B
+          - generic [ref=e406]:
+            - radio "Disabled option" [disabled]
+            - generic [ref=e408]: Disabled option
+      - generic [ref=e409]:
+        - heading "Conditional Reveal" [level=2] [ref=e410]
+        - generic [ref=e411]:
+          - paragraph [ref=e412]: "Do you use any of the following SaaS services:"
+          - generic [ref=e413]:
+            - generic [ref=e414]:
+              - generic [ref=e416] [cursor=pointer]:
+                - checkbox "Microsoft 365" [checked]
+                - img [ref=e419]
+                - generic [ref=e421]: Microsoft 365
+              - generic [ref=e424]:
+                - generic [ref=e425]: How many users do you have subscribed to the service at this current time?
+                - spinbutton [ref=e426]: "100"
+            - generic [ref=e429] [cursor=pointer]:
+              - checkbox "Salesforce"
+              - generic [ref=e431]: Salesforce
+            - generic [ref=e432]:
+              - generic [ref=e434] [cursor=pointer]:
+                - checkbox "Google" [checked]
+                - img [ref=e437]
+                - generic [ref=e439]: Google
+              - generic [ref=e442]:
+                - generic [ref=e443]: How many users do you have subscribed to the service at this current time?
+                - spinbutton [ref=e444]: "100"
+      - generic [ref=e445]:
+        - heading "Checkbox" [level=2] [ref=e446]
+        - generic [ref=e447]:
+          - generic [ref=e449] [cursor=pointer]:
+            - checkbox "I agree to the terms" [checked]
+            - img [ref=e452]
+            - generic [ref=e454]: I agree to the terms
+          - generic [ref=e456] [cursor=pointer]:
+            - checkbox "Small variant"
+            - generic [ref=e458]: Small variant
+          - generic [ref=e460]:
+            - checkbox "Disabled" [disabled]
+            - generic [ref=e462]: Disabled
+      - generic [ref=e463]:
+        - heading "Dropdown" [level=2] [ref=e464]
+        - generic [ref=e466]:
+          - generic [ref=e467]: Select supplier
+          - generic [ref=e468]: Choose from the list below
+          - generic [ref=e469]:
+            - combobox "Select supplier" [ref=e470] [cursor=pointer]:
+              - option "Select…" [disabled] [selected]
+              - option "Alpha Corp"
+              - option "Beta Ltd"
+              - option "Gamma PLC"
+            - generic:
+              - generic:
+                - img
+        - generic [ref=e472]:
+          - generic [ref=e473]: With error
+          - generic [ref=e474]:
+            - combobox "With error" [ref=e475] [cursor=pointer]:
+              - option "Select an option" [disabled] [selected]
+              - option "Alpha Corp"
+              - option "Beta Ltd"
+              - option "Gamma PLC"
+            - generic:
+              - generic:
+                - img
+          - alert [ref=e476]: Select a supplier to continue.
+      - generic [ref=e477]:
+        - heading "Free Text Box" [level=2] [ref=e478]
+        - generic [ref=e480]:
+          - generic [ref=e481]: Assessment rationale
+          - textbox "Assessment rationale" [ref=e482]:
+            - /placeholder: Describe the outcome of the assessment…
+        - generic [ref=e484]:
+          - generic [ref=e485]: With error
+          - textbox "With error" [ref=e486]:
+            - /placeholder: Enter rationale…
+          - alert [ref=e487]: Rationale is required.
+      - generic [ref=e488]:
+        - heading "Email Field" [level=2] [ref=e489]
+        - generic [ref=e491]:
+          - generic [ref=e492]: Email address
+          - textbox "Email address" [ref=e493]
+        - generic [ref=e495]:
+          - generic [ref=e496]: With error
+          - alert [ref=e497]:
+            - img [ref=e499]
+            - generic [ref=e501]: Enter a valid email address.
+          - textbox "With error" [ref=e502]: user@crptool.com
+      - generic [ref=e503]:
+        - heading "Password Field" [level=2] [ref=e504]
+        - generic [ref=e506]:
+          - generic [ref=e507]: Password
+          - generic [ref=e508]:
+            - textbox "Password" [ref=e509]: password123
+            - button "Show password" [ref=e510] [cursor=pointer]: Show
+        - generic [ref=e512]:
+          - generic [ref=e513]: With error
+          - alert [ref=e514]:
+            - img [ref=e516]
+            - generic [ref=e518]: Enter your password.
+          - generic [ref=e519]:
+            - textbox "With error" [ref=e520]
+            - button "Show password" [ref=e521] [cursor=pointer]: Show
+          - link "I've forgotten my password" [ref=e522] [cursor=pointer]:
+            - /url: /forgot-password
+      - generic [ref=e523]:
+        - heading "File Upload" [level=2] [ref=e524]
+        - generic [ref=e525]:
+          - generic [ref=e528]:
+            - generic [ref=e530] [cursor=pointer]:
+              - img [ref=e532]
+              - generic [ref=e534]: Upload file
+              - button "Upload file" [ref=e535]
+            - generic [ref=e536]: PDF, Word or Excel up to 10MB
+          - generic [ref=e541]:
+            - status "Uploading" [ref=e542]
+            - text: Uploading...
+          - generic [ref=e545]:
+            - generic [ref=e546]:
+              - generic [ref=e547]:
+                - img [ref=e549]
+                - text: Uploaded
+              - button "Remove" [ref=e551] [cursor=pointer]
+            - generic [ref=e552]: modern-slavery-statement.pdf
+          - generic [ref=e556]:
+            - generic [ref=e557]:
+              - img [ref=e559]
+              - text: Incorrect file type
+            - button "Remove" [ref=e561] [cursor=pointer]
+      - generic [ref=e562]:
+        - heading "Buttons" [level=2] [ref=e563]
+        - generic [ref=e564]:
+          - button "Primary" [ref=e565] [cursor=pointer]
+          - button "Secondary" [ref=e566] [cursor=pointer]
+          - button "Ghost" [ref=e567] [cursor=pointer]
+          - button "Disabled" [disabled] [ref=e568]
+      - generic [ref=e569]:
+        - heading "Badge" [level=2] [ref=e570]
+        - generic [ref=e571]:
+          - generic [ref=e573]: Edited
+          - generic [ref=e575]:
+            - img [ref=e577]
+            - text: Reset
+      - generic [ref=e579]:
+        - heading "Tab Bar" [level=2] [ref=e580]
+        - tablist [ref=e582]:
+          - tab "Overview" [selected] [ref=e583] [cursor=pointer]
+          - tab "Details" [ref=e584] [cursor=pointer]
+          - tab "History" [ref=e585] [cursor=pointer]
+        - paragraph [ref=e586]: "Active tab: overview"
+      - generic [ref=e587]:
+        - heading "Accordion" [level=2] [ref=e588]
+        - generic [ref=e589]:
+          - generic "Cloud infrastructure" [ref=e590]:
+            - button "Cloud infrastructure" [ref=e592] [cursor=pointer]:
+              - generic [ref=e593]: Cloud infrastructure
+              - img [ref=e595]
+          - generic "On-premise servers" [ref=e597]:
+            - generic [ref=e598]:
+              - button "On-premise servers" [expanded] [ref=e599] [cursor=pointer]:
+                - generic [ref=e600]: On-premise servers
+                - img [ref=e602]
+              - paragraph [ref=e605]: Include all on-premise server hardware and associated cooling systems.
+      - generic [ref=e606]:
+        - heading "Number Input" [level=2] [ref=e607]
+        - generic [ref=e608]:
+          - generic [ref=e610]:
+            - generic [ref=e611]: Annual consumption (kWh)
+            - generic [ref=e612]: Enter a value between 0 and 1,000,000
+            - spinbutton [ref=e613]: "42"
+          - generic [ref=e615]:
+            - generic [ref=e616]: With error
+            - spinbutton [ref=e617]
+            - generic [ref=e618]: Enter a valid number.
+      - generic [ref=e619]:
+        - heading "Slider" [level=2] [ref=e620]
+        - generic [ref=e622]:
+          - generic [ref=e623]: Percentage of renewable energy
+          - generic [ref=e624]:
+            - generic [ref=e625]: 0%
+            - slider [ref=e627] [cursor=pointer]: "60"
+            - generic [ref=e628]: 100%
+          - generic [ref=e629]: "60"
+      - generic [ref=e630]:
+        - heading "Split Slider" [level=2] [ref=e631]
+        - generic [ref=e633]:
+          - paragraph [ref=e634]: What percentage of those employee devices are desktops or laptops?
+          - generic [ref=e635]:
+            - generic [ref=e636]: Desktops
+            - generic [ref=e637]: Laptops
+          - generic [ref=e638]:
+            - generic [ref=e639]:
+              - textbox "Desktops percentage" [ref=e640]: "50"
+              - generic [ref=e641]: "%"
+            - slider "Desktops percentage" [ref=e643] [cursor=pointer]: "50"
+            - generic [ref=e644]:
+              - textbox "Laptops percentage" [ref=e645]: "50"
+              - generic [ref=e646]: "%"
+        - paragraph [ref=e647]: "Desktops: 50% — Laptops: 50%"
+      - generic [ref=e648]:
+        - heading "Segmented Control" [level=2] [ref=e649]
+        - group [ref=e651]:
+          - button "Annual" [pressed] [ref=e652] [cursor=pointer]
+          - button "Monthly" [ref=e653] [cursor=pointer]
+        - paragraph [ref=e654]: "Selected: annual"
+      - generic [ref=e655]:
+        - heading "Metric Headline" [level=2] [ref=e656]
+        - generic [ref=e657]:
+          - generic [ref=e659]:
+            - paragraph [ref=e660]: Total Emissions Estimate
+            - generic [ref=e661]:
+              - generic [ref=e662]: "4619"
+              - generic [ref=e663]: kg CO₂E
+              - generic "↘ 8% change" [ref=e664]: ↘ 8%
+          - generic [ref=e666]:
+            - paragraph [ref=e667]: Annual Energy Consumption
+            - generic [ref=e668]:
+              - generic [ref=e669]: 12,340
+              - generic [ref=e670]: kWh
+              - generic "↗ 3% change" [ref=e671]: ↗ 3%
+          - generic [ref=e673]:
+            - paragraph [ref=e674]: Assessed Suppliers
+            - generic [ref=e676]: "47"
+      - generic [ref=e677]:
+        - heading "Expandable Table" [level=2] [ref=e678]
+        - table [ref=e681]:
+          - rowgroup [ref=e682]:
+            - row "Expand Emissions Category Estimated (tCO₂e) % of Total Estimate" [ref=e683]:
+              - columnheader "Expand" [ref=e684]
+              - columnheader "Emissions Category" [ref=e685]
+              - columnheader "Estimated (tCO₂e)" [ref=e686]
+              - columnheader "% of Total Estimate" [ref=e687]
+              - columnheader [ref=e688]
+          - rowgroup [ref=e689]:
+            - row "Expand Cloud infrastructure Cloud infrastructure 1,240.00 57" [ref=e690]:
+              - cell "Expand Cloud infrastructure" [ref=e691]:
+                - button "Expand Cloud infrastructure" [ref=e692] [cursor=pointer]:
+                  - img [ref=e694]
+              - cell "Cloud infrastructure" [ref=e696]
+              - cell "1,240.00" [ref=e697]
+              - cell "57" [ref=e698]
+              - cell [ref=e699]
+            - row "Expand On-premise servers On-premise servers 640.00 29" [ref=e702]:
+              - cell "Expand On-premise servers" [ref=e703]:
+                - button "Expand On-premise servers" [ref=e704] [cursor=pointer]:
+                  - img [ref=e706]
+              - cell "On-premise servers" [ref=e708]
+              - cell "640.00" [ref=e709]
+              - cell "29" [ref=e710]
+              - cell [ref=e711]
+            - row "End-user devices 310.00 14" [ref=e714]:
+              - cell [ref=e715]
+              - cell "End-user devices" [ref=e716]
+              - cell "310.00" [ref=e717]
+              - cell "14" [ref=e718]
+              - cell [ref=e719]
+            - row "Total 2,190.00 100" [ref=e722]:
+              - cell [ref=e723]
+              - cell "Total" [ref=e724]
+              - cell "2,190.00" [ref=e725]
+              - cell "100" [ref=e726]
+              - cell [ref=e727]

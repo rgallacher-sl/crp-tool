@@ -1,0 +1,60 @@
+<div class="split-slider">
+  @if (label) {
+    <p class="split-slider__label">{{ label }}</p>
+  }
+  <div class="split-slider__labels-row">
+    <span class="split-slider__side-label">{{ leftLabel }}</span>
+    <span class="split-slider__side-label split-slider__side-label--right">{{ rightLabel }}</span>
+  </div>
+  <div class="split-slider__row">
+    <!-- Left number input -->
+    <div class="split-slider__input-group">
+      <input
+        class="split-slider__number"
+        type="text"
+        inputmode="numeric"
+        [value]="leftValue"
+        [disabled]="disabled"
+        [attr.aria-label]="leftLabel + ' percentage'"
+        (input)="onLeftInput($event)"
+        (blur)="onLeftBlur($event)"
+      />
+      <span class="split-slider__unit" aria-hidden="true">%</span>
+    </div>
+
+    <!-- Slider -->
+    <div class="split-slider__track-wrap">
+      <input
+        class="split-slider__range"
+        type="range"
+        min="0"
+        max="100"
+        step="1"
+        [value]="leftValue"
+        [disabled]="disabled"
+        [style.--fill]="fillPercent"
+        [attr.aria-label]="leftLabel + ' percentage'"
+        [attr.aria-valuemin]="0"
+        [attr.aria-valuemax]="100"
+        [attr.aria-valuenow]="leftValue"
+        (input)="onSliderInput($event)"
+        (blur)="markTouched()"
+      />
+    </div>
+
+    <!-- Right number input -->
+    <div class="split-slider__input-group">
+      <input
+        class="split-slider__number"
+        type="text"
+        inputmode="numeric"
+        [value]="rightValue"
+        [disabled]="disabled"
+        [attr.aria-label]="rightLabel + ' percentage'"
+        (input)="onRightInput($event)"
+        (blur)="onRightBlur($event)"
+      />
+      <span class="split-slider__unit" aria-hidden="true">%</span>
+    </div>
+  </div>
+</div>

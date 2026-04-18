@@ -1,0 +1,229 @@
+.exp-table-wrapper {
+  border: 1px solid var(--color-neutral-400);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.exp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-default);
+
+  &__header-row {
+    background: var(--color-brand-primary);
+    color: var(--color-text-on-interactive);
+  }
+
+  &__th {
+    padding: var(--sx-2) var(--sx-2);
+    text-align: left;
+    font-weight: var(--font-weight-semibold);
+    white-space: nowrap;
+
+    &--right {
+      text-align: right;
+    }
+
+    &--chevron {
+      width: 32px;
+      padding-right: 0;
+    }
+  }
+
+  &__row {
+    border-bottom: 1px solid var(--color-border-default);
+
+    &--even {
+      background: var(--color-brand-zebra);
+    }
+
+    &--child {
+      background: var(--color-bg-canvas);
+      border-bottom-color: var(--color-neutral-300);
+    }
+
+    &--total {
+      border-top: 1px solid var(--color-neutral-400);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    &--expandable:hover {
+      background: var(--color-bg-hover);
+      cursor: pointer;
+    }
+  }
+
+  &__td {
+    padding: var(--sx-2) var(--sx-2);
+    vertical-align: middle;
+
+    &--right {
+      text-align: right;
+    }
+
+    &--numeric {
+      font-variant-numeric: tabular-nums;
+      font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+    }
+
+    &--child {
+      padding-left: var(--sx-4);
+      color: var(--color-text-secondary);
+    }
+
+    &--chevron {
+      width: 32px;
+      padding-right: 0;
+    }
+
+    &--bar {
+      padding: var(--sx-1) var(--sx-2);
+      min-width: 80px;
+    }
+  }
+
+  &__bar-track {
+    width: 100%;
+    height: 8px;
+    background: var(--color-light-turq);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    display: flex;
+  }
+
+  &__bar-fill {
+    height: 100%;
+    border-radius: var(--radius-sm);
+    transition: width 0.3s ease;
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    border-radius: var(--radius-xs);
+
+    &:hover {
+      color: var(--color-text-default);
+      background: var(--color-bg-hover);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-focus);
+      outline-offset: 2px;
+    }
+  }
+}
+
+// Card layout — shown on mobile, hidden on desktop
+.exp-cards {
+  display: none;
+  flex-direction: column;
+  gap: var(--sx-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.exp-card {
+  border: 1px solid var(--color-neutral-400);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--color-bg-canvas);
+
+  &--total {
+    font-weight: var(--font-weight-semibold);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: var(--sx-2);
+    padding: var(--sx-3);
+    cursor: default;
+
+    .exp-card--expandable & {
+      cursor: pointer;
+    }
+
+    &--child {
+      padding-top: var(--sx-2);
+      padding-bottom: var(--sx-2);
+      cursor: default;
+    }
+  }
+
+  &__chevron {
+    width: 24px;
+    flex-shrink: 0;
+  }
+
+  &__label {
+    flex: 1;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-default);
+    min-width: 0;
+
+    &--child {
+      color: var(--color-text-secondary);
+    }
+  }
+
+  &__value {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-default);
+    font-variant-numeric: tabular-nums;
+    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+    white-space: nowrap;
+  }
+
+  &__bar-row {
+    display: flex;
+    align-items: center;
+    gap: var(--sx-2);
+    padding: 0 var(--sx-3) var(--sx-3);
+    padding-left: calc(var(--sx-3) + 24px + var(--sx-2));
+
+    &--child {
+      padding-top: var(--sx-1);
+      padding-bottom: var(--sx-2);
+    }
+
+    .exp-table__bar-track {
+      flex: 1;
+      width: auto;
+    }
+  }
+
+  &__pct {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    min-width: 2rem;
+    text-align: right;
+  }
+
+  &__child {
+    border-top: 1px solid var(--color-neutral-300);
+  }
+}
+
+@media (max-width: 640px) {
+  .exp-table-wrapper {
+    display: none;
+  }
+
+  .exp-cards {
+    display: flex;
+  }
+}

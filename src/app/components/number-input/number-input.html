@@ -1,0 +1,22 @@
+<div class="number-input" [class.number-input--error]="!!errorMessage">
+  @if (label) {
+    <label class="number-input__label">{{ label }}</label>
+  }
+  @if (hint) {
+    <span class="number-input__hint">{{ hint }}</span>
+  }
+  <input
+    class="number-input__field"
+    type="number"
+    [value]="value ?? ''"
+    [attr.min]="min"
+    [attr.max]="max"
+    [step]="step"
+    [disabled]="disabled"
+    (input)="onInput($event)"
+    (blur)="markTouched()"
+  />
+  @if (errorMessage) {
+    <span class="number-input__error">{{ errorMessage }}</span>
+  }
+</div>

@@ -162,6 +162,35 @@
     </div>
   </section>
 
+  <!-- CONDITIONAL REVEAL -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Conditional Reveal</h2>
+    <div class="conditional-reveal-demo">
+      <p class="conditional-reveal-demo__question">Do you use any of the following SaaS services:</p>
+      <div class="conditional-reveal-demo__list">
+        @for (service of saasServices; track service.label) {
+          <div class="conditional-reveal-demo__item">
+            <app-checkbox
+              [label]="service.label"
+              [checked]="service.checked"
+              (checkedChange)="service.checked = $event; !$event && (service.users = null)"
+              [attr.aria-expanded]="service.checked"
+              [attr.aria-controls]="'reveal-' + service.label"
+            />
+            @if (service.checked) {
+              <div class="conditional-reveal-demo__reveal" [id]="'reveal-' + service.label">
+                <app-number-input
+                  label="How many users do you have subscribed to the service at this current time?"
+                  [(ngModel)]="service.users"
+                />
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
   <section class="showcase__section">
     <h2 class="showcase__section-title">Checkbox</h2>
     <div class="showcase__stack">
@@ -223,5 +252,118 @@
       <app-file-upload state="uploaded" fileName="modern-slavery-statement.pdf" />
       <app-file-upload state="error" />
     </div>
+  </section>
+
+  <!-- BUTTONS -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Buttons</h2>
+    <div class="showcase__row">
+      <button class="btn-primary">Primary</button>
+      <button class="btn-secondary">Secondary</button>
+      <button class="btn-ghost">Ghost</button>
+      <button class="btn-primary" disabled>Disabled</button>
+    </div>
+  </section>
+
+  <!-- BADGE -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Badge</h2>
+    <div class="showcase__row">
+      <app-badge label="Edited" variant="default" />
+      <app-badge label="Reset" variant="success" [showIcon]="true" />
+    </div>
+  </section>
+
+  <!-- TAB BAR -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Tab Bar</h2>
+    <app-tab-bar [tabs]="tabs" [activeTab]="activeTab" (tabChange)="activeTab = $event" />
+    <p class="showcase__note">Active tab: {{ activeTab }}</p>
+  </section>
+
+  <!-- ACCORDION -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Accordion</h2>
+    <div class="showcase__stack">
+      <app-accordion title="Cloud infrastructure">
+        <p>Enter the estimated annual energy consumption for your cloud infrastructure below.</p>
+      </app-accordion>
+      <app-accordion title="On-premise servers" [expanded]="true">
+        <p>Include all on-premise server hardware and associated cooling systems.</p>
+      </app-accordion>
+    </div>
+  </section>
+
+  <!-- NUMBER INPUT -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Number Input</h2>
+    <div class="showcase__stack">
+      <app-number-input label="Annual consumption (kWh)" hint="Enter a value between 0 and 1,000,000" [min]="0" [max]="1000000" [(ngModel)]="numberInputValue" />
+      <app-number-input label="With error" errorMessage="Enter a valid number." />
+    </div>
+  </section>
+
+  <!-- SLIDER -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Slider</h2>
+    <app-slider
+      label="Percentage of renewable energy"
+      minLabel="0%"
+      maxLabel="100%"
+      [min]="0"
+      [max]="100"
+      [step]="1"
+      [(ngModel)]="sliderValue"
+    />
+  </section>
+
+  <!-- SPLIT SLIDER -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Split Slider</h2>
+    <app-split-slider
+      label="What percentage of those employee devices are desktops or laptops?"
+      leftLabel="Desktops"
+      rightLabel="Laptops"
+      [(ngModel)]="splitSliderValue"
+    />
+    <p class="showcase__note">Desktops: {{ splitSliderValue }}% — Laptops: {{ 100 - splitSliderValue }}%</p>
+  </section>
+
+  <!-- SEGMENTED CONTROL -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Segmented Control</h2>
+    <app-segmented-control [options]="segmentedOptions" [(ngModel)]="segmentedValue" />
+    <p class="showcase__note">Selected: {{ segmentedValue }}</p>
+  </section>
+
+  <!-- METRIC HEADLINE -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Metric Headline</h2>
+    <div class="showcase__stack">
+      <app-metric-headline
+        label="Total Emissions Estimate"
+        value="4619"
+        unit="kg CO₂E"
+        [trend]="-8"
+        trendVariant="success"
+      />
+      <app-metric-headline
+        label="Annual Energy Consumption"
+        value="12,340"
+        unit="kWh"
+        [trend]="3"
+        trendVariant="warning"
+      />
+      <app-metric-headline
+        label="Assessed Suppliers"
+        value="47"
+      />
+    </div>
+  </section>
+
+  <!-- EXPANDABLE TABLE -->
+  <section class="showcase__section">
+    <h2 class="showcase__section-title">Expandable Table</h2>
+    <app-expandable-table [columns]="tableColumns" [rows]="tableRows" />
   </section>
 </div>

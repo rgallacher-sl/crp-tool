@@ -1,0 +1,46 @@
+.metric-headline {
+  &__label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin: 0 0 var(--sx-1);
+  }
+
+  &__row {
+    display: flex;
+    align-items: baseline;
+    gap: var(--sx-2);
+    flex-wrap: wrap;
+  }
+
+  &__value {
+    font-size: var(--font-size-display);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-brand-primary);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__unit {
+    font-size: var(--font-size-md);
+    color: var(--color-text-secondary);
+  }
+
+  &__trend {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--sx-1) var(--sx-2);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+
+    &--success {
+      background: var(--color-light-green);
+      color: var(--color-success-green);
+    }
+
+    &--warning {
+      background: var(--color-outcome-fail-bg);
+      color: var(--color-outcome-fail-text);
+    }
+  }
+}

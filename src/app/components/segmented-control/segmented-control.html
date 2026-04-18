@@ -1,0 +1,12 @@
+<div class="segmented-control" role="group">
+  @for (option of options; track option.value) {
+    <button
+      class="segmented-control__option"
+      [class.segmented-control__option--active]="option.value === value"
+      [attr.aria-pressed]="option.value === value"
+      (click)="select(option.value)"
+    >
+      {{ option.label }}
+    </button>
+  }
+</div>

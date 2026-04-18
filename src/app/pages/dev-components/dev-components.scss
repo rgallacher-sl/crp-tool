@@ -63,3 +63,34 @@
     color: var(--color-text-muted);
   }
 }
+
+.conditional-reveal-demo {
+  &__question {
+    font-size: var(--font-size-md);
+    color: var(--color-text-secondary);
+    margin: 0 0 var(--sx-3);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sx-2);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sx-3);
+  }
+
+  &__reveal {
+    padding-left: var(--sx-8);
+
+    ::ng-deep .number-input__field {
+      width: 100%;
+      max-width: 320px;
+      background: var(--color-bg-subtle);
+      border-radius: var(--radius-md);
+    }
+  }
+}

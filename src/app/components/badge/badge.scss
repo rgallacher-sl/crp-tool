@@ -1,0 +1,19 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sx-1);
+  padding: 2px var(--sx-1);
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-neutral-300);
+  background: var(--color-surface-subtle);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.4;
+
+  &--success {
+    background: var(--color-light-green);
+    border-color: var(--color-success-green);
+    color: var(--color-success-green);
+  }
+}

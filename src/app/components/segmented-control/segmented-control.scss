@@ -1,0 +1,44 @@
+.segmented-control {
+  display: inline-flex;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+
+  &__option {
+    padding: 6px var(--sx-3);
+    font-size: var(--font-size-sm);
+    font-family: var(--font-family-ui);
+    font-weight: var(--font-weight-medium);
+    background: var(--color-bg-canvas);
+    color: var(--color-text-secondary);
+    border: none;
+    border-right: 1px solid var(--color-border-default);
+    cursor: pointer;
+    transition: background var(--duration-fast) var(--easing-standard),
+      color var(--duration-fast) var(--easing-standard);
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:hover {
+      background: var(--color-bg-hover);
+      color: var(--color-text-default);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-focus);
+      outline-offset: -2px;
+    }
+
+    &--active {
+      background: var(--color-brand-primary);
+      color: var(--color-text-on-interactive);
+
+      &:hover {
+        background: var(--color-interactive-hover);
+        color: var(--color-text-on-interactive);
+      }
+    }
+  }
+}
