@@ -1,0 +1,23 @@
+- generic [ref=e2]:
+  - banner [ref=e20]:
+    - navigation [ref=e21]:
+      - link "CRP Assessment Tool" [ref=e22] [cursor=pointer]:
+        - /url: /suppliers
+      - link "Suppliers" [ref=e23] [cursor=pointer]:
+        - /url: /suppliers
+      - link "Upload history" [ref=e24] [cursor=pointer]:
+        - /url: /batches
+      - button "Sign out" [ref=e25] [cursor=pointer]
+  - main [ref=e3]:
+    - generic [ref=e27]:
+      - heading "Suppliers" [level=1] [ref=e28]
+      - generic [ref=e29]:
+        - paragraph [ref=e30]: You haven't assessed any suppliers yet.
+        - paragraph [ref=e31]: This tool helps ensure supplier compliance with PPN 006 by reviewing their Carbon Reduction Plan.
+        - generic [ref=e32]:
+          - paragraph [ref=e33]: "What you'll do:"
+          - list [ref=e34]:
+            - listitem [ref=e35]: Provide a supplier's CRP
+            - listitem [ref=e36]: Review the document
+            - listitem [ref=e37]: Record a compliance decision
+        - button "Start first assessment" [ref=e38] [cursor=pointer]
