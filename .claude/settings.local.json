@@ -77,7 +77,10 @@
       "WebFetch(domain:smart-interface-design-patterns.com)",
       "Bash(./sync.sh crp-tool-postmvp:*)",
       "Bash(./sync.sh /c/Users/Ryan/Documents/GitHub/crp-tool-postmvp)",
-      "Bash(./sync.sh --apply /c/Users/Ryan/Documents/GitHub/crp-tool-postmvp)"
+      "Bash(./sync.sh --apply /c/Users/Ryan/Documents/GitHub/crp-tool-postmvp)",
+      "mcp__figma__get_design_context",
+      "mcp__figma__get_metadata",
+      "mcp__figma__whoami"
     ]
   }
 }
