@@ -1,5 +1,10 @@
 {
   "mcpServers": {
+    "sketch": {
+      "command": "python",
+      "args": ["mcp-servers/sketch/server.py"],
+      "env": { "SKETCHES_DIR": "./sketches" }
+    },
     "context7": {
       "command": "npx",
       "args": ["-y", "@upstash/context7-mcp"]
