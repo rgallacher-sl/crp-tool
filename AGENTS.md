@@ -125,6 +125,22 @@ Prefer targeted reads (specific file + line range) over broad ones. When a task 
 **MCP servers**
 Model Context Protocol servers extend what the agent can connect to — databases, APIs, internal tools — without shell commands. Add project-specific MCP servers to `.claude/settings.json` under `mcpServers` when you need the agent to query live data directly.
 
+## Thinking lenses
+
+Only apply when the task matches a trigger below — skip entirely for routine execution, simple questions, and tasks with a clear standard response.
+
+When triggered, load `references/thinking-lenses.md` and apply every relevant lens — there will often be more than one. Integrate into your response; only surface a lens explicitly when it changes the answer or reveals something Ryan needs to see. Missing a relevant lens is the failure mode.
+
+Triggers (what/whether phase only — before direction is set):
+- Decision / should I / choose between → honest trade-offs lens
+- Strategy / planning / roadmap → pre-mortem lens
+- Architecture / novel system → unknown unknowns lens
+- Brainstorm / generate options → divergence lens (5 genuinely different approaches)
+- Strong stated preference → disconfirmation lens
+- Build / create / add / design with no prior context establishing goal → divergence lens
+
+---
+
 ## Information Architecture
 
 When new information, documentation, or research arrives — use this table to decide where it goes. Prefer repo-local, agent-agnostic locations over agent-specific memory.
