@@ -84,7 +84,6 @@ Security runs through three stages — design, implementation, audit. Load the r
 | [security-and-hardening](skills/security-and-hardening/SKILL.md) | Implementation | About to write or edit code that handles form submission, authentication, session storage, localStorage, or API calls |
 | [accessibility](skills/accessibility/SKILL.md) | Implementation | Just finished writing or editing a component's HTML template |
 | [security-auditor](skills/security-auditor/SKILL.md) | Audit | Asked to audit security, or a feature is being marked ready for review or release |
-| [context-eval](skills/context-eval/SKILL.md) | — | Evaluating whether a proposed context document (knowledge file, skill, or reference) is worth writing — run before creating any new context document |
 
 ## Hooks
 
